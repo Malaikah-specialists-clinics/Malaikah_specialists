@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  margin:0px;
+  padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -37,4 +38,59 @@ h2, h4{
   width:200px;
   border:none;
   color:#0A1F3E;
+}
+.footer{
+  background-color: #0A1F3E; 
+  padding: 0px 50px;
+
+  
+}
+#footerNav{
+  padding-left: 120px;
+
+
+}
+#contactUs{
+  padding-left: 50px;
+  
+ }
+/* stylying homecare service  */
+.resize{
+  width: 100%;
+  height: 500px;
+}
+ .first-txt {
+padding: 100px 0px 0px 60px;
+color: #0A1F3E;
+font-weight: bolder;
+font-size: 50px;
+}
+.second-txt {
+padding: 30px 0px 0px 60px;
+font-size: 30px;
+} 
+#content{
+  background-image: url(https://image.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 100%;
+}
+#middlesect{
+ text-align: center;
+ color: #0A1F3E;
+ /* height: 100px; */
+}
+#sect1{
+  background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+}
+.hcare{
+  margin-top: 120px;
+}
+#hcare{
+  margin: 40px;
 }

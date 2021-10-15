@@ -1,11 +1,11 @@
 import React from 'react';
 
 function Home(){
-    return(
-        <>
-        <h1>THIS IS HOME PAGE</h1>
-        </>
-    )
+    return (
+      <>
+        <a href="/hcare">homecare</a>
+      </>
+    );
 }
 
 export default Home;
