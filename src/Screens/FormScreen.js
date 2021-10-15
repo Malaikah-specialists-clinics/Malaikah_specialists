@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Form,Container, Button} from 'react-bootstrap';
-// import { LinkContainer } from 'react-router-bootstrap';
+
 
 
 function FormPage(){
@@ -32,7 +32,8 @@ function FormPage(){
     </Col>
   </Row>
   
-   <Button  href="/form2" id='Btn'>NEXT</Button>{' '}
+  <Button href="#form2" id='Btn'>NEXT</Button>{' '}
+
 </Form>
     </Col>
     <Col>

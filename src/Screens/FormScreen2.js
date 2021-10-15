@@ -30,7 +30,7 @@ function FormPage2(){
    <Form.Label id='field'>What is your primary medical issue?</Form.Label>
       <Form.Control type="text-area" id="textarea" />
       <Row>
-      <Col> <Button href="/form" id='Btn'>BACK</Button>{' '} </Col>
+      <Col> <Button href="#form" id='Btn'>BACK</Button>{' '} </Col>
       <Col> <Button id='Btn'>BOOK APPOINTMENT</Button>{' '}</Col>
       </Row>
    
