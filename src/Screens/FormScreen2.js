@@ -6,7 +6,7 @@ import { Row, Col, Form,Container, Button} from 'react-bootstrap';
 function FormPage2(){
     return(
         <>
-    <Container>
+    <Container className='formcontent'>
   <Row>
     <Col className='form'>
     <Form>
@@ -15,16 +15,16 @@ function FormPage2(){
   <Row>
     <Col className='inputField'>
         <Form.Label id='field'>Select Department</Form.Label>
-      <Form.Control/>
+      <Form.Control id='form-control'/>
       <Form.Label id='field'>Time Of Appointment</Form.Label>
-      <Form.Control />
+      <Form.Control id='form-control'/>
      
     </Col>
     <Col className='inputField'>
     <Form.Label id='field' >Date Of Appointment</Form.Label>
-      <Form.Control />
+      <Form.Control id='form-control' />
       <Form.Label id='field'>Location</Form.Label>
-      <Form.Control />
+      <Form.Control id='form-control' />
     </Col>
   </Row>
    <Form.Label id='field'>What is your primary medical issue?</Form.Label>

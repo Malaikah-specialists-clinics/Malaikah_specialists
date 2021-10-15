@@ -6,7 +6,7 @@ import { Row, Col, Form,Container, Button} from 'react-bootstrap';
 function FormPage(){
     return(
         <>
-    <Container>
+    <Container className='formcontent'>
   <Row>
     <Col className='form'>
     <Form>
@@ -15,20 +15,20 @@ function FormPage(){
   <Row>
     <Col className='inputField'>
         <Form.Label id='field'>First Name</Form.Label>
-      <Form.Control  placeholder="E.g Mark" />
+      <Form.Control  placeholder="E.g Mark" id='form-control' />
       <Form.Label id='field'>Email</Form.Label>
-      <Form.Control  placeholder="winniek@example.com" />
+      <Form.Control  placeholder="winniek@example.com" id='form-control'/>
       <Form.Label id='field'>Date Of Birth</Form.Label>
-      <Form.Control  placeholder="mm/yyyy/dd" />
+      <Form.Control  placeholder="mm/yyyy/dd" id='form-control'/>
      
     </Col>
     <Col className='inputField'>
     <Form.Label id='field' >Last Name</Form.Label>
-      <Form.Control placeholder="E.g Mukuye" />
+      <Form.Control placeholder="E.g Mukuye" id='form-control'/>
       <Form.Label id='field'>Phone Number</Form.Label>
-      <Form.Control placeholder="+2347000000" />
+      <Form.Control placeholder="+2347000000" id='form-control' />
       <Form.Label id='field'>Gender</Form.Label>
-      <Form.Control placeholder="gender" />
+      <Form.Control placeholder="gender" id='form-control' />
     </Col>
   </Row>
   

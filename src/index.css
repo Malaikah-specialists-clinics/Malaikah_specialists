@@ -24,13 +24,23 @@ border-radius: 20px;
 }
 #field, #pic{
   margin-top:20px;
+  font-size: 15px;
+  color: black;
 }
 #textarea{
   width:100%;
   height:75px;
 }
 h2, h4{
+padding-top: 10px;
   color:#0A1F3E;
+}
+#form-control{
+  border: 0.5px solid grey;
+  border-radius: 8px;
+  height: 35px;
+  color: grey;
+  text-align: center;
 }
 #Btn{
   margin-top:20px;
@@ -88,9 +98,10 @@ font-size: 30px;
   width: 100%;
   height: 400px;
 }
-.hcare{
-  margin-top: 120px;
+.hcare, .formcontent{
+  margin-top: 130px;
 }
 #hcare{
   margin: 40px;
 }
+

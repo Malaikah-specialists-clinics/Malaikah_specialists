@@ -9,7 +9,7 @@ return (
       <header>
         <Navbar style={{ background: 'white' }}>
           <Container>
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Navbar.Brand href="#home">Malaikah</Navbar.Brand>
           </Container>
         </Navbar>
       </header>
@@ -35,7 +35,7 @@ return (
               <LinkContainer to="/">
                 <Nav.Link href="#home">Home</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/login">
+              <LinkContainer to="/hcare">
                 <Nav.Link>Services&Programs</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/form">
