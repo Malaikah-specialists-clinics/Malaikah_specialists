@@ -6,7 +6,7 @@ import { Row, Col, Form,Container, Button} from 'react-bootstrap';
 function FormPage(){
     return(
         <>
-    <Container className='formcontent'>
+    <Container fluid="sm" className='formcontent'>
   <Row>
     <Col className='form'>
     <Form>

@@ -5,7 +5,8 @@ import { LinkContainer } from 'react-router-bootstrap';
 function Header(){
 return (
   <>
-    <div class="fixed-top">
+  <Container>
+    <div className="fixed-top">
       <header>
         <Navbar style={{ background: 'white' }}>
           <Container>
@@ -52,6 +53,7 @@ return (
         </Container>
       </Navbar>
     </div>
+    </Container>
   </>
 );
 }
