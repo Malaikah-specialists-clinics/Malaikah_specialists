@@ -7,6 +7,7 @@ function FormPage(){
     return(
         <>
     <Container fluid="sm" className='formcontent'>
+
   <Row>
     <Col className='form'>
     <Form>

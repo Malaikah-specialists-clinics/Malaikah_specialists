@@ -3,6 +3,7 @@ import { Nav, Container, Navbar} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 function Header(){
+
 return (
   <>
   <Container>
@@ -52,10 +53,7 @@ return (
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
-    </Container>
-  </>
-);
+
 }
 
 export default Header;
