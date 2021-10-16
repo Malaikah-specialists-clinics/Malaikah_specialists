@@ -5,7 +5,7 @@ function Research() {
   return (
     <>
       <Container>
-      <h2 style={{textAlign:"center", paddingBottom:"30px"}}>OUR RESEARCH</h2>
+      <h2 style={{textAlign:"center", padding:"5px 0px 30px 0px"}}>Our Research</h2>
         <Row>
           <Col md className="research" > 
             <p>
@@ -25,13 +25,17 @@ function Research() {
               </Button>{" "}
           </Col>
           <Col md>
-              <img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/01/327372_1100-1100x628.jpg" alt=""
+            <div id="pic">
+            <img src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/01/327372_1100-1100x628.jpg" alt=""
               style={{
                 width:"600px",
                 height:"300px",
                 borderRadius:"10% 0% 0% 10%"
               }}
-               />
+              />
+            </div>
+              
+               
           </Col>
         </Row>
         

@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Card, CardGroup } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
@@ -117,13 +118,44 @@ const Events = () => {
             </div>
           </div>
         </div>
-        <div class="col-sm-2">
+        <div class="pic col-sm-2">
           <div class="card">
           <img className='card-image' src="https://images.unsplash.com/photo-1535229398509-70179087ac75?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoeSUyMGZvb2R8ZW58MHwxfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""/>
           </div>
         </div>
       </div>
       </div>
+
+      <CardGroup>
+  <Card id="crd">
+    <Card.Body>
+      <Card.Title>Good Mental Health Tips</Card.Title>
+      <Card.Text>
+        This is a wider card with supporting text below as a natural lead-in to
+        additional content. This content is a little bit longer.
+      </Card.Text>
+    </Card.Body>
+  </Card>
+  <Card id="crd">
+    <Card.Body>
+      <Card.Title>Safe Sex Tips</Card.Title>
+      <Card.Text>
+        This card has supporting text below as a natural lead-in to additional
+        content.{' '}
+      </Card.Text>
+    </Card.Body>
+  </Card>
+  <Card id="crd">
+    <Card.Body>
+      <Card.Title>Health-Patient Education</Card.Title>
+      <Card.Text>
+        This is a wider card with supporting text below as a natural lead-in to
+        additional content. This card has even longer content than the first to
+        show that equal height action.
+      </Card.Text>
+    </Card.Body>
+  </Card>
+</CardGroup>
     </div>
   );
 };

@@ -107,7 +107,7 @@ padding-top: 10px;
 
 
 #card1{
-background-color: #0A1F3E;
+background-color: #1A5691;
 
 text-align: center;
 }
@@ -163,6 +163,13 @@ font-size: 30px;
  color: #0A1F3E;
  /* height: 100px; */
 }
+#crd{
+  margin: 10px;
+  height: 200px;
+  background-color: #1A5691;
+  color: white;
+  border-radius: 0% 0% 20% 0%;
+}
 #sect1{
   background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
   background-repeat: no-repeat;
@@ -190,10 +197,10 @@ font-size: 30px;
 }
 /* --------media query forless than 600 screen size------ */
 @media(max-width: 600px){
-  img{
+  #pic, .pic{
     display: none;
   }
-  
+ 
   
 }
 
