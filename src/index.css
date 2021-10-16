@@ -175,3 +175,29 @@ font-size: 30px;
   
 }
 
+/* styling the Emegency service page */
+.row-herosect{
+  background: linear-gradient(90deg, rgb(143, 187, 200) 100%, rgb(251, 251, 251) 100%);
+  height: 400px;
+  width: auto;
+}
+.emeryserviceimg{
+width: 700px;
+height : 400px;
+}
+.headingsect{
+  float: right;
+  padding: 50px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #0A1F3E;
+}
+.emeserviceheading{
+ text-align: center;
+color: #0A1F3E;
+font-weight: bolder;
+font-size: 40px;
+}
+.emecontent{
+  font-size: 20px;
+}
