@@ -8,8 +8,8 @@ import FormScreen2 from './Screens/FormScreen2'
 import FormScreen from './Screens/FormScreen';
 import HomecareScreen from './Screens/HomecareScreen'
 import Home from './Components/Home';
-import About from './Components/About'
-import Events from './Components/Events'
+// import About from './Components/About'
+// import Events from './Components/Events'
 function App() {
   return (
 

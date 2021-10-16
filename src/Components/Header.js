@@ -53,8 +53,10 @@ return (
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-}
+      </div>
+</Container>
+</>
+)}
 
 export default Header;
 
