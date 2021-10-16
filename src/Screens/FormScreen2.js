@@ -6,7 +6,8 @@ import { Row, Col, Form,Container, Button} from 'react-bootstrap';
 function FormPage2(){
     return(
         <>
-    <Container>
+    <Container style={{ marginTop: "140px" }}>
+    
   <Row>
     <Col className='form'>
     <Form>

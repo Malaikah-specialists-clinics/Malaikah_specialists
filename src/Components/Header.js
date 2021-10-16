@@ -4,19 +4,19 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 function Header(){
 return(
-    <>
+    <div class='fixed-top'>
     <header>
-    <Navbar>
-     <Container>
-     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar style={{background:'white'}}>
+     <Container >
+     <Navbar.Brand href="#home" >Navbar</Navbar.Brand>
     
      </Container>
    </Navbar>  
     </header>
-   <Navbar className="navbar" bg='light' variant='light' expand='lg' collapseOnSelect>
-        <Container>
+   <Navbar className="navbar" style={{background:'#EBE9E8'}} expand='lg' collapseOnSelect>
+        <Container >
           <LinkContainer to='/'>
-            <Navbar.Brand>Malaikah</Navbar.Brand>
+            <Navbar.Brand></Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -57,7 +57,7 @@ return(
         </Container>
       </Navbar>
     
-    </>
+    </div>
      
   );
 }

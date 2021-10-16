@@ -2,9 +2,9 @@ import React from 'react';
 
 function Home(){
     return(
-        <>
-        <h1>THIS IS HOME PAGE</h1>
-        </>
+        <div className='container'>
+        <h1 style={{marginTop:'140px'}}>THIS IS HOME PAGE</h1>
+        </div>
     )
 }
 
