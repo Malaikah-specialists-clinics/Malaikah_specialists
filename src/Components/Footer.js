@@ -6,7 +6,7 @@ function Footer() {
       <footer className="footer">
         <div className="">
           <div className="row">
-            <div className="col l4 s12" id="footerLogo">
+            <div className="col-sm-4" id="footerLogo">
               <h5 className="white-text">Logo</h5>
               <p className="grey-text text-lighten-4">
                 Malaikah Specialist Center aim is to provide you with quality,
@@ -14,7 +14,7 @@ function Footer() {
                 education.
               </p>
             </div>
-            <div className="col l4 s12 " id="footerNav">
+            <div className="col-sm-4 " id="footerNav">
               <h5 className="white-text ">Navigation</h5>
               <ul>
                 <li>
@@ -44,7 +44,7 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col l4  s12" id="contactUs">
+            <div className="col-sm-4" id="contactUs">
               <h5 className="white-text">Contact Us</h5>
               <ul>
                 <li>

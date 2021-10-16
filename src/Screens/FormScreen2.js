@@ -9,7 +9,7 @@ function FormPage2(){
 
     <Container className='formcontent'>
   <Row>
-    <Col className='form'>
+    <Col md sm={6} className='form'>
     <Form>
     <h2>Book An Appointment</h2>
     <h4>Patient Information </h4>
@@ -37,7 +37,7 @@ function FormPage2(){
    
 </Form>
     </Col>
-    <Col>
+    <Col md sm={6}>
     <div id="pic">
     <img src="/images/caremeds.jpg" alt='care' width= "600px" height="470px"/>
     </div>
