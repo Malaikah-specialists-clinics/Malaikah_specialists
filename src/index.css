@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  margin:0px;
+  padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -25,13 +26,23 @@ border-radius: 20px;
 }
 #field, #pic{
   margin-top:20px;
+  font-size: 15px;
+  color: black;
 }
 #textarea{
   width:100%;
   height:75px;
 }
 h2, h4{
+padding-top: 10px;
   color:#0A1F3E;
+}
+#form-control{
+  border: 0.5px solid grey;
+  border-radius: 8px;
+  height: 35px;
+  color: grey;
+  text-align: center;
 }
 #Btn{
   margin-top:20px;
@@ -40,6 +51,7 @@ h2, h4{
   border:none;
   color:#0A1F3E;
 }
+
 
 
 /* .ml-auto.navbar-nav {
@@ -210,3 +222,86 @@ button.btn.btn-block {
         font-size: 25px;
     }
 } */
+=======
+.footer{
+  background-color: #0A1F3E; 
+  padding: 0px 50px;
+
+  
+}
+#footerNav{
+  padding-left: 120px;
+
+
+}
+#contactUs{
+  padding-left: 50px;
+  
+ }
+/* stylying homecare service  */
+.resize{
+  width: 100%;
+  height: 500px;
+}
+ .first-txt {
+padding: 100px 0px 0px 60px;
+color: #0A1F3E;
+font-weight: bolder;
+font-size: 50px;
+}
+.second-txt {
+padding: 30px 0px 0px 60px;
+font-size: 30px;
+} 
+#content{
+  background-image: url(https://image.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#middlesect{
+ text-align: center;
+ color: #0A1F3E;
+ /* height: 100px; */
+}
+#sect1{
+  background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+}
+.hcare, .formcontent{
+  margin-top: 110px;
+}
+#hcare{
+  margin: 40px;
+}
+
+
+@media(min-width: 1200px){
+
+}
+@media(max-width: 1024px){
+  
+}
+@media(max-width: 768px){
+  
+}
+/* --------media query forless than 600 screen size------ */
+@media(max-width: 600px){
+  .second-txt {
+ font-size: 20px;
+ padding: 0px 0px 0px 30px;
+
+  }
+  .first-txt{
+    font-size: 35px;
+    padding: 50px 0px 0px 30px;
+  }
+  #sect1{
+    height: 250px;
+  }
+  
+}
+
