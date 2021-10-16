@@ -18,7 +18,7 @@ function Footer() {
               <h5 className="white-text ">Navigation</h5>
               <ul>
                 <li>
-                  <a className="white-text text-lighten-3" href="#!">
+                  <a className="white-text text-lighten-3" href="#home">
                     Home
                   </a>
                 </li>
@@ -28,7 +28,7 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a className="grey-text text-lighten-3" href="#!">
+                  <a className="grey-text text-lighten-3" href="#hcare">
                     Services & Programs
                   </a>
                 </li>
@@ -48,12 +48,8 @@ function Footer() {
               <h5 className="white-text">Contact Us</h5>
               <ul>
                 <li>
-                  <p className="white-text">
-                    {' '}
-                    Email: support@malaikahgroup.com
-                  </p>
-                  <p className="white-text"> Tel: +234 703 229 3770 </p>
-                </li>
+                Email: support@malaikahgroup.com</li>
+                <li>Tel: +234 703 229 3770 </li>
               </ul>
             </div>
           </div>
