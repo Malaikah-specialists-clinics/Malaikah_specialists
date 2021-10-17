@@ -177,7 +177,7 @@ font-size: 30px;
 
 /* styling the Emegency service page */
 .row-herosect{
-  background: linear-gradient(90deg, rgb(143, 187, 200) 100%, rgb(251, 251, 251) 100%);
+  background: linear-gradient(63deg, rgb(143, 187, 200), rgb(251, 251, 251));
   height: 400px;
   width: auto;
 }
@@ -188,7 +188,7 @@ height : 400px;
 .headingsect{
   float: right;
   padding: 50px;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: bolder;
   color: #0A1F3E;
 }

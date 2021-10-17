@@ -1,5 +1,6 @@
 
 import React from 'react'
+// import LinearGradient from 'react-native-linear-gradient'; 
 
 const EmeservSreen = () => {
     return (
