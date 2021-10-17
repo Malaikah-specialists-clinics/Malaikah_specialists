@@ -7,14 +7,19 @@ const EmeservSreen = () => {
     return (
       <>
         <Row id='main'>
-          <Col className='pic col-md-6 '>
-          <img className='emeryserviceimg' src="/images/emeservice.jpg" alt="" />
+          <Col md className='pic'>
+          <img src="/images/emeservice.jpg" alt=""
+          style={{
+            width: '100%',
+            margin: '0px'
+          }}  
+          />
           </Col>
-          <Col className='col-md-6 headingsect row-herosect'>
+          <Col md className=' headingsect row-herosect'>
           <p> Emergency services </p>
           </Col>
            </Row>
-
+           
         <div>
             <h5 className="emeserviceheading" id="emeserviceheading">We’re Ready When You Need Us</h5>
             <ul className="emecontent">

@@ -58,6 +58,7 @@ padding-top: 10px;
 }
 #main{
   margin-top: 110px;
+  padding: 0;
 }
 .research{
   height: auto;
@@ -209,11 +210,6 @@ font-size: 30px;
 /* styling the Emegency service page */
 .row-herosect{
   background: linear-gradient(63deg, rgb(143, 187, 200), rgb(251, 251, 251));
-  height: auto;
-  width: auto;
-}
-.emeryserviceimg{
-height :auto;
 }
 .headingsect{
   text-align: center;
