@@ -14,34 +14,40 @@ function FormPage2(){
     <h2>Book An Appointment</h2>
     <h4>Patient Information </h4>
   <Row>
-    <Col className='inputField'>
+    <Col md className='inputField'>
         <Form.Label id='field'>Select Department</Form.Label>
       <Form.Control id='form-control'/>
-      <Form.Label id='field'>Time Of Appointment</Form.Label>
+      </Col>
+      <Col md>
+      <Form.Label id='field'>Date Of Appointment</Form.Label>
       <Form.Control id='form-control'/>
-     
-    </Col>
-    <Col className='inputField'>
-    <Form.Label id='field' >Date Of Appointment</Form.Label>
+      </Col>
+     </Row>
+     <Row>
+       <Col md>
+       <Form.Label id='field' >Time Of Appointment</Form.Label>
       <Form.Control id='form-control' />
-      <Form.Label id='field'>Location</Form.Label>
+       </Col>
+       <Col md>
+       <Form.Label id='field'>Location</Form.Label>
       <Form.Control id='form-control' />
-    </Col>
-  </Row>
+       </Col>
+     </Row>
+
+  
    <Form.Label id='field'>What is your primary medical issue?</Form.Label>
       <Form.Control type="text-area" id="textarea" />
       <Row>
       <Col> <Button href="#form" id='Btn'>BACK</Button>{' '} </Col>
       <Col> <Button id='Btn'>BOOK APPOINTMENT</Button>{' '}</Col>
-      </Row>
-   
+      </Row> 
 </Form>
     </Col>
     <Col md sm={6}>
     <div id="pic">
     <img src="/images/caremeds.jpg" alt='care' width= "600px" height="470px"/>
     </div>
-    </Col>
+      </Col>
   </Row>
   </Container>
         </>
