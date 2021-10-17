@@ -213,13 +213,12 @@ font-size: 30px;
   width: auto;
 }
 .emeryserviceimg{
-width: 700px;
 height :auto;
 }
 .headingsect{
   text-align: center;
   text-transform: uppercase;
-  padding: 50px;
+  padding-top: 100px;
   font-size: 70px;
   font-weight: bolder;
   color: #0A1F3E;
