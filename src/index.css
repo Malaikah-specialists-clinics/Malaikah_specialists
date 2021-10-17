@@ -95,13 +95,10 @@ padding-top: 10px;
 
 /* Style the counter cards */
 .card {
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); this adds the "card" effect */
-  /* padding: 10px; */
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   margin: 10px -12px;
-  /* text-align: center; */
   background-color: #f1f1f1;
   height: 330px;
-  /* float: left; */
 }
 
 
@@ -170,6 +167,24 @@ font-size: 30px;
   color: white;
   border-radius: 0% 0% 20% 0%;
 }
+#spc-card{
+  /* padding: 40px; */
+  margin: 10px;
+  height: auto;
+  background-color: #1A5691;
+  color: white;
+  border-radius: 0% 50px 0% 50px;
+}
+#crds{
+  margin: 5px;
+  text-align: center;
+  padding: 5px;
+  height: 200px;
+  font-size: 15px;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  border: 1px solid grey;
+  width: auto;
+}
 #sect1{
   background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
   background-repeat: no-repeat;
@@ -201,7 +216,7 @@ font-size: 30px;
     display: none;
   }
   .headingsect{
-    font-size: 40px;
+    font-size: 30px;
   }
  
   

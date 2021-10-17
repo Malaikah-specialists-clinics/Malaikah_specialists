@@ -11,7 +11,7 @@ const EmeservSreen = () => {
           <img src="/images/emeservice.jpg" alt=""
           style={{
             width: '100%',
-            margin: '0px'
+            height: 'auto'
           }}  
           />
           </Col>
