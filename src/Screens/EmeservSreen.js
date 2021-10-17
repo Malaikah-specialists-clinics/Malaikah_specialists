@@ -1,17 +1,19 @@
 
 import React from 'react'
+import { Row, Col } from 'react-bootstrap';
 // import LinearGradient from 'react-native-linear-gradient'; 
 
 const EmeservSreen = () => {
     return (
       <>
-        <div className="row-herosect">
-          <div className="formcontent">
-            <img className="emeryserviceimg col-md-6" src="/images/emeservice.jpg" alt="" />
-            <h1 className="headingsect col-md-6"> Emergency <br/> Service
-            </h1>
-          </div>
-        </div>
+        <Row id='main'>
+          <Col className='pic col-md-6 '>
+          <img className='emeryserviceimg' src="/images/emeservice.jpg" alt="" />
+          </Col>
+          <Col className='col-md-6 headingsect row-herosect'>
+          <p> Emergency services </p>
+          </Col>
+           </Row>
 
         <div>
             <h5 className="emeserviceheading" id="emeserviceheading">We’re Ready When You Need Us</h5>
