@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row, Card, CardGroup, Container } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 function Specialities() {
   return (
@@ -9,7 +10,8 @@ function Specialities() {
       <Row>
         <Col>
           <CardGroup id='crd-grp' style={{borderTop: '1px solid grey', borderBottom:'1px solid grey'}}>
-            <Card id="crds">
+          <LinkContainer to='/specialities'>
+          <Card id="crds">
               <Card.Img
                 variant="top"
                 src="/images/gynae.png"
@@ -18,9 +20,12 @@ function Specialities() {
                 border-radius='50%'
               />
               <Card.Body>
-                <h6>Gynecology services</h6>
+               <h6>Gynecology services</h6>
               </Card.Body>
             </Card>
+          </LinkContainer>
+           
+          <LinkContainer to='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -32,6 +37,8 @@ function Specialities() {
                 <h6>Paediatrics</h6>
               </Card.Body>
             </Card>
+            </LinkContainer>
+            <LinkContainer to='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -43,6 +50,8 @@ function Specialities() {
                 <h6>Ambulance services</h6>
               </Card.Body>
             </Card>
+            </LinkContainer>
+            <LinkContainer to='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -54,6 +63,9 @@ function Specialities() {
                 <h6>Hernia & Appendicitis surgery</h6>
               </Card.Body>
             </Card>
+            </LinkContainer>
+
+            <LinkContainer to='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -65,6 +77,7 @@ function Specialities() {
                 <h6>Health Education</h6>
               </Card.Body>
             </Card>
+            </LinkContainer>
           </CardGroup>
         </Col>
       </Row>

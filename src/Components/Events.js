@@ -148,7 +148,7 @@ const Events = () => {
       <CardGroup>
         <Card id="crd">
           <Card.Body>
-            <a href="#articles"> <Card.Title>Good Mental Health Tips</Card.Title></a>
+            <a href="#articles" style={{textDecoration:'none', color:'white'}}> <Card.Title>Good Mental Health Tips</Card.Title></a>
             <Card.Text>
               This is a wider card with supporting text below as a natural
               lead-in to additional content. This content is a little bit

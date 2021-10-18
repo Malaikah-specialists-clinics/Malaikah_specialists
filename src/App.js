@@ -13,6 +13,7 @@ import EmeservSreen from './Screens/EmeservSreen'
 import Moeventscreen from './Screens/Moeventscreen';
 import Home from './Components/Home';
 import Articlescreen from './Screens/Articlescreen';
+import SpecialitiesScreen from './Screens/SpecialitiesScreen'
 // import About from './Components/About'
 // import Events from './Components/Events'
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route path="/emergservice" component={EmeservSreen} />
       <Route path="/moeevents" component={Moeventscreen} />
       <Route path="/articles" component={Articlescreen}></Route>
+      <Route path="/specialities" component={SpecialitiesScreen}></Route>
       <Footer />
     </Router>
   );
