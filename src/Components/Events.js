@@ -1,7 +1,6 @@
 
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+
 
 const Events = () => {
   return (
@@ -82,12 +81,12 @@ const Events = () => {
         </button>
       </div>
 
-      <div class='container' style={{margin:'50px 0 50px 20px'}}>
+      <div class='' style={{margin:'50px'}}>
         <div className='upcoming'>
           <h2>Upcoming Events</h2>
           <h4>Find more Events</h4>
         </div>
-        <div class="row">
+        <div class="row events">
         <div class="col-sm-2">
           <div class="card" id="card1">
             <div className="item-date"></div>

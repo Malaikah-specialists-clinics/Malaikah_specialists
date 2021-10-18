@@ -30,13 +30,13 @@ return(
             <LinkContainer to='/'>
            <Nav.Link href="#home">Home</Nav.Link>
            </LinkContainer>
-            <LinkContainer to='/login'>
+            <LinkContainer to="/hcare">
                 <Nav.Link>
                  Services&Programs
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/form'>
-                <Nav.Link href='#form'>
+              <LinkContainer to=''>
+                <Nav.Link>
                  Research
                 </Nav.Link>
               </LinkContainer>
