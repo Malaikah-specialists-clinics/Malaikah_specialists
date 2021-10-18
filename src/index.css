@@ -14,6 +14,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .footer{
   margin-top:50px;
   background-color: #0A1F3E;
@@ -133,6 +134,117 @@ h3{
   height: 330px;
 }
 
+
+
+.footer{
+  background-color: #0A1F3E; 
+  padding: 0px 50px;
+
+  
+}
+
+#footerNav{
+  padding-left: 120px;
+
+
+}
+#contactUs{
+  padding-left: 50px;
+  
+ }
+/* stylying homecare service  */
+.resize{
+  width: 100%;
+  height: 500px;
+}
+ .first-txt {
+padding: 80px 0px 0px 20px;
+color: #0A1F3E;
+font-weight: bolder;
+font-size: 50px;
+}
+.second-txt {
+font-size: 30px;
+} 
+#content{
+  background-image: url(https://image.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#middlesect{
+ text-align: center;
+ color: #0A1F3E;
+ /* height: 100px; */
+}
+#sect1{
+  background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+}
+.hcare, .formcontent{
+  margin-top: 110px;
+}
+#hcare{
+  margin: 40px;
+  height: auto;
+}
+
+
+#toggle1, #toggle, #toggle2, #toggle3, #toggle4, #toggle5{
+  overflow:hidden;
+    display:none;
+    flex-wrap:wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#card5{
+  padding: 20px 50px;
+  
+}
+
+.card-box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 0px #c5c5c5;
+  margin-bottom: 30px;
+  /* float: right; */
+  border-radius: 10px;
+  
+}
+.card-box .card-thumbnail {
+  max-height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 1s;
+}
+.card-box .card-thumbnail:hover {
+  transform: scale(1.2);
+}
+
+.b-img{
+  background: url('https://www.aku.edu/mcea/medicine/SiteAssets/Specialities.jpg');
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  
+}
+.b-color{
+  height: 500px;
+  background-color: rgba(12, 75, 134, 0.863);
+}
+.details{
+ padding: 10px;
+}
+
+#details{
+  border-color:white;
+  background: none;
+  border-bottom-style: solid black;
+}
 /* stylying homecare service  */
 .resize{
   width: 100%;
@@ -327,4 +439,10 @@ text-align: center;
 }
 #imgcard{
   border: none;
+}
+.titlemental{
+  text-align: center;
+  font-weight: bolder;
+  color: #0A1F3E;
+  margin: 20px;
 }
