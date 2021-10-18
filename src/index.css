@@ -203,7 +203,10 @@ font-size: 30px;
   .headingsect{
     font-size: 40px;
   }
- 
+  #morevents {
+  max-width: 340px;
+  max-height: 400px;
+}
   
 }
 
@@ -228,4 +231,38 @@ font-size: 40px;
 }
 .emecontent{
   font-size: 20px;
+}
+/* styling the find more events */
+#morevents{
+  background-color: #FFFFFF;
+  /* box-shadow: 1px 1px black; */
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  /* margin-left: 20px; 
+   margin-right: 20px; */
+  width: 850px;
+  height: 220px;
+  border: none;
+}
+/* #rowevents{
+  padding: 0px;
+  margin: 0px;
+
+} */
+.eventdate{
+  padding: 20px;
+  
+}
+.detailscard{
+    padding: 10px;
+   
+}
+#carddate{
+/* margin-left: 15px; */
+max-width: 250px;
+height: 220px;
+background-color: #1A5691;
+text-align: center;
+}
+#imgcard{
+  border: none;
 }
