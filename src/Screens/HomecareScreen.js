@@ -1,15 +1,13 @@
 
 import React from 'react';
-import Specialities from '../Screens/SpecialitiesScreen';
 
 const homecareservices = () => {
   return (
     <>
     
       <div class="hcare">
-      <Specialities/>
         <div id="sect1">
-          <div class='row container' style={{width:'500px'}}>
+          <div className='row container' style={{width:'500px'}}>
           <h4 className="first-txt">
             Compasionate care for your loved ones
           </h4>
