@@ -99,7 +99,7 @@ const Events = () => {
       <div class="container" style={{ margin: '50px 0 50px 20px' }}>
         <div className="upcoming">
           <h2>Upcoming Events</h2>
-          <a href="#moeevents">
+          <a href="#moeevents" style={{textDecoration:'none'}}>
             <h4>Find more Events</h4>
           </a>
         </div>
