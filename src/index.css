@@ -226,7 +226,24 @@ font-size: 30px;
 .caption{
 font-size: 16px;
 }
-  
+  #crd-grp{
+    display: flex;
+    height: auto;
+    width: 400px;
+    font-size: 12px;
+  }
+  #crds{
+    height: 100px;
+    width: 250px;
+    object-fit: contain;
+    margin:5px 0px;
+  }
+  h6{
+    display:none;
+  }
+  #row2{
+    display: flex;
+  }
 }
 
 /* styling the Emegency service page */
@@ -269,7 +286,7 @@ font-size: 40px;
 /* styling landing page */
  .video-container {
  top: 10px;
-  height: 450px;
+  height: 550px;
   width: 100%;
   position: relative;
 }
