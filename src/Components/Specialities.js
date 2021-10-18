@@ -3,8 +3,8 @@ import { Col, Row, Card, CardGroup } from "react-bootstrap";
 
 function Specialities() {
   return (
-    <>
-      <h2 style={{textAlign: 'center', fontWeight: 'bolder', paddingTop:'30px'}}> Our Specialities</h2>
+    <> <h2 style={{textAlign: 'center', fontWeight: 'bolder', paddingTop:'30px'}}> Our Specialities</h2>
+     
       <Row>
         <Col>
           <CardGroup style={{borderTop: '1px solid grey', borderBottom:'1px solid grey'}}>
