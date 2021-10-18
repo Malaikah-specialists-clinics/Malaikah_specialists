@@ -1,7 +1,6 @@
 
 import React from 'react';
 
-
 const homecareservices = () => {
   return (
     <>
@@ -17,7 +16,6 @@ const homecareservices = () => {
             <p>+234 703 229 3770</p>
           </div>
           </div>
-
         </div>
         <div id="content">
           <div id="middlesect">
