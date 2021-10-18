@@ -1,11 +1,7 @@
 import React from "react";
 
-<<<<<<< HEAD
-const About = () => {
-=======
 import { FaQuestionCircle, FaEye, FaRegHandshake} from 'react-icons/fa';
 
->>>>>>> 32187f67c56a056c1911727fa7c123da141c5964
 
 
 const About = () => {
