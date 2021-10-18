@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 const Events = () => {
   return (
     <div class=''>
+       <h2 style={{textAlign: 'center', fontWeight: 'bolder', paddingTop:'30px'}}> Events And Education</h2>
       <div
         id="carouselExampleDark"
         class="carousel carousel-dark slide"
