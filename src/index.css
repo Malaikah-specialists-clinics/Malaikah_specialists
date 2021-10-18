@@ -13,16 +13,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.form{
-padding: 40px;
-height: 68vh;
-top: 229px;
- border: none;
-background: #FFFFFF;
-/* box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px; */
-box-shadow: 8px 14px 4px -1px rgba(0, 0, 0, 0.25);
-border-radius: 20px;
-}
+
 #field, #pic{
   margin-top:20px;
 }
@@ -55,7 +46,7 @@ h2, h4{
 
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {
+.events {
   margin: 0px 35px;
   /* display: grid; */
   /* width: 30%; */
@@ -116,97 +107,114 @@ h3{
   height: 330px;
 }
 
-/* .custom-select,
-.form-control {
-    box-shadow: inset 0 1px 1px 0 rgb(0 0 0 / 4%) !important;
-    background-color: #FAFBFC;
+
+
+.footer{
+  background-color: #0A1F3E; 
+  padding: 0px 50px;
+
+  
 }
 
-.section {
-    padding: 50px 0;
-    background: rgba(0, 0, 0, 0.644);
-    width: auto;
-    height: auto;
-}
+#footerNav{
+  padding-left: 120px;
 
-small {
-    color: #ff0000;
-    font-size: 13px;
-    font-style: italic;
-}
-
-input,
-select {
-    padding: 5px 5px 10px 5px;
-    border: 1px solid lightgrey;
-    border-radius: 15px !important;
-    margin: 10px 0px 5px 0px;
-    width: 200px;
-    box-sizing: border-box;
-    color: #2C3E50;
-    font-size: 14px;
-    letter-spacing: 1px
-}
-
-h1 {
-    text-align: center;
-    color: white;
-    font-weight: 700;
-    font-size: 35px;
-    margin-bottom: 2%;
-    font-family: 'Roboto', sans-serif;
-}
-
-footer p {
-    color: white;
-    font-size: 14px;
-    text-align: center;
-}
-
-footer a {
-    color: rgb(182, 245, 255);
-}
-
-#main {
-
-    padding: 30px 0;
-    margin-top: 140px;
-    background-color: #1b1e3c;
-    font-family: 'Roboto', sans-serif;
 
 }
-
-label {
-    display: none;
+#contactUs{
+  padding-left: 50px;
+  
+ }
+/* stylying homecare service  */
+.resize{
+  width: 100%;
+  height: 500px;
+}
+ .first-txt {
+padding: 80px 0px 0px 20px;
+color: #0A1F3E;
+font-weight: bolder;
+font-size: 50px;
+}
+.second-txt {
+font-size: 30px;
+} 
+#content{
+  background-image: url(https://image.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#middlesect{
+ text-align: center;
+ color: #0A1F3E;
+ /* height: 100px; */
+}
+#sect1{
+  background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+}
+.hcare, .formcontent{
+  margin-top: 110px;
+}
+#hcare{
+  margin: 40px;
+  height: auto;
 }
 
-.form {
-    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 6%), 0 1px 2px 0 rgb(0 0 0 / 4%);
-    background-color: white;
-    padding: 20px 25px;
-    border-radius: 6px;
+
+#toggle1, #toggle, #toggle2, #toggle3, #toggle4, #toggle5{
+  overflow:hidden;
+    display:none;
+    flex-wrap:wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
-input,
-optgroup,
-select,
-textarea {
-    font-size: 15px !important;
+#card5{
+  padding: 20px 50px;
+  
 }
 
-button.btn.btn-block {
-    margin-top: 5%;
-    width: 300px;
-    align-items: center;
+.card-box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 0px #c5c5c5;
+  margin-bottom: 30px;
+  /* float: right; */
+  border-radius: 10px;
+  
+}
+.card-box .card-thumbnail {
+  max-height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 1s;
+}
+.card-box .card-thumbnail:hover {
+  transform: scale(1.2);
 }
 
-@media(max-width:500px) {
-    .row {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
+.b-img{
+  background: url('https://www.aku.edu/mcea/medicine/SiteAssets/Specialities.jpg');
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  
+}
+.b-color{
+  height: 500px;
+  background-color: rgba(12, 75, 134, 0.863);
+}
+.details{
+ padding: 10px;
+}
 
-    h1 {
-        font-size: 25px;
-    }
-} */
+#details{
+  border-color:white;
+  background: none;
+  border-bottom-style: solid black;
+}
