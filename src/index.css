@@ -311,3 +311,9 @@ text-align: center;
 #imgcard{
   border: none;
 }
+.titlemental{
+  text-align: center;
+  font-weight: bolder;
+  color: #0A1F3E;
+  margin: 20px;
+}
