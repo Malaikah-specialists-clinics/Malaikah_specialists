@@ -165,7 +165,7 @@ font-size: 30px;
   height: 200px;
   background-color: #1A5691;
   color: white;
-  border-radius: 0% 0% 20% 0%;
+  border-radius: 0px 0px 80px 0px;
 }
 #spc-card{
   /* padding: 40px; */
@@ -173,7 +173,7 @@ font-size: 30px;
   height: auto;
   background-color: #1A5691;
   color: white;
-  border-radius: 0% 50px 0% 50px;
+  border-radius: 0px 50px 0px 50px;
 }
 #crds{
   margin: 5px;
@@ -244,4 +244,12 @@ font-size: 40px;
 }
 .emecontent{
   font-size: 20px;
+}
+
+/* styling landing page */
+#bgvid{
+  position: relative;
+  z-index: -1;
+  height: 200px;
+  width: 1080px;
 }
