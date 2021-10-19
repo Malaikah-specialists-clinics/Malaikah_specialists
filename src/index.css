@@ -401,6 +401,10 @@ font-size: 16px;
     max-height: 350px;
     max-width: 600px;
   }
+  #sect1{
+    max-height: 350px;
+    max-width: 600px;
+  }
 }
 
 /* styling the Emegency service page */

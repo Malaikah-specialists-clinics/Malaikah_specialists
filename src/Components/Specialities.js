@@ -17,7 +17,7 @@ function Specialities() {
                <Card.Img
                 variant="top"
                 className='crd-icon'
-                src="https://cdn-icons-png.flaticon.com/512/4006/4006060.png"
+                src="/images/gynecology.png"
               /> 
               
               <Card.Body>
@@ -31,7 +31,7 @@ function Specialities() {
               <Card.Img
               className='crd-icon'
                 variant="top"
-                src="https://cdn-icons.flaticon.com/png/512/4854/premium/4854135.png?token=exp=1634645666~hmac=3eba40743218c499b4beadfd986c4ce2"
+                src="/images/bby.png"
               />
               <Card.Body>
                 <h6>Paediatrics</h6>
@@ -43,7 +43,7 @@ function Specialities() {
               <Card.Img
                 variant="top"
                 className='crd-icon'
-                src="https://cdn-icons.flaticon.com/png/512/2869/premium/2869649.png?token=exp=1634645514~hmac=01f65621a2a2d1b1a171d7a68424bb1e"
+                src="/images/ambl.png"
               />
               <Card.Body>
                 <h6>Ambulance services</h6>
@@ -55,7 +55,7 @@ function Specialities() {
               <Card.Img
                 variant="top"
                 className='crd-icon'
-                src="https://cdn-icons.flaticon.com/png/512/2217/premium/2217851.png?token=exp=1634646916~hmac=2d58814817dff428da07690fc8877c3f"
+                src="/images/tummy.png"
               />
               <Card.Body>
                 <h6>Hernia & Appendicitis surgery</h6>
@@ -68,7 +68,7 @@ function Specialities() {
               <Card.Img
                 variant="top"
                 className='crd-icon'
-                src="https://cdn-icons-png.flaticon.com/512/1694/1694130.png"
+                src="/images/edu.png"
               />
               <Card.Body>
                 <h6>Health Education</h6>
@@ -80,7 +80,7 @@ function Specialities() {
               <Card.Img
                 variant="top"
                 className='crd-icon'
-                src="https://cdn-icons-png.flaticon.com/512/4006/4006060.png"
+                src="/images/gynecology.png"
               />
               <Card.Body>
                <h6>Gynecology services</h6>
@@ -93,7 +93,7 @@ function Specialities() {
               <Card.Img
                 variant="top"
                 className='crd-icon'
-                src="https://cdn-icons.flaticon.com/png/512/4854/premium/4854135.png?token=exp=1634645666~hmac=3eba40743218c499b4beadfd986c4ce2"
+                src="/images/bby.png"
               />
               <Card.Body>
                 <h6>Paediatrics</h6>
@@ -105,7 +105,7 @@ function Specialities() {
               <Card.Img
                 variant="top"
                 className='crd-icon'
-                src="https://cdn-icons.flaticon.com/png/512/2869/premium/2869649.png?token=exp=1634645514~hmac=01f65621a2a2d1b1a171d7a68424bb1e"
+                src="/images/ambl.png"
                
               />
               <Card.Body>
@@ -118,7 +118,7 @@ function Specialities() {
               <Card.Img
                 variant="top"
                 className='crd-icon'
-                src="https://cdn-icons.flaticon.com/png/512/2217/premium/2217851.png?token=exp=1634646916~hmac=2d58814817dff428da07690fc8877c3f"
+                src="/images/tummy.png"
               />
               <Card.Body>
                 <h6>Hernia & Appendicitis surgery</h6>
@@ -131,7 +131,7 @@ function Specialities() {
               <Card.Img
                 variant="top"
                 className='crd-icon'
-                src="https://cdn-icons-png.flaticon.com/512/1694/1694130.png"
+                src="/images/edu.png"
               />
               <Card.Body>
                 <h6>Health Education</h6>
