@@ -151,7 +151,7 @@ function Specialities() {
           <Row>
               <div className='col-sm-6 col-5'>
                 <img
-                  src="https://cdn-icons.flaticon.com/png/512/3695/premium/3695987.png?token=exp=1634649510~hmac=21ba80a5b2e766143c3ca40d62cee702"
+                  src="/images/homecare.png"
                   alt="homecare"
                   className='crd-icon'
                 />{" "}
@@ -161,7 +161,7 @@ function Specialities() {
            
               <div className='col-sm-6 col-5'>
                 <img
-                  src="https://cdn-icons.flaticon.com/png/512/2955/premium/2955622.png?token=exp=1634649651~hmac=362d0cd2dbaf80576a60000214381f64"
+                  src="/images/emergecy.png"
                   alt=""
                   className='crd-icon'
                 />{" "}
