@@ -37,7 +37,7 @@ const Stories = () => {
 
             <Carousel.Item>
               <div id="storycard">
-                <h2 id="strytitle">Gynecology</h2>
+                <h2 id="strytitle">Paediatrics</h2>
                 <img
                   id="storyimg"
                   src="https://avatars.githubusercontent.com/u/79285222?v=4"
@@ -56,7 +56,7 @@ const Stories = () => {
 
             <Carousel.Item>
               <div id="storycard">
-                <h2 id="strytitle">Gynecology</h2>
+                <h2 id="strytitle">Auto-immune diseases</h2>
                 <img
                   id="storyimg"
                   src="https://avatars.githubusercontent.com/u/79285222?v=4"

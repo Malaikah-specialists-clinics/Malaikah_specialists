@@ -497,8 +497,8 @@ text-align: center;
 }
 /* styling the stories page. */
 .storycont{
-  height: 500px;
-  margin-top: 20px;
+  height: auto;
+  margin-top: 40px;
   /* background: linear-gradient(180deg, rgb(63, 224, 193), rgb(216, 117, 247)); */
 }
 #storycard{
@@ -519,10 +519,12 @@ text-align: center;
 }
 #strytitle{
   text-align: center; 
-  background-color:#3FE0C1;
+  background: linear-gradient(90deg, rgb(63, 224, 193), rgb(216, 117, 247));
+  /* background-color:#3FE0C1; */
   border-radius: 12px;
   width: 60%;
   margin: auto;
+  margin-top: 20px;
   padding: 2px;
 }
 .strycontent{
