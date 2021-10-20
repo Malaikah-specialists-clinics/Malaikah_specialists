@@ -519,8 +519,7 @@ text-align: center;
 }
 #strytitle{
   text-align: center; 
-  background: linear-gradient(90deg, rgb(63, 224, 193), rgb(216, 117, 247));
-  /* background-color:#3FE0C1; */
+  background-color:#3FE0C1;
   border-radius: 12px;
   width: 60%;
   margin: auto;
