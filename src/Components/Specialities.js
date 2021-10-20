@@ -3,18 +3,33 @@ import { Col, Row, Card, CardGroup } from "react-bootstrap";
 
 function Specialities() {
   return (
-    <> <h2 style={{textAlign: 'center', fontWeight: 'bolder', paddingTop:'30px'}}> Our Specialities</h2>
-     
+    <>
+      {" "}
+      <h2
+        style={{
+          textAlign: "center",
+          fontWeight: "bolder",
+          paddingTop: "30px",
+        }}
+      >
+        {" "}
+        Our Specialities
+      </h2>
       <Row>
         <Col>
-          <CardGroup style={{borderTop: '1px solid grey', borderBottom:'1px solid grey'}}>
+          <CardGroup
+            style={{
+              borderTop: "1px solid grey",
+              borderBottom: "1px solid grey",
+            }}
+          >
             <Card id="crds">
               <Card.Img
                 variant="top"
                 src="/images/gynae.png"
                 width="45px"
                 height="135px"
-                border-radius='50%'
+                border-radius="50%"
               />
               <Card.Body>
                 <h6>Gynecology services</h6>
@@ -70,7 +85,7 @@ function Specialities() {
       {/* second row */}
       <Row>
         <Col md>
-        <h2>Speciality Services</h2>
+          <h2>Speciality Services</h2>
           <Row>
             <Col md>
               <div>
@@ -81,7 +96,13 @@ function Specialities() {
                   height="105px"
                 />{" "}
                 <br />
-                <a href="#hcare" style={{color:'#0A1F3E', textDecoration:'none'}}> Home Care services</a>
+                <a
+                  href="#hcare"
+                  style={{ color: "#0A1F3E", textDecoration: "none" }}
+                >
+                  {" "}
+                  Home Care services
+                </a>
               </div>
             </Col>
             <Col md>
@@ -93,18 +114,43 @@ function Specialities() {
                   height="100px"
                 />{" "}
                 <br />
-                <a href="#emergservice" style={{color:'#0A1F3E', textDecoration:'none'}}>Emergency Services</a>
+                <a
+                  href="#emergservice"
+                  style={{ color: "#0A1F3E", textDecoration: "none" }}
+                >
+                  Emergency Services
+                </a>
               </div>
             </Col>
           </Row>
         </Col>
         <Col md>
           <Card id="spc-card" style={{ width: "25rem", height: "180px" }}>
-            <Card.Title style={{textAlign: 'center'}}>Check Our Weekly Time Table</Card.Title>
-            <ul style={{listStyleType:'none'}}>
-              <li>Mon - Fri <p style={{float: 'right', paddingRight:'40px'}}>8:00- 23:00</p> <hr/></li> 
-              <li>Saturday <p style={{float: 'right', paddingRight:'40px'}}>8:00- 22:00</p><hr/></li>
-              <li>Sunday <p style={{float: 'right', paddingRight:'40px'}}>9:00- 21:00</p> <hr/></li>
+            <Card.Title style={{ textAlign: "center" }}>
+              Check Our Weekly Time Table
+            </Card.Title>
+            <ul style={{ listStyleType: "none" }}>
+              <li>
+                Mon - Fri{" "}
+                <p style={{ float: "right", paddingRight: "40px" }}>
+                  8:00- 23:00
+                </p>{" "}
+                <hr />
+              </li>
+              <li>
+                Saturday{" "}
+                <p style={{ float: "right", paddingRight: "40px" }}>
+                  8:00- 22:00
+                </p>
+                <hr />
+              </li>
+              <li>
+                Sunday{" "}
+                <p style={{ float: "right", paddingRight: "40px" }}>
+                  9:00- 21:00
+                </p>{" "}
+                <hr />
+              </li>
             </ul>
           </Card>
         </Col>
