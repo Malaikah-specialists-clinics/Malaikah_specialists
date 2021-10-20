@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Card, CardGroup } from "react-bootstrap";
+import { Card, CardGroup, Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
@@ -95,7 +95,7 @@ const Events = () => {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
+      <Container>
       <div class="container" style={{ margin: '50px 0 50px 20px' }}>
         <div className="upcoming">
           <h2>Upcoming Events</h2>
@@ -148,7 +148,7 @@ const Events = () => {
       <CardGroup>
         <Card id="crd">
           <Card.Body>
-            <a href="#articles"> <Card.Title>Good Mental Health Tips</Card.Title></a>
+            <a href="#articles" style={{textDecoration:'none', color:'white'}}> <Card.Title>Good Mental Health Tips</Card.Title></a>
             <Card.Text>
               This is a wider card with supporting text below as a natural
               lead-in to additional content. This content is a little bit
@@ -176,7 +176,9 @@ const Events = () => {
           </Card.Body>
         </Card>
       </CardGroup>
+      </Container>
     </div>
+   
   );
 };
 

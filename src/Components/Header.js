@@ -37,16 +37,16 @@ return (
                 <LinkContainer to="/">
                   <Nav.Link href="#home">Home</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/hcare">
+                <LinkContainer to="/specialities">
                   <Nav.Link>Services&Programs</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/form">
+                <LinkContainer to="/">
                   <Nav.Link href="#form">Research</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/login">
+                <LinkContainer to="/">
                   <Nav.Link>Events&Education</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/emergservice">
+                <LinkContainer to="/">
                   <Nav.Link href="#emergservice">About Us</Nav.Link>
                 </LinkContainer>
               </Nav>

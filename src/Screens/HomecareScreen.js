@@ -1,13 +1,12 @@
 
 import React from 'react';
 
-
 const homecareservices = () => {
   return (
     <>
     
       <div class="hcare">
-        <div id="sect1">
+        <div>
           <div className='row container' style={{width:'500px'}}>
           <h4 className="first-txt">
             Compasionate care for your loved ones
@@ -17,7 +16,6 @@ const homecareservices = () => {
             <p>+234 703 229 3770</p>
           </div>
           </div>
-
         </div>
         <div id="content">
           <div id="middlesect">
