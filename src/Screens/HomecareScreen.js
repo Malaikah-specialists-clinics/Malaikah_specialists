@@ -6,7 +6,7 @@ const homecareservices = () => {
     <>
     
       <div class="hcare">
-        <div id="sect1">
+        <div>
           <div className='row container' style={{width:'500px'}}>
           <h4 className="first-txt">
             Compasionate care for your loved ones

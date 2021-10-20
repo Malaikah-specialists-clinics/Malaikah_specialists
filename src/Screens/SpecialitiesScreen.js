@@ -114,8 +114,11 @@ class Specialities extends Component {
                   </div>
                 </div>
                 <div class="col-sm-8 col-9" style={{ marginTop: "5px" }}>
-                  <Link class="btn btn-primary" to="/form" role="button">
+                  <Link to="/form" role="button">
+                    <button className="Btn">
                     Book An Appointment
+                    </button>
+                    
                   </Link>
                 </div>
                 <div id="toggle" class="row ">
@@ -169,8 +172,10 @@ class Specialities extends Component {
                   </div>
                 </div>
                 <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                  <Link class="btn btn-primary" to="/form" role="button">
+                  <Link to="/form" role="button">
+                    <button className="Btn">
                     Book An Appointment
+                    </button>
                   </Link>
                 </div>
                 <div id="toggle1" class="row ">
@@ -230,8 +235,11 @@ class Specialities extends Component {
                   </div>
                 </div>
                 <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                  <Link class="btn btn-primary" to="/form" role="button">
+                  <Link to="/form" role="button">
+                    <button className="Btn">
                     Book An Appointment
+                    </button>
+                    
                   </Link>
                 </div>
                 <div id="toggle2" class="row ">
@@ -286,8 +294,11 @@ class Specialities extends Component {
                   </div>
                 </div>
                 <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                  <Link class="btn btn-primary" to="/form" role="button">
+                  <Link to="/form" role="button">
+                    <button className="Btn">
                     Book An Appointment
+                    </button>
+                    
                   </Link>
                 </div>
                 <div id="toggle3" class="row ">
@@ -340,8 +351,11 @@ class Specialities extends Component {
                   </div>
                 </div>
                 <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                  <Link class="btn btn-primary" to="/form" role="button">
+                  <Link  to="/form" role="button">
+                  <button className="Btn">
                     Book An Appointment
+                    </button>
+                    
                   </Link>
                 </div>
                 <div id="toggle4" class="row ">
@@ -391,8 +405,11 @@ class Specialities extends Component {
               </p>
 
               <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                <Link class="btn btn-primary" to="/form" role="button">
-                  Book An Appointment
+                <Link  to="/form" role="button">
+                <button className="Btn">
+                    Book An Appointment
+                    </button>
+                
                 </Link>
               </div>
             </div>
@@ -428,8 +445,11 @@ class Specialities extends Component {
                   </div>
                 </div>
                 <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                  <Link class="btn btn-primary" to="/form" role="button">
+                  <Link to="/form" role="button">
+                  <button className="Btn">
                     Book An Appointment
+                    </button>
+                    
                   </Link>
                 </div>
                 <div id="toggle5" class="row ">

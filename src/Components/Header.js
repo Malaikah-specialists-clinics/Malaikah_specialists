@@ -43,10 +43,10 @@ return (
                 <LinkContainer to="/rscreen">
                   <Nav.Link href="#rscreen">Research</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/login">
+                <LinkContainer to="/">
                   <Nav.Link>Events&Education</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/emergservice">
+                <LinkContainer to="/">
                   <Nav.Link href="#emergservice">About Us</Nav.Link>
                 </LinkContainer>
               </Nav>

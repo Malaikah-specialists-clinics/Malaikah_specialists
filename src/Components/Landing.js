@@ -1,10 +1,11 @@
 import React from "react";
-// import { Container } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 function Landing() {
   return (
     <>
       {/* id="bgvid" poster="/images/emeservice.jpg" */}
+      <Col> 
       <div className="video-container">
         <video
           src="/videos/video-dmm.mp4"
@@ -25,6 +26,7 @@ function Landing() {
           </p>
         </div>
       </div>
+      </Col>
     </>
   );
 }

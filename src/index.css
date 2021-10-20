@@ -74,6 +74,13 @@ padding-top: 10px;
   border:none;
   color:#0A1F3E;
 }
+.Btn{
+  background-color: #3FE0C1;
+  width:180px;
+  padding: 5px;
+  border:none;
+  color:#0A1F3E;
+}
 
 
 /* * {
@@ -251,7 +258,7 @@ font-size: 30px;
   height: 500px;
 }
  .first-txt {
-padding: 80px 0px 0px 60px;
+padding: 80px 0px 0px 40px;
 color: #0A1F3E;
 font-weight: bolder;
 font-size: 50px;
@@ -280,24 +287,74 @@ font-size: 30px;
   border-radius: 0px 0px 80px 0px;
 }
 #spc-card{
-  /* padding: 40px; */
-  margin: 10px;
   height: auto;
   background-color: #1A5691;
   color: white;
   border-radius: 0px 50px 0px 50px;
 }
 #crds{
-  margin: 5px;
+  margin: 2px;
+  align-items: center;
   text-align: center;
-  padding: 5px;
+  padding: 15px;
   height: 200px;
-  font-size: 15px;
+  font-size: 12px;
   background-color: #FFFFFF;
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   border: 1px solid grey;
-  width: auto;
+  display: flex;
+  width: 200px;
+  perspective: 100px;
+  
 }
+.crd-icon{
+  max-width: 100px;
+  max-height: 200px;
+}
+/* Card:hover{
+  transform: translateZ(20px);
+} */
+
+@keyframes scroll{
+  0% {
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-200px * 5));
+  }
+}
+.slider{
+  overflow: hidden;
+  height:250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+
+}
+.slider-track{
+  display: flex;
+  width: calc(250px * 10);
+  animation: scroll 30s linear infinite;
+}
+.slider::before,
+.slider::after{
+  content: ' ';
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.slider::before{
+  left: 0;
+  top: 0;
+}
+.slider::after{
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg)
+}
+
 #sect1{
   background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
   background-repeat: no-repeat;
@@ -309,9 +366,7 @@ font-size: 30px;
 .hcare, .formcontent{
   margin-top: 110px;
 }
-#hcare{
-  margin: 40px;
-}
+
 
 
 @media(min-width: 1200px){
@@ -338,7 +393,18 @@ font-size: 30px;
 .caption{
 font-size: 16px;
 }
-  
+
+  #row2{
+    display: flex;
+  }
+  .video-container, video {
+    max-height: 350px;
+    max-width: 600px;
+  }
+  #sect1{
+    max-height: 350px;
+    max-width: 600px;
+  }
 }
 
 /* styling the Emegency service page */
@@ -381,7 +447,7 @@ font-size: 40px;
 /* styling landing page */
  .video-container {
  top: 10px;
-  height: 450px;
+  height:450px;
   width: 100%;
   position: relative;
 }
@@ -434,4 +500,47 @@ text-align: center;
 .res-bcolor{
   height: 500px;
   background-color: #1f5c5cb9;
+}
+.titlemental{
+  text-align: center;
+  font-weight: bolder;
+  color: #0A1F3E;
+  margin: 20px;
+}
+/* styling the stories page. */
+.storycont{
+  height: auto;
+  margin-top: 40px;
+  /* background: linear-gradient(180deg, rgb(63, 224, 193), rgb(216, 117, 247)); */
+}
+#storycard{
+  height: auto;
+  margin: auto;
+  width: 70%;
+  /* padding: 50px; */
+  background-color: #FFFFFF;
+}
+#storyimg{
+  border-radius: 50%;
+  max-width: 100px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: block;
+}
+#strytitle{
+  text-align: center; 
+  background-color:#3FE0C1;
+  border-radius: 12px;
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 2px;
+}
+.strycontent{
+  text-align: center;
+  font-size: 20px;
+  /* overflow-wrap: break-word; */
+  padding-bottom: 40px;
 }
