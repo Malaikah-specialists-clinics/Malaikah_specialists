@@ -4,6 +4,7 @@ import Events from './Events';
 import Research from './Research';
 import Specialities from './Specialities';
 import Landing from './Landing';
+import Stories from './Stories'
 function Home(){
     return (
       <>
@@ -12,6 +13,7 @@ function Home(){
       <Specialities/>
     <Events/>
     <Research/>
+    <Stories />
      <About/>
       </div>
       
