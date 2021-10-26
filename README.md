@@ -1,3 +1,5 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5001e0eaef4e4aa594c5e027621bc16f)](https://www.codacy.com/gh/kiara398/Malaikah_specialists/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kiara398/Malaikah_specialists&amp;utm_campaign=Badge_Grade)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
