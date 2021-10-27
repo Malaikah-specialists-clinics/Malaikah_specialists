@@ -7,7 +7,7 @@ function FormPage() {
   return (
     <>
       <Container className="formcontent">
-        <Row className="g-2">
+        <Row>
           <Col md sm={6} className="form">
             <Form>
               <h2>Book An Appointment</h2>
