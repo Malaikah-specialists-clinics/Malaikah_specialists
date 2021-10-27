@@ -6,8 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* padding: 20px; */
-  margin-top: 80px;
+   /* padding: 20px; */
+  margin-top: 80px; 
+  overflow-x: hidden;
 }
 
 code {
@@ -21,13 +22,7 @@ code {
   padding: 20px 50px;
   color: #FFFFFF;
 }
-#footerNav{
- padding-left: 120px;
-}
-#contactUs{
-  padding-left: 50px;
-  text-align: left;
-}
+
 .form{
 padding: 40px;
 height: auto;
@@ -131,7 +126,7 @@ h3{
   background-color: #0A1F3E; 
   padding: 20px 20px;
 }
-li, .footer-li{
+ .footer-li{
   list-style-type: none;
   color: #FFFFFF;
   text-decoration: none;
@@ -165,7 +160,7 @@ font-weight: bolder;
   height: 400px;
 }
 .hcare, .formcontent{
-  margin-top: 110px;
+  margin-top: 120px;
 }
 #hcare{
   margin: 40px;

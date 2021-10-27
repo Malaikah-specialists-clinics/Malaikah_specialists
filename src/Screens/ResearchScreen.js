@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class Specialities extends Component {
@@ -42,8 +43,8 @@ class Specialities extends Component {
               <h2>Recent Publication</h2>
 
               <p>A research about COVID 19 vaccine in Africa ......</p>
-              <div class="row">
-                <div class="col-3" style={{ marginTop: "5px" }}>
+              <Row>
+                <Col style={{ marginTop: "5px" }}>
                   <Link
                     class="btn btn-primary"
                     to=""
@@ -52,8 +53,8 @@ class Specialities extends Component {
                   >
                     25/04/2021
                   </Link>
-                </div>
-                <div class="col-3" style={{ marginTop: "5px" }}>
+                </Col>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link
                     class="btn btn-primary"
                     to=""
@@ -66,8 +67,8 @@ class Specialities extends Component {
                   >
                     25 comments
                   </Link>
-                </div>
-                <div class="col-3" style={{ marginTop: "5px" }}>
+                </Col>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link
                     class="btn btn-primary"
                     to=""
@@ -76,8 +77,8 @@ class Specialities extends Component {
                   >
                     Read More
                   </Link>
-                </div>
-              </div>
+                </Col>
+              </Row>
             </div>
           </div>
         </div>
@@ -102,8 +103,8 @@ class Specialities extends Component {
               <h2>A new discovery</h2>
 
               <p>Recent publication on psycholigical disorder ......</p>
-              <div class="row">
-                <div class="col-3" style={{ marginTop: "5px" }}>
+              <Row>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link
                     class="btn btn-primary"
                     to=""
@@ -112,8 +113,8 @@ class Specialities extends Component {
                   >
                     25/04/2021
                   </Link>
-                </div>
-                <div class="col-3" style={{ marginTop: "5px" }}>
+                </Col>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link
                     class="btn btn-primary"
                     to=""
@@ -126,8 +127,8 @@ class Specialities extends Component {
                   >
                     25 comments
                   </Link>
-                </div>
-                <div class="col-3" style={{ marginTop: "5px" }}>
+                </Col>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link
                     class="btn btn-primary"
                     to=""
@@ -136,8 +137,8 @@ class Specialities extends Component {
                   >
                     Read More
                   </Link>
-                </div>
-              </div>
+                </Col>
+              </Row>
             </div>
           </div>
         </div>

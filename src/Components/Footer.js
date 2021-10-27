@@ -7,7 +7,7 @@ function Footer() {
     <>
     <Row className='footer'>
       <Col md style={{textAlign: 'center'}}>
-      <h5 className="white-text">Logo</h5>
+      <img src='/images/logo-01.png' alt='' width='220px' height='100px' />
             <p className="grey-text text-lighten-4">
              Malaikah Specialist Center aim is to provide you with quality,
              accessible and affordable health care services & health
@@ -17,27 +17,27 @@ function Footer() {
       <Col md style={{textAlign: 'center'}}>
       <h5 className="white-text ">Navigation</h5>
             <ul>
-              <li>
+              <li className="footer-li">
                 <a className="footer-li" href="#home">
                   Home
                </a>
              </li>
-             <li>
+             <li className="footer-li">
                <a className="footer-li" href="#!">
                   Research
                </a>
           </li>
-              <li>
+              <li className="footer-li">
                 <a className="footer-li" href="#hcare">
                   Services & Programs
                  </a>
               </li>
-               <li>
+               <li className="footer-li">
                  <a className="footer-li" href="#!">
                     Events & Education
                 </a>
               </li>
-               <li>
+               <li className="footer-li">
                   <a className="footer-li" href="#!">
                     About
                    </a>
@@ -47,9 +47,9 @@ function Footer() {
       <Col md style={{textAlign: 'center'}}>
       <h5 className="white-text">Contact Us</h5>
            <ul>
-              <li>
+              <li className="footer-li">
                Email: support@malaikahgroup.com</li>
-               <li>Tel: +234 703 229 3770 </li>
+               <li className="footer-li">Tel: +234 703 229 3770 </li>
              </ul>
       </Col>
       <div >
