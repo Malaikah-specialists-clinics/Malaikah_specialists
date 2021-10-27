@@ -6,11 +6,11 @@ const homecareservices = () => {
     <>
     
       <div class="hcare">
-        <div>
+        <div className='sect1'>
           <div className='row container' style={{width:'500px'}}>
-          <h4 className="first-txt">
+          <h1 className="first-txt">
             Compasionate care for your loved ones
-          </h4>
+          </h1>
           <div className="second-txt">
             <p>One click away</p>
             <p>+234 703 229 3770</p>
