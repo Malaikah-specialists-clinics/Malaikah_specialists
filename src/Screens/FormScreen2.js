@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Form, Container, Button } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 // import { LinkContainer } from 'react-router-bootstrap';
 
 class FormPage2 extends Component {
@@ -10,7 +10,7 @@ class FormPage2 extends Component {
   render(){
     return (
       <>
-        <Container className="formcontent">
+        <div className="formcontent" style={{width: '90%', marginLeft:'auto', marginRight: 'auto'}}>
           <Row>
             <Col md sm={6} className="form">
               <Form>
@@ -55,7 +55,7 @@ class FormPage2 extends Component {
                 </Row>
               </Form>
             </Col>
-            <Col md sm={6}>
+            <Col md>
               <div id="pic">
                 <img
                   src="/images/caremeds.jpg"
@@ -66,7 +66,7 @@ class FormPage2 extends Component {
               </div>
             </Col>
           </Row>
-        </Container>
+        </div>
       </>
     );
   }
