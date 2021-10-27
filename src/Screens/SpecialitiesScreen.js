@@ -69,7 +69,7 @@ class Specialities extends Component {
           <div className="b-color">
             <h1
               style={{
-                fontSize: "80px",
+                fontSize: "65px",
                 padding: "210px 10px 20px",
                 color: "whitesmoke",
                 fontWeight: "bolder",
