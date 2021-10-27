@@ -107,7 +107,7 @@ class Specialities extends Component {
                 children, and
               </p>
               <Row>
-                <Col>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle}>
                       View Details
@@ -132,7 +132,7 @@ class Specialities extends Component {
                     </ul>
                   </Col>
                 </Row>
-                <Col style={{ marginTop: "5px" }}>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link to="/form" role="button">
                     <button className="Btn">
                     Book An Appointment
@@ -164,7 +164,7 @@ class Specialities extends Component {
                 We Deliver Competent based, affordable Gynecological Services.
               </p>
               <Row>
-                <Col>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle1}>
                       View Details
@@ -192,7 +192,7 @@ class Specialities extends Component {
                     </ul>
                   </Col>
                 </Row>
-                <Col style={{ marginTop: "5px" }}>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link to="/form" role="button">
                     <button className="Btn">
                     Book An Appointment
@@ -228,7 +228,7 @@ class Specialities extends Component {
               </p>
               <div class="row">
                 <Row>
-                  <Col>
+                  <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle2}>
                       View Details
@@ -253,7 +253,7 @@ class Specialities extends Component {
                     </ul>
                   </Col>
                 </Row> 
-                <Col>
+                <Col md>
                    <Link to="/form" role="button">
                     <button className="Btn">
                     Book An Appointment
@@ -288,7 +288,7 @@ class Specialities extends Component {
                 appendicitis.
               </p>
               <Row>
-                <Col>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle3}>
                       View Details
@@ -309,7 +309,7 @@ class Specialities extends Component {
                     </ul>
                   </Col>
                 </Row>
-                <Col style={{ marginTop: "5px" }}>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link to="/form" role="button">
                     <button className="Btn">
                     Book An Appointment
@@ -345,7 +345,7 @@ class Specialities extends Component {
                 change activities.
               </p>
               <Row>
-                <Col>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle4}>
                       View Details
@@ -371,7 +371,7 @@ class Specialities extends Component {
                     </ul>
                   </Col>
                 </Row>
-                <Col style={{ marginTop: "5px" }}>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link  to="/form" role="button">
                   <button className="Btn">
                     Book An Appointment
@@ -439,7 +439,7 @@ class Specialities extends Component {
                 manufactured medicine that works.
               </p>
               <Row>
-                <Col>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle5}>
                       View Details
@@ -456,7 +456,7 @@ class Specialities extends Component {
                     </ul>
                   </Col>
                 </Row>
-                <Col style={{ marginTop: "5px" }}>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link to="/form" role="button">
                   <button className="Btn">
                     Book An Appointment
