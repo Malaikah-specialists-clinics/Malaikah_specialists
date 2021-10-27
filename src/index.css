@@ -242,7 +242,7 @@ font-size: 30px;
 }
 .b-color{
   height: 500px;
-  background-color: rgba(12, 75, 134, 0.863);
+  background-color: #1f465cd7;
 }
 .details{
  padding: 10px;
@@ -489,6 +489,18 @@ text-align: center;
 }
 #imgcard{
   border: none;
+}
+
+.res-bimg{
+  background: url('https://www.biospectrumindia.com/uploads/articles/1-11517.jpg');
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  
+}
+.res-bcolor{
+  height: 500px;
+  background-color: #1f5c5cb9;
 }
 .titlemental{
   text-align: center;

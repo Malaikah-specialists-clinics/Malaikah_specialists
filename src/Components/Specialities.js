@@ -156,7 +156,13 @@ function Specialities() {
                   className='crd-icon'
                 />{" "}
                 <br />
-                <a href="#hcare" style={{color:'#0A1F3E', textDecoration:'none'}}> Home Care services</a>
+                <a
+                  href="#hcare"
+                  style={{ color: "#0A1F3E", textDecoration: "none" }}
+                >
+                  {" "}
+                  Home Care services
+                </a>
               </div>
            
               <div className='col-sm-6 col-5'>
@@ -166,7 +172,12 @@ function Specialities() {
                   className='crd-icon'
                 />{" "}
                 <br />
-                <a href="#emergservice" style={{color:'#0A1F3E', textDecoration:'none'}}>Emergency Services</a>
+                <a
+                  href="#emergservice"
+                  style={{ color: "#0A1F3E", textDecoration: "none" }}
+                >
+                  Emergency Services
+                </a>
               </div>
           </Row>
           
