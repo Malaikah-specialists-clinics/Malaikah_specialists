@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class Specialities extends Component {
@@ -68,7 +69,7 @@ class Specialities extends Component {
           <div className="b-color">
             <h1
               style={{
-                fontSize: "80px",
+                fontSize: "65px",
                 padding: "210px 10px 20px",
                 color: "whitesmoke",
                 fontWeight: "bolder",
@@ -105,41 +106,40 @@ class Specialities extends Component {
                 branch of medicine that involves the medical care of infants,
                 children, and
               </p>
-              <div class="row">
-                <div class="col-sm-4 col-3">
+              <Row>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle}>
                       View Details
                     </button>
                   </div>
-                </div>
-                <div class="col-sm-8 col-9" style={{ marginTop: "5px" }}>
-                  <Link to="/form" role="button">
-                    <button className="Btn">
-                    Book An Appointment
-                    </button>
-                    
-                  </Link>
-                </div>
-                <div id="toggle" class="row ">
-                  <div class="col-sm-4">
+                </Col>
+                <Row id="toggle">
+                  <Col>
                     <ul>
                       <li>Sore Throat</li>
                       <li>Skin Infection</li>
                       <li>Cough</li>
                       <li>Ear Pain</li>
                     </ul>
-                  </div>
-                  <div class="col-sm-4">
+                  </Col>
+                  <Col>
                     <ul>
                       <li>Bronchitis</li>
                       <li>Pain</li>
                       <li>Urinary Tarct Infection</li>
                       <li>Other Conditions associated with children</li>
                     </ul>
-                  </div>
-                </div>
-              </div>
+                  </Col>
+                </Row>
+                <Col md style={{ marginTop: "5px" }}>
+                  <Link to="/form" role="button">
+                    <button className="Btn">
+                    Book An Appointment
+                    </button>
+                  </Link>
+                </Col>
+              </Row>
             </div>
           </div>
         </div>
@@ -163,23 +163,16 @@ class Specialities extends Component {
               <p>
                 We Deliver Competent based, affordable Gynecological Services.
               </p>
-              <div class="row">
-                <div class="col-sm-4 col-3">
+              <Row>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle1}>
                       View Details
                     </button>
                   </div>
-                </div>
-                <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                  <Link to="/form" role="button">
-                    <button className="Btn">
-                    Book An Appointment
-                    </button>
-                  </Link>
-                </div>
-                <div id="toggle1" class="row ">
-                  <div class="col-sm-4">
+                </Col>
+                <Row id="toggle1">
+                  <Col>
                     <ul>
                       <li>Pelvic Floor Prolapse</li>
                       <li>Family Planing</li>
@@ -188,8 +181,8 @@ class Specialities extends Component {
                       <li>Urinary Incontinence</li>
                       <li>Papsmear abnormalities</li>
                     </ul>
-                  </div>
-                  <div class="col-sm-4">
+                  </Col>
+                  <Col>
                     <ul>
                       <li>Cervical Dysplasia</li>
                       <li>Pelvic Pain</li>
@@ -197,9 +190,16 @@ class Specialities extends Component {
                       <li>Polycystic Ovarian Syndrome</li>
                       <li>Infertility an many others</li>
                     </ul>
-                  </div>
-                </div>
-              </div>
+                  </Col>
+                </Row>
+                <Col md style={{ marginTop: "5px" }}>
+                  <Link to="/form" role="button">
+                    <button className="Btn">
+                    Book An Appointment
+                    </button>
+                  </Link>
+                </Col>
+              </Row>
             </div>
           </div>
         </div>
@@ -227,39 +227,41 @@ class Specialities extends Component {
                 diseases at a very affordable price
               </p>
               <div class="row">
-                <div class="col-sm-4 col-3">
+                <Row>
+                  <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle2}>
                       View Details
                     </button>
                   </div>
-                </div>
-                <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                  <Link to="/form" role="button">
-                    <button className="Btn">
-                    Book An Appointment
-                    </button>
-                    
-                  </Link>
-                </div>
-                <div id="toggle2" class="row ">
-                  <div class="col-sm-4">
+                  </Col>
+                  <Row id="toggle2">
+                  <Col>
                     <ul>
                       <li>Cancer</li>
                       <li>Diabetes</li>
                       <li>Chronic Kidney Disesase</li>
                       <li>Osteoporosis</li>
                     </ul>
-                  </div>
-                  <div class="col-sm-4">
+                  </Col>
+                  <Col>
                     <ul>
                       <li>Stroke</li>
                       <li>Heart Diseases</li>
                       <li>Autoimmune Diseases</li>
                       <li>Others</li>
                     </ul>
-                  </div>
-                </div>
+                  </Col>
+                </Row> 
+                <Col md>
+                   <Link to="/form" role="button">
+                    <button className="Btn">
+                    Book An Appointment
+                    </button>
+                  </Link>
+                  </Col>
+                </Row>
+               
               </div>
             </div>
           </div>
@@ -285,37 +287,37 @@ class Specialities extends Component {
                 Our experience doctors are available to cure your hernia and
                 appendicitis.
               </p>
-              <div class="row">
-                <div class="col-sm-4 col-3">
+              <Row>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle3}>
                       View Details
                     </button>
                   </div>
-                </div>
-                <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
+                </Col>
+                <Row id="toggle3">
+                  <Col>
+                    <ul>
+                      <li>Inguinal hernia</li>
+                      <li>Hiatal hernia</li>
+                    </ul>
+                  </Col>
+                  <Col>
+                    <ul>
+                      <li>Umbilical hernia</li>
+                      <li>Ventral hernia</li>
+                    </ul>
+                  </Col>
+                </Row>
+                <Col md style={{ marginTop: "5px" }}>
                   <Link to="/form" role="button">
                     <button className="Btn">
                     Book An Appointment
                     </button>
                     
                   </Link>
-                </div>
-                <div id="toggle3" class="row ">
-                  <div class="col-sm-4">
-                    <ul>
-                      <li>Inguinal hernia</li>
-                      <li>Hiatal hernia</li>
-                    </ul>
-                  </div>
-                  <div class="col-sm-4">
-                    <ul>
-                      <li>Umbilical hernia</li>
-                      <li>Ventral hernia</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                </Col>
+              </Row>
             </div>
           </div>
         </div>
@@ -342,24 +344,16 @@ class Specialities extends Component {
                 premature death through education-driven voluntary behavior
                 change activities.
               </p>
-              <div class="row">
-                <div class="col-sm-4 col-3">
+              <Row>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle4}>
                       View Details
                     </button>
                   </div>
-                </div>
-                <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                  <Link  to="/form" role="button">
-                  <button className="Btn">
-                    Book An Appointment
-                    </button>
-                    
-                  </Link>
-                </div>
-                <div id="toggle4" class="row ">
-                  <div class="col-sm-4">
+                </Col>
+                <Row id="toggle4">
+                  <Col>
                     
                     <ul>
                       <li>Fitness</li>
@@ -367,17 +361,25 @@ class Specialities extends Component {
                       <li>Happiness</li>
                       <li>Knowing Yourself well</li>
                     </ul>
-                  </div>
-                  <div class="col-sm-4">
+                  </Col>
+                  <Col>
                     <ul>
                       <li>Women's health</li>
                       <li>Men's health</li>
                       <li>Autoimmune Diseases</li>
                       <li>Impact of clean environment on health </li>
                     </ul>
-                  </div>
-                </div>
-              </div>
+                  </Col>
+                </Row>
+                <Col md style={{ marginTop: "5px" }}>
+                  <Link  to="/form" role="button">
+                  <button className="Btn">
+                    Book An Appointment
+                    </button>
+                    
+                  </Link>
+                </Col>
+              </Row>
             </div>
           </div>
         </div>
@@ -436,33 +438,33 @@ class Specialities extends Component {
                 High quality imported medicine from USA, India UK and locally
                 manufactured medicine that works.
               </p>
-              <div class="row">
-                <div class="col-sm-4 col-3">
+              <Row>
+                <Col md>
                   <div class="details">
                     <button id="details" onClick={this.toggle5}>
                       View Details
                     </button>
                   </div>
-                </div>
-                <div class="col-sm-6 col-9" style={{ marginTop: "5px" }}>
-                  <Link to="/form" role="button">
-                  <button className="Btn">
-                    Book An Appointment
-                    </button>
-                    
-                  </Link>
-                </div>
-                <div id="toggle5" class="row ">
-                  <div class="col-sm-6">
+                </Col>
+                <Row id="toggle5">
+                  <Col>
                     <ul>
                       <li>
                         This store located at Tse-Kucha Market - For others, you
                         can call: 08060960546
                       </li>
                     </ul>
-                  </div>
-                </div>
-              </div>
+                  </Col>
+                </Row>
+                <Col md style={{ marginTop: "5px" }}>
+                  <Link to="/form" role="button">
+                  <button className="Btn">
+                    Book An Appointment
+                    </button>
+                    
+                  </Link>
+                </Col>
+              </Row>
             </div>
           </div>
         </div>

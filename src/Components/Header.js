@@ -7,11 +7,19 @@ function Header(){
 return (
   <>
     <Container>
-      <div className="fixed-top">
+      <div className="fixed-top" style={{position:'fixed'}}>
         <header>
           <Navbar style={{ background: 'white' }}>
             <Container>
-              <Navbar.Brand href="#home">Malaikah</Navbar.Brand>
+              <Navbar.Brand href="#home">
+              <img
+          alt=""
+          src="/images/hlogo-02.png"
+          width="80"
+          height="40"
+          className="d-inline-block align-top"
+        />
+          </Navbar.Brand>
             </Container>
           </Navbar>
         </header>
