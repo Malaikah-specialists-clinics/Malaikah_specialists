@@ -84,20 +84,6 @@ padding-top: 10px;
 
 
 
-/* * {
-  box-sizing: border-box;
-} */
-
-
-
-/* Remove extra left and right margins, due to padding in columns */
-/* .row {
-  margin: 0px 35px;
-  /* display: grid; */
-  /* width: 30%; */
-  /* grid-template-columns: 17% 63% 20%; */
-  
-
 
 /* Clear floats after the columns */
 
@@ -184,7 +170,7 @@ font-size: 30px;
  color: #0A1F3E;
  /* height: 100px; */
 }
-#sect1{
+.sect1{
   background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -259,10 +245,9 @@ font-size: 30px;
   height: 500px;
 }
  .first-txt {
-padding: 80px 0px 0px 40px;
 color: #0A1F3E;
 font-weight: bolder;
-font-size: 50px;
+
 }
 .second-txt {
 font-size: 30px;
@@ -312,9 +297,6 @@ font-size: 30px;
   max-width: 100px;
   max-height: 200px;
 }
-/* Card:hover{
-  transform: translateZ(20px);
-} */
 
 @keyframes scroll{
   0% {
@@ -384,9 +366,9 @@ font-size: 30px;
   #pic, .pic{
     display: none;
   }
-  .headingsect{
+  /* .headingsect{
     font-size: 30px;
-  }
+  } */
   #morevents {
   max-width: 340px;
   max-height: 400px;

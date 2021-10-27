@@ -17,36 +17,6 @@ const About = () => {
           Services, Home Care Services, Virtual Communities.
         </p>
       </div>
-      {/* <div class="row justify-content-center">
-        <div class="col-sm-6">
-          <h5 class="black-text"> Our Vision</h5>
-          <p class="black-text">
-            To provide exceptional quality, affordable and innovative care that
-            ensures good health and wellbeing of the communities and Africans
-            with a mandate for health education and research.
-          </p>
-        </div>
-        <div class="col-sm-6">
-          <h5 class="black-text">  Our Mission</h5>
-          <p>
-            To be a reference point and recognized by patients, staff, peer
-            institutions, and the community as the leading model providing
-            exceptional, innovative care and research that makes a difference in
-            diversity and inclusion.
-          </p>
-        </div>
-      </div>
-      <div class="offset-md-1">
-        <h4 class="offset-md-4" >Our Principles</h4>
-       <ul>
-         <li> Malaikah shall nurture all upcoming practitioners equally without any discrimination.</li>
-         <li> Malaikah shall work with other like minded partners involved in quality and innovative care delivery.</li>
-         <li> Malaikah cherishes the principle of <b>result oriented</b> management and therefore all staff shall execute their work with minimum supervision based on their agreed action plans per work plans.</li>
-         <li> Malaikah shall seek <b>professionalism </b>in all its operations.</li>
-         <li> Malaikah believes in collective efforts realized through <b>teamwork</b>.</li>
-         <li> Malaikah shall pride itself in <b>gender sensitivity</b> in its operations in terms of clients and staff.</li>
-       </ul>
-      </div> */}
       <Accordion flush>
   <Accordion.Item eventKey="0">
     <Accordion.Header style={{textAlign: 'center'}}>Our Vision</Accordion.Header>
