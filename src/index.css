@@ -83,6 +83,7 @@ padding-top: 10px;
 }
 
 
+
 /* * {
   box-sizing: border-box;
 } */
@@ -505,7 +506,7 @@ text-align: center;
   height: auto;
   margin: auto;
   width: 70%;
-  /* padding: 50px; */
+  /* padding: 20px; */
   background-color: #FFFFFF;
 }
 #storyimg{
