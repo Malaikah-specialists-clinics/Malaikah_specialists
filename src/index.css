@@ -102,14 +102,11 @@ h3{
   color: white;
 }
 #card2{
-  
   padding: 70px 50px;
-  
 }
 
 #card3{
   padding: 0;
- 
 }
 
 .upcoming h4{
@@ -506,4 +503,13 @@ text-align: center;
   font-size: 20px;
   /* overflow-wrap: break-word; */
   padding-bottom: 40px;
+}
+#datecard{
+  height: 250px;
+  background-color: #1A5691;
+  text-align: center;
+}
+#contentcard{
+  height: 250px;
+  padding: 5px 30px;
 }
