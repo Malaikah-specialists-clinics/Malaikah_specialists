@@ -1,12 +1,12 @@
 import React from "react";
-import { Row, Col, Form, Container, Button } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
 function FormPage() {
   return (
     <>
-      <Container className="formcontent">
+      <div className="formcontent" style={{width: '90%', marginLeft:'auto', marginRight: 'auto'}}>
         <Row>
           <Col md sm={6} className="form">
             <Form>
@@ -50,7 +50,7 @@ function FormPage() {
               </Button>{" "}
             </Form>
           </Col>
-          <Col md sm={6} className="pic">
+          <Col md className="pic">
             <div id="pic">
               <img
                 src="/images/caremeds.jpg"
@@ -61,7 +61,7 @@ function FormPage() {
             </div>
           </Col>
         </Row>
-      </Container>
+      </div>
     </>
   );
 }
