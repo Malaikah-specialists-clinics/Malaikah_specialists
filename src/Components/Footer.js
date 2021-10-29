@@ -8,15 +8,10 @@ function Footer() {
     <footer>
     <Row className='footer'>
       <Col md style={{textAlign: 'center'}}>
-      <img src='/images/logo-01.png' alt='' width='220px' height='100px' />
-            <p className="grey-text text-lighten-4">
-             Malaikah Specialist Center aim is to provide you with quality,
-             accessible and affordable health care services & health
-             education.
-            </p>
+      <img src='/images/logo-01.png' alt='' width='280px' height='150px' />
       </Col>
       <Col md style={{textAlign: 'center'}}>
-      <h5 className="white-text ">Navigation</h5>
+      <h5 className="white-text ">NAVIGATION</h5>
             <ul>
               <li className="footer-li">
                 <a className="footer-li" href="#home">
@@ -24,36 +19,36 @@ function Footer() {
                </a>
              </li>
              <li className="footer-li">
-               <a className="footer-li" href="#!">
+               <a className="footer-li" href="#rscreen">
                   Research
                </a>
           </li>
               <li className="footer-li">
-                <a className="footer-li" href="#hcare">
+                <a className="footer-li" href="#specscreen">
                   Services & Programs
                  </a>
               </li>
                <li className="footer-li">
-                 <a className="footer-li" href="#!">
+                 <a className="footer-li" href="#moeevents">
                     Events & Education
                 </a>
               </li>
                <li className="footer-li">
-                  <a className="footer-li" href="#!">
+                  <a className="footer-li" href="#emergservice">
                     About
                    </a>
                </li>
               </ul>
       </Col>
       <Col md style={{textAlign: 'center'}}>
-      <h5 className="white-text">Contact Us</h5>
+      <h5 className="white-text">CONTACT US</h5>
            <ul>
               <li className="footer-li">
                Email: support@malaikahgroup.com</li>
                <li className="footer-li">Tel: +234 703 229 3770 </li>
              </ul>
       </Col>
-      <div >
+      <div style={{textAlign: 'center'}}>
           {' '}
             © 2021 Copyright. All rights reserved.
          </div>
