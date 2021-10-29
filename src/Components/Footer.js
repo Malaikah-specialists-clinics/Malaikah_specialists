@@ -5,6 +5,7 @@ import { Col, Row } from 'react-bootstrap';
 function Footer() {
   return (
     <>
+    <footer>
     <Row className='footer'>
       <Col md style={{textAlign: 'center'}}>
       <img src='/images/logo-01.png' alt='' width='220px' height='100px' />
@@ -57,6 +58,7 @@ function Footer() {
             © 2021 Copyright. All rights reserved.
          </div>
     </Row>
+    </footer>
   </>
    );
 }
