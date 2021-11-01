@@ -18,6 +18,10 @@
          console.log({ message: err });
        });
    }, []);
+  //  console.log(events)
+  
+  if (event.length > 0) {
+
    return (
      <>
        <div class="hcare" style={{ display: 'block' }}>
@@ -60,6 +64,14 @@
        </div>
      </>
    );
+  } else {
+    return(
+    <div className='event-alert' >
+       <h1> NO EVENTS YET</h1>
+    </div>
+   
+    )
+  }
  };
 
  export default Moeventscreen;

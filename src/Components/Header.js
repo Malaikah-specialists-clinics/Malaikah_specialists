@@ -1,73 +1,58 @@
-import React from 'react';
-import { Nav, Container, Navbar} from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from "react";
+import { Nav, Container, Navbar } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
-function Header(){
-
-return (
-  <>
-    <Container>
-      <div className="fixed-top" style={{position:'fixed'}}>
-        <header>
-          <Navbar style={{ background: 'white' }}>
+function Header() {
+  return (
+    <>
+      <Container>
+        <div className="fixed-top" style={{ position: "fixed" }}>
+          <Navbar
+            className="navbar"
+            variant="dark"
+            style={{ backgroundColor: "#0A1F3E" }}
+            expand="lg"
+            collapseOnSelect
+          >
             <Container>
-              <Navbar.Brand href="#home">
-              <img
-          alt=""
-          src="/images/hlogo-02.png"
-          width="80"
-          height="40"
-          className="d-inline-block align-top"
-        />
-          </Navbar.Brand>
+
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                  <Navbar.Brand>
+                    <img
+                      alt=""
+                      src="/images/logo-01.png"
+                      width="40"
+                      height="40"
+                      className="d-inline-block align-top"
+                    />
+                  </Navbar.Brand>
+                </Nav>
+                <Nav className="ml-auto">
+                  <LinkContainer to="/">
+                    <Nav.Link >Home</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="/specscreen">
+                    <Nav.Link>Services&Programs</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="/rscreen">
+                    <Nav.Link >Research</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="/moeevents">
+                    <Nav.Link>Events&Education</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="/emergservice">
+                    <Nav.Link >About Us</Nav.Link>
+                  </LinkContainer>
+                </Nav>
+              </Navbar.Collapse>
             </Container>
           </Navbar>
-        </header>
-        <Navbar
-          className="navbar"
-          style={{ background: '#EBE9E8' }}
-          expand="lg"
-          collapseOnSelect
-        >
-          <Container>
-            <LinkContainer to="/">
-              <Navbar.Brand></Navbar.Brand>
-            </LinkContainer>
-
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                {/* <Nav.Link to='/'>
-           <Nav.Link href="#home">Home</Nav.Link>
-           </Nav.Link> */}
-              </Nav>
-              <Nav className="ml-auto">
-                <LinkContainer to="/">
-                  <Nav.Link href="#home">Home</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="specscreen">
-                  <Nav.Link>Services&Programs</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/rscreen">
-                  <Nav.Link href="#rscreen">Research</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/">
-                  <Nav.Link>Events&Education</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/">
-                  <Nav.Link href="#emergservice">About Us</Nav.Link>
-                </LinkContainer>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </div>
-    </Container>
-  </>
-);}
+        </div>
+      </Container>
+    </>
+  );
+}
 
 export default Header;
-
-
-
-
