@@ -21,6 +21,7 @@
    }, []);
   //  console.log(events)
   
+  if (event.length > 0) {
 
    return (
      <>
@@ -64,6 +65,14 @@
        </div>
      </>
    );
+  } else {
+    return(
+    <div className='event-alert' >
+       <h1> NO EVENTS YET</h1>
+    </div>
+   
+    )
+  }
  };
 
  export default Moeventscreen;
