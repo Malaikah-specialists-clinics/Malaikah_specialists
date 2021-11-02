@@ -11,8 +11,8 @@ import { Col, Row } from "react-bootstrap";
 // import YouTubeIcon from 'react-youtube'
 // import {WhatsappIcon} from 'react-share'
 // import { FaFacebook, FaYoutube, FaWhatsapp } from 'react-icons/fa';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
