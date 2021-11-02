@@ -6,16 +6,15 @@ function Header() {
   return (
     <>
       <Container>
-        <div className="fixed-top" style={{ position: "fixed" }}>
+        <div className="fixed-top" style={{ position: 'fixed' }}>
           <Navbar
             className="navbar"
             variant="dark"
-            style={{ backgroundColor: "#0A1F3E" }}
+            style={{ backgroundColor: '#0A1F3E' }}
             expand="lg"
             collapseOnSelect
           >
             <Container>
-
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
@@ -31,19 +30,22 @@ function Header() {
                 </Nav>
                 <Nav className="ml-auto">
                   <LinkContainer to="/">
-                    <Nav.Link >Home</Nav.Link>
+                    <Nav.Link>Home</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/specscreen">
-                    <Nav.Link>Services&Programs</Nav.Link>
+                    <Nav.Link>Specialities</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/rscreen">
-                    <Nav.Link >Research</Nav.Link>
+                    <Nav.Link>Research</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/moeevents">
-                    <Nav.Link>Events&Education</Nav.Link>
+                    <Nav.Link>Events</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="#">
+                    <Nav.Link>Education</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/emergservice">
-                    <Nav.Link >About Us</Nav.Link>
+                    <Nav.Link>About Us</Nav.Link>
                   </LinkContainer>
                 </Nav>
               </Navbar.Collapse>

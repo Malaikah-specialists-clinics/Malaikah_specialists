@@ -8,7 +8,6 @@
  const Moeventscreen = () => {
    const [event, setEvents] = useState([]);
    useEffect(() => {
-     //  console.log("useEffect");
      axios
        .get('http://localhost:3010/events')
        .then((res) => {
