@@ -6,7 +6,7 @@ import {Accordion} from 'react-bootstrap'
 const About = () => {
   
   return (
-    <div class="container About">
+    <div class="About">
      
       <div class="offset-md-1">
         <h4 class="offset-md-4" >  About Us</h4>

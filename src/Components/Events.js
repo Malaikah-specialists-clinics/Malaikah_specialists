@@ -95,8 +95,7 @@ const Events = () => {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <Container>
-      <div class="container" style={{ margin: '50px 0 50px 20px' }}>
+      <div class="" style={{ marginLeft: 'auto', marginRight:'auto', width: '90%'}}>
         <div className="upcoming">
           <h2>Upcoming Events</h2>
           <a href="#moeevents" style={{textDecoration:'none'}}>
@@ -176,7 +175,6 @@ const Events = () => {
           </Card.Body>
         </Card>
       </CardGroup>
-      </Container>
     </div>
    
   );
