@@ -72,7 +72,7 @@ function Footer() {
               href="https://www.facebook.com/malaikahmedicalcenter"
               quote={'Malaika Specialist Care'}
               hashtag="#MalaikahCare"
-              className="socialmediaicon"
+              className="mediaicon"
             >
               <FacebookIcon logoFillColor="black" round="true"></FacebookIcon>
             </FacebookShareButton>
@@ -100,12 +100,8 @@ function Footer() {
             >
               <FontAwesomeIcon icon={faWhatsapp} />
             </a> */}
-            <a
-              logoFillColor="red"
-              round="true"
-              href="https://www.youtube.com/channel/UCZogwUu3bJLpOgca5LdI8Yw"
-            >
-              <FontAwesomeIcon icon={faYoutube}/>
+            <a href="https://www.youtube.com/channel/UCZogwUu3bJLpOgca5LdI8Yw">
+              <FontAwesomeIcon icon={faYoutube} className="youtubeicon" />
             </a>
           </Col>
           <div> © 2021 Copyright. All rights reserved.</div>
