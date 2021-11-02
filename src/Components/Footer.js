@@ -1,6 +1,19 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 
+import {
+  FacebookIcon,
+  LinkedinIcon,
+  FacebookShareButton,
+  LinkedinShareButton,
+} from 'react-share';
+// import YouTubeShareButton from 'react-youtube'
+// import YouTubeIcon from 'react-youtube'
+// import {WhatsappIcon} from 'react-share'
+// import { FaFacebook, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faYoutube} from '@fortawesome/free-brands-svg-icons'
+
 
 function Footer() {
   return (
@@ -21,12 +34,12 @@ function Footer() {
              <li className="footer-li">
                <a className="footer-li" href="#rscreen">
                   Research
-               </a>
-          </li>
+                </a>
+              </li>
               <li className="footer-li">
                 <a className="footer-li" href="#specscreen">
                   Services & Programs
-                 </a>
+                </a>
               </li>
                <li className="footer-li">
                  <a className="footer-li" href="#moeevents">

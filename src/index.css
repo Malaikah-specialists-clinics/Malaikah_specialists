@@ -421,18 +421,21 @@ font-size: 40px;
 /* styling landing page */
  .video-container {
  top: 10px;
-  height:450px;
+  height: 550px;
   width: 100%;
   position: relative;
+}
+video{
+  height: 70%;
 }
 
 
 /* Just styling the content of the div, the *magic* in the previous rules */
 #caption {
-top: 28%;
-left:30%;
+top: 50%;
+left:70%;
 position: absolute;
-text-align: center;
+text-align: right;
 color: #0A1F3E;
 font-weight: bolder;
 font-size: 28px;
@@ -526,4 +529,15 @@ text-align: center;
 #contentcard{
   height: 250px;
   padding: 5px 30px;
+}
+.footericons{
+  margin: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+a.socialmediaicon {
+  margin: 0 20px;
+  color: #FFFFFF;
+  font-size: 30px;
 }
