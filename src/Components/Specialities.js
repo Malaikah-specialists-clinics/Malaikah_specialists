@@ -1,13 +1,13 @@
 import React from "react";
-import { Col, Row, Card, Container } from "react-bootstrap";
+import { Col, Row, Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 
 function Specialities() {
   return (
     <> 
-    <h2 style={{textAlign: 'center', fontWeight: 'bolder', top:'0'}}> Our Specialities</h2>
-     <Container>
+    <h2 style={{textAlign: 'center', fontWeight: 'bolder', top:'0'}}> Our Specialties</h2>
+     <div style={{width: '91%', marginLeft: 'auto', marginRight: 'auto'}}>
       <Row>
         <Col>
         <div className='slider'>
@@ -143,13 +143,13 @@ function Specialities() {
           </div>
         </Col>
       </Row>
+      </div>
       {/* second row */}
-      
-      <Row id='row2'>
-        <Col sm={6} >
-        <h2>Speciality Services</h2>
-          <Row>
-              <div className='col-sm-6 col-5'>
+      <Row id='row2'style={{width: '85%', marginLeft: 'auto', marginRight: 'auto'}}>
+        <Col md>
+        <h2>Out-Of-Hospital Care</h2>
+              <Row>
+              <Col>
                 <img
                   src="/images/homecare.png"
                   alt="homecare"
@@ -163,9 +163,9 @@ function Specialities() {
                   {" "}
                   Home Care services
                 </a>
-              </div>
+              </Col>
            
-              <div className='col-sm-6 col-5'>
+              <Col >
                 <img
                   src="/images/emergecy.png"
                   alt=""
@@ -178,22 +178,37 @@ function Specialities() {
                 >
                   Emergency Services
                 </a>
-              </div>
-          </Row>
-          
-        </Col>
-        <Col sm={4}>
-          <Card id="spc-card" style={{ width: "22rem", height: "180px"}}>
+              </Col>
+              </Row>
+              </Col>
+              
+        <Col md>
+          <Card id="spc-card" style={{ width: "auto", height: "auto", padding:'10px'}}>
             <Card.Title style={{textAlign: 'center'}}>Check Our Weekly Time Table</Card.Title>
-            <ul style={{listStyleType:'none'}}>
-              <li>Mon - Fri <p style={{float: 'right', paddingRight:'40px'}}>8:00- 23:00</p> <hr/></li> 
+            <Row>
+              <Col>Gynecology</Col> 
+              <Col> Saturday</Col> 
+              <Col>7:30AM - 6:00PM</Col> 
+              </Row> <hr/>
+              <Row>
+              <Col>Eye Clinic</Col> 
+              <Col> Wednesday</Col> 
+              <Col>7:30AM - 6:00PM</Col> 
+            </Row> <hr/>
+            <Row>
+              <Col>Other Specialties</Col> 
+              <Col> </Col> 
+              <Col>24/7</Col> 
+            </Row>
+            {/* <ul style={{listStyleType:'none'}}>
+              <li>Gynecology <p> &nbsp Saturday <span style={{float:'right'}}>7:30AM-6:00PM</span></p> <hr/></li> 
               <li>Saturday <p style={{float: 'right', paddingRight:'40px'}}>8:00- 22:00</p><hr/></li>
-              <li>Sunday <p style={{float: 'right', paddingRight:'40px'}}>9:00- 21:00</p> <hr/></li>
-            </ul>
+              <li>Sunday <p style={{float: 'right', paddingRight:'40px'}}>9:00- 21:00</p></li>
+            </ul> */}
           </Card>
         </Col>
       </Row>
-      </Container>
+      
     </>
   );
 }
