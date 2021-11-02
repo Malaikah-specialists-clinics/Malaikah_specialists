@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Card, CardGroup, Container } from "react-bootstrap";
+import { Card, CardGroup} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 

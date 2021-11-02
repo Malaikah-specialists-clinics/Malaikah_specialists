@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Container, Carousel} from 'react-bootstrap'
+import {Carousel} from 'react-bootstrap'
 
 const Stories = () => {
     return (
