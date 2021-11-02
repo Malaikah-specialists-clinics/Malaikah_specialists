@@ -9,6 +9,7 @@ const Stories = () => {
           <h1
             style={{
               color: '#0A1F3E',
+              fontSize: '35px',
               paddingTop: '20px',
               textAlign: 'center',
             }}
