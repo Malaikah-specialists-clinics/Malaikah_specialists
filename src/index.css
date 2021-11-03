@@ -539,11 +539,11 @@ text-align: center;
 .youtubeicon{
   font-size: 50px;
   color: red;
-  margin: 0 20px;
+  margin: 0 2px;
 }
 
 .mediaicon {
-  margin: 0 20px;
-  color: #FFFFFF;
-  size: 30px;
+  margin: 0 2px;
+  margin-bottom: 20px;
+  height: 50px;
 }

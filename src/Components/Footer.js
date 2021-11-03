@@ -72,16 +72,25 @@ function Footer() {
               href="https://www.facebook.com/malaikahmedicalcenter"
               quote={'Malaika Specialist Care'}
               hashtag="#MalaikahCare"
-              className="mediaicon"
             >
-              <FacebookIcon logoFillColor="black" round="true"></FacebookIcon>
+              <FacebookIcon
+                className="mediaicon"
+                logoFillColor="black
+               "
+                round="true
+              "
+              ></FacebookIcon>
             </FacebookShareButton>
             <LinkedinShareButton
               href="https://www.linkedin.com/company/malaikah-specialist-clinics"
               quote={'Malaika Specialist Care'}
               hashtag="#MalaikahCare"
             >
-              <LinkedinIcon logoFillColor="white" round="true"></LinkedinIcon>
+              <LinkedinIcon
+                className="mediaicon"
+                logoFillColor="white"
+                round="true"
+              ></LinkedinIcon>
             </LinkedinShareButton>
             {/* <YouTubeShareButton
               href="https://www.youtube.com/channel/UCZogwUu3bJLpOgca5LdI8Yw"
