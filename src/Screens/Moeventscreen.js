@@ -9,7 +9,7 @@
    const [event, setEvents] = useState([]);
    useEffect(() => {
      axios
-       .get('http://localhost:3010/events')
+       .get('http://localhost:3010/api/events')
        .then((res) => {
          setEvents(res.data);
          console.log(res.data);
@@ -35,20 +35,20 @@
                <div class="card" id="datecard">
                  <div className="item-date"></div>
                  <div>
-                   <h3 className="day">{events.event_date}</h3>
+                   <h3 className="day">{events.date}</h3>
                    {/* <h3 className="month">NOV</h3> */}
                  </div>
                </div>
              </div>
              <div class="col-sm-8">
                <div class="card" id="contentcard">
-                 <h2>{events.event_name}</h2>
-                 <h6>{events.event_time}</h6>
-                 <p>{events.event_description}</p>
+                 <h2>{events.title}</h2>
+                 <h6>{events.time}</h6>
+                 <p>{events.description}</p>
                  <div>
-                   <h5 style={{ float: 'left' }}>{events.event_location}</h5>
+                   <h5 style={{ float: 'left' }}>Location:</h5>
                    <h6 style={{ float: 'left', padding: '3px 15px' }}>
-                     {events.event_location}
+                     {events.location}
                    </h6>
                  </div>
                  <div>

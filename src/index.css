@@ -16,10 +16,10 @@ code {
 
 .footer{
   margin-top:50px;
-  background-color: #0A1F3E;
+  background-color: #20c997;
   padding: 20px 50px;
   color: #FFFFFF;
-}
+} 
 
 .form{
 padding: 40px;
@@ -63,13 +63,13 @@ padding-top: 10px;
 }
 #Btn{
   margin-top:20px;
-  background-color: #3FE0C1;
+  background-color: #FBBB35;
   width:200px;
   border:none;
   color:#0A1F3E;
 }
 .Btn{
-  background-color: #3FE0C1;
+  background-color: #FBBB35;
   width:180px;
   padding: 5px;
   border:none;
@@ -93,7 +93,7 @@ padding-top: 10px;
 
 
 #card1{
-background-color: #1A5691;
+background-color: #020e20;
 
 text-align: center;
 }
@@ -117,10 +117,6 @@ h3{
 }
 .card-image {
   height: 330px;
-}
-.footer{
-  background-color: #0A1F3E; 
-  padding: 20px 20px;
 }
  .footer-li{
   list-style-type: none;
@@ -156,7 +152,7 @@ font-weight: bolder;
   height: 400px;
 }
 .hcare, .formcontent{
-  top: 0;
+  padding-top: 40px;
 }
 #hcare{
   margin: 40px;
@@ -245,13 +241,13 @@ font-size: 30px;
 #crd{
   margin: 10px;
   height: 200px;
-  background-color: #1A5691;
+  background-color: #020e20;
   color: white;
   border-radius: 0px 0px 80px 0px;
 }
 #spc-card{
   height: auto;
-  background-color: #1A5691;
+  background-color: #020e20;
   color: white;
   border-radius: 0px 50px 0px 50px;
 }
@@ -333,10 +329,10 @@ font-size: 30px;
   margin-bottom: 193px;
   margin-left: auto;
   margin-right: auto;
-  height: auto;
+  height: auto                                                                                                                                                                  ;
   text-align: center;
   width: 40%;
-  background-color: #3FE0C1;
+  background-color: #FBBB35;
   color: #0A1F3E;
   border-radius: 12px;
   border: none;
@@ -436,7 +432,7 @@ top: 50%;
 left:70%;
 position: absolute;
 text-align: right;
-color: #0A1F3E;
+color: #414042;
 font-weight: bolder;
 font-size: 28px;
 } 
@@ -460,7 +456,7 @@ video {
 /* margin-left: 15px; */
 max-width: 250px;
 height: 220px;
-background-color: #1A5691;
+background-color: #0A1F3E;
 text-align: center;
 }
 #imgcard{
@@ -508,8 +504,6 @@ text-align: center;
 }
 #strytitle{
   text-align: center; 
-  background-color:#3FE0C1;
-  border-radius: 12px;
   width: 60%;
   margin: auto;
   margin-top: 20px;
@@ -537,13 +531,21 @@ text-align: center;
 }
 
 .youtubeicon{
-  font-size: 50px;
+  font-size: 40px;
   color: red;
   margin: 0 2px;
 }
 
-.mediaicon {
+.linkedinicon {
   margin: 0 2px;
   margin-bottom: 20px;
-  height: 50px;
+  height: 40px;
+}
+.facebookicon{
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+.nav-items{
+  font-size: 17px;
 }

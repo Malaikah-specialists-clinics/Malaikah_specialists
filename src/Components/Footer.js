@@ -1,5 +1,5 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import React from "react";
+import { Col, Row } from "react-bootstrap";
 
 import {
   FacebookIcon,
@@ -11,59 +11,51 @@ import {
 // import YouTubeIcon from 'react-youtube'
 // import {WhatsappIcon} from 'react-share'
 // import { FaFacebook, FaYoutube, FaWhatsapp } from 'react-icons/fa';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faYoutube} from '@fortawesome/free-brands-svg-icons'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
     <>
       <footer>
         <Row className="footer">
-          <Col md style={{ textAlign: 'center' }}>
+          <Col md style={{ textAlign: "center" }}>
             <img
-              src="/images/logo-01.png"
+              src="/images/bluelogo-01.png"
               alt=""
-              width="220px"
+              width="100px"
               height="100px"
-            />
-            <p className="grey-text text-lighten-4">
-              Malaikah Specialist Center aim is to provide you with quality,
-              accessible and affordable health care services & health education.
-            </p>
+            /> MALAIKAH
           </Col>
-          <Col md style={{ textAlign: 'center' }}>
-            <h5 className="white-text ">Navigation</h5>
-            <ul>
-              <li className="footer-li">
-                <a className="footer-li" href="#home">
-                  Home
-                </a>
-              </li>
-              <li className="footer-li">
-                <a className="footer-li" href="#!">
-                  Research
-                </a>
-              </li>
-              <li className="footer-li">
-                <a className="footer-li" href="#hcare">
-                  Services & Programs
-                </a>
-              </li>
-              <li className="footer-li">
-                <a className="footer-li" href="#!">
-                  Events & Education
-                </a>
-              </li>
-              <li className="footer-li">
-                <a className="footer-li" href="#!">
-                  About
-                </a>
-              </li>
-            </ul>
+          <Col md style={{ textAlign: "center" }}>
+            <h5 className="white-text ">NAVIGATION</h5>
+
+            <a className="footer-li" href="/">
+              Home |
+            </a>
+
+            <a className="footer-li" href="#rscreen">
+              Research |
+            </a>
+
+            <a className="footer-li" href="#specscreen">
+              Specialties |
+            </a>
+
+            <a className="footer-li" href="#moeevents">
+              Events |
+            </a>
+
+            <a className="footer-li" href="#emergservice">
+              About
+            </a>
+            <div style={{ textAlign: "center" }}>
+              {" "}
+              © 2021 Copyright. All rights reserved.
+            </div>
           </Col>
-          <Col md style={{ textAlign: 'center' }}>
-            <h5 className="white-text">Contact Us</h5>
+          <Col md style={{ textAlign: "center" }}>
+            <h5 className="white-text">CONTACT US</h5>
             <ul>
               <li className="footer-li">Email: support@malaikahgroup.com</li>
               <li className="footer-li">Tel: +234 703 229 3770 </li>
@@ -74,11 +66,9 @@ function Footer() {
               hashtag="#MalaikahCare"
             >
               <FacebookIcon
-                className="mediaicon"
-                logoFillColor="black
-               "
-                round="true
-              "
+                className="facebookicon"
+                logoFillColor="black"
+                round="true"
               ></FacebookIcon>
             </FacebookShareButton>
             <LinkedinShareButton
@@ -87,7 +77,7 @@ function Footer() {
               hashtag="#MalaikahCare"
             >
               <LinkedinIcon
-                className="mediaicon"
+                className="linkedinicon"
                 logoFillColor="white"
                 round="true"
               ></LinkedinIcon>
@@ -113,7 +103,6 @@ function Footer() {
               <FontAwesomeIcon icon={faYoutube} className="youtubeicon" />
             </a>
           </Col>
-          <div> © 2021 Copyright. All rights reserved.</div>
         </Row>
       </footer>
     </>
