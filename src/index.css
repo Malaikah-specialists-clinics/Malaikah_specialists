@@ -530,10 +530,20 @@ text-align: center;
   height: 50px;
 }
 
-a.socialmediaicon {
-  margin: 0 20px;
-  color: #FFFFFF;
-  font-size: 30px;
+.youtubeicon{
+  font-size: 40px;
+  color: red;
+  margin: 0 2px;
+}
+
+.linkedinicon {
+  margin: 0 2px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+.facebookicon{
+  margin-bottom: 20px;
+  height: 40px;
 }
 
 .nav-items{
