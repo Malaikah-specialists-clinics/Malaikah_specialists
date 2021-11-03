@@ -5,6 +5,7 @@ import Research from './Research';
 import Specialities from './Specialities';
 import Landing from './Landing';
 import Stories from './Stories'
+// import Popup from './Popup';
 function Home(){
     return (
       <>
