@@ -1,11 +1,11 @@
 
 import React from 'react'
-import { Container, Carousel} from 'react-bootstrap'
+import {Carousel} from 'react-bootstrap'
 
 const Stories = () => {
     return (
       <>
-        <Container className="storycont">
+        <div className="storycont">
           <h1
             style={{
               color: '#0A1F3E',
@@ -74,7 +74,7 @@ const Stories = () => {
               </div>
             </Carousel.Item>
           </Carousel>
-        </Container>
+        </div>
       </>
     );
 }
