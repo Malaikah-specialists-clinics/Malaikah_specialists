@@ -550,3 +550,51 @@ text-align: center;
 .nav-items{
   font-size: 17px;
 }
+/* styling the pop up page */
+.popicon{
+  position: fixed;
+  background: transparent;
+  top: 70%;
+  left: 20px;
+}
+.popup{
+  width: 120px;
+  height: 80px;
+}
+#PopModel{
+  background-color: #020e20;
+}
+#bookappointbtn{
+  background-color: white;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 10px;
+  border: none;
+}
+#talktodocbtn{
+  background-color: white;
+  width: 96%;
+  height: 50%;
+  border: none;
+  left: 20px;
+  margin-left: 10px;
+}
+.bookappoint{
+  color: #020e20;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+.talktodoc{
+  color: #020e20;
+  font-weight: bold;
+  padding-top: 10px;
+}
+#popuptitle{
+  color: #FFFFFF;
+  margin-left: 30px;
+  font-size: 25px;
+}
+closeButton{
+  color: #FFFFFF;
+}
