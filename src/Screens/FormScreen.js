@@ -3,7 +3,11 @@ import { Row, Col, Form, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
+
+ 
+
 class FormPage extends Component {
+
   alertText = () => {
     alert('You have an appointment!!, Please check your email');
   };
