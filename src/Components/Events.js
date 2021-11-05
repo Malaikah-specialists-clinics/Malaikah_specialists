@@ -3,8 +3,22 @@ import React from "react";
 import { Card, CardGroup} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Events = () => {
+   const [tip, setTips] = useState([]);
+   useEffect(() => {
+     axios
+       .get('http://localhost:3000/tips')
+       .then((res) => {
+         setTips(res.data);
+         console.log(res.data);
+       })
+       .catch((err) => {
+         console.log({ message: err });
+       });
+   }, []);
   return (
     <div class="">
       <h2
@@ -104,7 +118,10 @@ const Events = () => {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <div class="" style={{ marginLeft: 'auto', marginRight:'auto', width: '90%'}}>
+      <div
+        class=""
+        style={{ marginLeft: 'auto', marginRight: 'auto', width: '90%' }}
+      >
         <div className="upcoming">
           <h2>Upcoming Events</h2>
           <a href="#moeevents" style={{ textDecoration: 'none' }}>
@@ -152,44 +169,34 @@ const Events = () => {
           </div>
         </div>
       </div>
-
-      <CardGroup>
-        <Card id="crd">
-          <Card.Body>
-            <a
-              href="#articles"
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              {' '}
-              <Card.Title>Good Mental Health Tips</Card.Title>
-            </a>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card id="crd">
-          <Card.Body>
-            <Card.Title>Safe Sex Tips</Card.Title>
-            <Card.Text>
-              This card has supporting text below as a natural lead-in to
-              additional content.{' '}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card id="crd">
-          <Card.Body>
-            <Card.Title>Health-Patient Education</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </CardGroup>
+      {tip.map((tip_entity) => (
+        <CardGroup key={tip_entity.id}>
+          <Card id="crd">
+            <Card.Body>
+              <a
+                href="#articles"
+                style={{ textDecoration: 'none', color: 'white' }}
+              >
+                {' '}
+                <Card.Title>{tip_entity.title1}</Card.Title>
+              </a>
+              <Card.Text>{tip_entity.description1}</Card.Text>
+            </Card.Body>
+          </Card>
+          <Card id="crd">
+            <Card.Body>
+              <Card.Title>{tip_entity.title2}</Card.Title>
+              <Card.Text>{tip_entity.description2}</Card.Text>
+            </Card.Body>
+          </Card>
+          <Card id="crd">
+            <Card.Body>
+              <Card.Title>{tip_entity.title3}</Card.Title>
+              <Card.Text>{tip_entity.description3}</Card.Text>
+            </Card.Body>
+          </Card>
+        </CardGroup>
+      ))}
     </div>
   );
 };
