@@ -10,47 +10,52 @@ class FormPage2 extends Component {
   render(){
     return (
       <>
-        <div className="formcontent" style={{width: '90%', marginLeft:'auto', marginRight: 'auto'}}>
+        <div
+          className="formcontent"
+          style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}
+        >
           <Row>
             <Col md sm={6} className="form">
-              <Form>
+              <Form action="http://localhost:3000/bookappts" Method="POST">
                 <h2>Book An Appointment</h2>
                 <h4>Patient Information </h4>
                 <Row>
                   <Col md className="inputField">
                     <Form.Label id="field">Select Department</Form.Label>
-                    <Form.Control id="form-control" />
+                    <Form.Control name="sdept" id="form-control" />
                   </Col>
                   <Col md>
                     <Form.Label id="field">Date Of Appointment</Form.Label>
-                    <Form.Control id="form-control" />
+                    <Form.Control name="doa" id="form-control" />
                   </Col>
                 </Row>
                 <Row>
                   <Col md>
                     <Form.Label id="field">Time Of Appointment</Form.Label>
-                    <Form.Control id="form-control" />
+                    <Form.Control name="toa" id="form-control" />
                   </Col>
                   <Col md>
                     <Form.Label id="field">Location</Form.Label>
-                    <Form.Control id="form-control" />
+                    <Form.Control name="location" id="form-control" />
                   </Col>
                 </Row>
-  
+
                 <Form.Label id="field">
                   What is your primary medical issue?
                 </Form.Label>
-                <Form.Control type="text-area" id="textarea" />
+                <Form.Control name="pmi" type="text-area" id="textarea" />
                 <Row>
                   <Col>
-                    {" "}
+                    {' '}
                     <Button href="#form" id="Btn">
                       BACK
-                    </Button>{" "}
+                    </Button>{' '}
                   </Col>
                   <Col>
-                    {" "}
-                    <Button id="Btn" onClick={this.alertText}>BOOK APPOINTMENT</Button>{" "}
+                    {' '}
+                    <Button id="Btn" onClick={this.alertText}>
+                      BOOK APPOINTMENT
+                    </Button>{' '}
                   </Col>
                 </Row>
               </Form>
