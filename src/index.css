@@ -428,8 +428,8 @@ video{
 
 /* Just styling the content of the div, the *magic* in the previous rules */
 #caption {
-top: 50%;
-left:70%;
+top: 30%;
+left:50%;
 position: absolute;
 text-align: right;
 color: #414042;

@@ -1,10 +1,10 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 
 function Research() {
   return (
     <>
-      <Container>
+    <div style={{marginLeft: 'auto', marginRight: 'auto', width: '85%'}}>
       <h2 style={{textAlign:"center", padding:"5px 0px 30px 0px"}}>Our Research</h2>
         <Row>
           <Col md className="research" > 
@@ -39,7 +39,7 @@ function Research() {
           </Col>
         </Row>
         
-      </Container>
+        </div>
     </>
   );
 }

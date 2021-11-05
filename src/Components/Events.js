@@ -1,7 +1,8 @@
-import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
+
+import React from "react";
+import { Card, CardGroup} from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 const Events = () => {
   return (
@@ -103,10 +104,7 @@ const Events = () => {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <div
-        class=""
-        style={{ marginLeft: 'auto', marginRight: 'auto', width: '90%' }}
-      >
+      <div class="" style={{ marginLeft: 'auto', marginRight:'auto', width: '90%'}}>
         <div className="upcoming">
           <h2>Upcoming Events</h2>
           <a href="#moeevents" style={{ textDecoration: 'none' }}>
