@@ -9,7 +9,7 @@
    const [event, setEvents] = useState([]);
    useEffect(() => {
      axios
-       .get('http://localhost:3010/api/events')
+       .get('http://localhost:3000/events')
        .then((res) => {
          setEvents(res.data);
          console.log(res.data);

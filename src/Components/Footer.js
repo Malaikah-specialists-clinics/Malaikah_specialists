@@ -72,7 +72,7 @@ function Footer() {
                 round="true"
               ></LinkedinIcon>
             </LinkedinShareButton>
-            <a href="https://www.youtube.com/channel/UCZogwUu3bJLpOgca5LdI8Yw">
+            <a href="https://www.youtube.com/channel/UCZogwUu3bJLpOgca5LdI8Yw" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faYoutube} className="youtubeicon" />
             </a>
           </Col>
