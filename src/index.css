@@ -517,7 +517,8 @@ text-align: center;
 }
 #datecard{
   height: 250px;
-  background-color: #1A5691;
+  width: auto;
+  background-color: #020e20;
   text-align: center;
 }
 #contentcard{
