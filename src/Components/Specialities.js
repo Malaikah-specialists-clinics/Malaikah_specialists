@@ -6,7 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 function Specialities() {
   return (
     <> 
-    <h2 style={{textAlign: 'center', fontWeight: 'bolder', top:'0'}}> Our Specialties</h2>
+    <h2 style={{textAlign: 'center', fontWeight: 'bolder', marginTop:'5%'}}> Our Specialties</h2>
      <div style={{width: '91%', marginLeft: 'auto', marginRight: 'auto'}}>
       <Row>
         <Col>

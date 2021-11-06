@@ -1,12 +1,13 @@
 body {
-  margin:0px;
-  padding: 0px;
+  margin:0;
+  padding: 0;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 code {
@@ -369,8 +370,10 @@ font-size: 16px;
     display: flex;
   }
   .video-container, video {
-    max-height: 350px;
-    max-width: 600px;
+    max-height: auto;
+    max-width: 100%;
+    
+
   }
   .sect1{
     max-height: 250px;
@@ -428,13 +431,14 @@ video{
 
 /* Just styling the content of the div, the *magic* in the previous rules */
 #caption {
-top: 30%;
-left:50%;
+/* top: 30%; */
+/* left:50%; */
 position: absolute;
 text-align: right;
 color: #414042;
 font-weight: bolder;
 font-size: 28px;
+ background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
 } 
 video {
   object-fit: cover;

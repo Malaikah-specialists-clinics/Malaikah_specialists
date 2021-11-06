@@ -170,7 +170,7 @@ const Events = () => {
         </div>
       </div>
       {tip.map((tip_entity) => (
-        <CardGroup key={tip_entity.id}>
+        <CardGroup key={tip_entity.id} style={{width:'94%', margin:'auto'}}>
           <Card id="crd">
             <Card.Body>
               <a
