@@ -17,8 +17,12 @@ code {
 
 .footer{
   margin-top:50px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #20c997;
-  padding: 20px 50px;
+  padding: 2% 4%;
+  width: 100%;
+  height: auto;
   color: #FFFFFF;
 } 
 
@@ -227,7 +231,7 @@ font-weight: bolder;
 font-size: 30px;
 } 
 .About{
-  margin-top: 40px;
+  margin-top: 5%;
 }
 #content{
   background-image: url(https://image.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg);
@@ -369,12 +373,12 @@ font-size: 16px;
   #row2{
     display: flex;
   }
-  .video-container, video {
+  /* .video-container, video {
     max-height: auto;
     max-width: 100%;
     
 
-  }
+  } */
   .sect1{
     max-height: 250px;
   }
@@ -438,7 +442,9 @@ text-align: right;
 color: #414042;
 font-weight: bolder;
 font-size: 28px;
- background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
+background-size: cover;
+background-position: center;
+background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
 } 
 video {
   object-fit: cover;
@@ -529,20 +535,20 @@ text-align: center;
   height: 250px;
   padding: 5px 30px;
 }
-.footericons{
+/* .footericons{
   margin: 20px;
   width: 50px;
   height: 50px;
-}
+} */
 
 .youtubeicon{
   font-size: 40px;
   color: red;
-  margin: 0 2px;
+  margin: 0 0.2%;
 }
 
 .linkedinicon {
-  margin: 0 2px;
+  margin: 0 0.2%;
   margin-bottom: 20px;
   height: 40px;
 }

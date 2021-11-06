@@ -13,9 +13,9 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   return (
     <>
-      <footer>
-        <Row className="footer">
-          <Col md style={{ textAlign: "center" }}>
+      <footer className="footer">
+         <Row>
+          <Col md>
             <img
               src="/images/bluelogo-01.png"
               alt=""
@@ -23,8 +23,8 @@ function Footer() {
               height="100px"
             /> MALAIKAH
           </Col>
-          <Col md style={{ textAlign: "center" }}>
-            <h5 className="white-text ">NAVIGATION</h5>
+          <Col md>
+            <h5>NAVIGATION</h5>
 
             <a className="footer-li" href="/">
               Home |
@@ -45,17 +45,17 @@ function Footer() {
             <a className="footer-li" href="#emergservice">
               About
             </a>
-            <div style={{ textAlign: "center" }}>
+            <div style={{ }}>
               {" "}
               © 2021 Copyright. All rights reserved.
             </div>
           </Col>
-          <Col md style={{ textAlign: "center" }}>
-            <h5 className="white-text">CONTACT US</h5>
-            <ul>
-              <li className="footer-li">Email: support@malaikahgroup.com</li>
-              <li className="footer-li">Tel: +234 703 229 3770 </li>
-            </ul>
+          <Col md>
+            <h5>CONTACT US</h5>
+            
+              <p className="footer-li">Email: support@malaikahgroup.com</p>
+              <p className="footer-li">Tel: +234 703 229 3770 </p>
+           
             <FacebookShareButton
               url="https://www.facebook.com/malaikahmedicalcenter" >
               <FacebookIcon
@@ -76,7 +76,7 @@ function Footer() {
               <FontAwesomeIcon icon={faYoutube} className="youtubeicon" />
             </a>
           </Col>
-        </Row>
+        </Row> 
       </footer>
     </>
   );

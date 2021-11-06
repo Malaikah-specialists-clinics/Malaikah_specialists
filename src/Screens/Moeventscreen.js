@@ -2,6 +2,7 @@
  
  import React, { useState, useEffect } from 'react';
  import axios from 'axios';
+import { Col, Row } from 'react-bootstrap';
  //  import { Screens} from 'react'
  //  import { Row, Card, Col } from 'react-bootstrap';
 
@@ -26,12 +27,11 @@
      <>
        <div class="hcare" style={{ display: 'block' }}>
          {event.map((events) => (
-           <div
-             class="row offset-md-1"
-             style={{ width: '100%' }}
+           <Row
+             style={{ width: '100%', padding:'0', margin: '0' }}
              key={events.id}
            >
-             <div class="col-sm-1">
+             <Col sm={3}>
                <div class="card" id="datecard">
                  <div className="item-date"></div>
                  <div>
@@ -39,8 +39,8 @@
                    {/* <h3 className="month">NOV</h3> */}
                  </div>
                </div>
-             </div>
-             <div class="col-sm-8">
+             </Col>
+             <Col sm={9}>
                <div class="card" id="contentcard">
                  <h2>{events.title}</h2>
                  <h6>{events.time}</h6>
@@ -58,8 +58,8 @@
                    </h6>
                  </div>
                </div>
-             </div>
-           </div>
+             </Col>
+           </Row>
          ))}
        </div>
      </>
