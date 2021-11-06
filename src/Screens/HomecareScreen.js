@@ -1,10 +1,11 @@
 import React from "react";
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col, Container} from 'react-bootstrap';
 
 
 const homecareservices = () => {
   return (
     <>
+    <Container style={{maxWidth: '100%'}}>
     <div className="hcare">
       <Row>
         <Col className="sect1">
@@ -44,6 +45,7 @@ const homecareservices = () => {
         </Col>
       </Row>
       </div>
+      </Container>
     </>
   );
 };

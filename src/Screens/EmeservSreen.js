@@ -1,11 +1,12 @@
 
 import React from 'react'
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 // import LinearGradient from 'react-native-linear-gradient'; 
 
 const EmeservSreen = () => {
     return (
       <>
+       <Container style={{maxWidth: '100%'}}>
         <Row id='main'>
           <Col md className='pic'>
           <img src="/images/emeservice.jpg" alt=""
@@ -43,6 +44,7 @@ const EmeservSreen = () => {
               </li>
             </ul>
         </div>
+        </Container>
       </>
     );
 }

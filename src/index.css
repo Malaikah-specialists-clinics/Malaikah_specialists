@@ -180,7 +180,6 @@ font-weight: bolder;
 
 .card-box {
   border: 1px solid #ddd;
-  padding: 10px;
   box-shadow: 0px 0px 10px 0px #c5c5c5;
   margin-bottom: 30px;
   /* float: right; */
@@ -200,12 +199,14 @@ font-weight: bolder;
 .b-img{
   background: url('https://www.aku.edu/mcea/medicine/SiteAssets/Specialities.jpg');
   height: 500px;
+  width: 100%;
   background-size: cover;
   background-position: center;
   
 }
 .b-color{
   height: 500px;
+  width: 100%;
   background-color: #1f465cd7;
 }
 .details{
