@@ -16,7 +16,6 @@ code {
 }
 
 .footer{
-  margin-top: 22%;
   margin-left: auto;
   margin-right: auto;
   background-color: #20c997;
@@ -605,4 +604,17 @@ text-align: center;
   color: #FFFFFF;
   margin-left: 30px;
   font-size: 25px;
+}
+/* styling the about us scren */
+.aboutus1{
+  background-color: #020e20;
+  text-align: center;
+  color: #fff7f7;
+  padding-top: 5%; 
+}
+.aboutus2{
+  top: 10%;
+  bottom: 10%;
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
 }

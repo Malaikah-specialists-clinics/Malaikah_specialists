@@ -5,6 +5,7 @@ import Footer from './Components/Footer';
 
 import HomecareScreen from './Screens/HomecareScreen'
 import Specialities from './Screens/SpecialitiesScreen';
+import Aboutscreen from './Screens/Aboutscreen';
 
 import FormScreen2 from './Screens/FormScreen2'
 import FormScreen from './Screens/FormScreen';
@@ -29,6 +30,7 @@ function App() {
       <Route path="/emergservice" component={EmeservSreen} />
       <Route path="/moeevents" component={Moeventscreen} />
       <Route path="/articles" component={Articlescreen}></Route>
+      <Route path="/about" component={Aboutscreen}></Route>
       <Route path="/specialities" component={SpecialitiesScreen}></Route>
       <Footer />
     </Router>
