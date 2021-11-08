@@ -58,7 +58,7 @@ function Header() {
                   <LinkContainer to="#">
                     <Nav.Link>Education</Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="/emergservice">
+                  <LinkContainer to="/about">
                     <Nav.Link>About Us</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/login">
