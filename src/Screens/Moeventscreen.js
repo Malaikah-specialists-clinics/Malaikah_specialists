@@ -28,7 +28,7 @@ import { Col, Row } from 'react-bootstrap';
        <div class="hcare" style={{ display: 'block' }}>
          {event.map((events) => (
            <Row
-             style={{ width: '100%', padding:'0', margin: '0' }}
+             style={{ width: '100%', padding: '0', margin: '0' }}
              key={events.id}
            >
              <Col sm={3}>
@@ -57,6 +57,9 @@ import { Col, Row } from 'react-bootstrap';
                      malaikah@gmail.com
                    </h6>
                  </div>
+                 <button className="Btn" style={{ padding: '2px' }}>
+                   Register
+                 </button>
                </div>
              </Col>
            </Row>

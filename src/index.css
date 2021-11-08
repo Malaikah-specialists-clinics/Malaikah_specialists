@@ -16,7 +16,7 @@ code {
 }
 
 .footer{
-  margin-top:50px;
+  margin-top: 22%;
   margin-left: auto;
   margin-right: auto;
   background-color: #20c997;
@@ -330,7 +330,7 @@ font-size: 30px;
 }
 
 .event-alert{
-  margin-top: 60px;
+  margin-top: 8%;
   padding: 30px;
   margin-bottom: 193px;
   margin-left: auto;
@@ -424,7 +424,7 @@ font-size: 40px;
 
 /* styling landing page */
  .video-container {
- top: 10px;
+ /* top: 10px; */
   height: 550px;
   width: 100%;
   position: relative;
@@ -605,7 +605,4 @@ text-align: center;
   color: #FFFFFF;
   margin-left: 30px;
   font-size: 25px;
-}
-closeButton{
-  color: #FFFFFF;
 }
