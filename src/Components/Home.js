@@ -1,5 +1,4 @@
 import React from 'react';
-import About from './About'
 import Events from './Events';  
 import Research from './Research';
 import Specialities from './Specialities';
@@ -15,7 +14,6 @@ function Home(){
           <Events />
           <Research />
           <Stories />
-          <About />
           <Popupbtn />
         </div>
       </>
