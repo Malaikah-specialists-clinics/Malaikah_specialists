@@ -61,6 +61,9 @@ function Header() {
                   <LinkContainer to="/emergservice">
                     <Nav.Link>About Us</Nav.Link>
                   </LinkContainer>
+                  <LinkContainer to="/login">
+                    <Nav.Link>Login</Nav.Link>
+                  </LinkContainer>
                 </Nav>
               </Navbar.Collapse>
           </Navbar>
