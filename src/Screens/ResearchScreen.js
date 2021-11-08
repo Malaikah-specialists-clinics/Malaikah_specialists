@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class Specialities extends Component {
   render() {
     return (
-      <div>
+      <Container style={{maxWidth: '100%'}}>
         <div className="res-bimg">
           <div className="res-bcolor">
             <h1
@@ -49,7 +49,7 @@ class Specialities extends Component {
                     class="btn btn-primary"
                     to=""
                     role="button"
-                    style={{ background: "#0A1F3E" }}
+                    style={{ background: "#0A1F3E", border: 'none' }}
                   >
                     25/04/2021
                   </Link>
@@ -73,7 +73,7 @@ class Specialities extends Component {
                     class="btn btn-primary"
                     to=""
                     role="button"
-                    style={{ background: "#3FE0C1", color: "black" }}
+                    style={{ background: "#FBBB35", color: "black", border: 'none' }}
                   >
                     Read More
                   </Link>
@@ -109,7 +109,7 @@ class Specialities extends Component {
                     class="btn btn-primary"
                     to=""
                     role="button"
-                    style={{ background: "#0A1F3E" }}
+                    style={{ background: "#0A1F3E", border: 'none' }}
                   >
                     25/04/2021
                   </Link>
@@ -133,7 +133,7 @@ class Specialities extends Component {
                     class="btn btn-primary"
                     to=""
                     role="button"
-                    style={{ background: "#3FE0C1", color: "black" }}
+                    style={{ background: "#FBBB35", color: "black", border: 'none' }}
                   >
                     Read More
                   </Link>
@@ -142,7 +142,7 @@ class Specialities extends Component {
             </div>
           </div>
         </div>
-      </div>
+    </Container>
     );
   }
 }

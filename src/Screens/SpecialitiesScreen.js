@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class Specialities extends Component {
@@ -64,7 +64,8 @@ class Specialities extends Component {
   };
   render() {
     return (
-      <div>
+      <>
+      <Container style={{maxWidth: '100%'}}>
         <div className="b-img">
           <div className="b-color">
             <h1
@@ -86,7 +87,7 @@ class Specialities extends Component {
           class="row offset-md-2"
           style={{ height: "auto", marginTop: "30px" }}
         >
-          <div class="col-sm-4">
+          <div class="col-sm-4" >
             <div class="card-box" id="card4">
               <div class="card-thumbnail">
                 <img
@@ -468,7 +469,8 @@ class Specialities extends Component {
             </div>
           </div>
         </div>
-      </div>
+        </Container>
+      </>
     );
   }
 }

@@ -6,7 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 function Specialities() {
   return (
     <> 
-    <h2 style={{textAlign: 'center', fontWeight: 'bolder', top:'0'}}> Our Specialties</h2>
+    <h2 style={{textAlign: 'center', fontWeight: 'bolder', marginTop:'5%'}}> Our Specialties</h2>
      <div style={{width: '91%', marginLeft: 'auto', marginRight: 'auto'}}>
       <Row>
         <Col>
@@ -183,7 +183,7 @@ function Specialities() {
               </Col>
               
         <Col md>
-          <Card id="spc-card" style={{ width: "auto", height: "auto", padding:'10px'}}>
+          <Card id="spc-card" style={{ width: "auto", height: "auto", padding:'5%'}}>
             <Card.Title style={{textAlign: 'center'}}>Check Our Weekly Time Table</Card.Title>
             <Row>
               <Col>Gynecology</Col> 
@@ -200,11 +200,6 @@ function Specialities() {
               <Col> </Col> 
               <Col>24/7</Col> 
             </Row>
-            {/* <ul style={{listStyleType:'none'}}>
-              <li>Gynecology <p> &nbsp Saturday <span style={{float:'right'}}>7:30AM-6:00PM</span></p> <hr/></li> 
-              <li>Saturday <p style={{float: 'right', paddingRight:'40px'}}>8:00- 22:00</p><hr/></li>
-              <li>Sunday <p style={{float: 'right', paddingRight:'40px'}}>9:00- 21:00</p></li>
-            </ul> */}
           </Card>
         </Col>
       </Row>

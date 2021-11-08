@@ -10,7 +10,7 @@ function Header() {
           <Navbar
             className="navbar"
             variant="dark"
-            style={{ backgroundColor: "#20c997" }}
+            style={{ backgroundColor: "#20c997"}}
             expand="lg"
             collapseOnSelect
           >
@@ -21,14 +21,7 @@ function Header() {
                   <Navbar.Brand>
                     <Row>
                       <Col>
-                        <div
-                          style={{
-                            height: "70px",
-                            width: "70px",
-                            Top: '0'
-                            
-                          }}
-                        >
+                        <div>
                           <img
                             alt=""
                             src="/images/bluelogo-01.png"
@@ -41,7 +34,7 @@ function Header() {
                       <Col style={{paddingTop: '20px'}}>
                         Malaikah Specialists Clinics <br />{" "}
                         <small
-                          style={{ marginLeft: "50px", fontSize: "13.5px" }}
+                          style={{ marginLeft: "8%", fontSize: "13.5px" }}
                         >
                           <i>Angels of Health</i>
                         </small>

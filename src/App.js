@@ -20,7 +20,6 @@ function App() {
   return (
     <Router className="App">
       <Header />
-
       <Route path="/" component={Home} exact />
       <Route path="/form" component={FormScreen} />
       <Route path="/form2" component={FormScreen2} />

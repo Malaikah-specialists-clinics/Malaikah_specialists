@@ -25,7 +25,7 @@ const Events = () => {
         style={{
           textAlign: 'center',
           fontWeight: 'bolder',
-          paddingTop: '30px',
+          paddingTop: '5%',
         }}
       >
         {' '}
@@ -148,11 +148,11 @@ const Events = () => {
               </p>
               <div>
                 <h5 style={{ float: 'left' }}>Location:</h5>
-                <h6 style={{ float: 'left', padding: '3px 15px' }}>Virtual</h6>
+                <h6 style={{ float: 'left', padding: '0.5% 1.5%' }}>Virtual</h6>
               </div>
               <div>
                 <h5 style={{ float: 'left' }}>Contact:</h5>
-                <h6 style={{ float: 'left', padding: '3px 15px' }}>
+                <h6 style={{ float: 'left', padding: '0.5% 1.5%' }}>
                   malaikah@gmail.com
                 </h6>
               </div>
@@ -170,7 +170,7 @@ const Events = () => {
         </div>
       </div>
       {tip.map((tip_entity) => (
-        <CardGroup key={tip_entity.id}>
+        <CardGroup key={tip_entity.id} style={{width:'94%', margin:'auto'}}>
           <Card id="crd">
             <Card.Body>
               <a
