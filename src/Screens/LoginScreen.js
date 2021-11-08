@@ -19,7 +19,7 @@ class Login extends Component {
           <h2 style={{marginTop: '40px', textAlign: 'center'}}>Login</h2>
               <div id="pic">
                 <img
-                  src="/images/doc.jpg"
+                  src="/images/nurse.gif"
                   alt="care"
                   width="500px"
                   height="340px"
@@ -45,7 +45,7 @@ class Login extends Component {
                 <Row>              
                   <Col style={{marginTop:'5%'}}>
                     <Button id="Btn">
-                      REGISTER
+                      LOGIN
                     </Button>
                   </Col>
                   </Row>
