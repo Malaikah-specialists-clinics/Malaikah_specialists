@@ -424,7 +424,7 @@ font-size: 40px;
 
 /* styling landing page */
  .video-container {
- top: 10px;
+ /* top: 10px; */
   height: 550px;
   width: 100%;
   position: relative;

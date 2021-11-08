@@ -28,13 +28,17 @@ const Alerts = () => {
       {alert.map((alerts) => (
           <Alert
             style={{
+
               width: "60%",
               margin: "auto",
               textAlign: "center",
-              backgroundColor: "#414042",
-              color: "#ffffff",
+              // backgroundColor: "#414042",
+              // color: "#ffffff",
               border: "none",
+              fontSize: "20px",
+              fontWeight: "lighter",
             }}
+            variant="success"
             key={alerts.id}
           >
             {/* {alerts.title} */}
