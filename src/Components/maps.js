@@ -19,11 +19,13 @@ class Maps extends Component {
        // };
         return (
             
-            <div className="mapFrame" style={{ width: '100%', height: '80vh', }}>
+            <div className="mapFrame" style={{ width: '100%', height: '300px', bottom: '0', position: 'relative' }}>
                 <Map
                     google={this.props.google}
+                    resetBoundsOnResize={true}
+
                    // zoom={5}
-                   style={{ height: '80%' }}
+               style={{ height: '100%' }}
                     //initialCenter={{ lat: -7.71712, lng: 8.594125 }}
                 >
                     <Marker

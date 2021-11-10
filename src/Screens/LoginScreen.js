@@ -19,7 +19,7 @@ class Login extends Component {
           <h2 style={{marginTop: '40px', textAlign: 'center'}}>Login</h2>
               <div id="pic">
                 <img
-                  src="/images/nurse.gif"
+                  src="/images/doc.jpg"
                   alt="care"
                   width="500px"
                   height="340px"
