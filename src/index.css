@@ -16,7 +16,6 @@ code {
 }
 
 .footer{
-  margin-top:50px;
   margin-left: auto;
   margin-right: auto;
   background-color: #20c997;
@@ -330,7 +329,7 @@ font-size: 30px;
 }
 
 .event-alert{
-  margin-top: 60px;
+  margin-top: 8%;
   padding: 30px;
   margin-bottom: 193px;
   margin-left: auto;
@@ -393,7 +392,7 @@ font-size: 16px;
   text-align: center;
   text-transform: uppercase;
   padding-top: 100px;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: bolder;
   color: #0A1F3E;
 }
@@ -402,11 +401,9 @@ font-size: 16px;
  text-align: center;
 color: #0A1F3E;
 font-weight: bolder;
-font-size: 40px;
+font-size: 30px;
 }
-.emecontent{
-  font-size: 20px;
-}
+
 /* styling the find more events */
 #morevents{
   background-color: #FFFFFF;
@@ -424,7 +421,7 @@ font-size: 40px;
 
 /* styling landing page */
  .video-container {
- top: 10px;
+ /* top: 10px; */
   height: 550px;
   width: 100%;
   position: relative;
@@ -559,7 +556,7 @@ text-align: center;
 }
 
 .nav-items{
-  font-size: 17px;
+  font-size: 16px;
 }
 /* styling the pop up page */
 .popicon{
@@ -606,6 +603,16 @@ text-align: center;
   margin-left: 30px;
   font-size: 25px;
 }
-closeButton{
-  color: #FFFFFF;
+/* styling the about us scren */
+.aboutus1{
+  background-color: #020e20;
+  text-align: center;
+  color: #fff7f7;
+  padding-top: 5%; 
+}
+.aboutus2{
+  top: 10%;
+  bottom: 10%;
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
 }

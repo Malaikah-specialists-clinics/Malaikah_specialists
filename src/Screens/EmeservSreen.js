@@ -17,7 +17,7 @@ const EmeservSreen = () => {
           />
           </Col>
           <Col md className=' headingsect row-herosect'>
-          <p> Emergency services </p>
+          <p> Emergency <br/> services </p>
           </Col>
            </Row>
            
