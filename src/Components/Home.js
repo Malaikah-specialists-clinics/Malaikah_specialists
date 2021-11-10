@@ -6,6 +6,9 @@ import Specialities from './Specialities';
 import Landing from './Landing';
 import Stories from './Stories';
 import Popupbtn from './Popupbtn';
+import Maps from './maps';  
+
+
 function Home(){
     return (
       <>
@@ -17,6 +20,7 @@ function Home(){
           <Stories />
           <About />
           <Popupbtn />
+          <Maps />
         </div>
       </>
     );
