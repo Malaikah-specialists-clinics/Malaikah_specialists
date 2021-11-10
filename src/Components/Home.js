@@ -5,7 +5,7 @@ import Specialities from './Specialities';
 import Landing from './Landing';
 import Stories from './Stories';
 import Popupbtn from './Popupbtn';
-import Maps from './maps';  
+import Maps from './maps';
 
 
 function Home(){
@@ -17,8 +17,9 @@ function Home(){
           <Events />
           <Research />
           <Stories />
-          <Popupbtn />
           <Maps />
+          <Popupbtn />
+          
         </div>
       </>
     );
