@@ -2,7 +2,7 @@
  
  import React, { useState, useEffect } from 'react';
  import axios from 'axios';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Alert } from 'react-bootstrap';
  //  import { Screens} from 'react'
  //  import { Row, Card, Col } from 'react-bootstrap';
 
@@ -69,8 +69,10 @@ import { Col, Row } from 'react-bootstrap';
    );
   } else {
     return(
-    <div className='event-alert' >
-       <h1> NO EVENTS YET</h1>
+    <div className='event-alert' variant='success' >
+      <Alert variant='success'>
+    NO EVENTS YET
+  </Alert>
     </div>
    
     )

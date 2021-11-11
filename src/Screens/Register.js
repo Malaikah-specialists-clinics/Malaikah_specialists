@@ -29,37 +29,52 @@ class Register extends Component {
             <Col md sm={6} className="form">
               <Form action="" Method="POST" style={{padding:'10px'}}>
                 <Row>
-                  <Col md className="inputField">
-                    <Form.Label id="field">Full Names</Form.Label>
-                    <Form.Control name="" id="form-control" />
-                  </Col>
                   <Col md>
+                  <Form.Label id="field">
+                 Full Names
+                </Form.Label>
+                <Form.Control name="fullNames" type="text" id="form-control" />
+                  </Col>
+                  <Col md className="inputField">
                     <Form.Label id="field">Email Address</Form.Label>
-                    <Form.Control name="doa" id="form-control" />
+                    <Form.Control name="emai;" id="form-control" />
                   </Col>
                 </Row>
                 <Row>
                   <Col md>
                     <Form.Label id="field">Phone number</Form.Label>
-                    <Form.Control name="toa" id="form-control" />
+                    <Form.Control name="phoneNumber" id="form-control" />
                   </Col>
                   <Col md>
-                    <Form.Label id="field">Age</Form.Label>
-                    <Form.Control name="location" id="form-control" />
+                    <Form.Label id="field">Date of birth</Form.Label>
+                    <Form.Control name="dob" id="form-control" />
                   </Col>
                 </Row>
                 <Row>
                   <Col md>
+                    <Form.Label id="field">Gender</Form.Label>
+                    <Form.Control name="gender" id="form-control" />
+                  </Col>
+                  <Col md>
+                  <Form.Label id="field">
+                  Location
+                </Form.Label>
+                <Form.Control name="location" type="text" id="form-control" />
+                  </Col>
+                </Row>
+                <Row>
+                  
+                  <Col md>
                   <Form.Label id="field">
                   Password
                 </Form.Label>
-                <Form.Control name="pmi" type="text" id="form-control" />
+                <Form.Control name="password" type="text" id="form-control" />
                   </Col>
                   <Col md>
                   <Form.Label id="field">
                   Confirm Password
                 </Form.Label>
-                <Form.Control name="pmi" type="text" id="form-control" />
+                <Form.Control name="confirmPassword" type="text" id="form-control" />
                   </Col>
                 </Row>
                 <Row>              

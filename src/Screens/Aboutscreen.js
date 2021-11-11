@@ -7,8 +7,8 @@ const Aboutscreen = () => {
   
   return (
     <div className="formcontent">
-      <Row id="main">
-        <Col md className="aboutus1">
+      {/* <Row id="main"> */}
+        {/* <Col md className="aboutus1">
           <h1> Who We Are</h1>
           <p st>
             Malaikah Specialist Center aims is to provide you with quality,
@@ -101,7 +101,7 @@ const Aboutscreen = () => {
             </ul>
           </Accordion.Body>
         </Accordion.Item>
-      </Accordion>
+      </Accordion> */}
     </div>
   );
 };

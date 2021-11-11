@@ -65,7 +65,7 @@ class Specialities extends Component {
   render() {
     return (
       <>
-      <Container style={{maxWidth: '100%'}}>
+     
         <div className="b-img">
           <div className="b-color">
             <h1
@@ -82,9 +82,9 @@ class Specialities extends Component {
             </h1>
           </div>
         </div>
-
+        <Container>
         <div
-          class="row offset-md-2"
+          class="row"
           style={{ height: "auto", marginTop: "30px" }}
         >
           <div class="col-sm-4" >
@@ -145,7 +145,7 @@ class Specialities extends Component {
           </div>
         </div>
 
-        <div class="row offset-md-2" style={{ height: "auto" }}>
+        <div class="row " style={{ height: "auto" }}>
           <div class="col-sm-4">
             <div class="card-box" id="card4">
               <div class="card-thumbnail">
@@ -205,7 +205,7 @@ class Specialities extends Component {
           </div>
         </div>
 
-        <div class="row offset-md-2" style={{ height: "auto" }}>
+        <div class="row" style={{ height: "auto" }}>
           <div class="col-sm-4">
             <div class="card-box" id="card4">
               <div class="card-thumbnail">
@@ -268,7 +268,7 @@ class Specialities extends Component {
           </div>
         </div>
 
-        <div class="row offset-md-2" style={{ height: "auto" }}>
+        <div class="row" style={{ height: "auto" }}>
           <div class="col-sm-4">
             <div class="card-box" id="card4">
               <div class="card-thumbnail">
@@ -322,7 +322,7 @@ class Specialities extends Component {
             </div>
           </div>
         </div>
-        <div class="row offset-md-2" style={{ height: "auto" }}>
+        <div class="row" style={{ height: "auto" }}>
           <div class="col-sm-4">
             <div class="card-box" id="card4">
               <div class="card-thumbnail">
@@ -385,7 +385,7 @@ class Specialities extends Component {
           </div>
         </div>
 
-        <div class="row offset-md-2" style={{ height: "auto" }}>
+        <div class="row" style={{ height: "auto" }}>
           <div class="col-sm-4">
             <div class="card-box" id="card4">
               <div class="card-thumbnail">
@@ -419,7 +419,7 @@ class Specialities extends Component {
           </div>
         </div>
 
-        <div class="row offset-md-2" style={{ height: "auto" }}>
+        <div class="row" style={{ height: "auto" }}>
           <div class="col-sm-4">
             <div class="card-box" id="card4">
               <div class="card-thumbnail">

@@ -37,7 +37,7 @@ const Popupbtn = () => {
           </Modal.Header>
           <Modal.Body id="PopModel">
             {/* onclick= {() => { navigation('/#/form');}} */}
-            <LinkContainer to="/form">
+            <LinkContainer to="/login">
               <Button id="bookappointbtn">
                 <Row xs={12} md={8}>
                   <h5 className="bookappoint">BOOK AN APPOINTMENT</h5>

@@ -195,6 +195,7 @@ const Events = () => {
               <Card.Text>{tip_entity.description3}</Card.Text>
             </Card.Body>
           </Card>
+          
         </CardGroup>
       ))}
     </div>

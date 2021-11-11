@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class Specialities extends Component {
   render() {
     return (
-      <Container style={{maxWidth: '100%'}}>
+      <>
         <div className="res-bimg">
           <div className="res-bcolor">
             <h1
@@ -22,9 +22,9 @@ class Specialities extends Component {
             </h1>
           </div>
         </div>
-
+        <Container>
         <div
-          class="row offset-md-2"
+          class="row"
           style={{ height: "auto", marginTop: "30px" }}
         >
           <div class="col-sm-4">
@@ -84,7 +84,7 @@ class Specialities extends Component {
         </div>
 
         <div
-          class="row offset-md-2"
+          class="row"
           style={{ height: "auto", marginTop: "30px" }}
         >
           <div class="col-sm-4">
@@ -142,7 +142,8 @@ class Specialities extends Component {
             </div>
           </div>
         </div>
-    </Container>
+        </Container>
+        </>
     );
   }
 }

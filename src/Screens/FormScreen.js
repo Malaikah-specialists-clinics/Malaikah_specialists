@@ -24,56 +24,12 @@ class FormPage extends Component {
               <h2>Book An Appointment</h2>
               <h4>Patient Information </h4>
               <Row>
-                <Col md className="inputField">
-                  <Form.Label id="field">First Name</Form.Label>
-                  <Form.Control
-                    placeholder="E.g Mark"
-                    id="form-control"
-                    name="firstName"
-                  />
-                </Col>
-                <Col md>
-                  <Form.Label id="field">Last Name</Form.Label>
-                  <Form.Control
-                    placeholder="E.g Mukuye"
-                    id="form-control"
-                    name="lastName"
-                  />
-                </Col>
-              </Row>
-              <Row>
                 <Col md>
                   <Form.Label id="field">Email</Form.Label>
                   <Form.Control
                     placeholder="winniek@example.com"
                     id="form-control"
                     name="email"
-                  />
-                </Col>
-                <Col md>
-                  <Form.Label id="field">Phone Number</Form.Label>
-                  <Form.Control
-                    placeholder="+2347000000"
-                    id="form-control"
-                    name="phoneNumber"
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col md>
-                  <Form.Label id="field">Date Of Birth</Form.Label>
-                  <Form.Control
-                    placeholder="mm/yyyy/dd"
-                    id="form-control"
-                    name="dob"
-                  />
-                </Col>
-                <Col md>
-                  <Form.Label id="field">Gender</Form.Label>
-                  <Form.Control
-                    placeholder="gender"
-                    id="form-control"
-                    name=""
                   />
                 </Col>
               </Row>
@@ -114,6 +70,11 @@ class FormPage extends Component {
               </Col>
             </Form>
           </Col>
+          <Col md>
+            <div className="pic">
+            <img src="/images/caremeds.jpg" alt="doctor" style={{width:'600px', height:'600px', marginTop: '3%'}}/>
+            </div>
+           </Col>
         </Row>
       </div>
     </>
