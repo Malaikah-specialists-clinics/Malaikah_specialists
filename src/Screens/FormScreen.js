@@ -36,8 +36,14 @@ class FormPage extends Component {
               <Col md className="">
                 <Row>
                   <Col md className="inputField">
-                    <Form.Label id="field">Select Department</Form.Label>
-                    <Form.Control name="sdept" id="form-control" />
+                    <Form.Label id="field">Department</Form.Label>
+                    <Form.Select name="sdept" id="form-control" >
+                      <option>Select department</option>
+                      <option >Gynecology</option>
+                      <option >Paediatrics</option>
+                      <option>Non-communicable diseases</option>
+                      <option >Hernia and appendicitis Surgery</option>
+                    </Form.Select>
                   </Col>
                   <Col md>
                     <Form.Label id="field">Date Of Appointment</Form.Label>
@@ -50,8 +56,12 @@ class FormPage extends Component {
                     <Form.Control name="toa" id="form-control" />
                   </Col>
                   <Col md>
-                    <Form.Label id="field">Location</Form.Label>
-                    <Form.Control name="location" id="form-control" />
+                    <Form.Label id="field">Mode of appointment</Form.Label>
+                    <Form.Select name="moa" id="form-control" >
+                      <option>Select mode of appointment</option>
+                      <option >Online</option>
+                      <option >In Person</option>
+                    </Form.Select>
                   </Col>
                 </Row>
 

@@ -1,8 +1,7 @@
-
-import React from 'react'
-import {Carousel} from 'react-bootstrap'
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from "react";
+import { Col, Container,Row } from "react-bootstrap";
+ import { useState, useEffect } from "react";
+  import axios from "axios";
 
 const Stories = () => {
    const [story, setStory  ] = useState([]);
@@ -17,40 +16,39 @@ const Stories = () => {
          console.log({ message: err });
        });
    }, []);
-    return (
-      <>
-        <div className="storycont">
-          <h1
-            style={{
-              color: '#0A1F3E',
-              fontSize: '35px',
-              paddingTop: '20px',
-              textAlign: 'center',
-            }}
-          >
-            OUR SUCCESS STORIES
-          </h1>
-          {story.map((story_entity) => (
-            <Carousel variant="dark" key={story_entity.id}>
-              <Carousel.Item>
-                <div id="storycard">
-                  <h2 id="strytitle">{story_entity.storytitle}</h2>
-                  {/* <img
-                    id="storyimg"
-                    src="https://avatars.githubusercontent.com/u/79285222?v=4"
-                    alt=""
-                  /> */}
-                  <p className="strycontent">{story_entity.storycontent}</p>
-                  {/* <h6>
-                  <small className="text-muted">Last updated 3 mins ago</small>
-                </h6> */}
-                </div>
-              </Carousel.Item>
-            </Carousel>
-          ))}
-        </div>
-      </>
-    );
-}
+  return (
+    <>
+    {story.map((story_entity) => (
+      <div className="storycont">
+        <h2
+          style={{
+            paddingTop: "20px",
+            textAlign: "center",
+          }}
+        >
+          OUR SUCCESS STORIES
+        </h2>
+        <Container style={{paddingBottom: '30px'}}>
+        <Row>
+          <Col>
+          <h4 style={{textAlign: 'center'}}>{story_entity.department}</h4>
+          <iframe
+          width="260"
+          height="200"
+          src={story_entity.url}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+          </Col>
+         </Row>
+        
+        </Container>
+      </div>
+      ))}
+    </>
+  );
+};
 
-export default Stories
+export default Stories;
