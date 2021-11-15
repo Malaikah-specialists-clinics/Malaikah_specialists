@@ -15,8 +15,10 @@ class Register extends Component {
           style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}
         >
           <Row>
-          <Col md>
-          <h2 style={{marginTop: '40px', textAlign: 'center'}}>Create An Account</h2>
+            <Col md>
+              <h2 style={{ marginTop: '40px', textAlign: 'center' }}>
+                Create An Account
+              </h2>
               <div id="pic">
                 <img
                   src="/images/reg.jpg"
@@ -27,17 +29,19 @@ class Register extends Component {
               </div>
             </Col>
             <Col md sm={6} className="form">
-              <Form action="" Method="POST" style={{padding:'10px'}}>
+              <Form
+                action="http://localhost:3000/users"
+                Method="POST"
+                style={{ padding: '10px' }}
+              >
                 <Row>
                   <Col md>
-                  <Form.Label id="field">
-                 Full Names
-                </Form.Label>
-                <Form.Control name="fullNames" type="text" id="form-control" />
+                    <Form.Label id="field">Full Names</Form.Label>
+                    <Form.Control name="name" type="text" id="form-control" />
                   </Col>
                   <Col md className="inputField">
                     <Form.Label id="field">Email Address</Form.Label>
-                    <Form.Control name="emai;" id="form-control" />
+                    <Form.Control name="email" id="form-control" />
                   </Col>
                 </Row>
                 <Row>
@@ -56,35 +60,42 @@ class Register extends Component {
                     <Form.Control name="gender" id="form-control" />
                   </Col>
                   <Col md>
-                  <Form.Label id="field">
-                  Location
-                </Form.Label>
-                <Form.Control name="location" type="text" id="form-control" />
+                    <Form.Label id="field">Location</Form.Label>
+                    <Form.Control
+                      name="location"
+                      type="text"
+                      id="form-control"
+                    />
                   </Col>
                 </Row>
                 <Row>
-                  
                   <Col md>
-                  <Form.Label id="field">
-                  Password
-                </Form.Label>
-                <Form.Control name="password" type="text" id="form-control" />
+                    <Form.Label id="field">Password</Form.Label>
+                    <Form.Control
+                      name="password"
+                      type="password"
+                      id="form-control"
+                    />
                   </Col>
                   <Col md>
-                  <Form.Label id="field">
-                  Confirm Password
-                </Form.Label>
-                <Form.Control name="confirmPassword" type="text" id="form-control" />
+                    <Form.Label id="field">Confirm Password</Form.Label>
+                    <Form.Control
+                      name="confirmPassword"
+                      type="text"
+                      id="form-control"
+                    />
                   </Col>
                 </Row>
-                <Row>              
-                  <Col style={{marginTop:'5%'}}>
-                    <Button id="Btn">
+                <Row>
+                  <Col style={{ marginTop: '5%' }}>
+                    <Button type="submit" id="Btn">
                       REGISTER
                     </Button>
                   </Col>
-                  <Col style={{marginTop:'9.5%'}}>
-                  <p>Already have an account? <a href="#login">Sign in</a></p>
+                  <Col style={{ marginTop: '9.5%' }}>
+                    <p>
+                      Already have an account? <a href="#login">Sign in</a>
+                    </p>
                   </Col>
                 </Row>
               </Form>
