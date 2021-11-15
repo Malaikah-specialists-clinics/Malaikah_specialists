@@ -3,20 +3,19 @@ import { Row, Col, Form, Button } from "react-bootstrap";
 // import { LinkContainer } from 'react-router-bootstrap';
 
 class Register extends Component {
-  alertText = () =>{
-    alert('You have an appointment!!, Please check your email')
-}
 
-  render(){
+  render() {
     return (
       <>
         <div
           className="formcontent"
-          style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}
+          style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}
         >
           <Row>
-          <Col md>
-          <h2 style={{marginTop: '40px', textAlign: 'center'}}>Create An Account</h2>
+            <Col md>
+              <h2 style={{ marginTop: "40px", textAlign: "center" }}>
+                Create An Account
+              </h2>
               <div id="pic">
                 <img
                   src="/images/reg.jpg"
@@ -27,17 +26,19 @@ class Register extends Component {
               </div>
             </Col>
             <Col md sm={6} className="form">
-              <Form action="" Method="POST" style={{padding:'10px'}}>
+              <Form action="http://localhost:3000/users" Method="POST" style={{ padding: "10px" }}>
                 <Row>
                   <Col md>
-                  <Form.Label id="field">
-                 Full Names
-                </Form.Label>
-                <Form.Control name="fullNames" type="text" id="form-control" />
+                    <Form.Label id="field">Full Names</Form.Label>
+                    <Form.Control
+                      name="name"
+                      type="text"
+                      id="form-control"
+                    />
                   </Col>
                   <Col md className="inputField">
                     <Form.Label id="field">Email Address</Form.Label>
-                    <Form.Control name="emai;" id="form-control" />
+                    <Form.Control name="email" id="form-control" />
                   </Col>
                 </Row>
                 <Row>
@@ -52,39 +53,49 @@ class Register extends Component {
                 </Row>
                 <Row>
                   <Col md>
-                    <Form.Label id="field">Gender</Form.Label>
-                    <Form.Control name="gender" id="form-control" />
+                  <Form.Label id="field">Gender</Form.Label>
+                    <Form.Select name="gender" id="form-control" >
+                      <option>Select Gender</option>
+                      <option value="1">Female</option>
+                      <option value="2">Male</option>
+                      <option value="3">Prefer not to say</option>
+                    </Form.Select>
                   </Col>
                   <Col md>
-                  <Form.Label id="field">
-                  Location
-                </Form.Label>
-                <Form.Control name="location" type="text" id="form-control" />
+                    <Form.Label id="field">Location</Form.Label>
+                    <Form.Control
+                      name="location"
+                      type="text"
+                      id="form-control"
+                    />
                   </Col>
                 </Row>
                 <Row>
-                  
                   <Col md>
-                  <Form.Label id="field">
-                  Password
-                </Form.Label>
-                <Form.Control name="password" type="text" id="form-control" />
+                    <Form.Label id="field">Password</Form.Label>
+                    <Form.Control
+                      name="password"
+                      type="password"
+                      id="form-control"
+                    />
                   </Col>
                   <Col md>
-                  <Form.Label id="field">
-                  Confirm Password
-                </Form.Label>
-                <Form.Control name="confirmPassword" type="text" id="form-control" />
+                    <Form.Label id="field">Confirm Password</Form.Label>
+                    <Form.Control
+                      name="confirmPassword"
+                      type="password"
+                      id="form-control"
+                    />
                   </Col>
                 </Row>
-                <Row>              
-                  <Col style={{marginTop:'5%'}}>
-                    <Button id="Btn">
-                      REGISTER
-                    </Button>
+                <Row>
+                  <Col style={{ marginTop: "5%" }}>
+                    <Button type='submit' id="Btn">REGISTER</Button>
                   </Col>
-                  <Col style={{marginTop:'9.5%'}}>
-                  <p>Already have an account? <a href="#login">Sign in</a></p>
+                  <Col style={{ marginTop: "9.5%" }}>
+                    <p>
+                      Already have an account? <a href="#login">Sign in</a>
+                    </p>
                   </Col>
                 </Row>
               </Form>
@@ -94,7 +105,6 @@ class Register extends Component {
       </>
     );
   }
-  
 }
 
 export default Register;

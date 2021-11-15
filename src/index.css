@@ -26,13 +26,13 @@ code {
 } 
 
 .form{
-padding: 40px;
+padding: 20px;
 margin-bottom: 40px;
 height: auto;
 border: none;
 background: #FFFFFF;
 box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-box-shadow: 8px 14px 4px -1px rgba(0, 0, 0, 0.25);
+/* box-shadow: 8px 14px 4px -1px rgba(0, 0, 0, 0.25); */
 border-radius: 20px;
 }
 #field, #pic{
@@ -49,12 +49,13 @@ padding-top: 10px;
   color:#0A1F3E;
 }
 #form-control{
-  border: 0.5px solid grey;
-  border-radius: 8px;
+  border: 0.1px solid grey;
+  border-radius: 4px;
   height: 35px;
-  color: grey;
+  /* color: grey; */
   text-align: center;
 }
+
 /* #main{
   margin-top: 110px;
   padding: 0;
@@ -562,8 +563,8 @@ text-align: center;
 .popicon{
   position: fixed;
   background: transparent;
-  top: 70%;
-  left: 20px;
+  top: 85%;
+  left: 0;
 }
 .popup{
   width: 120px;

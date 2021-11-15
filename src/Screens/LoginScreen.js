@@ -15,8 +15,8 @@ class Login extends Component {
           style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}
         >
           <Row>
-          <Col md>
-          <h2 style={{marginTop: '40px', textAlign: 'center'}}>Login</h2>
+            <Col md>
+              <h2 style={{ marginTop: '40px', textAlign: 'center' }}>Login</h2>
               <div id="pic">
                 <img
                   src="/images/doc.jpg"
@@ -27,11 +27,15 @@ class Login extends Component {
               </div>
             </Col>
             <Col md sm={6} className="form">
-              <Form action="" Method="POST" style={{padding:'10px'}}>
+              <Form
+                action="http://localhost:3000/users/login"
+                Method="POST"
+                style={{ padding: '10px' }}
+              >
                 <Row>
                   <Col md>
                     <Form.Label id="field">Email Address</Form.Label>
-                    <Form.Control name="doa" id="form-control" />
+                    <Form.Control name="email" id="form-control" />
                   </Col>
                 </Row>
                 <Row>
@@ -39,19 +43,21 @@ class Login extends Component {
                   <Form.Label id="field">
                   Password
                 </Form.Label>
-                <Form.Control name="pmi" type="text" id="form-control" />
+                <Form.Control name="password" type="password" id="form-control" />
                   </Col>
                   </Row>
                 <Row>              
                   <Col style={{marginTop:'5%'}}>
-                    <Button id="Btn">
+                    <Button type='submit' id="Btn">
                       LOGIN
                     </Button>
                   </Col>
-                  </Row>
-                  <Row>
-                  <Col style={{marginTop:'9.5%'}}>
-                  <p>Have No account? <a href="#register">Sign Up</a></p>
+                </Row>
+                <Row>
+                  <Col style={{ marginTop: '9.5%' }}>
+                    <p>
+                      Have No account? <a href="#register">Sign Up</a>
+                    </p>
                   </Col>
                 </Row>
               </Form>
