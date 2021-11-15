@@ -15,8 +15,8 @@ class Login extends Component {
           style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}
         >
           <Row>
-          <Col md>
-          <h2 style={{marginTop: '40px', textAlign: 'center'}}>Login</h2>
+            <Col md>
+              <h2 style={{ marginTop: '40px', textAlign: 'center' }}>Login</h2>
               <div id="pic">
                 <img
                   src="/images/doc.jpg"
@@ -27,7 +27,11 @@ class Login extends Component {
               </div>
             </Col>
             <Col md sm={6} className="form">
-              <Form action="http://localhost:3000/users/login" Method="POST" style={{padding:'10px'}}>
+              <Form
+                action="http://localhost:3000/users/login"
+                Method="POST"
+                style={{ padding: '10px' }}
+              >
                 <Row>
                   <Col md>
                     <Form.Label id="field">Email Address</Form.Label>
@@ -48,10 +52,12 @@ class Login extends Component {
                       LOGIN
                     </Button>
                   </Col>
-                  </Row>
-                  <Row>
-                  <Col style={{marginTop:'9.5%'}}>
-                  <p>Have No account? <a href="#register">Sign Up</a></p>
+                </Row>
+                <Row>
+                  <Col style={{ marginTop: '9.5%' }}>
+                    <p>
+                      Have No account? <a href="#register">Sign Up</a>
+                    </p>
                   </Col>
                 </Row>
               </Form>
