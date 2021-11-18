@@ -31,6 +31,7 @@ const Events = () => {
         {' '}
         Events
       </h2>
+
       <div
         id="carouselExampleDark"
         class="carousel carousel-dark slide"
@@ -62,7 +63,7 @@ const Events = () => {
           <div class="carousel-item active" data-bs-interval="10000">
             <img
               src="https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2017/12/05112949/hospital-event-promotion.jpg"
-              class="d-block w-100"
+              class="item img"
               alt=""
             />
             <div class="carousel-caption d-none d-md-block">
@@ -75,7 +76,7 @@ const Events = () => {
           <div class="carousel-item" data-bs-interval="2000">
             <img
               src="https://higherlogicdownload.s3.amazonaws.com/CCGCOP/44c83e86-513d-42d6-b779-70c3625da6b3/UploadedImages/homepage/tile-1-bg.jpeg"
-              class="d-block w-100"
+              class="item img"
               alt=""
             />
             <div class="carousel-caption d-none d-md-block">
@@ -88,7 +89,7 @@ const Events = () => {
           <div class="carousel-item">
             <img
               src="https://www.clarityexperiences.com/hubfs/2018%20Website/2018%20Healthcare/healthcare-event-presentation-cvs-health.jpg"
-              class="d-block w-100"
+              class="item img"
               alt=""
             />
             <div class="carousel-caption d-none d-md-block">
@@ -170,7 +171,7 @@ const Events = () => {
         </div>
       </div>
       {tip.map((tip_entity) => (
-        <CardGroup key={tip_entity.id} style={{width:'94%', margin:'auto'}}>
+        <CardGroup key={tip_entity.id} style={{ width: '94%', margin: 'auto' }}>
           <Card id="crd">
             <Card.Body>
               <a
@@ -195,7 +196,6 @@ const Events = () => {
               <Card.Text>{tip_entity.description3}</Card.Text>
             </Card.Body>
           </Card>
-          
         </CardGroup>
       ))}
     </div>
