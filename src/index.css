@@ -355,6 +355,9 @@ font-size: 30px;
   #pic, .pic{
     display: none;
   }
+  .htext{
+    margin-top: 60%;
+  }
   .formcontent{
     margin-top: 0;
   }
@@ -437,6 +440,9 @@ height: 550px;
  background-size: cover;
 background-position: center;
 } 
+.htext{
+  margin-top: 20%;
+}
 
 
 .eventdate{
