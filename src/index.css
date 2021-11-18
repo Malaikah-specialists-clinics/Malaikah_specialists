@@ -447,7 +447,7 @@ background-position: center;
 } 
 .htext{
   margin-top: 20%;
-  float: right;
+  text-align: right;
   padding-right: 2%;
  
 }
