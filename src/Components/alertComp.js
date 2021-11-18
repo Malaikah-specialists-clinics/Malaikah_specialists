@@ -26,26 +26,17 @@ const Alerts = () => {
     <>
       {alert.map((alerts) => (
         <Alert
-          style={{
-            width: '60%',
-            margin: 'auto',
-            textAlign: 'center',
-            // backgroundColor: "#414042",
-            // color: "#ffffff",
-            border: 'none',
-            fontSize: '18px',
-            fontWeight: 'lighter',
-          }}
+        className="alert"
           variant="success"
           key={alerts.id}
         >
-          {/* {alerts.title} */}
+          
           <p>
             {alerts.title}: {alerts.content}
           </p>
         </Alert>
       ))}
-      ;
+      
     </>
   );
 };

@@ -31,12 +31,12 @@ function Landing() {
   }, []);
   return (
     <>
-      {/* id="bgvid" poster="/images/emeservice.jpg" */}
       <Col>
-        <div className="video-container">
-          <div id="caption" className="video-container">
-            <Alerts />
-            <h1 style={{ marginTop: '20%' }}>
+      <div className="video-container">
+        <img src="/images/hospital.jpeg" alt="doctor" id="himg"/>
+          <div id="caption">
+          <Alerts />
+            <h1 style={{marginTop:'20%'}}>
               <span ref={textRef}></span>
             </h1>
             <p id="paragrah ">
@@ -46,7 +46,7 @@ function Landing() {
               {/* <span ref={paragrah}></span> */}
             </p>
           </div>
-        </div>
+          </div>
       </Col>
     </>
   );
