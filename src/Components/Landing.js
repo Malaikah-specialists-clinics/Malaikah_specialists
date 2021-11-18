@@ -34,8 +34,8 @@ function Landing() {
       <Col>
       <div className="video-container">
         <img src="/images/hospital.jpeg" alt="doctor" id="himg"/>
+        <Alerts />
           <div id="caption">
-          <Alerts />
             <h1 className="htext">
               <span ref={textRef}></span>
             </h1>
