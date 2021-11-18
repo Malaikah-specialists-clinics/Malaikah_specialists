@@ -36,7 +36,7 @@ function Landing() {
         <img src="/images/hospital.jpeg" alt="doctor" id="himg"/>
           <div id="caption">
           <Alerts />
-            <h1 style={{marginTop:'20%'}}>
+            <h1 className="htext">
               <span ref={textRef}></span>
             </h1>
             <p id="paragrah ">
