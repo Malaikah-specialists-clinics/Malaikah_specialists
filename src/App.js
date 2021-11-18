@@ -16,6 +16,8 @@ import Home from './Components/Home';
 import Articlescreen from './Screens/Articlescreen';
 import SpecialitiesScreen from './Screens/SpecialitiesScreen'
 import LoginScreen from './Screens/LoginScreen'
+import EventReg from './Screens/EventRegForm';
+
 function App() {
   return (
     <Router className="App">
@@ -31,6 +33,7 @@ function App() {
       <Route path="/articles" component={Articlescreen}></Route>
       <Route path="/login" component={LoginScreen}></Route>
       <Route path="/about" component={Aboutscreen}></Route>
+      <Route path="/about" component={EventReg}></Route>
       <Route path="/specialities" component={SpecialitiesScreen}></Route>
       <Footer />
     </Router>
