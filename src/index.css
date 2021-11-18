@@ -52,14 +52,9 @@ padding-top: 10px;
   border: 0.1px solid grey;
   border-radius: 4px;
   height: 35px;
-  /* color: grey; */
   text-align: center;
 }
 
-/* #main{
-  margin-top: 110px;
-  padding: 0;
-} */
 .research{
   height: auto;
   padding: auto;
@@ -422,37 +417,22 @@ font-size: 30px;
 
 /* styling landing page */
  .video-container {
- /* top: 10px; */
   height: 550px;
   width: 100%;
   position: relative;
-}
-video{
-  height: 70%;
 }
 
 
 /* Just styling the content of the div, the *magic* in the previous rules */
 #caption {
-/* top: 30%; */
-/* left:50%; */
 position: absolute;
 text-align: right;
 color: #414042;
 font-weight: bolder;
 font-size: 28px;
-background-size: cover;
 background-position: center;
 background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
 } 
-video {
-  object-fit: cover;
-  width: 100%;
-  height: 400px;
-  position: relative;
-  z-index: -1;
-}
-
 .eventdate{
   padding: 20px;
   

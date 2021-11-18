@@ -1,12 +1,11 @@
-import React  from "react";
-import {useEffect, useRef} from "react"
-import { Col } from "react-bootstrap";
-import Alerts from './alertComp';
-import { init } from 'ityped';
+import React from 'react'
+import { useEffect, useRef } from 'react'
+import { Col } from 'react-bootstrap'
+import Alerts from './alertComp'
+import { init } from 'ityped'
 
 function Landing() {
-  const textRef = useRef();
-  // const paragrah = useRef();
+  const textRef = useRef()
 
   useEffect(() => {
     console.log(textRef);
@@ -18,29 +17,12 @@ function Landing() {
       loop: true,
 
       strings: ['Quality Innovative', 'Healthcare Delivery'],
-    });
-    // console.log(paragrah);
-    // init(paragrah.current, {
-    //   disableBackTyping: false,
-    //   strings: [
-    //     'Easing access to affordable',
-    //     'healthcare services.',
-    //     'We link global doctors to you',
-    //   ],
-    // });
-  }, []);
+    })
+  }, [])
   return (
     <>
-      {/* id="bgvid" poster="/images/emeservice.jpg" */}
       <Col>
         <div className="video-container">
-          {/* <video
-          src="/videos/video-dmm.mp4"
-          type="video/mp4"
-          autoPlay
-          muted
-          loop
-        /> */}
           <div id="caption" className="video-container">
             <Alerts />
             <h1 style={{ marginTop: '20%' }}>
