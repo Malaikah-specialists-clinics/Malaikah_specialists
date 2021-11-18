@@ -57,8 +57,8 @@ import { Col, Row, Alert } from 'react-bootstrap';
                      malaikah@gmail.com
                    </h6>
                  </div>
-                 <button className="Btn" style={{ padding: '2px' }}>
-                   Register
+                 <button className="Btn">
+                   REGISTER
                  </button>
                </div>
              </Col>

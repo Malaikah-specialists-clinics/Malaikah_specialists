@@ -26,23 +26,17 @@ const Alerts = () => {
     <>
       {alert.map((alerts) => (
         <Alert
-        className='alert'
-          style={{
-            width: '60%',
-            margin: 'auto',
-            textAlign: 'center',
-            border: 'none',
-            fontSize: '18px',
-            fontWeight: 'lighter',
-          }}
+        className="alert"
           variant="success"
           key={alerts.id}
         >
+          
           <p>
             {alerts.title}: {alerts.content}
           </p>
         </Alert>
       ))}
+      
     </>
   );
 };
