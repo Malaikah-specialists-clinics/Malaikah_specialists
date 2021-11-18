@@ -36,7 +36,7 @@ const Events = () => {
       className="d-block w-100"
       src="https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2017/12/05112949/hospital-event-promotion.jpg"
       alt="First slide"
-      style={{height: '420px', width: '100%'}}
+      style={{height: '400px', width: '100%'}}
     />
     <Carousel.Caption>
       <h4>First slide label</h4>
@@ -48,7 +48,7 @@ const Events = () => {
       className="d-block w-100"
       src="https://higherlogicdownload.s3.amazonaws.com/CCGCOP/44c83e86-513d-42d6-b779-70c3625da6b3/UploadedImages/homepage/tile-1-bg.jpeg"
       alt="Second slide"
-      style={{height: '420px', width: '100%'}}
+      style={{height: '400px', width: '100%'}}
     />
 
     <Carousel.Caption>
@@ -61,7 +61,7 @@ const Events = () => {
       className="d-block w-100"
       src="https://www.clarityexperiences.com/hubfs/2018%20Website/2018%20Healthcare/healthcare-event-presentation-cvs-health.jpg"
       alt="Third slide"
-      style={{height: '420px', width: '100%'}}
+      style={{height: '400px', width: '100%'}}
     />
 
     <Carousel.Caption>
