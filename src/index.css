@@ -88,7 +88,7 @@ padding-top: 10px;
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   margin: 10px -12px;
   background-color: #FFFFFF;
-  height: 330px;
+ 
 }
 
 
@@ -101,9 +101,9 @@ text-align: center;
 h3{
   color: white;
 }
-#card2{
+/* #card2{
   padding: 70px 50px;
-}
+} */
 
 #card3{
   padding: 0;
@@ -355,9 +355,7 @@ font-size: 30px;
   #pic, .pic{
     display: none;
   }
-  .htext{
-    margin-top: 60%;
-  }
+  
   .formcontent{
     margin-top: 0;
   }
@@ -366,6 +364,9 @@ font-size: 30px;
   }
   .form{
     max-width: 100%;
+  }
+  .htext{
+    padding-top: 40%;
   }
   #morevents {
   max-width: 340px;
@@ -429,9 +430,8 @@ font-size: 30px;
 
 /* Just styling the content of the div, the *magic* in the previous rules */
 #caption {
-bottom: 98%;
+bottom: 95%;
 position: relative; 
-text-align: right;
 color: #f1f1fd;
 font-weight: bolder;
 font-size: 28px;
@@ -442,6 +442,9 @@ background-position: center;
 } 
 .htext{
   margin-top: 20%;
+  text-align: right;
+  padding-right: 2%;
+ 
 }
 
 
@@ -523,7 +526,7 @@ text-align: center;
   text-align: center;
 }
 #contentcard{
-  height: 250px;
+  height: auto;
   padding: 5px 30px;
 }
 /* .footericons{
@@ -614,19 +617,11 @@ text-align: center;
    height:600px;
 }
 .alert{
+  bottom: 98%;
   width: 60%;
     margin: auto;
     text-align: center;
     border: none;
     font-size: 18px;
     font-weight: lighter;
-}
-.carousel-item {
-  height: 75vh;
-}
-.item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-   height: 100px;
 }

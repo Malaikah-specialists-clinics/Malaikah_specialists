@@ -25,7 +25,7 @@ import { Col, Row, Alert } from 'react-bootstrap';
 
    return (
      <>
-       <div class="hcare" style={{ display: 'block' }}>
+       <div class="hcare">
          {event.map((events) => (
            <Row
              style={{ width: '100%', padding: '0', margin: '0' }}
