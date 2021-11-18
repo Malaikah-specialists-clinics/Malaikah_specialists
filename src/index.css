@@ -74,8 +74,9 @@ padding-top: 10px;
   color:#0A1F3E;
 }
 .Btn{
+  border-radius: 4px;
   background-color: #FBBB35;
-  width:180px;
+  width:200px;
   padding: 5px;
   border:none;
   color:#0A1F3E;
@@ -436,12 +437,13 @@ video{
 #caption {
 /* top: 30%; */
 /* left:50%; */
-position: absolute;
+/* position: relative; */
 text-align: right;
 color: #414042;
 font-weight: bolder;
 font-size: 28px;
 background-size: cover;
+z-index: -1;
 background-position: center;
 background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
 } 

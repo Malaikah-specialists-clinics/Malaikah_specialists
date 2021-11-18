@@ -34,13 +34,6 @@ function Landing() {
       {/* id="bgvid" poster="/images/emeservice.jpg" */}
       <Col>
         <div className="video-container">
-          {/* <video
-          src="/videos/video-dmm.mp4"
-          type="video/mp4"
-          autoPlay
-          muted
-          loop
-        /> */}
           <div id="caption" className="video-container">
             <Alerts />
             <h1 style={{ marginTop: '20%' }}>
