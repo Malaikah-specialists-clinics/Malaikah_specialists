@@ -3,12 +3,13 @@ import React from "react";
 import { Card, CardGroup, Carousel, Col, Row} from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { URL } from '../Constants/index.js';
 
 const Events = () => {
    const [tip, setTips] = useState([]);
    useEffect(() => {
      axios
-       .get('http://localhost:3000/tips')
+       .get(`${URL}/tips`)
        .then((res) => {
          setTips(res.data);
          console.log(res.data);
@@ -111,7 +112,7 @@ const Events = () => {
       </div>
       <div>
       {tip.map((tip_entity) => (
-        <CardGroup key={tip_entity.id} style={{width:'94%', margin:'auto'}}>
+        <CardGroup key={tip_entity.id} style={{ width: '94%', margin: 'auto' }}>
           <Card id="crd">
             <Card.Body>
               <a
@@ -136,7 +137,6 @@ const Events = () => {
               <Card.Text>{tip_entity.description3}</Card.Text>
             </Card.Body>
           </Card>
-          
         </CardGroup>
       ))}
       </div>
