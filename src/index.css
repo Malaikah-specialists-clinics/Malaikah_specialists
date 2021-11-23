@@ -85,29 +85,14 @@ padding-top: 10px;
 
 /* Style the counter cards */
 .card {
-  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   margin: 10px -12px;
   background-color: #FFFFFF;
- 
 }
 
-
-
-#card1{
-background-color: #020e20;
-
-text-align: center;
-}
 h3{
   color: white;
 }
-/* #card2{
-  padding: 70px 50px;
-} */
 
-#card3{
-  padding: 0;
-}
 
 .upcoming h4{
   font-size: 17px;
@@ -116,9 +101,7 @@ h3{
 .item-date{
   padding: 50px;
 }
-.card-image {
-  height: 330px;
-}
+
  .footer-li{
   list-style-type: none;
   color: #FFFFFF;
@@ -526,8 +509,7 @@ text-align: center;
   text-align: center;
 }
 #contentcard{
-  height: auto;
-  padding: 5px 30px;
+  height: auto; 
 }
 /* .footericons{
   margin: 20px;
