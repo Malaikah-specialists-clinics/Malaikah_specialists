@@ -15,7 +15,7 @@ const Moeventscreen = () => {
         console.log({ message: err });
       });
   }, []);
-  //  console.log(events)
+ 
 
   if (event.length > 0) {
     return (
