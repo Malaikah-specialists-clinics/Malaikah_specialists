@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Col, Row, Alert, Card, Container } from "react-bootstrap";
+import { URL } from '../Constants/index.js';
 
 const Moeventscreen = () => {
   const [event, setEvents] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/events")
+      .get(`${URL}/events`)
       .then((res) => {
         setEvents(res.data);
         console.log(res.data);
