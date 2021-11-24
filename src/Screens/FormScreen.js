@@ -12,11 +12,9 @@ class FormPage extends Component {
   alertText = () => {
     alert('You have an appointment!!, Please check your email');
   };
-  
+
   constructor(props) {
     super(props);
-    
-
     this.state = {
       email: '',
       sdpet: '',
@@ -31,9 +29,9 @@ class FormPage extends Component {
     this.setState({ email: e.target.value });
   }
 
-  onChangeSdpet(e) {
-    // this.setState({ sdept: e.target.value });
-    console.log("sdept")
+  onChangeSdept(e) {
+    this.setState({ sdept: e.target.value });
+    // console.log('sdept');
   }
   onChangeDoa(e) {
     this.setState({ doa: e.target.value });
@@ -52,9 +50,8 @@ class FormPage extends Component {
   }
 
   onSubmit(e) {
-    this.alertText()
+    this.alertText();
     e.preventDefault();
- 
 
     const patientObject = {
       email: this.state.email,
@@ -65,7 +62,9 @@ class FormPage extends Component {
       pmi: this.state.pmi,
     };
     axios
-      .post('http://localhost:3000/bookappts', patientObject, {headers:{"Access-Control-Allow-Origin":"*"}})
+      .post('http://localhost:3000/bookappts', patientObject, {
+        headers: { 'Access-Control-Allow-Origin': '*' },
+      })
 
       .then((res) => {
         console.log(res.data);
@@ -74,7 +73,6 @@ class FormPage extends Component {
         console.log(err);
       });
   }
- 
 
   render() {
     return (
@@ -83,7 +81,6 @@ class FormPage extends Component {
           className="formcontent"
           style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}
         >
-
           <Row>
             <Col md sm={6} className="form">
               <Form onSubmit={(e) => this.onSubmit(e)}>
@@ -108,7 +105,7 @@ class FormPage extends Component {
                       <Form.Select
                         name="sdept"
                         value={this.state.sdept}
-                        // onChange={(e)=>this.onChangeSdept(e)}
+                        onChange={(e) => this.onChangeSdept(e)}
                         id="form-control"
                       >
                         <option>Select department</option>
