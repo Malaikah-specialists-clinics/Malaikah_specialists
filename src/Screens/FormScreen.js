@@ -4,6 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import axios from "axios";
 import { base_url } from '../Constants/index.js';
+// import CORS from "react"
+// import { useState, useEffect } from "react";
+
+ 
 
 class FormPage extends Component {
   alertText = () => {
@@ -21,15 +25,38 @@ class FormPage extends Component {
       pmi: '',
     };
   }
-  onChangeField(e){
-    this.setState({ email: e.target.value });
-    this.setState({ sdept: e.target.value });
-    this.setState({ doa: e.target.value });
-    this.setState({ toa: e.target.value });
-    this.setState({ moa: e.target.value });
-    this.setState({ pmi: e.target.value });
+  // onChangeField(e){
+  //   this.setState({ email: e.target.value });
+  //   this.setState({ sdept: e.target.value });
+  //   this.setState({ doa: e.target.value });
+  //   this.setState({ toa: e.target.value });
     
+  // }
+
+  onChangeEmail(e) {
+    this.setState({ email: e.target.value });
   }
+
+  onChangeSdept(e) {
+    this.setState({ sdept: e.target.value });
+    // console.log('sdept');
+  }
+  onChangeDoa(e) {
+    this.setState({ doa: e.target.value });
+  }
+
+  onChangeToa(e) {
+    this.setState({ toa: e.target.value });
+  }
+
+  onChangeMoa(e) {
+    this.setState({ moa: e.target.value });
+  }
+
+  onChangePmi(e) {
+    this.setState({ pmi: e.target.value });
+  }
+
   onSubmit(e) {
     this.alertText();
     e.preventDefault();
@@ -75,7 +102,7 @@ class FormPage extends Component {
                       id="form-control"
                       name="email"
                       value={this.state.email}
-                      onChange={(e) => this.onChangeField(e)}
+                      onChange={(e) => this.onChangeEmail(e)}
                     />
                   </Col>
                 </Row>
@@ -86,7 +113,7 @@ class FormPage extends Component {
                       <Form.Select
                         name="sdept"
                         value={this.state.sdept}
-                        onChange={(e) => this.onChangeField(e)}
+                        onChange={(e) => this.onChangeSdept(e)}
                         id="form-control"
                       >
                         <option>Select department</option>
@@ -101,7 +128,7 @@ class FormPage extends Component {
                       <Form.Control
                         name="doa"
                         value={this.state.doa}
-                        onChange={(e) => this.onChangeField(e)}
+                        onChange={(e) => this.onChangeDoa(e)}
                         id="form-control"
                       />
                     </Col>
@@ -112,16 +139,17 @@ class FormPage extends Component {
                       <Form.Control
                         name="toa"
                         value={this.state.toa}
-                        onChange={(e) => this.onChangeField(e)}
+                        onChange={(e) => this.onChangeToa(e)}
                         id="form-control"
                       />
                     </Col>
+
                     <Col md>
                       <Form.Label id="field">Mode of appointment</Form.Label>
                       <Form.Select
                         name="moa"
                         value={this.state.moa}
-                        onChange={(e) => this.onChangeField(e)}
+                        onChange={(e) => this.onChangeMoa(e)}
                         id="form-control"
                       >
                         <option>Select mode of appointment</option>
@@ -137,7 +165,7 @@ class FormPage extends Component {
                   <Form.Control
                     name="pmi"
                     value={this.state.pmi}
-                    onChange={(e) => this.onChangeField(e)}
+                    onChange={(e) => this.onChangePmi(e)}
                     type="text-area"
                     id="textarea"
                   />
