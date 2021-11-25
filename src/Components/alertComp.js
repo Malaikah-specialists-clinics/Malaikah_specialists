@@ -2,14 +2,14 @@ import React from "react";
 import { Alert } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { URL } from '../Constants/index.js';
+import { base_url } from '../Constants/index.js';
 
 const Alerts = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [alert, setAlerts] = useState([]);
   useEffect(() => {
     axios
-      .get(`${URL}/alerts`)
+      .get(`${base_url}/alerts`)
       .then((res) => {
         setIsLoading(false);
         setAlerts(res.data);

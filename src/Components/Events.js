@@ -3,13 +3,13 @@ import React from "react";
 import { Card, CardGroup, Carousel, Col, Row} from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { URL } from '../Constants/index.js';
+import { base_url } from '../Constants/index.js';
 
 const Events = () => {
    const [tip, setTips] = useState([]);
    useEffect(() => {
      axios
-       .get(`${URL}/tips`)
+       .get(`${base_url}/tips`)
        .then((res) => {
          setTips(res.data);
          console.log(res.data);

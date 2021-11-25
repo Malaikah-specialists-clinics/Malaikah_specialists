@@ -1,13 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 // import { LinkContainer } from 'react-router-bootstrap';
 
-class Login extends Component {
-  alertText = () =>{
-    alert('You have an appointment!!, Please check your email')
-}
+const Login =()=>{
+ 
 
-  render(){
     return (
       <>
         <div
@@ -68,6 +65,5 @@ class Login extends Component {
     );
   }
   
-}
 
 export default Login;
