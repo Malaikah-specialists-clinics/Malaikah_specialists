@@ -17,7 +17,7 @@ import Articlescreen from './Screens/Articlescreen';
 import SpecialitiesScreen from './Screens/SpecialitiesScreen'
 import LoginScreen from './Screens/LoginScreen'
 import EventReg from './Screens/EventRegForm';
-
+require('dotenv').config()
 function App() {
   return (
     <Router className="App">
