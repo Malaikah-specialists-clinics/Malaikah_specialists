@@ -79,7 +79,7 @@ const Moeventscreen = (props) => {
                 </Modal.Body>
               </Modal>
 
-              <Container style={{ maxWidth: '100%', margin: '0' }}>
+             <Container style={{ maxWidth: '100%', margin: '0' }}>
                 <Card
                   id="contentcard"
                   style={{ marginLeft: 'auto', marginRight: 'auto' }}
