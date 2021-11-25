@@ -3,10 +3,7 @@ import { Row, Col, Form, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import axios from "axios";
-// import CORS from "react"
-// import { useState, useEffect } from "react";
-
- 
+import { base_url } from '../Constants/index.js';
 
 class FormPage extends Component {
   alertText = () => {
@@ -24,31 +21,15 @@ class FormPage extends Component {
       pmi: '',
     };
   }
-
-  onChangeEmail(e) {
+  onChangeField(e){
     this.setState({ email: e.target.value });
-  }
-
-  onChangeSdept(e) {
     this.setState({ sdept: e.target.value });
-    // console.log('sdept');
-  }
-  onChangeDoa(e) {
     this.setState({ doa: e.target.value });
-  }
-
-  onChangeToa(e) {
     this.setState({ toa: e.target.value });
-  }
-
-  onChangeMoa(e) {
     this.setState({ moa: e.target.value });
-  }
-
-  onChangePmi(e) {
     this.setState({ pmi: e.target.value });
+    
   }
-
   onSubmit(e) {
     this.alertText();
     e.preventDefault();
@@ -62,7 +43,7 @@ class FormPage extends Component {
       pmi: this.state.pmi,
     };
     axios
-      .post('http://localhost:3000/bookappts', patientObject, {
+      .post(`${base_url}/bookappts`, patientObject, {
         headers: { 'Access-Control-Allow-Origin': '*' },
       })
 
@@ -94,7 +75,7 @@ class FormPage extends Component {
                       id="form-control"
                       name="email"
                       value={this.state.email}
-                      onChange={(e) => this.onChangeEmail(e)}
+                      onChange={(e) => this.onChangeField(e)}
                     />
                   </Col>
                 </Row>
@@ -105,7 +86,7 @@ class FormPage extends Component {
                       <Form.Select
                         name="sdept"
                         value={this.state.sdept}
-                        onChange={(e) => this.onChangeSdept(e)}
+                        onChange={(e) => this.onChangeField(e)}
                         id="form-control"
                       >
                         <option>Select department</option>
@@ -120,7 +101,7 @@ class FormPage extends Component {
                       <Form.Control
                         name="doa"
                         value={this.state.doa}
-                        onChange={(e) => this.onChangeDoa(e)}
+                        onChange={(e) => this.onChangeField(e)}
                         id="form-control"
                       />
                     </Col>
@@ -131,7 +112,7 @@ class FormPage extends Component {
                       <Form.Control
                         name="toa"
                         value={this.state.toa}
-                        onChange={(e) => this.onChangeToa(e)}
+                        onChange={(e) => this.onChangeField(e)}
                         id="form-control"
                       />
                     </Col>
@@ -140,7 +121,7 @@ class FormPage extends Component {
                       <Form.Select
                         name="moa"
                         value={this.state.moa}
-                        onChange={(e) => this.onChangeMoa(e)}
+                        onChange={(e) => this.onChangeField(e)}
                         id="form-control"
                       >
                         <option>Select mode of appointment</option>
@@ -156,7 +137,7 @@ class FormPage extends Component {
                   <Form.Control
                     name="pmi"
                     value={this.state.pmi}
-                    onChange={(e) => this.onChangePmi(e)}
+                    onChange={(e) => this.onChangeField(e)}
                     type="text-area"
                     id="textarea"
                   />
