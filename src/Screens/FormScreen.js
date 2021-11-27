@@ -25,14 +25,6 @@ class FormPage extends Component {
       pmi: '',
     };
   }
-  // onChangeField(e){
-  //   this.setState({ email: e.target.value });
-  //   this.setState({ sdept: e.target.value });
-  //   this.setState({ doa: e.target.value });
-  //   this.setState({ toa: e.target.value });
-    
-  // }
-
   onChangeEmail(e) {
     this.setState({ email: e.target.value });
   }

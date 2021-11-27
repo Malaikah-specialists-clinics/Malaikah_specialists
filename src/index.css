@@ -607,6 +607,14 @@ text-align: center;
     font-size: 18px;
     font-weight: lighter;
 }
-#aboutusrow{
-  display: flex;
+
+/* styling the staff screen */
+#staffcardgroup{
+  width: 25%;
+  height: 5%;
+  margin: 20px; 
+}
+.staffcard{
+  margin: auto;
+ 
 }

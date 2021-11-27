@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, Row, Col, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, Row, Col, NavDropdown,} from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
 
 function Header() {
@@ -54,19 +54,14 @@ function Header() {
               <LinkContainer to="#">
                 <Nav.Link>Education</Nav.Link>
               </LinkContainer>
-              <NavDropdown title="About Us" id="navbarScrollingDropdown">
-                <Row id="aboutusrow">
-                  <Col className="firstcol">
-                    <NavDropdown.Item href="#action3"> Our Vision </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4"> Our Mission</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4"> Our Principles</NavDropdown.Item>
-                  </Col>
-                   <Col className="secondcol">
-                    <NavDropdown.Item href="#action3"> Directors </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4"> Doctors</NavDropdown.Item>
-                  </Col>
-                </Row>
-              </NavDropdown>
+                <NavDropdown title="About Us" id="navbarScrollingDropdown">
+                      <NavDropdown.Item href="#about">
+                        Core Values
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#staff">
+                        Staff
+                      </NavDropdown.Item>
+                </NavDropdown>
               <LinkContainer to="/login">
                 <Nav.Link>Login</Nav.Link>
               </LinkContainer>
