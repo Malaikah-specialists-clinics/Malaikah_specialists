@@ -413,7 +413,7 @@ font-size: 30px;
 
 /* Just styling the content of the div, the *magic* in the previous rules */
 #caption {
-bottom: 95%;
+bottom: 100%;
 position: relative; 
 color: #f1f1fd;
 font-weight: bolder;
