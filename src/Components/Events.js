@@ -18,6 +18,8 @@ const Events = () => {
          console.log({ message: err });
        });
    }, []);
+   
+    
   return (
     <div class="">
       <h2
@@ -110,7 +112,7 @@ const Events = () => {
            </Row>
           </Card>
       </div>
-      <div>
+      <div style={{display: 'flex'}}>
       {tip.map((tip_entity) => (
         <CardGroup key={tip_entity.id} style={{ width: '94%', margin: 'auto' }}>
           <Card id="crd">
@@ -120,21 +122,9 @@ const Events = () => {
                 style={{ textDecoration: 'none', color: 'white' }}
               >
                 {' '}
-                <Card.Title>{tip_entity.title1}</Card.Title>
+                <Card.Title>{tip_entity.title}</Card.Title>
               </a>
-              <Card.Text>{tip_entity.description1}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card id="crd">
-            <Card.Body>
-              <Card.Title>{tip_entity.title2}</Card.Title>
-              <Card.Text>{tip_entity.description2}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card id="crd">
-            <Card.Body>
-              <Card.Title>{tip_entity.title3}</Card.Title>
-              <Card.Text>{tip_entity.description3}</Card.Text>
+              <Card.Text>{tip_entity.description}</Card.Text>
             </Card.Body>
           </Card>
         </CardGroup>
