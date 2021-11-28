@@ -25,8 +25,6 @@ class FormPage extends Component {
       pmi: '',
     };
   }
-  
-
   onChangeEmail(e) {
     this.setState({ email: e.target.value });
   }
