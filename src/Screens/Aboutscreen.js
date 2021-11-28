@@ -1,11 +1,12 @@
 import React from "react";
- import {Accordion} from 'react-bootstrap'
-import { Row, Col} from 'react-bootstrap'
+import {Accordion, Container, Row, Col} from 'react-bootstrap'
+
 
 
 const Aboutscreen = () => {
   
   return (
+    <Container style={{maxWidth: '100%'}}>
     <div className="formcontent">
        <Row id="main"> 
          <Col md className="aboutus1">
@@ -103,6 +104,7 @@ const Aboutscreen = () => {
         </Accordion.Item>
       </Accordion>
     </div>
+    </Container>
   );
 };
 
