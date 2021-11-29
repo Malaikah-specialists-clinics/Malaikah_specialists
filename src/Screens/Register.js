@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Form, Button } from "react-bootstrap";
-import {axios} from "axios"
+import axios from "axios";
 import {base_url} from "../Constants/index.js"
 
 class Register extends Component {
@@ -24,7 +24,6 @@ class Register extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
     const userObject = {
       name: this.state.name,
       email: this.state.email,
@@ -39,6 +38,7 @@ class Register extends Component {
        .post(`${base_url}/users`, userObject)
 
        .then((res) => {
+         window.location.href = '/login';
          console.log(res.data);
        })
        .catch((err) => {
