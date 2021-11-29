@@ -25,29 +25,9 @@ class FormPage extends Component {
       pmi: '',
     };
   }
-  onChangeEmail(e) {
-    this.setState({ email: e.target.value });
-  }
-
-  onChangeSdept(e) {
-    this.setState({ sdept: e.target.value });
-    // console.log('sdept');
-  }
-  onChangeDoa(e) {
-    this.setState({ doa: e.target.value });
-  }
-
-  onChangeToa(e) {
-    this.setState({ toa: e.target.value });
-  }
-
-  onChangeMoa(e) {
-    this.setState({ moa: e.target.value });
-  }
-
-  onChangePmi(e) {
-    this.setState({ pmi: e.target.value });
-  }
+  changeHandler = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   onSubmit(e) {
     this.alertText();
@@ -94,7 +74,7 @@ class FormPage extends Component {
                       id="form-control"
                       name="email"
                       value={this.state.email}
-                      onChange={(e) => this.onChangeEmail(e)}
+                      onChange={this.changeHandler}
                     />
                   </Col>
                 </Row>
@@ -105,7 +85,7 @@ class FormPage extends Component {
                       <Form.Select
                         name="sdept"
                         value={this.state.sdept}
-                        onChange={(e) => this.onChangeSdept(e)}
+                        onChange={this.changeHandler}
                         id="form-control"
                       >
                         <option>Select department</option>
@@ -120,7 +100,7 @@ class FormPage extends Component {
                       <Form.Control
                         name="doa"
                         value={this.state.doa}
-                        onChange={(e) => this.onChangeDoa(e)}
+                        onChange={this.changeHandler}
                         id="form-control"
                       />
                     </Col>
@@ -131,7 +111,7 @@ class FormPage extends Component {
                       <Form.Control
                         name="toa"
                         value={this.state.toa}
-                        onChange={(e) => this.onChangeToa(e)}
+                        onChange={this.changeHandler}
                         id="form-control"
                       />
                     </Col>
@@ -141,7 +121,7 @@ class FormPage extends Component {
                       <Form.Select
                         name="moa"
                         value={this.state.moa}
-                        onChange={(e) => this.onChangeMoa(e)}
+                        onChange={this.changeHandler}
                         id="form-control"
                       >
                         <option>Select mode of appointment</option>
@@ -157,17 +137,15 @@ class FormPage extends Component {
                   <Form.Control
                     name="pmi"
                     value={this.state.pmi}
-                    onChange={(e) => this.onChangePmi(e)}
+                    onChange={this.changeHandler}
                     type="text-area"
                     id="textarea"
                   />
                   <Row>
                     <Col>
-                      {' '}
-                    
-                      <Button type="submit" id="Btn">
+                      <Button type="submit"  id="Btn">
                         BOOK APPOINTMENT
-                      </Button>{' '}
+                      </Button>
                     </Col>
                   </Row>
                 </Col>
