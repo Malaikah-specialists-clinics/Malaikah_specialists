@@ -4,21 +4,9 @@ import {axios} from "axios"
 import {base_url} from "../Constants/index.js"
 
 class Register extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      phoneNumber: '',
-      dob: '',
-      gender: '',
-      location: '',
-      password: '',
-      confirmPassword: ''
-    };
-  }
+ 
   render() {
-    const { name, email, phoneNumber, dob, gender, location, password, confirmPassword} = this.state
+ 
     return (
       <>
         <div
@@ -103,7 +91,7 @@ class Register extends Component {
                       type="password"
                       id="form-control"
                       value={confirmPassword}
-                      onChange={this.changeHandler}
+                     
                     />
                   </Col>
                 </Row>
