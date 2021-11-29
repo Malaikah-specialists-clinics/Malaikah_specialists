@@ -1,10 +1,59 @@
-import React, { Component } from "react";
+import React, { } from 'react';
 import { Row, Col, Form, Button } from "react-bootstrap";
-// import { LinkContainer } from 'react-router-bootstrap';
+// import {useEffect } from "react";
+// import {axios} from "axios"
+// import { base_url } from '../Constants/index.js';
 
-class Register extends Component {
 
-  render() {
+
+const Register =()=> {
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [, setUsers] = useState([]);
+
+//    useEffect(() => {
+//   // // POST request using axios inside useEffect React hook
+//   const user = {
+//     name: 'name',
+//     email: 'email',
+//     phoneNumber: 'phoneNumber',
+//     dob: 'dob',
+//     gender: 'gender',
+//     location: 'location',
+//     password: 'password',
+//     confirmPassword: 'confirmPassword',
+//   };
+  
+//   axios
+//     .post(`${base_url}/users`, user)
+//     .then((response) => { setIsLoading(false); setUsers(response.user.id)
+      
+//     });
+
+//   // empty dependency array means this effect will only run once (like componentDidMount in classes)
+// }, []);
+//  if (isLoading) {
+//    return <div>Loading...</div>;
+//  }
+
+
+
+    // const user = {
+    //   name: 'name',
+    //   email: 'email',
+    //   phoneNumber: 'phoneNumber',
+    //   dob: 'dob',
+    //   gender: 'gender',
+    //   location: 'location',
+    //   password: 'password',
+    //   confirmPassword: 'confirmPassword',
+    // };
+    // axios.post(`${base_url}/users`, user)
+    //   .then((response) => {
+    //     console.log('Status: ', response.status);
+    //   })
+    //   .catch((error) => {
+    //     console.error('Something went wrong!', error);
+    //   });
     return (
       <>
         <div
@@ -104,7 +153,6 @@ class Register extends Component {
         </div>
       </>
     );
-  }
 }
 
 export default Register;

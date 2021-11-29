@@ -12,6 +12,7 @@
     "axios": "^0.24.0",
     "bootstrap": "^5.1.1",
     "dotenv": "^10.0.0",
+    "formik": "^2.2.9",
     "get-youtube-id": "^1.0.1",
     "google-maps-react": "^2.0.6",
     "ityped": "^1.0.3",
@@ -28,7 +29,8 @@
     "react-scripts": "4.0.3",
     "react-share": "^4.4.0",
     "react-youtube": "^7.13.1",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
