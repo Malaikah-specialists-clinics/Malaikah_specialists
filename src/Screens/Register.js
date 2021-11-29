@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Form, Button } from "react-bootstrap";
 import axios from "axios";
 import {base_url} from "../Constants/index.js"
+import {withRouter} from 'react-router-dom'
 
 class Register extends Component {
 
@@ -38,12 +39,13 @@ class Register extends Component {
        .post(`${base_url}/users`, userObject)
 
        .then((res) => {
-         window.location.href = '/login';
+  
          console.log(res.data);
        })
        .catch((err) => {
          console.log(err);
        });
+       this.props.history.push('/login')
   }
 
   render() {
@@ -181,4 +183,4 @@ class Register extends Component {
 }
 }
 
-export default Register;
+export default withRouter (Register);

@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import axios from "axios";
 import { base_url } from '../Constants/index.js';
+import {withRouter} from 'react-router-dom'
 // import CORS from "react"
 // import { useState, useEffect } from "react";
 
@@ -52,6 +53,7 @@ class FormPage extends Component {
       .catch((err) => {
         console.log(err);
       });
+      this.props.history.push('/')
   }
 
   render() {
@@ -166,4 +168,4 @@ class FormPage extends Component {
     );
   }
 }
-export default FormPage;
+export default withRouter (FormPage);
