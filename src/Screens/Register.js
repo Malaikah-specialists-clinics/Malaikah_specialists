@@ -1,10 +1,24 @@
 import React, { Component } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
-// import { LinkContainer } from 'react-router-bootstrap';
+import {axios} from "axios"
+import {base_url} from "../Constants/index.js"
 
 class Register extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      phoneNumber: '',
+      dob: '',
+      gender: '',
+      location: '',
+      password: '',
+      confirmPassword: ''
+    };
+  }
   render() {
+    const { name, email, phoneNumber, dob, gender, location, password, confirmPassword} = this.state
     return (
       <>
         <div
@@ -26,7 +40,7 @@ class Register extends Component {
               </div>
             </Col>
             <Col md sm={6} className="form">
-              <Form action="http://localhost:3000/users" Method="POST" style={{ padding: "10px" }}>
+              <Form onSubmit={this.submitHandler} style={{ padding: "10px" }}>
                 <Row>
                   <Col md>
                     <Form.Label id="field">Full Names</Form.Label>
@@ -34,27 +48,28 @@ class Register extends Component {
                       name="name"
                       type="text"
                       id="form-control"
+                      value={name}
                     />
                   </Col>
                   <Col md className="inputField">
                     <Form.Label id="field">Email Address</Form.Label>
-                    <Form.Control name="email" id="form-control" />
+                    <Form.Control name="email" id="form-control"  value={email} />
                   </Col>
                 </Row>
                 <Row>
                   <Col md>
                     <Form.Label id="field">Phone number</Form.Label>
-                    <Form.Control name="phoneNumber" id="form-control" />
+                    <Form.Control name="phoneNumber" id="form-control"  value={phoneNumber} />
                   </Col>
                   <Col md>
                     <Form.Label id="field">Date of birth</Form.Label>
-                    <Form.Control name="dob" id="form-control" />
+                    <Form.Control name="dob" id="form-control"  value={dob} />
                   </Col>
                 </Row>
                 <Row>
                   <Col md>
                   <Form.Label id="field">Gender</Form.Label>
-                    <Form.Select name="gender" id="form-control" >
+                    <Form.Select name="gender" id="form-control"  value={gender} >
                       <option>Select Gender</option>
                       <option value="1">Female</option>
                       <option value="2">Male</option>
@@ -67,6 +82,7 @@ class Register extends Component {
                       name="location"
                       type="text"
                       id="form-control"
+                      value={location}
                     />
                   </Col>
                 </Row>
@@ -77,6 +93,7 @@ class Register extends Component {
                       name="password"
                       type="password"
                       id="form-control"
+                      value={password}
                     />
                   </Col>
                   <Col md>
@@ -85,6 +102,8 @@ class Register extends Component {
                       name="confirmPassword"
                       type="password"
                       id="form-control"
+                      value={confirmPassword}
+                      onChange={this.changeHandler}
                     />
                   </Col>
                 </Row>

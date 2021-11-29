@@ -31,7 +31,6 @@ class FormPage extends Component {
 
   onChangeSdept(e) {
     this.setState({ sdept: e.target.value });
-    // console.log('sdept');
   }
   onChangeDoa(e) {
     this.setState({ doa: e.target.value });
