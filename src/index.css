@@ -338,6 +338,9 @@ font-size: 30px;
   #pic, .pic{
     display: none;
   }
+ #tipcrd{
+   display: inline-block;
+ }
   
   .formcontent{
     margin-top: 0;
@@ -606,6 +609,9 @@ text-align: center;
     border: none;
     font-size: 18px;
     font-weight: lighter;
+}
+#tipcrd{
+  display: flex;
 }
 
 

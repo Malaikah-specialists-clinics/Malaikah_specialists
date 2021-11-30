@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Card, CardGroup, Carousel, Col, Row} from "react-bootstrap";
+import { Card, CardGroup, Carousel, Col, Container, Row} from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
@@ -21,7 +21,7 @@ const Events = () => {
    
     
   return (
-    <div class="">
+    <Container style={{maxWidth: '100%'}}>
       <h2
         style={{
           textAlign: 'center',
@@ -112,25 +112,21 @@ const Events = () => {
            </Row>
           </Card>
       </div>
-      <div style={{display: 'flex'}}>
+      <div id="tipcrd" >
       {tip.map((tip_entity) => (
         <CardGroup key={tip_entity.id} style={{ width: '94%', margin: 'auto' }}>
-          <Card id="crd">
+          <Card md id="crd">
             <Card.Body>
-              <a
-                href="#articles"
-                style={{ textDecoration: 'none', color: 'white' }}
-              >
                 {' '}
                 <Card.Title>{tip_entity.title}</Card.Title>
-              </a>
+
               <Card.Text>{tip_entity.description}</Card.Text>
             </Card.Body>
           </Card>
         </CardGroup>
       ))}
       </div>
-    </div>
+      </Container>
   );
 };
 
