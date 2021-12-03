@@ -30,11 +30,12 @@ const Alerts = () => {
         className="alert"
           variant="success"
           key={alerts.id}
-        >
-          
+         >
+          {/* <CloseButton /> */}
           <p>
             {alerts.title}: {alerts.content}
           </p>
+         
         </Alert>
       ))}
       
