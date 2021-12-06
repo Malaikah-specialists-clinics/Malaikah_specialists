@@ -19,7 +19,7 @@ const Popupbtn = () => {
         <div className="popicon" onClick={handleShow}>
           <img
             className="popup"
-            src="/images/chat-icon-by-back1design1-580x355-removebg-preview.png"
+            src="/images/chaticon.png"
             alt=""
           />
         </div>
@@ -31,7 +31,7 @@ const Popupbtn = () => {
         >
           <Modal.Header id="PopModel" closeButton>
             <Modal.Title id="popuptitle">
-              Welcome to Malaikah Specialist Care
+              Welcome To Malaikah Specialist Care
             </Modal.Title>
           </Modal.Header>
           <Modal.Body id="PopModel">
