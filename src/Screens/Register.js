@@ -3,7 +3,8 @@ import { Row, Col, Form, Button } from "react-bootstrap";
 import axios from "axios";
 import {base_url} from "../Constants/index.js"
 import {withRouter} from 'react-router-dom';
-import { Formik } from 'formik';
+import { Formik} from 'formik';
+
 import * as Yup from 'yup';
 
 
@@ -86,19 +87,19 @@ class Register extends Component {
       password: this.state.password,
       // confirmPassword: this.state.confirmPassword
     };
-     axios
-       .post(`${base_url}/users`, userObject)
 
-       .then((res) => {
-
-         console.log(res.data);
-       })
-       .catch((err) => {
-         console.log(err);
-       });
-       this.props.history.push('/login')
+    axios
+      .post(`${base_url}/users`, userObject)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+        // FormikHelpers.setSubmitting(false);
+      });
+    this.props.history.push('/login');
   }
-  // submitData=(values, {setSubmitting})=> { 
+  // submitData=(values, {setSubmitting})=> {
   //   axios
   //     .post(`${base_url}/users`, values)
 
@@ -138,7 +139,7 @@ class Register extends Component {
                 validationSchema={registerSchema}
                 onSubmit={this.submitData}
               >
-                {({ values, errors, touched, isValidating }) => (
+                {({ values, errors, touched, isValidating, isSubmitting }) => (
                   <Form
                     // onSubmit={(e) => this.onSubmit(e)}
                     style={{ padding: '10px' }}
