@@ -1,10 +1,60 @@
-import React from "react";
-import { Row, Col, Form, Button } from "react-bootstrap";
+import React, { Component} from 'react';
+import { Row, Col, Form, Button} from "react-bootstrap";
+import axios from 'axios';
+// import { useFormik } from 'formik';
+// import { Formik } from 'formik';
+import { base_url } from '../Constants/index.js';
+
+// import * as Yup from 'yup';
 // import { LinkContainer } from 'react-router-bootstrap';
 
-const Login =()=>{
  
 
+class Login extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+    };
+  }
+  //  const { handleChange, handleSubmit, values } = useFormik({ 
+  // initialValues: { email: '', password: '' },
+  // onSubmit: (values) =>
+  //   alert(`Email: ${values.email}, Password: ${values.password}`),
+  // });
+ 
+
+  changeHandler = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+
+   onSubmit(e) {
+    e.preventDefault();
+  
+    const loginObject = {
+      email: this.state.email,
+      password: this.state.password,
+    };
+
+    axios
+      .post(`${base_url}/users/login`, loginObject, {
+        headers: { 'Access-Control-Allow-Origin': '*' },
+      })
+
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      this.props.history.push('/bookappts');
+      
+  }
+ 
+  render(){
     return (
       <>
         <div
@@ -23,29 +73,53 @@ const Login =()=>{
                 />
               </div>
             </Col>
+            {/* <Formik initialValues={{
+              email: '',
+              password: ''
+            }}
+            validationSchema={Yup.object().shape({
+              email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
+              password: Yup.string().max(255).required('Password is required')
+            })}
+            onSubmit={()=> {
+              navigate('/users/login')
+            }} */}
+            {/* > */}
             <Col md sm={6} className="form">
               <Form
-                action="http://localhost:3000/users/login"
-                Method="POST"
+                onSubmit={(e) => this.onSubmit(e)}
                 style={{ padding: '10px' }}
               >
                 <Row>
                   <Col md>
                     <Form.Label id="field">Email Address</Form.Label>
-                    <Form.Control name="email" id="form-control" />
+                    <Form.Control
+                      name="email"
+                      value={this.state.email}
+                      onChange={this.changeHandler}
+                      // onChangeText={handleChange('email')}
+                      id="form-control"
+                    />
                   </Col>
                 </Row>
                 <Row>
                   <Col md>
-                  <Form.Label id="field">
-                  Password
-                </Form.Label>
-                <Form.Control name="password" type="password" id="form-control" />
+                    <Form.Label id="field">Password</Form.Label>
+                    <Form.Control
+                      name="password"
+                      value={this.state.password}
+                      onChange={this.changeHandler}
+                      // onChangeText={handleChange('password')}
+                      type="password"
+                      id="form-control"
+                    />
                   </Col>
-                  </Row>
-                <Row>              
-                  <Col style={{marginTop:'5%'}}>
-                    <Button type='submit' id="Btn">
+                </Row>
+                <Row>
+                  <Col style={{ marginTop: '5%' }}>
+                    <Button type="submit"
+                    // onPress={handleSubmit}
+                     id="Btn">
                       LOGIN
                     </Button>
                   </Col>
@@ -59,10 +133,12 @@ const Login =()=>{
                 </Row>
               </Form>
             </Col>
+          {/* </Formik>   */}
           </Row>
         </div>
       </>
     );
+  }
   }
   
 
