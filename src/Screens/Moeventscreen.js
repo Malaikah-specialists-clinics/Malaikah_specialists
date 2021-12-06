@@ -64,12 +64,6 @@ const Moeventscreen = (props) => {
 
                     <label>Email</label>
                     <input type="email" name="email" className="form-control" />
-                   
-                   <div style={{display: 'none'}}>
-                   <label>Event Title</label>
-                    <input type="text" name="title" className="form-control" value='{event.title}'/>
-                   </div>
-                  
                     <div
                       class="d-grid gap-2 col-6 mx-auto"
                       style={{ marginTop: '25px ' }}
