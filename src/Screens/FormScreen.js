@@ -61,7 +61,7 @@ class FormPage extends Component {
       <>
         <div
           className="formcontent"
-          style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}
+          style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', marginTop: '8%' }}
         >
           <Row>
             <Col md sm={6} className="form">

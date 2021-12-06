@@ -117,7 +117,7 @@ class Register extends Component {
       <>
         <div
           className="formcontent"
-          style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}
+          style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto', marginTop: '8%' }}
         >
           <Row>
             <Col md>

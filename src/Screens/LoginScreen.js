@@ -59,11 +59,11 @@ class Login extends Component {
       <>
         <div
           className="formcontent"
-          style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}
+          style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto', marginTop: '8%' }}
         >
           <Row>
             <Col md>
-              <h2 style={{ marginTop: '40px', textAlign: 'center' }}>Login</h2>
+              <h2 style={{textAlign: 'center' }}>Login</h2>
               <div id="pic">
                 <img
                   src="/images/doc.jpg"

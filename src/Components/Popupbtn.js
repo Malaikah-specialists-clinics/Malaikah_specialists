@@ -31,7 +31,7 @@ const Popupbtn = () => {
         >
           <Modal.Header id="PopModel" closeButton>
             <Modal.Title id="popuptitle">
-              Welcome To Malaikah Specialist Care
+              Welcome To Malaikah Specialists Clinics!
             </Modal.Title>
           </Modal.Header>
           <Modal.Body id="PopModel">
