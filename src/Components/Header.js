@@ -1,11 +1,16 @@
 import React from "react";
-import { Nav, Navbar, Row, Col, NavDropdown,} from 'react-bootstrap';
+import { Nav, Navbar, Row, Col, NavDropdown} from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
 
 function Header() {
   return (
     <>
       <div className="fixed-top" style={{ position: 'fixed' }}>
+        <Navbar bg="light">
+          <LinkContainer style={{ marginLeft: '82%' }} to="/login">
+            <Nav.Link>Login</Nav.Link>
+          </LinkContainer>
+        </Navbar>
         <Navbar
           className="navbar"
           variant="dark"
@@ -54,17 +59,10 @@ function Header() {
               <LinkContainer to="#">
                 <Nav.Link>Education</Nav.Link>
               </LinkContainer>
-                <NavDropdown title="About Us" id="navbarScrollingDropdown">
-                      <NavDropdown.Item href="#about">
-                        Core Values
-                      </NavDropdown.Item>
-                      <NavDropdown.Item href="#staff">
-                        Staff
-                      </NavDropdown.Item>
-                </NavDropdown>
-              <LinkContainer to="/login">
-                <Nav.Link>Login</Nav.Link>
-              </LinkContainer>
+              <NavDropdown title="About Us" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#about">Core Values</NavDropdown.Item>
+                <NavDropdown.Item href="#staff">Staff</NavDropdown.Item>
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
