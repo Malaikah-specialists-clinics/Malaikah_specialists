@@ -8,7 +8,9 @@ function Header() {
       <div className="fixed-top" style={{ position: 'fixed' }}>
         <Navbar bg="light">
           <LinkContainer style={{ marginLeft: '82%' }} to="/login">
-            <Nav.Link>Login</Nav.Link>
+            <Nav.Link>
+              <h5 style={{ color: '#020e20' }}>LOGIN</h5>
+            </Nav.Link>
           </LinkContainer>
         </Navbar>
         <Navbar
