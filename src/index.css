@@ -544,7 +544,7 @@ text-align: center;
   position: fixed;
   background: transparent;
   top: 85%;
-  left: 0;
+  right: 0;
 }
 .popup{
   width: 120px;

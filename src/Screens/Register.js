@@ -3,34 +3,44 @@ import { Row, Col, Form, Button } from "react-bootstrap";
 import axios from "axios";
 import {base_url} from "../Constants/index.js"
 import {withRouter} from 'react-router-dom';
-// import { Formik } from 'formik';
-// import * as Yup from 'yup';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
 
-//  const registerSchema = Yup.object().shape({
-//    name: Yup.string()
-//      .min(2, 'Too Short!')
-//      .max(50, 'Too Long!')
-//      .required('Required'),
-//    email: Yup.string()
-//      .min(2, 'Too Short!')
-//      .email('Invalid email')
-//      .required('Required'),
-//    phoneNumber: Yup.string()
-//      .min(9, 'TooShort!')
-//      .max(16, 'Too Long!')
-//      .required('Required'),
-//    dob: Yup.string().required('Required'),
-//    gender: Yup.string().required('Required'),
-//    location: Yup.string()
-//      .min(2, 'Too Short!')
-//      .max(10, 'Too Long')
-//      .required('Required'),
-//    password: Yup.string()
-//      .min(3, 'Too short!')
-//      .max(10, 'Too Long!')
-//      .required('Required'),
-//  });
+ const registerSchema = Yup.object().shape({
+   name: Yup.string()
+     .min(2, 'Too Short!')
+     .max(50, 'Too Long!')
+     .required('Required'),
+   email: Yup.string()
+     .min(2, 'Too Short!')
+     .email('Invalid email')
+     .required('Required'),
+   phoneNumber: Yup.string()
+     .min(9, 'TooShort!')
+     .max(16, 'Too Long!')
+     .required('Required'),
+   dob: Yup.string().required('Required'),
+   gender: Yup.string().required('Required'),
+   location: Yup.string()
+     .min(2, 'Too Short!')
+     .max(10, 'Too Long')
+     .required('Required'),
+   password: Yup.string()
+     .min(3, 'Too short!')
+     .max(10, 'Too Long!')
+     .required('Required'),
+ });
+ 
+  const initialValues={
+                  name: '',
+                  email: '',
+                  phoneNumber: '',
+                  dob: '',
+                  gender: '',
+                  location: '',
+                  password: ''
+                }
 
 // function validateEmail(value) {
 //   let error;
@@ -57,14 +67,14 @@ class Register extends Component {
       location: '',
       password: '',
       // confirmPassword: '',
-    }; 
+    };
   }
-  
-  changeHandler = e =>{
-    this.setState({ [e.target.name]: e.target.value });
-  }; 
 
-  onSubmit(e) {
+  changeHandler = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  submitData(e) {
     e.preventDefault();
     const userObject = {
       name: this.state.name,
@@ -74,13 +84,13 @@ class Register extends Component {
       gender: this.state.gender,
       location: this.state.location,
       password: this.state.password,
-      confirmPassword: this.state.confirmPassword
+      // confirmPassword: this.state.confirmPassword
     };
      axios
        .post(`${base_url}/users`, userObject)
 
        .then((res) => {
-  
+
          console.log(res.data);
        })
        .catch((err) => {
@@ -88,6 +98,18 @@ class Register extends Component {
        });
        this.props.history.push('/login')
   }
+  // submitData=(values, {setSubmitting})=> { 
+  //   axios
+  //     .post(`${base_url}/users`, values)
+
+  //     .then((res) => {
+  //       console.log(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   this.props.history.push('/login');
+  // }
 
   render() {
     return (
@@ -111,25 +133,14 @@ class Register extends Component {
               </div>
             </Col>
             <Col md sm={6} className="form">
-              {/* <Formik
-                initialValues={{
-                  name: '',
-                  email: '',
-                  phoneNumber: '',
-                  dob: '',
-                  gender: '',
-                  location: '',
-                  password: '',
-                }}
+              <Formik
+                initialValues={initialValues}
                 validationSchema={registerSchema}
-                onSubmit={(values) => { */}
-                  {/* // same shape as initial values */}
-                  {/* console.log(values);
-                }} */}
-              {/* > */}
-                {/* {({ errors, touched }) => ( */}
+                onSubmit={this.submitData}
+              >
+                {({ values, errors, touched, isValidating }) => (
                   <Form
-                    onSubmit={(e) => this.onSubmit(e)}
+                    // onSubmit={(e) => this.onSubmit(e)}
                     style={{ padding: '10px' }}
                   >
                     <Row>
@@ -150,14 +161,15 @@ class Register extends Component {
                         <Form.Label id="field">Email Address</Form.Label>
                         <Form.Control
                           // validate={validateEmail}
+                          // type="email"
                           name="email"
                           id="form-control"
                           value={this.state.email}
                           onChange={this.changeHandler}
                         />
-                        {/* {errors.email && touched.email ? (
+                        {errors.email && touched.email ? (
                           <div>{errors.email}</div>
-                        ) : null} */}
+                        ) : null}
                       </Col>
                     </Row>
                     <Row>
@@ -256,14 +268,14 @@ class Register extends Component {
                       </Col>
                     </Row>
                   </Form>
-                {/* )}
-              </Formik> */}
+                )}
+              </Formik>
             </Col>
           </Row>
         </div>
       </>
     );
-}
+  }
 }
 
 export default withRouter (Register);

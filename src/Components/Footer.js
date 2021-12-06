@@ -46,7 +46,6 @@ function Footer() {
               About
             </a>
             <div style={{ }}>
-              {" "}
               © 2021 Copyright. All rights reserved.
             </div>
           </Col>
@@ -60,7 +59,7 @@ function Footer() {
               url="https://www.facebook.com/malaikahmedicalcenter" >
               <FacebookIcon
                 className="facebookicon"
-                logoFillColor="black"
+                logofillcolor="black"
                 round="true"
               ></FacebookIcon>
             </FacebookShareButton>
@@ -68,7 +67,7 @@ function Footer() {
               url="https://www.linkedin.com/company/malaikah-specialist-clinics">
               <LinkedinIcon
                 className="linkedinicon"
-                logoFillColor="white"
+                logofillcolor="white"
                 round="true"
               ></LinkedinIcon>
             </LinkedinShareButton>
