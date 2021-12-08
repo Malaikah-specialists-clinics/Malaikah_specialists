@@ -1,14 +1,12 @@
-import React, {Component} from "react";
-import { Row, Col, Form, Button } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
-import axios from "axios";
+import React, { Component } from 'react';
+import { Row, Col, Form, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import axios from 'axios';
 import { base_url } from '../Constants/index.js';
-import {withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 // import CORS from "react"
 // import { useState, useEffect } from "react";
-
- 
 
 class FormPage extends Component {
   alertText = () => {
@@ -53,7 +51,7 @@ class FormPage extends Component {
       .catch((err) => {
         console.log(err);
       });
-      this.props.history.push('/')
+    this.props.history.push('/profile');
   }
 
   render() {
@@ -61,7 +59,7 @@ class FormPage extends Component {
       <>
         <div
           className="formcontent"
-          style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', marginTop: '8%' }}
+          style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}
         >
           <Row>
             <Col md sm={6} className="form">
@@ -145,7 +143,7 @@ class FormPage extends Component {
                   />
                   <Row>
                     <Col>
-                      <Button type="submit"  id="Btn">
+                      <Button type="submit" id="Btn">
                         BOOK APPOINTMENT
                       </Button>
                     </Col>
@@ -168,4 +166,4 @@ class FormPage extends Component {
     );
   }
 }
-export default withRouter (FormPage);
+export default withRouter(FormPage);
