@@ -24,13 +24,13 @@ function SideNavbar() {
           </li>
           <li>
             <NavLink to="/appts" id="current">
-              <img src="/images/profileicon.png " alt="" style={{ width: '20%', height: '20%' }}/>
+              <img src="/images/bookappticon-01.png " alt="" style={{ width: '20%', height: '30px' }}/>
               Appointments
             </NavLink>
           </li>
           <li>
             <NavLink to="#" id="current">
-              <img src="/images/profileicon.png " alt="" style={{ width: '20%', height: '20%' }}/>
+              <img src="/images/medicalhist-icon-02.png " alt="" style={{ width: '20%', height: '30px' }}/>
               Medical History
             </NavLink>
           </li>
