@@ -58,7 +58,7 @@ const Moeventscreen = (props) => {
                     Please fill in your information to help us prepare for the
                     event
                   </p>
-                  <Form action= 'https://malaikah-db.herokuapp.com/event-reg' method='POST'>
+                  <Form action= 'http://localhost:3500/event-reg' method='POST'>
                     <label>Name</label>
                     <input type="text" name="name" className="form-control" />
 

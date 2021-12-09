@@ -1,17 +1,13 @@
 import React, { Component} from 'react';
 import { Row, Col, Form, Button} from "react-bootstrap";
 import axios from 'axios';
-// import { useFormik } from 'formik';
-// import { Formik } from 'formik';
 import { base_url } from '../Constants/index.js';
+// import '../validation';
 
-// import * as Yup from 'yup';
-// import { LinkContainer } from 'react-router-bootstrap';
 
- 
 
 class Login extends Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -19,18 +15,9 @@ class Login extends Component {
       password: '',
     };
   }
-  //  const { handleChange, handleSubmit, values } = useFormik({ 
-  // initialValues: { email: '', password: '' },
-  // onSubmit: (values) =>
-  //   alert(`Email: ${values.email}, Password: ${values.password}`),
-  // });
- 
-
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
-
-
    onSubmit(e) {
     e.preventDefault();
   
@@ -50,7 +37,7 @@ class Login extends Component {
       .catch((err) => {
         console.log(err);
       });
-      this.props.history.push('/bookappts');
+      this.props.history.push('/profile');
       
   }
  
@@ -73,21 +60,10 @@ class Login extends Component {
                 />
               </div>
             </Col>
-            {/* <Formik initialValues={{
-              email: '',
-              password: ''
-            }}
-            validationSchema={Yup.object().shape({
-              email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
-              password: Yup.string().max(255).required('Password is required')
-            })}
-            onSubmit={()=> {
-              navigate('/users/login')
-            }} */}
-            {/* > */}
             <Col md sm={6} className="form">
               <Form
                 onSubmit={(e) => this.onSubmit(e)}
+                
                 style={{ padding: '10px' }}
               >
                 <Row>
@@ -98,8 +74,9 @@ class Login extends Component {
                       value={this.state.email}
                       onChange={this.changeHandler}
                       // onChangeText={handleChange('email')}
-                      id="form-control"
+                      id="email"
                     />
+                    <span id="EmailError"></span>
                   </Col>
                 </Row>
                 <Row>
@@ -109,7 +86,6 @@ class Login extends Component {
                       name="password"
                       value={this.state.password}
                       onChange={this.changeHandler}
-                      // onChangeText={handleChange('password')}
                       type="password"
                       id="form-control"
                     />
@@ -118,8 +94,9 @@ class Login extends Component {
                 <Row>
                   <Col style={{ marginTop: '5%' }}>
                     <Button type="submit"
-                    // onPress={handleSubmit}
-                     id="Btn">
+                     id="Btn" 
+                     onSubmit="user()"
+                     >
                       LOGIN
                     </Button>
                   </Col>
@@ -133,7 +110,6 @@ class Login extends Component {
                 </Row>
               </Form>
             </Col>
-          {/* </Formik>   */}
           </Row>
         </div>
       </>
