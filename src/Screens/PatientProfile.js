@@ -1,5 +1,5 @@
 import React from "react";
-import SideNavbar from "./SideNavbar";
+import SideNavbar from "../Components/SideNavbar";
 import { Col, Container, Row } from "react-bootstrap";
 
 

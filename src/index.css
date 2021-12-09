@@ -603,15 +603,15 @@ h3 {
 }
 
 .sidebar-container {
-  /* position: absolute; */
   width: 220px;
   height: auto;
   margin-left: 25px;
-  /* overflow-x: hidden;
-  overflow-y: auto; */
   background: #fcfcfc;
   color: #fff;
   border-radius: 7%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: none;
   margin-top: 90px;
 }
 
