@@ -35,8 +35,7 @@ const Moeventscreen = (props) => {
                 {...props}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
-                centered
-                
+                centered          
                 show={show}
                 onHide={handleClose}
               >
@@ -58,7 +57,7 @@ const Moeventscreen = (props) => {
                     Please fill in your information to help us prepare for the
                     event
                   </p>
-                  <Form action= 'https://malaikah-db.herokuapp.com/event-reg' method='POST'>
+                  <Form action= 'http://localhost:3500/event-reg' method='POST'>
                     <label>Name</label>
                     <input type="text" name="name" className="form-control" />
 
@@ -104,7 +103,6 @@ const Moeventscreen = (props) => {
                         <h5 style={{ textAlign: 'left' }}>
                           Location:{' '}
                           <span style={{ fontWeight: 'lighter' }}>
-                            {' '}
                             {events.location}
                           </span>{' '}
                         </h5>
@@ -113,7 +111,6 @@ const Moeventscreen = (props) => {
                         <h5 style={{ textAlign: 'left' }}>
                           Contact:{' '}
                           <span style={{ fontWeight: 'lighter' }}>
-                            {' '}
                             malaikah@gmail.com
                           </span>
                         </h5>

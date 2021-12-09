@@ -27,7 +27,7 @@ function SideNavbar() {
         <ul class="sidebar-navigation">
           <li class="header">Dashboard</li>
           <li>
-            <Link to="/pdash" id="current">
+            <Link to="/profile" id="current">
               <img src="/images/profileicon.png " alt="" style={{ width: '20%', height: '20%' }}/>
               Profile
             </Link>
