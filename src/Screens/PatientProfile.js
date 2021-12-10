@@ -21,10 +21,10 @@ const PatientProfile = () => {
             }}
             sm={8}
           >
-            <div style={{padding: '3%', marginBottom: '3%', background: "#fcfcfc",}}>
+            <div style={{padding: '3%', marginBottom: '3%', background: "#fcfcfc", }}>
               <img src="/images/79285222.jpeg" id="photo" alt="" /> <br />
               <input type="file" id="file" />
-              <label for="file">Change Picture</label>
+              <label style={{fontWeight:'bold', cursor: 'pointer', fontSize:'20px'}} for="file">Change Picture</label>
               <div style={{ textAlign: "left" }}>
                 <h4>Lary Marc</h4>
               </div>
