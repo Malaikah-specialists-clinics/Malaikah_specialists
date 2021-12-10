@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Col, Row, Alert, Card, Container, Form } from "react-bootstrap";
+import { Col, Row, Alert, Card, Container} from "react-bootstrap";
 import { base_url } from '../Constants/index.js';
-import { Button, Modal} from 'react-bootstrap';
-
-
+import {  Modal} from 'react-bootstrap';
+import  EventModelScreen from './EventModelScreen'
 
 
 const Moeventscreen = (props) => {
@@ -29,56 +28,20 @@ const Moeventscreen = (props) => {
     return (
       <>
         <div class="hcare">
-          {event.map((events) => (
-            <div>
-              <Modal
-                {...props}
-                size="lg"
-                aria-labelledby="contained-modal-title-vcenter"
-                centered          
-                show={show}
-                onHide={handleClose}
-              >
-                <Modal.Header closeButton>
-                  <Modal.Title id="contained-modal-title-vcenter">
-                    <h2 style={{ textAlign: 'center' }}>{events.title}</h2>
-                  </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <h4 style={{ fontSize: '16px' }}>
-                    Date:
-                    <span>{events.date}</span>
-                  </h4>
-                  <h4 style={{ fontSize: '16px' }}>
-                    Time:
-                    <span>{events.time}</span>
-                  </h4>
-                  <p>
-                    Please fill in your information to help us prepare for the
-                    event
-                  </p>
-                  <Form action= 'http://localhost:3500/event-reg' method='POST'>
-                    <label>Name</label>
-                    <input type="text" name="name" className="form-control" />
+          <div>
+            <Modal
+              {...props}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+              show={show}
+              onHide={handleClose}
+            >
+            <EventModelScreen/>
+            </Modal>
 
-                    <label>Email</label>
-                    <input type="email" name="email" className="form-control" />
-                    <div
-                      class="d-grid gap-2 col-6 mx-auto"
-                      style={{ marginTop: '25px ' }}
-                    >
-                      <Button id="Btn" style={{width: "100%", }} type="submit">
-                        Submit
-                      </Button>
-                      <Button className="btn btn-light" onClick={handleClose}>
-                        Cancel
-                      </Button>
-                    </div>
-                  </Form>
-                </Modal.Body>
-              </Modal>
-
-             <Container style={{ maxWidth: '100%', margin: '0' }}>
+            {event.map((events) => (
+              <Container style={{ maxWidth: '100%', margin: '0' }}>
                 <Card
                   id="contentcard"
                   style={{ marginLeft: 'auto', marginRight: 'auto' }}
@@ -115,15 +78,13 @@ const Moeventscreen = (props) => {
                           </span>
                         </h5>
                       </div>
-                      <button onClick={handleShow} className="Btn">
-                        REGISTER
-                      </button>
+                      <button className="Btn" onClick={handleShow}>REGISTER</button>
                     </Col>
                   </Row>
                 </Card>
               </Container>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </>
     );

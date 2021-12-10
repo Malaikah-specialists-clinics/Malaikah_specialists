@@ -25,7 +25,6 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password,
     };
-
     axios
       .post(`${base_url}/users/login`, loginObject, {
         headers: { 'Access-Control-Allow-Origin': '*' },
@@ -37,7 +36,7 @@ class Login extends Component {
       .catch((err) => {
         console.log(err);
       });
-      this.props.history.push('/form');
+      this.props.history.push('/profile');
       
   }
  
