@@ -680,11 +680,7 @@ h3 {
   background-color: transparent;
 }
 
-/* .content-container {
-  padding-left: 250px;
-  padding-top: 70px;
-  padding-bottom: 10px;
-} */
+
 
 .heading h4 {
   margin-top: 5px;
@@ -774,18 +770,8 @@ h3 {
   font-weight: bold;
 }
 
-/* body {
-  background: rgba(52, 95, 144, 0.07);
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.66667;
-} */
-.toggle-container {
-  width: 75%;
-  margin: 3rem auto;
-}
 
+<<<<<<< HEAD
 .tab-slider--nav {
   width: 100%;
   float: left;
@@ -842,6 +828,9 @@ h3 {
 .tab-slider--body {
   margin-bottom: 20px;
 }
+=======
+
+>>>>>>> 1946c289258d27cb9254cf9251d2019a10071d93
 
 #card {
   height: auto;
@@ -880,4 +869,7 @@ h3 {
   color: #494949a6;
   text-align: left;
   font-weight: lighter;
+}
+.nav.nav-pills .nav-link.active {
+  background-color: #0a1f3e;
 }
