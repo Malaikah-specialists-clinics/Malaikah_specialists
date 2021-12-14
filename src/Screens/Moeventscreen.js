@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Col, Row, Alert, Card, Container} from "react-bootstrap";
+import { Col, Row, Alert, Card, Container, Modal } from 'react-bootstrap';
 import { base_url } from '../Constants/index.js';
-import {  Modal} from 'react-bootstrap';
-import  EventModelScreen from './EventModelScreen'
+import Trial from "./EventModelScreen.js";
+// import {  Modal} from 'react-bootstrap';
+// import  EventModelScreen from './EventModelScreen'
+
 
 
 const Moeventscreen = (props) => {
   const [event, setEvents] = useState([]);
+  const [eventData, setEventData] = useState([]);
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
   useEffect(() => {
     axios
       .get(`${base_url}/events`)
@@ -20,9 +26,24 @@ const Moeventscreen = (props) => {
       });
   }, []);
   //  console.log(events)
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  
+
+
+  const handleShow = (data) => {
+    console.log(data)
+    setEventData(data)
+    setShow(true)};
+  // const [trial, setTrial] = useState(true);
+
+  // const handleModalOpen = () => {
+  //   setTrial(true);
+  // };
+  // const handleCancel = () =>{
+  //   setTrial(false)
+  // }
+  // const handleOk = () =>{
+  //   setTrial(false)
+  // }  
 
   if (event.length > 0) {
     return (
@@ -37,9 +58,8 @@ const Moeventscreen = (props) => {
               show={show}
               onHide={handleClose}
             >
-            <EventModelScreen/>
+              <Trial data={eventData} closeDialog={handleClose}/>
             </Modal>
-
             {event.map((events) => (
               <Container style={{ maxWidth: '100%', margin: '0' }}>
                 <Card
@@ -64,21 +84,23 @@ const Moeventscreen = (props) => {
 
                       <div>
                         <h5 style={{ textAlign: 'left' }}>
-                          Location:{' '}
+                          Location:
                           <span style={{ fontWeight: 'lighter' }}>
                             {events.location}
-                          </span>{' '}
+                          </span>
                         </h5>
                       </div>
                       <div>
                         <h5 style={{ textAlign: 'left' }}>
-                          Contact:{' '}
+                          Contact:
                           <span style={{ fontWeight: 'lighter' }}>
                             malaikah@gmail.com
                           </span>
                         </h5>
                       </div>
-                      <button className="Btn" onClick={handleShow}>REGISTER</button>
+                      <button className="Btn" onClick={()=> {handleShow(events)}}>
+                        REGISTER
+                      </button>
                     </Col>
                   </Row>
                 </Card>
