@@ -25,7 +25,6 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password,
     };
-
     axios
       .post(`${base_url}/users/login`, loginObject, {
         headers: { 'Access-Control-Allow-Origin': '*' },

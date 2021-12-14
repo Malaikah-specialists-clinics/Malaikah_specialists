@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Col, Row, Alert, Card, Container, Form } from "react-bootstrap";
+import { Col, Row, Alert, Card, Container, Modal } from 'react-bootstrap';
 import { base_url } from '../Constants/index.js';
-import { Button, Modal} from 'react-bootstrap';
-
+import Trial from "./EventModelScreen.js";
+// import {  Modal} from 'react-bootstrap';
+// import  EventModelScreen from './EventModelScreen'
 
 
 
 const Moeventscreen = (props) => {
   const [event, setEvents] = useState([]);
+  const [eventData, setEventData] = useState([]);
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
   useEffect(() => {
     axios
       .get(`${base_url}/events`)
@@ -21,65 +26,42 @@ const Moeventscreen = (props) => {
       });
   }, []);
   //  console.log(events)
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  
+
+
+  const handleShow = (data) => {
+    console.log(data)
+    setEventData(data)
+    setShow(true)};
+  // const [trial, setTrial] = useState(true);
+
+  // const handleModalOpen = () => {
+  //   setTrial(true);
+  // };
+  // const handleCancel = () =>{
+  //   setTrial(false)
+  // }
+  // const handleOk = () =>{
+  //   setTrial(false)
+  // }  
 
   if (event.length > 0) {
     return (
       <>
         <div class="hcare">
-          {event.map((events) => (
-            <div>
-              <Modal
-                {...props}
-                size="lg"
-                aria-labelledby="contained-modal-title-vcenter"
-                centered
-                
-                show={show}
-                onHide={handleClose}
-              >
-                <Modal.Header closeButton>
-                  <Modal.Title id="contained-modal-title-vcenter">
-                    <h2 style={{ textAlign: 'center' }}>{events.title}</h2>
-                  </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <h4 style={{ fontSize: '16px' }}>
-                    Date:
-                    <span>{events.date}</span>
-                  </h4>
-                  <h4 style={{ fontSize: '16px' }}>
-                    Time:
-                    <span>{events.time}</span>
-                  </h4>
-                  <p>
-                    Please fill in your information to help us prepare for the
-                    event
-                  </p>
-                  <Form action= 'http://localhost:3500/event-reg' method='POST'>
-                    <label>Name</label>
-                    <input type="text" name="name" className="form-control" />
-
-                    <label>Email</label>
-                    <input type="email" name="email" className="form-control" />
-                    <div
-                      class="d-grid gap-2 col-6 mx-auto"
-                      style={{ marginTop: '25px ' }}
-                    >
-                      <Button id="Btn" style={{width: "100%", }} type="submit">
-                        Submit
-                      </Button>
-                      <Button className="btn btn-light" onClick={handleClose}>
-                        Cancel
-                      </Button>
-                    </div>
-                  </Form>
-                </Modal.Body>
-              </Modal>
-
-             <Container style={{ maxWidth: '100%', margin: '0' }}>
+          <div>
+            <Modal
+              {...props}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+              show={show}
+              onHide={handleClose}
+            >
+              <Trial data={eventData} closeDialog={handleClose}/>
+            </Modal>
+            {event.map((events) => (
+              <Container style={{ maxWidth: '100%', margin: '0' }}>
                 <Card
                   id="contentcard"
                   style={{ marginLeft: 'auto', marginRight: 'auto' }}
@@ -102,31 +84,29 @@ const Moeventscreen = (props) => {
 
                       <div>
                         <h5 style={{ textAlign: 'left' }}>
-                          Location:{' '}
+                          Location:
                           <span style={{ fontWeight: 'lighter' }}>
-                            {' '}
                             {events.location}
-                          </span>{' '}
+                          </span>
                         </h5>
                       </div>
                       <div>
                         <h5 style={{ textAlign: 'left' }}>
-                          Contact:{' '}
+                          Contact:
                           <span style={{ fontWeight: 'lighter' }}>
-                            {' '}
                             malaikah@gmail.com
                           </span>
                         </h5>
                       </div>
-                      <button onClick={handleShow} className="Btn">
+                      <button className="Btn" onClick={()=> {handleShow(events)}}>
                         REGISTER
                       </button>
                     </Col>
                   </Row>
                 </Card>
               </Container>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </>
     );
