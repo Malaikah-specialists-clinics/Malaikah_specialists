@@ -1,6 +1,5 @@
 import React, { Component} from 'react';
 import { Modal, Form, Button } from 'react-bootstrap';
-// import { useState} from 'react';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
 
@@ -41,7 +40,6 @@ constructor(props) {
       });
     this.props.history.push('/moevents');
   }
-
   render() {
     //   const [show, setShow] = useState(false);
     //   const handleClose = () => setShow(false); 
