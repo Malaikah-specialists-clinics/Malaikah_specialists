@@ -1,22 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
 import { Formik } from 'formik';
-// import * as Yup from 'yup';
+
+ 
+
 
 const EventModelScreen = ({ data, closeDialog }) => {
-  // const registereventSchema = Yup.object().shape({
-  //   firstName: Yup.string()
-  //     .min(2, 'Too Short!')
-  //     .max(50, 'Too Long!')
-  //     .required('Required'),
-  //   lastName: Yup.string()
-  //     .min(2, 'Too Short!')
-  //     .max(50, 'Too Long!')
-  //     .required('Required'),
-  //   email: Yup.string().email('Invalid email').required('Required'),
-  // });
 
   return (
     <>
@@ -60,20 +51,24 @@ const EventModelScreen = ({ data, closeDialog }) => {
             }, 1000);
           }}
         >
+      
           {(formik) => (
-            <form onSubmit={formik.handleSubmit}>
+            <form onSubmit={formik.handleSubmit.handleVal}>
               <label>Names</label>
               <Form.Control
                 name="name"
                 onChange={formik.handleChange}
                 value={formik.values.name}
+                required
               />
+            
               <label>Email</label>
               <Form.Control
                 name="email"
                 type="email"
                 value={formik.values.email}
                 onChange={formik.handleChange}
+                required
               />
 
               <Button id="Btn" style={{ width: '100%' }} type="submit">

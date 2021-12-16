@@ -3,8 +3,7 @@ import axios from "axios";
 import { Col, Row, Alert, Card, Container, Modal } from 'react-bootstrap';
 import { base_url } from '../Constants/index.js';
 import Trial from "./EventModelScreen.js";
-// import {  Modal} from 'react-bootstrap';
-// import  EventModelScreen from './EventModelScreen'
+
 
 
 
@@ -33,17 +32,6 @@ const Moeventscreen = (props) => {
     console.log(data)
     setEventData(data)
     setShow(true)};
-  // const [trial, setTrial] = useState(true);
-
-  // const handleModalOpen = () => {
-  //   setTrial(true);
-  // };
-  // const handleCancel = () =>{
-  //   setTrial(false)
-  // }
-  // const handleOk = () =>{
-  //   setTrial(false)
-  // }  
 
   if (event.length > 0) {
     return (
