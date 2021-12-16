@@ -72,7 +72,6 @@ class Login extends Component {
                       name="email"
                       value={this.state.email}
                       onChange={this.changeHandler}
-                      // onChangeText={handleChange('email')}
                       id="email"
                     />
                     <span id="EmailError"></span>
