@@ -7,7 +7,7 @@ import { Formik} from 'formik';
 const validateLogin = (userLogin) => {
   const errors = {};
   if (!userLogin.email) {
-    errors.email = 'Please Enter Email';
+    errors.email = 'Please enter email';
   } else if (
     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(userLogin.email)
   ) {
@@ -15,17 +15,13 @@ const validateLogin = (userLogin) => {
   }
   if (!userLogin.password) {
     errors.password = 'Please enter correct password';
-  } else {
-    errors.password = 'correct password'
-  }
+  } 
 
   return errors;
 };
 
 
-
-
-const Login =()=> {
+const Login =(data)=> {
 
   // changeHandler = (e) => {
   //   this.setState({ [e.target.name]: e.target.value });
@@ -88,16 +84,23 @@ const Login =()=> {
                     email: values.email,
                     password: values.password,
                   };
-
-                  axios.post(`${base_url}/event-reg`, loginObject, {
-                    headers: { 'Access-Control-Allow-Origin': '*' },
-                  });
+                  axios
+                    .post(`${base_url}/users/login`, loginObject, {
+                      headers: { 'Access-Control-Allow-Origin': '*' },
+                    })
+                    .then((res) => {
+                      console.log(res.data);
+                    })
+                    .catch((err) => {
+                      console.log(err);
+                    });
+                   this.props.history.push('/profile');
                 }}
               >
                 {(formik) => (
                   <Form
-                    onSubmit={(e) => this.onSubmit(e)}
                     style={{ padding: '10px' }}
+                    //  onSubmit={formik.handleSubmit}
                   >
                     <Row>
                       <Col md>
@@ -106,8 +109,14 @@ const Login =()=> {
                           name="email"
                           value={formik.values.email}
                           onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
                           id="email"
                         />
+                        {formik.touched.email && formik.errors.email ? (
+                          <span style={{ color: 'red' }}>
+                            {formik.errors.email}
+                          </span>
+                        ) : null}
                       </Col>
                     </Row>
                     <Row>
@@ -117,9 +126,16 @@ const Login =()=> {
                           name="password"
                           value={formik.values.password}
                           onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
                           type="password"
-                          id="form-control"
+                          id="form-control password"
+                          
                         />
+                        {formik.touched.password && formik.errors.password ? (
+                          <span style={{ color: 'red' }}>
+                            {formik.errors.password}
+                          </span>
+                        ) : null}
                       </Col>
                     </Row>
                     <Row>
