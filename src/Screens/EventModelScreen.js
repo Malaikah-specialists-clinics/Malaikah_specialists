@@ -3,20 +3,18 @@ import { Modal, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
 import { Formik } from 'formik';
-// import * as Yup from 'yup';
+import * as Yup from 'yup';
+
 
 const EventModelScreen = ({ data, closeDialog }) => {
-  // const registereventSchema = Yup.object().shape({
-  //   firstName: Yup.string()
-  //     .min(2, 'Too Short!')
-  //     .max(50, 'Too Long!')
-  //     .required('Required'),
-  //   lastName: Yup.string()
-  //     .min(2, 'Too Short!')
-  //     .max(50, 'Too Long!')
-  //     .required('Required'),
-  //   email: Yup.string().email('Invalid email').required('Required'),
-  // });
+  const registereventSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Required'),
+    email: Yup.string().email('Invalid email').required('Required'),
+  });
+ 
 
   return (
     <>
@@ -42,7 +40,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
             name: '',
             email: '',
           }}
-          // validationSchema={registereventSchema}
+          validationSchema={registereventSchema}
           onSubmit={(values, actions) => {
             setTimeout(() => {
               const registereventObject = {
@@ -50,6 +48,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
                 email: values.email,
                 eventId: data.id,
               };
+              
               axios.post(`${base_url}/event-reg`, registereventObject, {
                 headers: { 'Access-Control-Allow-Origin': '*' },
               });
@@ -68,6 +67,8 @@ const EventModelScreen = ({ data, closeDialog }) => {
                 onChange={formik.handleChange}
                 value={formik.values.name}
               />
+              
+
               <label>Email</label>
               <Form.Control
                 name="email"
@@ -77,7 +78,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
               />
 
               <Button id="Btn" style={{ width: '100%' }} type="submit">
-                Submit
+                SUBMIT
               </Button>
             </form>
           )}
