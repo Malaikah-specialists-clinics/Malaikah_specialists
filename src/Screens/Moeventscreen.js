@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Col, Row, Alert, Card, Container, Modal } from 'react-bootstrap';
 import { base_url } from '../Constants/index.js';
-import Trial from "./EventModelScreen.js";
-
-
-
+import Trial from './EventModelScreen.js';
+// import {  Modal} from 'react-bootstrap';
+// import  EventModelScreen from './EventModelScreen'
 
 const Moeventscreen = (props) => {
   const [event, setEvents] = useState([]);
@@ -25,13 +24,23 @@ const Moeventscreen = (props) => {
       });
   }, []);
   //  console.log(events)
-  
-
 
   const handleShow = (data) => {
-    console.log(data)
-    setEventData(data)
-    setShow(true)};
+    console.log(data);
+    setEventData(data);
+    setShow(true);
+  };
+  // const [trial, setTrial] = useState(true);
+
+  // const handleModalOpen = () => {
+  //   setTrial(true);
+  // };
+  // const handleCancel = () =>{
+  //   setTrial(false)
+  // }
+  // const handleOk = () =>{
+  //   setTrial(false)
+  // }
 
   if (event.length > 0) {
     return (
@@ -46,7 +55,7 @@ const Moeventscreen = (props) => {
               show={show}
               onHide={handleClose}
             >
-              <Trial data={eventData} closeDialog={handleClose}/>
+              <Trial data={eventData} closeDialog={handleClose} />
             </Modal>
             {event.map((events) => (
               <Container style={{ maxWidth: '100%', margin: '0' }}>
@@ -86,7 +95,12 @@ const Moeventscreen = (props) => {
                           </span>
                         </h5>
                       </div>
-                      <button className="Btn" onClick={()=> {handleShow(events)}}>
+                      <button
+                        className="Btn"
+                        onClick={() => {
+                          handleShow(events);
+                        }}
+                      >
                         REGISTER
                       </button>
                     </Col>
