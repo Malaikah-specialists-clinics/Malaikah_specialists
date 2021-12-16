@@ -8,13 +8,13 @@ import { base_url } from '../Constants/index.js';
 
 class Login extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: '',
-      password: '',
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     email: '',
+  //     password: '',
+  //   };
+  // }
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -36,7 +36,7 @@ class Login extends Component {
       .catch((err) => {
         console.log(err);
       });
-      this.props.history.push('/profile');
+      // this.props.history.push('/profile');
       
   }
  

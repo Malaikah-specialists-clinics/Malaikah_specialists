@@ -1,8 +1,8 @@
 import { useState}  from 'react';
 import {LinkContainer} from 'react-router-bootstrap'
 import {Button, Modal, Row,} from 'react-bootstrap';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faWhatsapp} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp} from '@fortawesome/free-brands-svg-icons';
 // import { FaComment } from 'react-icons';
 
 
@@ -13,15 +13,14 @@ const Popupbtn = () => {
     const handleShow = () => setShow(true);
     return (
       <>
-        {/* <FontAwesomeIcon icon={faWhatsapp} className="youtubeicon"
+        <FontAwesomeIcon icon={faWhatsapp} className="youtubeicon"
             onClick={handleShow}
-          /> */}
-        <div className="popicon" onClick={handleShow}>
-          <img
-            className="popup"
-            src="/images/chaticon.png"
-            alt=""
           />
+        <div className="popicon" onClick={handleShow}>
+          <img className="popup" src="/images/chaticon.png" alt="" />
+        </div>
+        <div className="whatsappicon">
+          <img className="whatsapp" src="/images/Whatsappbtn.png " alt="" onClick={handleShow}/>
         </div>
         <Modal
           show={show}

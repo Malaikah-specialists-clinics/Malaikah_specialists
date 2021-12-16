@@ -63,6 +63,7 @@ function Footer() {
                 round="true"
               ></FacebookIcon>
             </FacebookShareButton>
+            
             <LinkedinShareButton
               url="https://www.linkedin.com/company/malaikah-specialist-clinics">
               <LinkedinIcon
