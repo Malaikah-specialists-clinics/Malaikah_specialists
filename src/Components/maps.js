@@ -18,8 +18,11 @@ class Maps extends Component {
            // height: '70%',
        // };
         return (
+
+            
             
             <div className="mapFrame" style={{ width: '100%', height: '300px', bottom: '0', position: 'relative' }}>
+                <h2 style={{textAlign: 'center'}}>Visit Us!</h2>
                 <Map
                     google={this.props.google}
                     resetBoundsOnResize={true}
