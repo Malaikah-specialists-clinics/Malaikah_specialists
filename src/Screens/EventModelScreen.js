@@ -80,8 +80,9 @@ const EventModelScreen = ({ data, closeDialog }) => {
             }, 1000);
           }}
         >
+      
           {(formik) => (
-            <form onSubmit={formik.handleSubmit}>
+            <form onSubmit={formik.handleSubmit.handleVal}>
               <label>Names</label>
               <Form.Control
                 name="name"

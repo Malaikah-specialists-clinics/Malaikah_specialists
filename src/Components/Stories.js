@@ -1,68 +1,128 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { Col, Row, Container } from "react-bootstrap";
+// import { useState, useEffect } from "react";
+// import axios from "axios";
 
 const Stories = () => {
-  const [story, setStory] = useState([]);
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/stories")
-      .then((res) => {
-        setStory(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log({ message: err });
-      });
-  }, []);
   return (
     <>
-      {story.map((story_entity) => (
-        <div className="storycont">
-          <h2
-            style={{
-              paddingTop: "20px",
-              textAlign: "center",
-            }}
-          >
-            OUR SUCCESS STORIES
-          </h2>
-          <Container style={{ paddingBottom: "30px" }}>
-            <Row>
-              <Col>
-                <h4 style={{ textAlign: "center" }}>
-                  {story_entity.department}
-                </h4>
-                <iframe
-                  width="260"
-                  height="200"
-                  src="https://www.youtube.com/embed/BThr1pb77Fo"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                </Col>
-                <Col>
-                <h4 style={{ textAlign: "center" }}>
-                 Paediatrics
-                </h4>
-                <iframe
-                  width="260"
-                  height="200"
-                  src="https://www.youtube.com/embed/BThr1pb77Fo"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      ))}
+    <h2 style={{textAlign: 'center'}}>OUR SUCCESS STORIES</h2>
+    <Container style={{ marginLeft: 'auto', marginRight: 'auto', padding: '3% 0'}}>
+    <Row style={{marginBottom: '3%'}}>
+      <Col md>
+      <iframe
+            width="100%"
+            height="160"
+            src="https://www.youtube.com/embed/X3CaSPRxnhY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h6 style={{textAlign: 'center'}}>Medicine Store</h6>
+        
+      </Col>
+      <Col md>
+      <iframe
+            width="100%"
+            height="160"
+            src="https://www.youtube.com/embed/X3CaSPRxnhY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h6 style={{textAlign: 'center'}}>Ambulance services</h6>
+      </Col>
+      <Col md>
+      <iframe
+            width="100%"
+            height="160"
+            src="https://www.youtube.com/embed/X3CaSPRxnhY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h6 style={{textAlign: 'center'}}>Diabetes</h6>
+        
+      </Col>
+      <Col md>
+      <iframe
+            width="100%"
+            height="160"
+            src="https://www.youtube.com/embed/X3CaSPRxnhY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h6 style={{textAlign: 'center'}}>Home care services</h6>
+      </Col>
+    </Row>
+    
+         
+          
+        
+    <Row>
+  <Col md>
+  <iframe
+            width="100%"
+            height="160"
+            src="https://www.youtube.com/embed/X3CaSPRxnhY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h6 style={{textAlign: 'center'}}>Non-communicable diseases</h6>
+        
+  </Col>
+  <Col md>
+  <iframe
+            width="100%"
+            height="160"
+            src="https://www.youtube.com/embed/X3CaSPRxnhY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h6 style={{textAlign: 'center'}}>Gynecology</h6>
+  </Col>
+  <Col md>
+  <iframe
+            width="100%"
+            height="160"
+            src="https://www.youtube.com/embed/X3CaSPRxnhY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h6 style={{textAlign: 'center'}}>Paediatrics</h6>
+        
+  </Col>
+  <Col md>
+  <iframe
+            width="100%"
+            height="160"
+            src="https://www.youtube.com/embed/X3CaSPRxnhY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h6 style={{textAlign: 'center'}}>Hernia Surgery</h6>
+        
+  </Col>
+    </Row>
+        
+         
+        
+          
+          
+    </Container>
     </>
   );
 };
