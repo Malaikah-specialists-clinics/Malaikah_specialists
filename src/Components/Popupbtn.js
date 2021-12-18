@@ -1,9 +1,6 @@
 import { useState}  from 'react';
 import {LinkContainer} from 'react-router-bootstrap'
 import { Button, Modal, Row, Container } from 'react-bootstrap';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faWhatsapp} from '@fortawesome/free-brands-svg-icons';
-// import { FaComment } from 'react-icons';
 
 
 
