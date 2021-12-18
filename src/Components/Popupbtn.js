@@ -1,9 +1,6 @@
 import { useState}  from 'react';
 import {LinkContainer} from 'react-router-bootstrap'
-import {Button, Modal, Row,} from 'react-bootstrap';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faWhatsapp} from '@fortawesome/free-brands-svg-icons';
-// import { FaComment } from 'react-icons';
+import { Button, Modal, Row, Container } from 'react-bootstrap';
 
 
 
@@ -17,7 +14,12 @@ const Popupbtn = () => {
           <img className="popup" src="/images/chaticon.png" alt="" />
         </div>
         <div className="whatsappicon">
-          <a href="https://wa.me/256754238777" className="whatsapp" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://wa.me/256754238777"
+            className="whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img className="whatsapp" src="/images/Whatsappbtn.png " alt="" />
           </a>
         </div>
@@ -43,13 +45,13 @@ const Popupbtn = () => {
               </Button>
             </LinkContainer>
 
-            <LinkContainer to="/form">
+            <Container>
               <Row xs={12} md={8}>
-                <Button id="talktodocbtn">
+                <Button id="talktodocbtn" href="https://wa.me/256754238777">
                   <h5 className="talktodoc">TALK TO A DOCTOR</h5>
                 </Button>
               </Row>
-            </LinkContainer>
+            </Container>
           </Modal.Body>
         </Modal>
       </>
