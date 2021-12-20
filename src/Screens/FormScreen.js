@@ -4,82 +4,47 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
-import { withRouter } from 'react-router-dom';
 import { Formik } from 'formik';
-// import CORS from "react"
-// import { useState, useEffect } from "react";
 
-
-
-const validateBookappt = (detailsBookappt) => {
+const validateBookappt = (bookapptDetails) => {
   const errors = {};
-  if (!detailsBookappt.email) {
+
+  if (!bookapptDetails.email) {
     errors.email = 'Please Enter Email';
   } else if (
-    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(detailsBookappt.email)
+    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(bookapptDetails.email)
   ) {
     errors.email = 'Invalid email address';
   }
-  if (!detailsBookappt.sdept === "") {
+
+  if (!bookapptDetails.sdept) {
     errors.sdept = 'Field Required';
-  } 
-  // else if (detailsBookappt.sdept.length > 20) {
-  //   errors.sdept = 'Name cannot exceed 20 characters';
-  // }
-  //  if (!detailsBookappt.name) {
-  //    errors.name = 'Please Enter Full Names';
-  //  } else if (detailsBookappt.doa.length > 20) {
-  //    errors.name = 'Name cannot exceed 20 characters';
-  //  }
+  }
+
+  if (!bookapptDetails.doa) {
+     errors.doa = 'Field Required';
+  }
+
+  if (!bookapptDetails.toa) {
+    errors.toa = 'Field Required';
+  }
+
+  if (!bookapptDetails.moa) {
+    errors.moa = 'Field Required';
+  }
+
+  if (!bookapptDetails.pmi) {
+    errors.pmi = 'Field Required';
+  }
 
   return errors;
 };
+
 
 const FormPage = ({ closeDialog }) => {
   // alertText = () => {
   //   alert('You have an appointment!!, Please check your email');
   // };
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     email: '',
-  //     sdpet: '',
-  //     doa: '',
-  //     toa: '',
-  //     moa: '',
-  //     pmi: '',
-  //   };
-  // }
-  // changeHandler = (e) => {
-  //   this.setState({ [e.target.name]: e.target.value });
-  // };
-  // validate = { validateBookappt };
-  // onSubmit(e) {
-  //   this.alertText();
-  //   e.preventDefault();
-
-  //   const patientObject = {
-  //     email: this.state.email,
-  //     sdept: this.state.sdept,
-  //     doa: this.state.doa,
-  //     toa: this.state.toa,
-  //     moa: this.state.moa,
-  //     pmi: this.state.pmi,
-  //   };
-  //   axios
-  //     .post(`${base_url}/bookappts`, patientObject, {
-  //       headers: { 'Access-Control-Allow-Origin': '*' },
-  //     })
-
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  //   this.props.history.push('/profile');
-  // }
 
   return (
     <>
@@ -92,10 +57,14 @@ const FormPage = ({ closeDialog }) => {
             <Formik
               initialValues={{
                 email: '',
+                sdept: '',
+                doa: '',
+                toa: '',
+                moa: '',
+                pmi: '',
               }}
-              // validationSchema={registereventSchema}
               validate={validateBookappt}
-              onSubmit={(values, actions, errors) => {
+              onSubmit={(values, actions) => {
                 setTimeout(() => {
                   const patientObject = {
                     email: values.email,
@@ -130,7 +99,6 @@ const FormPage = ({ closeDialog }) => {
                         name="email"
                         value={formik.values.email}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
                       />
                       {formik.touched.email && formik.errors.email ? (
                         <span style={{ color: 'red' }}>
@@ -144,42 +112,54 @@ const FormPage = ({ closeDialog }) => {
                       <Col md className="inputField">
                         <Form.Label id="field">Department</Form.Label>
                         <Form.Select
+                          id="form-control"
                           name="sdept"
                           value={formik.values.sdept}
                           onChange={formik.handleChange}
-                          id="form-control sdept"
                         >
                           <option>Select department</option>
                           <option>Gynecology</option>
                           <option>Paediatrics</option>
                           <option>Non-communicable diseases</option>
                           <option>Hernia and appendicitis Surgery</option>
-                          {formik.touched.sdept && formik.errors.sdept ? (
-                            <span style={{ color: 'red' }}>
-                              {formik.errors.sdept}
-                            </span>
-                          ) : null}
                         </Form.Select>
+                        {formik.touched.sdept && formik.errors.sdept ? (
+                          <span style={{ color: 'red' }}>
+                            {formik.errors.sdept}
+                          </span>
+                        ) : null}
                       </Col>
                       <Col md>
                         <Form.Label id="field">Date Of Appointment</Form.Label>
                         <Form.Control
+                          type="date"
                           name="doa"
                           value={formik.values.doa}
                           onChange={formik.handleChange}
-                          id="form-control"
+                          id="form-control doa"
                         />
+                        {formik.touched.doa && formik.errors.doa ? (
+                          <span style={{ color: 'red' }}>
+                            {formik.errors.doa}
+                          </span>
+                        ) : null}
                       </Col>
                     </Row>
                     <Row>
                       <Col md>
                         <Form.Label id="field">Time Of Appointment</Form.Label>
                         <Form.Control
+                          type="time"
                           name="toa"
                           value={formik.values.toa}
                           onChange={formik.handleChange}
                           id="form-control"
                         />
+                        {formik.touched.toa && formik.errors.toa ? (
+                          <span style={{ color: 'red' }}>
+                            {formik.errors.toa}
+                          </span>
+                        ) : null}
                       </Col>
 
                       <Col md>
@@ -194,6 +174,11 @@ const FormPage = ({ closeDialog }) => {
                           <option>Online</option>
                           <option>In Person</option>
                         </Form.Select>
+                        {formik.touched.moa && formik.errors.moa ? (
+                          <span style={{ color: 'red' }}>
+                            {formik.errors.moa}
+                          </span>
+                        ) : null}
                       </Col>
                     </Row>
 
@@ -207,6 +192,9 @@ const FormPage = ({ closeDialog }) => {
                       type="text-area"
                       id="textarea"
                     />
+                    {formik.touched.pmi && formik.errors.pmi ? (
+                      <span style={{ color: 'red' }}>{formik.errors.pmi}</span>
+                    ) : null}
                     <Row>
                       <Col>
                         <Button type="submit" id="Btn">
@@ -233,4 +221,4 @@ const FormPage = ({ closeDialog }) => {
     </>
   );
 };
-export default withRouter(FormPage);
+export default FormPage;
