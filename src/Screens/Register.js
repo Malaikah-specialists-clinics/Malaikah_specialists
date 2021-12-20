@@ -138,7 +138,10 @@ const Register = ({ closeDialog }) => {
 
                   axios.post(`${base_url}/users`, userObject, {
                     headers: { 'Access-Control-Allow-Origin': '*' },
-                  });
+                  })
+                  // .then((res)=>{
+                  //   localStorage.setItem('access_token', res.data.access_token)
+                  // });
                   window.location.href = '/#/login';
                   if (closeDialog) {
                     closeDialog();

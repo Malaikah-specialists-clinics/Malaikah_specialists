@@ -25,6 +25,7 @@ const validateLogin = (loginUser) => {
 const Login = ({ closeDialog }) => {
 
   return (
+    
     <>
       <div
         className="formcontent"
@@ -63,7 +64,9 @@ const Login = ({ closeDialog }) => {
 
                   axios.post(`${base_url}/users/login`, loginObject, {
                     headers: { 'Access-Control-Allow-Origin': '*' },
-                  });
+                    
+                  }
+                  ).then( res =>{localStorage.setItem('token', res.loginObject.token)});
                   window.location.href = '/#/profile';
                   if (closeDialog) {
                     closeDialog();
