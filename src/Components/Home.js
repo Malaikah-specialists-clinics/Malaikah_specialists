@@ -3,8 +3,8 @@ import Events from './Events';
 import Research from './Research';
 import Specialities from './Specialities';
 import Landing from './Landing';
-import Stories from './Stories';
-// import Popupbtn from './Popupbtn';
+// import Stories from './Stories';
+ import Popupbtn from './Popupbtn';
 import Maps from './maps';
 
 
@@ -16,9 +16,9 @@ function Home(){
           <Specialities />
           <Events />
           <Research />
-          <Stories />
+          {/* <Stories /> */}
           <Maps />
-          {/* <Popupbtn /> */}
+          <Popupbtn />
           
         </div>
       </>
