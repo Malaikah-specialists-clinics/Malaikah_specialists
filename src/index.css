@@ -537,7 +537,7 @@ h3 {
   position: fixed;
   background: transparent;
   top: 85%;
-  right: 0;
+  left: 94%;
 }
 .popup{
   width: 60px;
@@ -817,7 +817,7 @@ h3 {
   position: fixed;
   background: transparent;
   top: 85%;
-  left: 0;
+  left: 2%;
 }
 .whatsapp{
   width: 60px;
