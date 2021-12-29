@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardGroup,} from "react-bootstrap";
+import { Card, CardGroup, Container} from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
@@ -19,7 +19,7 @@ const Tips = () => {
    }, []);
 
   return (
-    <div>
+    <Container style={{maxWidth: '100%'}}>
       <div id="tipcrd">
         {tip.map((tip_entity) => (
           <CardGroup
@@ -35,7 +35,7 @@ const Tips = () => {
           </CardGroup>
         ))}
       </div>
-    </div>
+    </Container>
   );
 }
 
