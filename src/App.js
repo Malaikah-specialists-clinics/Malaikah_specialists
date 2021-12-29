@@ -41,7 +41,7 @@ function App() {
       <Route path="/specialities" component={SpecialitiesScreen}></Route>
       <Route path="/profile" component={PatientProfile}></Route>
       <Route path="/appts" component={Appointments}></Route>
-      <Router path="/applicationforms" component={Applicationforms}></Router>
+      <Route path="/applicationforms" component={Applicationforms}></Route>
       <Footer />
     </Router>
   );
