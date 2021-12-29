@@ -6,20 +6,19 @@ import { base_url } from '../Constants/index.js';
 import { useState, useEffect } from "react";
 
 
+
 const PatientProfile = () => {
-  const [user, setUser] = useState([]);
+ const [users, setUsers] = useState([]);
 
   const config = {
-    // headers: {
-    //   Authorization : 'Bearer' + localStorage.getItem('access_token'),
-    // }
+  
 
     headers:{
     Accept: 'application/json',
              'Content-Type': 'application/json',
               Authorization: "Bearer " + localStorage.getItem('access_token'),
             },
-    //             //  Authorization: "Bearer " + localStorage.getItem('access_token'),
+  
   }
  
 
@@ -27,7 +26,7 @@ const PatientProfile = () => {
     axios
       .get(`${base_url}/users`, config)
       .then((res) => {
-        setUser(res.data);
+          setUsers(res.data);
         console.log(res.data);
       })
       .catch((err) => {
@@ -35,11 +34,13 @@ const PatientProfile = () => {
       });
   });
 
-  if (user){
+ 
+
+    
   return ( 
     <div style={{ background: "#f8f8f8" }} className="formcontent">
+    {users.map((user) => (
       <Container>
-      {user.map((users) => (
         <Row key={users.id}>
           <Col sm={4}>
             <SideNavbar />
@@ -98,11 +99,11 @@ const PatientProfile = () => {
             </div>
           </Col>
         </Row>
-         ))}
       </Container>
+        ))}
     </div>
   );
-}
+    
 };
 
 export default PatientProfile;

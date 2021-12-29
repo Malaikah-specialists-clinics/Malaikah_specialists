@@ -14,11 +14,11 @@ import EmeservSreen from './Screens/EmeservSreen'
 import Moeventscreen from './Screens/Moeventscreen';
 import Home from './Components/Home';
 import SpecialitiesScreen from './Screens/SpecialitiesScreen'
-// import LoginScreen from './Screens/LoginScreen'
+ import LoginScreen from './Screens/LoginScreen'
 import Staffscreen from './Screens/Staffscreen'
 import PatientProfile from './Screens/PatientProfile'
 import Appointments from './Screens/Appointments'
-import Dummy from './Screens/dummyuser'
+// import Dummy from './Screens/dummyuser'
 
 
 require('dotenv').config();
@@ -35,7 +35,7 @@ function App() {
       <Route path="/specscreen" component={Specialities} />
       <Route path="/emergservice" component={EmeservSreen} />
       <Route path="/moeevents" component={Moeventscreen} />
-      <Route path="/login" component={Dummy}></Route>
+      <Route path="/login" component={LoginScreen}></Route>
       <Route path="/about" component={Aboutscreen}></Route>
       <Route path="/staff" component={Staffscreen}></Route>
       <Route path="/specialities" component={SpecialitiesScreen}></Route>
