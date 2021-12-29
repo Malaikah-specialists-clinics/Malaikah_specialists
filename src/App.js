@@ -18,6 +18,7 @@ import LoginScreen from './Screens/LoginScreen'
 import Staffscreen from './Screens/Staffscreen'
 import PatientProfile from './Screens/PatientProfile'
 import Appointments from './Screens/Appointments'
+import Applicationforms from './EducationPortal/Applicationforms'
 
 
 require('dotenv').config();
@@ -40,6 +41,7 @@ function App() {
       <Route path="/specialities" component={SpecialitiesScreen}></Route>
       <Route path="/profile" component={PatientProfile}></Route>
       <Route path="/appts" component={Appointments}></Route>
+      <Router path="/applicationforms" component={Applicationforms}></Router>
       <Footer />
     </Router>
   );
