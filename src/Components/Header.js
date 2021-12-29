@@ -58,7 +58,7 @@ function Header() {
               <LinkContainer to="/moeevents">
                 <Nav.Link>Events</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="#">
+              <LinkContainer to="/applicationforms">
                 <Nav.Link>Education</Nav.Link>
               </LinkContainer>
               <NavDropdown title="About Us" id="navbarScrollingDropdown">
