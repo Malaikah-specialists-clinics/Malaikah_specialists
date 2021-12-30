@@ -823,4 +823,21 @@ h3 {
   width: 60px;
   height: 60px;
 }
+/* styling the application forms */
+#applicationfield{
+  margin-top: 20px;
+  font-size: 15px;
+  border-radius: 0px;
+  color: rgb(85, 84, 84);
+  background-color: #85B6FF; 
+}
+#btnapplicaton {
+  margin-top: 20px;
+  background-color: #fbbb35;
+  color: black;
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 0px;
+}
 
