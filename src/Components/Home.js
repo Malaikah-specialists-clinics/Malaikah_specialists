@@ -4,7 +4,7 @@ import Research from './Research';
 import Specialities from './Specialities';
 import Landing from './Landing';
 import Stories from './Stories';
-import Popupbtn from './Popupbtn';
+ import Popupbtn from './Popupbtn';
 import Maps from './maps';
 
 

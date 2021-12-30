@@ -1,10 +1,11 @@
 import React from "react";
-import {Card, Col, Row} from "react-bootstrap"
+import {Card, Col, Container, Row} from "react-bootstrap"
 
 
 function Upcomingappts() {
   return (
 <>
+<Container style={{maxWidth: '100%'}}>
 <Card id="card">
   <Card.Body>
     <Row>
@@ -24,6 +25,7 @@ function Upcomingappts() {
     </Row>
   </Card.Body>
 </Card>
+</Container>
 </>
 
 )

@@ -14,13 +14,15 @@ import EmeservSreen from './Screens/EmeservSreen'
 import Moeventscreen from './Screens/Moeventscreen';
 import Home from './Components/Home';
 import SpecialitiesScreen from './Screens/SpecialitiesScreen'
-import LoginScreen from './Screens/LoginScreen'
+ import LoginScreen from './Screens/LoginScreen'
 import Staffscreen from './Screens/Staffscreen'
 import PatientProfile from './Screens/PatientProfile'
 import Appointments from './Screens/Appointments'
 import Applicationforms from './EducationPortal/Applicationforms'
 import Applicationforms2 from './EducationPortal/Applicationforms2'
 import Applicationforms3 from './EducationPortal/Applicationforms3';
+import StudentLogin from './EducationPortal/StudentLogin';
+import HomePage from './EducationPortal/HomePage';
 
 
 require('dotenv').config();
@@ -46,6 +48,8 @@ function App() {
       <Route path="/applicationforms" component={Applicationforms}></Route>
       <Route path="/applicationforms2" component={Applicationforms2}></Route>
       <Route path="/applicationforms3" component={Applicationforms3}></Route>
+      <Route path="/studentlogin" component={StudentLogin}></Route>
+      <Route path="/studenthome" component={HomePage}></Route>
       <Footer />
     </Router>
   );

@@ -7,7 +7,7 @@ const Stories = () => {
   return (
     <>
     <h2 style={{textAlign: 'center'}}>OUR SUCCESS STORIES</h2>
-    <Container style={{ marginLeft: 'auto', marginRight: 'auto', padding: '3% 0'}}>
+    <Container style={{ marginLeft: 'auto', marginRight: 'auto'}}>
     <Row style={{marginBottom: '3%'}}>
       <Col md>
       <iframe

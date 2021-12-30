@@ -10,6 +10,7 @@ const Popupbtn = () => {
     const handleShow = () => setShow(true);
     return (
       <>
+      <Container>
         <div className="popicon" onClick={handleShow}>
           <img className="popup" src="/images/chaticon.png" alt="" />
         </div>
@@ -54,6 +55,7 @@ const Popupbtn = () => {
             </Container>
           </Modal.Body>
         </Modal>
+        </Container>
       </>
     );
 }
