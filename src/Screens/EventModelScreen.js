@@ -62,7 +62,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
           }}
           // validationSchema={registereventSchema}
           validate={validateRegister}
-          onSubmit={(values, actions, errors) => {
+          onSubmit={(values, actions,) => {
             setTimeout(() => {
               const registereventObject = {
                 name: values.name,
@@ -82,7 +82,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
         >
       
           {(formik) => (
-            <form onSubmit={formik.handleSubmit.handleVal}>
+            <form onSubmit={formik.handleSubmit}>
               <label>Names</label>
               <Form.Control
                 name="name"
