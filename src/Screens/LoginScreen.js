@@ -26,7 +26,7 @@ class Login extends Component {
       password: this.state.password,
     };
     axios
-      .post(`${base_url}/users/login`, loginObject, {
+      .post(`${base_url}/auth/login`, loginObject, {
         headers: { 'Access-Control-Allow-Origin': '*' },
       })
 

@@ -46,47 +46,6 @@ const validateUser = (regUser) => {
 
 
 const Register = ({ closeDialog }) => {
-
-  // submitData(e) {
-  //   e.preventDefault();
-  //   const {name, email, phoneNumber, dob, gender, location, password} = this.state
-  //   const userObject = {
-  //     name,
-  //     email,
-  //     phoneNumber,
-  //     dob,
-  //     gender,
-  //     location,
-  //     password,
-  //     // confirmPassword: this.state.confirmPassword
-  //   };
-  // if()
-
-  //   axios
-  //     .post(`${base_url}/users`, userObject)
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //       // FormikHelpers.setSubmitting(false);
-  //     });
-  //   this.props.history.push('/login');
-  // }
-
-  // submitData=(values, {setSubmitting})=> {
-  //   axios
-  //     .post(`${base_url}/users`, values)
-
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  //   this.props.history.push('/login');
-  // }
-
   return (
     <>
       <div
@@ -136,7 +95,7 @@ const Register = ({ closeDialog }) => {
                     password: values.password,
                   };
 
-                  axios.post(`${base_url}/users`, userObject, {
+                  axios.post(`${base_url}/auth/register`, userObject, {
                     headers: { 'Access-Control-Allow-Origin': '*' },
                   })
                   // .then((res)=>{

@@ -841,3 +841,21 @@ h3 {
   border-radius: 0px;
 }
 
+.stdform{
+  padding: 40px;
+  margin-bottom: 40px;
+  margin: auto;
+  width: 60%;
+  height: auto;
+  border: none;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
+    rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+}
+.studenthome{
+  height: 350px;
+  background: url('https://images.squarespace-cdn.com/content/v1/5269fbd3e4b0eb2b76ccc1db/1590313106663-6U0LEBI5MTB7AJ0MAKRO/morehouse-school-of-medicine.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
