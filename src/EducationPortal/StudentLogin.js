@@ -19,7 +19,9 @@ const StudentLogin = () => {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
         <div style={{textAlign:'center'}}>
-        <Button id="Btn" type="submit">  SUBMIT </Button>
+          
+        <Button id="Btn" type="submit" href="#studentdashboard">  SUBMIT </Button>
+        
         </div>
         
          

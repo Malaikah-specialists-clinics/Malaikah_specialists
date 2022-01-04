@@ -23,6 +23,7 @@ import Applicationforms2 from './EducationPortal/Applicationforms2'
 import Applicationforms3 from './EducationPortal/Applicationforms3';
 import StudentLogin from './EducationPortal/StudentLogin';
 import HomePage from './EducationPortal/HomePage';
+import StudentDashboard from './EducationPortal/StudentDashboard';
 
 
 require('dotenv').config();
@@ -50,6 +51,7 @@ function App() {
       <Route path="/applicationforms3" component={Applicationforms3}></Route>
       <Route path="/studentlogin" component={StudentLogin}></Route>
       <Route path="/studenthome" component={HomePage}></Route>
+      <Route path="/StudentDashboard" component={StudentDashboard}></Route>
       <Footer />
     </Router>
   );
