@@ -8,23 +8,31 @@ import { base_url } from '../Constants/index.js';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
-  // const [pastdates, setpastDates] = useState(null)
+  var currentDate = new Date();
+
+  var dd = String(currentDate.getDate()).padStart(2, '0');
+  var mm = String(currentDate.getMonth() + 1).padStart(2, '0');
+  var yyyy = currentDate.getFullYear();
+
+  currentDate = yyyy + '-' + mm + '-' + dd;
+  
+
   useEffect(() => {
     axios
       .get(`${base_url}/events`)
       .then((res) => {
         setEvents(res.data);
-        console.log(res.data);
+        console.log("capturing date:", res.data[0].date);
       })
       .catch((err) => {
         console.log({ message: err });
       });
   }, []);
 
-  // const d = new Date();
-  // pastdates.search('query', {
+  
+  // data.search('query', {
   //     filters: `date_timestamp > ${Math.floor(
-  //       d.setDate(d.getDate() - 7) / 1000
+  //       date.setDate(date.getDate() - 7) / 1000
   //     )}`,
   //   })
   //   .then(({ hits }) => {
@@ -42,7 +50,8 @@ const Events = () => {
       </h2>
 
       <Carousel>
-        {events.map((events_entity) => (
+
+        {events.map((events_entity) => (events_entity.date < currentDate) ? (
           <Carousel.Item>
             <img
               src={events_entity.image}
@@ -51,16 +60,15 @@ const Events = () => {
             />
             <Carousel.Caption>
               <h4>{events_entity.title}</h4>
-              <p>{events_entity.description}</p>
+              <p style={{ color: '#0a1f3e' }}>{events_entity.description}</p>
             </Carousel.Caption>
-          </Carousel.Item>
-        ))}
+          </Carousel.Item> 
+        ): null )}
       </Carousel>
+
       <Upcomingevents />
       <Tips />
     </Container>
-
-
 
     // {/* method one seems to be working 1 */}
     // {/* {events.map((events_entity) => (
