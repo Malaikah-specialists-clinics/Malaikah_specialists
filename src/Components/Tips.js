@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardGroup, Container} from "react-bootstrap";
+import { Card, Container, Row, Col} from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
@@ -19,21 +19,20 @@ const Tips = () => {
    }, []);
 
   return (
-    <Container style={{maxWidth: '100%'}}>
+    <Container style={{ maxWidth: '100%' }}>
       <div id="tipcrd">
-        {tip.map((tip_entity) => (
-          <CardGroup
-            key={tip_entity.id}
-            style={{ width: '94%', margin: 'auto' }}
-          >
-            <Card md id="crd">
-              <Card.Body>
-                <Card.Title>{tip_entity.title}</Card.Title>
-                <Card.Text>{tip_entity.description}</Card.Text>
-              </Card.Body>
-            </Card>
-          </CardGroup>
-        ))}
+        <Row xs={1} md={3}>
+          {tip.map((tip_entity) => (
+            <Col md>
+              <Card id="crd" style={{ width: '100%' }}>
+                <Card.Body>
+                  <Card.Title>{tip_entity.title}</Card.Title>
+                  <Card.Text>{tip_entity.description}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
       </div>
     </Container>
   );
