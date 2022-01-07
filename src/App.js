@@ -25,6 +25,7 @@ import StudentLogin from './EducationPortal/StudentLogin';
 import HomePage from './EducationPortal/HomePage';
 import StudentDashboard from './EducationPortal/StudentDashboard';
 import Programs from './EducationPortal/Programs'
+import StudentProfile from './EducationPortal/StudentProfile';
 
 
 require('dotenv').config();
@@ -53,7 +54,8 @@ function App() {
       <Route path="/studentlogin" component={StudentLogin}></Route>
       <Route path="/studenthome" component={HomePage}></Route>
       <Route path="/StudentDashboard" component={StudentDashboard}></Route>
-      <Route path="/Programs" component={Programs}></Route>
+      <Route path="/StudentProfile" component={StudentProfile}></Route>
+      <Route path="/programs" component={Programs}></Route>
       <Footer />
     </Router>
   );
