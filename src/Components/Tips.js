@@ -21,7 +21,7 @@ const Tips = () => {
   return (
     <Container style={{ maxWidth: '100%' }}>
       <div id="tipcrd">
-        <Row xs={1} md={3}>
+        <Row>
           {tip.map((tip_entity) => (
             <Col md>
               <Card id="crd" style={{ width: '100%' }}>
