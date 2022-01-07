@@ -12,11 +12,11 @@ const StudentDashboard = () => {
               <Card.Img
                 variant="top"
                 src="/images/profileicon.png"
-                style={{ width: "40%", margin: "auto" }}
+                style={{ width: "40%", margin: "auto" }} 
               />
               <Card.Body>
                 <Card.Title style={{ textAlign: "center" }}>
-                  MY PROFILE
+                   <a href="#StudentProfile">MY PROFILE</a>
                 </Card.Title>
               </Card.Body>
             </Card>
