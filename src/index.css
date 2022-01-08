@@ -858,3 +858,18 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
 }
+/* styling the programs component */
+.programsinfo{
+ background-color: #020e20; 
+ color: #ffffff;
+}
+#programsBtn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fbbb35;
+  color: #020e20;
+  font-size: 25px;
+  width: 22%;
+  border: none;
+  border-radius: 8px;
+}

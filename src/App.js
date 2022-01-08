@@ -24,6 +24,7 @@ import Applicationforms3 from './EducationPortal/Applicationforms3';
 import StudentLogin from './EducationPortal/StudentLogin';
 import HomePage from './EducationPortal/HomePage';
 import StudentDashboard from './EducationPortal/StudentDashboard';
+import Programs from './EducationPortal/Programs'
 import StudentProfile from './EducationPortal/StudentProfile';
 
 
@@ -54,6 +55,7 @@ function App() {
       <Route path="/studenthome" component={HomePage}></Route>
       <Route path="/StudentDashboard" component={StudentDashboard}></Route>
       <Route path="/StudentProfile" component={StudentProfile}></Route>
+      <Route path="/programs" component={Programs}></Route>
       <Footer />
     </Router>
   );
