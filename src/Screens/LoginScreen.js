@@ -34,7 +34,7 @@ class Login extends Component {
         if (res.data.accessToken) {
           localStorage.setItem("user", JSON.stringify(res.data));
         }
-        return res.data;
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
