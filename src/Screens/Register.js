@@ -39,6 +39,9 @@ const validateUser = (regUser) => {
   if (!regUser.password) {
     errors.password = 'Password Required';
   } 
+  if (!regUser.marital) {
+    errors.marital = 'Marital Status Required';
+  } 
 
 
   return errors;
@@ -81,6 +84,7 @@ const Register = ({ closeDialog }) => {
                 gender: '',
                 location: '',
                 password: '',
+                marital: ''
               }}
               validate={validateUser}
               onSubmit={(values, actions) => {
@@ -93,6 +97,7 @@ const Register = ({ closeDialog }) => {
                     gender: values.gender,
                     location: values.location,
                     password: values.password,
+                    marital: values.marital,
                   };
 
                   axios.post(`${base_url}/auth/register`, userObject, {
@@ -186,9 +191,9 @@ const Register = ({ closeDialog }) => {
                         onChange={formik.handleChange}
                       >
                         <option>Select Gender</option>
-                        <option value="1">Female</option>
-                        <option value="2">Male</option>
-                        <option value="3">Prefer not to say</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">Prefer not to say</option>
                       </Form.Select>
                       {formik.touched.gender && formik.errors.gender ? (
                         <span style={{ color: 'red' }}>
@@ -213,6 +218,26 @@ const Register = ({ closeDialog }) => {
                     </Col>
                   </Row>
                   <Row>
+                  <Col md>
+                      <Form.Label id="field">Marital Status</Form.Label>
+                      <Form.Select
+                        name="marital"
+                        id="form-control marital"
+                        value={formik.values.marital}
+                        onChange={formik.handleChange}
+                      >
+                        <option>Select Marital Status</option>
+                        <option value="single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="seperated">Seperated</option>
+                      </Form.Select>
+                      {formik.touched.marital && formik.errors.marital ? (
+                        <span style={{ color: 'red' }}>
+                          {formik.errors.marital}
+                        </span>
+                      ) : null}
+                    </Col>
+
                     <Col md>
                       <Form.Label id="field">Password</Form.Label>
                       <Form.Control

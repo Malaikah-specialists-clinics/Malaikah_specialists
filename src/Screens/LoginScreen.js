@@ -31,13 +31,16 @@ class Login extends Component {
       })
 
       .then((res) => {
-        localStorage.setItem('access_token', res.data.access_token)
+        if (res.data.accessToken) {
+          localStorage.setItem("user", JSON.stringify(res.data));
+        }
         console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-      // this.props.history.push('/profile');
+      this.props.history.push("/profile");
+      window.location.reload();
       
   }
  
