@@ -181,7 +181,7 @@ const Register = ({ closeDialog }) => {
                       <Form.Label id="field">Gender</Form.Label>
                       <Form.Select
                         name="gender"
-                        id="form-control"
+                        id="form-control gender"
                         value={formik.values.gender}
                         onChange={formik.handleChange}
                       >
@@ -201,7 +201,7 @@ const Register = ({ closeDialog }) => {
                       <Form.Control
                         name="location"
                         type="text"
-                        id="form-control"
+                        id="form-control location"
                         value={formik.values.location}
                         onChange={formik.handleChange}
                       />
@@ -218,7 +218,7 @@ const Register = ({ closeDialog }) => {
                       <Form.Control
                         name="password"
                         type="password"
-                        id="form-control"
+                        id="form-control password"
                         value={formik.values.password}
                         onChange={formik.handleChange}
                       />
