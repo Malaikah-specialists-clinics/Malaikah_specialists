@@ -57,12 +57,7 @@ h4 {
   text-align: center;
 }
 
-.research {
-  height: auto;
-  padding: auto;
-  margin: auto;
-  text-align: left;
-}
+
 #Btn {
   margin-top: 20px;
   background-color: #fbbb35;
@@ -225,13 +220,12 @@ h3 {
   height: 200px;
   background-color: #020e20;
   color: white;
-  border-radius: 0px 0px 80px 0px;
 }
 #spc-card {
   height: auto;
   background-color: #020e20;
   color: white;
-  border-radius: 0px 50px 0px 50px;
+  border-radius: 0px 25px 0px 25px;
 }
 #crds {
   margin: 2px;
@@ -590,16 +584,15 @@ h3 {
 }
 .alert {
   bottom: 98%;
-  width: 60%;
+  background-color: #fff3cd;
+  width: 100%;
   margin: auto;
   text-align: center;
   border: none;
   font-size: 18px;
   font-weight: lighter;
 }
-#tipcrd{
-  display: flex;
-}
+
 
 .sidebar-container {
   width: 220px;
@@ -828,7 +821,7 @@ h3 {
   font-size: 15px;
   border-radius: 0px;
   color: rgb(85, 84, 84);
-  background-color: #85B6FF; 
+  /* background-color: #85B6FF;  */
 }
 #btnapplicaton {
   margin-top: 20px;
@@ -862,14 +855,4 @@ h3 {
 .programsinfo{
  background-color: #020e20; 
  color: #ffffff;
-}
-#programsBtn{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #fbbb35;
-  color: #020e20;
-  font-size: 25px;
-  width: 22%;
-  border: none;
-  border-radius: 8px;
 }

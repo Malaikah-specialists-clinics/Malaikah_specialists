@@ -10,7 +10,7 @@ function Header() {
   return (
     <>
       <div className="fixed-top" style={{ position: 'fixed' }}>
-        <Navbar bg="light">
+        <Navbar bg="light" style={{padding: '0'}}>
           <LinkContainer style={{ marginLeft: '82%' }} to="/login">
             <Nav.Link onClick={authService.logout}>
               <h5 style={{ color: '#020e20' }}>LOGIN</h5>

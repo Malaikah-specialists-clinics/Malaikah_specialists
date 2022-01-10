@@ -78,7 +78,7 @@ class Specialities extends Component {
             >
               Our
               <br />
-              Specialities
+              Specialties
             </h1>
           </div>
         </div>

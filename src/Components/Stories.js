@@ -6,7 +6,7 @@ import { Col, Row, Container } from "react-bootstrap";
 const Stories = () => {
   return (
     <>
-    <h2 style={{textAlign: 'center'}}>OUR SUCCESS STORIES</h2>
+    <h2 style={{textAlign: 'center', marginTop: '3%'}}>OUR SUCCESS STORIES</h2>
     <Container style={{ marginLeft: 'auto', marginRight: 'auto'}}>
     <Row style={{marginBottom: '3%'}}>
       <Col md>

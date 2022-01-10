@@ -64,8 +64,8 @@ const Upcomingevents = () => {
                   <p>{events_entity.description}</p>
                   <div>
                     <h5 style={{ textAlign: 'left' }}>
-                      Location: {events_entity.location}
-                      <span style={{ fontWeight: 'lighter' }}>Virtual</span>
+                      Location: 
+                      <span style={{ fontWeight: 'lighter' }}>{events_entity.location}</span>
                     </h5>
                   </div>
                   <div>

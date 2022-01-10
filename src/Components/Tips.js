@@ -19,12 +19,12 @@ const Tips = () => {
    }, []);
 
   return (
-    <Container style={{ maxWidth: '100%' }}>
+    <Container style={{ maxWidth: '95%' }}>
       <div id="tipcrd">
         <Row>
           {tip.map((tip_entity) => (
             <Col md>
-              <Card id="crd" style={{ width: '100%' }}>
+              <Card id="crd">
                 <Card.Body>
                   <Card.Title>{tip_entity.title}</Card.Title>
                   <Card.Text>{tip_entity.description}</Card.Text>

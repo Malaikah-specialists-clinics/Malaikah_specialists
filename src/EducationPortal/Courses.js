@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, CardGroup, Row,Col, Container } from "react-bootstrap";
+import { Card, CardGroup, Row,Col, Container, Button } from "react-bootstrap";
 
 const Courses = () => {
   return (
     <>
-      <Container className="hcare" style={{ maxWidth: '100%' }}>
-        <h2>Our Courses</h2>
+      <Container style={{ maxWidth: '100%' }}>
+        <h2 style={{marginTop: '2%'}}>Our Courses</h2>
         <CardGroup style={{ justifyContent: 'space-evenly' }}>
           <Card style={{ margin: '1%' }}>
             <Card.Img variant="top" src="/images/nursingbook.jpg" />
@@ -81,8 +81,10 @@ const Courses = () => {
             </Card.Footer>
           </Card>
         </CardGroup>
-        <div style={{ textAlign: 'right' }}>
-          <a href="#programs">Explore More Courses</a>
+        <div style={{ textAlign: 'right',paddingBottom: '1%'}}>
+          <Button id="Btn" href="#programs">
+            Explore More Courses
+            </Button>
         </div>
       </Container>
     </>
