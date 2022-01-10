@@ -31,13 +31,16 @@ class Login extends Component {
       })
 
       .then((res) => {
-        localStorage.setItem('access_token', res.data.access_token)
+        if (res.data.accessToken) {
+          localStorage.setItem("user", JSON.stringify(res.data));
+        }
         console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-      // this.props.history.push('/profile');
+      this.props.history.push("/profile");
+      window.location.reload();
       
   }
  
@@ -73,8 +76,7 @@ class Login extends Component {
                       name="email"
                       value={this.state.email}
                       onChange={this.changeHandler}
-                      // onChangeText={handleChange('email')}
-                      id="email"
+                      id="form-control email"
                     />
                     <span id="EmailError"></span>
                   </Col>
@@ -87,7 +89,7 @@ class Login extends Component {
                       value={this.state.password}
                       onChange={this.changeHandler}
                       type="password"
-                      id="form-control"
+                      id="form-control password"
                     />
                   </Col>
                 </Row>

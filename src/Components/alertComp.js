@@ -3,10 +3,13 @@ import { Alert } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { base_url } from '../Constants/index.js';
-
+// import CloseButton from 'react-bootstrap/CloseButton'
 const Alerts = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [alert, setAlerts] = useState([]);
+  const [show, setShow] = useState(true);
+
+ 
   useEffect(() => {
     axios
       .get(`${base_url}/alerts`)
@@ -23,24 +26,30 @@ const Alerts = () => {
   if (isLoading) {
     return <div>Loading...</div>
   }
+ 
   return (
     <>
       {alert.map((alerts) => (
         <Alert
         className="alert"
-          variant="success"
-          key={alerts.id}
+          variant=""
+        key={alerts.id}
+         dismissible
+         show={show}
+         onClick={() => setShow(false)}
+
          >
-          {/* <CloseButton /> */}
           <p>
             {alerts.title}: {alerts.content}
           </p>
-         
+        
         </Alert>
       ))}
       
     </>
   );
-};
+}
+
 
 export default Alerts;
+

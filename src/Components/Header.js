@@ -1,14 +1,18 @@
 import React from "react";
 import { Nav, Navbar, Row, Col, NavDropdown} from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
+import authService from "../Services/auth.service";
+
 
 function Header() {
+
+  
   return (
     <>
       <div className="fixed-top" style={{ position: 'fixed' }}>
-        <Navbar bg="light">
+        <Navbar bg="light" style={{padding: '0'}}>
           <LinkContainer style={{ marginLeft: '82%' }} to="/login">
-            <Nav.Link>
+            <Nav.Link onClick={authService.logout}>
               <h5 style={{ color: '#020e20' }}>LOGIN</h5>
             </Nav.Link>
           </LinkContainer>

@@ -32,6 +32,7 @@ const Events = () => {
 
 
   return (
+    
     <Container style={{ maxWidth: '100%' }}>
       <h2
         style={{ textAlign: 'center', fontWeight: 'bolder', paddingTop: '5%' }}

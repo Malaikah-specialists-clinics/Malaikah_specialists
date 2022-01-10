@@ -7,7 +7,7 @@ const Programs = () => {
         <Container className="hcare" style={{ maxWidth: '100%' }}>
           <Row>
             <Col md className=" programsinfo">
-              <h1 style={{ marginTop: '20%' }}>
+              <h1 style={{ marginTop: '5%' }}>
                 A Certificate in Nursing with
                 <br />
                 Malaikah Specialties Clinic
@@ -22,6 +22,9 @@ const Programs = () => {
                 you're looking to advance your career, considering graduate
                 school, or exploring new career paths.
               </article>
+              <Button type="submit" id="Btn" href="#applicationforms"style={{fontWeight: 'bolder'}}>
+              APPLY
+            </Button>
             </Col>
             <Col md className="pic">
               <img
@@ -29,7 +32,7 @@ const Programs = () => {
                 alt=""
                 style={{
                   width: '100%',
-                  height: 'auto',
+                  height: '400px',
                 }}
               />
             </Col>
@@ -49,10 +52,7 @@ const Programs = () => {
             </p>
             <h4>FEE: $300</h4>
             <h4>Duration: 2 Years</h4>
-            <h4>Deadline: January 2022</h4>
-            <Button type="submit" id="programsBtn" href="#applicationforms">
-              APPLY
-            </Button>
+            <h4>Application Deadline: January 2022</h4>
           </div>
         </Container>
       </div>

@@ -6,7 +6,7 @@ import Courses from "./Courses"
 const HomePage = () => {
   return (
     <>
-      <div className="studenthome" style={{ marginTop: "13%" }}>
+      <div className="studenthome" style={{ marginTop: "11.5%" }}>
       </div>
       <Button id="Btn" href="#studentlogin" style={{float: 'right', marginTop:'-25%'}}>LOGIN/REGISTER</Button>
       <div style={{backgroundColor:'#20C997', textAlign:'center', height: 'auto', fontSize:'larger', fontWeight:'medium', color:'#0A1F3E', padding: '1%'

@@ -95,7 +95,7 @@ const FormPage = ({ closeDialog }) => {
                       <Form.Label id="field">Email</Form.Label>
                       <Form.Control
                         placeholder="winniek@example.com"
-                        id="email"
+                        id="form-control email"
                         name="email"
                         value={formik.values.email}
                         onChange={formik.handleChange}
@@ -112,7 +112,7 @@ const FormPage = ({ closeDialog }) => {
                       <Col md className="inputField">
                         <Form.Label id="field">Department</Form.Label>
                         <Form.Select
-                          id="form-control"
+                          id="form-control dept"
                           name="sdept"
                           value={formik.values.sdept}
                           onChange={formik.handleChange}
@@ -153,7 +153,7 @@ const FormPage = ({ closeDialog }) => {
                           name="toa"
                           value={formik.values.toa}
                           onChange={formik.handleChange}
-                          id="form-control"
+                          id="form-control toa"
                         />
                         {formik.touched.toa && formik.errors.toa ? (
                           <span style={{ color: 'red' }}>
@@ -168,7 +168,7 @@ const FormPage = ({ closeDialog }) => {
                           name="moa"
                           value={formik.values.moa}
                           onChange={formik.handleChange}
-                          id="form-control"
+                          id="form-control moa"
                         >
                           <option>Select mode of appointment</option>
                           <option>Online</option>
