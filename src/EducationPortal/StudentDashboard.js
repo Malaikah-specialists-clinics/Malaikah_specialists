@@ -16,7 +16,7 @@ const StudentDashboard = () => {
               />
               <Card.Body>
                 <Card.Title style={{ textAlign: "center" }}>
-                   <a href="#StudentProfile">MY PROFILE</a>
+                   <a href="#StudentProfile" style={{textDecoration: 'none', color: '#020e20'}}>MY PROFILE</a>
                 </Card.Title>
               </Card.Body>
             </Card>
@@ -45,7 +45,7 @@ const StudentDashboard = () => {
               />
               <Card.Body>
                 <Card.Title style={{ textAlign: "center" }}>
-                  START NEW APPLICATION
+                <a href="#Applicationforms" style={{textDecoration: 'none', color: '#020e20'}}>NEW APPLICATION</a>
                 </Card.Title>
               </Card.Body>
             </Card>

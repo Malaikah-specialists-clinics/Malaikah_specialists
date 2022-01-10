@@ -6,24 +6,24 @@ const StudentProfile = () => {
 
             <Container>
                 <Row>
-                    <Col>
-                    <div style={{ padding: '3%', marginBottom: '3%', background: "#fcfcfc", }}>
+                    <Col md>
+                    <div style={{ padding: '3%', marginBottom: '3%', textAlign: 'center'}}>
                         <img src="/images/79285222.jpeg" id="photo" alt="" />
                     </div>
                     </Col>
-                    <Col>
+                    <Col md style={{textAlign: 'center'}}>
                     <h6> STUDENT NAME</h6>
                     <h4> WINNIE NASSOZI</h4>
                     </Col>
-                    <Col>
+                    <Col md  style={{textAlign: 'center'}}>
                     <h6> STUDENT NUMBER</h6>
                     <h4> NGN79285222</h4>
                     </Col>
                 </Row>
-                <Row style={{ display: "flex" }}>
+                <Row>
                     <Col>
                         <Card.Title>ABOUT</Card.Title>
-                        <Card style={{ width: '60%', height: '80%' }}>
+                        <Card style={{ width: '100%', height: '70%' }}>
                             <Card.Body>
 
                                 <Card.Text>
@@ -31,6 +31,8 @@ const StudentProfile = () => {
                                         <li>Phone:  0705178450</li>
                                         <li>Address:    Koboko, Uganda</li>
                                         <li>Email:  aleku2@student.com</li>
+                                        <li>Birthday:  09/07/2000</li>
+                                        <li>Gender: Female </li>
                                     </ul>
                                 </Card.Text>
                             </Card.Body>
@@ -40,15 +42,14 @@ const StudentProfile = () => {
                     <Col>
                         <Card.Title>BASIC INFORMATION</Card.Title>
 
-                        <Card style={{ width: '60%', height: '80%' }}>
+                        <Card style={{ width: '100%', height: '70%' }}>
 
                             <Card.Body>
                                 <Card.Text>
                                     <ul>
                                         <li>COURSE NAME:  HEALTH MGT</li>
                                         <li>YEAR OF STUDY:    2021</li>
-                                        <li>BIRTHDAY:  09/07/1998</li>
-                                        <li>GENDER: MALE </li>
+                                       
                                     </ul>
                                 </Card.Text>
 

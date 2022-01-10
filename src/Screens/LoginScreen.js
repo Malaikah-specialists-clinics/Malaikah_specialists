@@ -40,7 +40,7 @@ class Login extends Component {
         console.log(err);
       });
       this.props.history.push("/profile");
-      window.location.reload();
+     
       
   }
  
@@ -53,7 +53,6 @@ class Login extends Component {
         >
           <Row>
             <Col md>
-              <h2 style={{textAlign: 'center' }}>Login</h2>
               <div id="pic">
                 <img
                   src="/images/doc.jpg"
