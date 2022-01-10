@@ -151,7 +151,7 @@ function Specialities() {
               <Row>
               <Col>
                 <img
-                  src="/images/homecare.png"
+                  src="/images/icons-04.png"
                   alt="homecare"
                   className='crd-icon'
                 />{" "}
@@ -167,7 +167,7 @@ function Specialities() {
            
               <Col >
                 <img
-                  src="/images/emergecy.png"
+                  src="/images/icons-05.png"
                   alt=""
                   className='crd-icon'
                 />{" "}
