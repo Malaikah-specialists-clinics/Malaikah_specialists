@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Col, Row, Alert, Card, Container, Modal } from 'react-bootstrap';
 import { base_url } from '../Constants/index.js';
-import Trial from './EventModelScreen.js';
-// import {  Modal} from 'react-bootstrap';
-// import  EventModelScreen from './EventModelScreen'
+import EventModelScreen from './EventModelScreen.js';
+
 
 const Moeventscreen = (props) => {
   const [event, setEvents] = useState([]);
@@ -12,6 +11,13 @@ const Moeventscreen = (props) => {
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
+
+  var currentDate = new Date();
+  var dd = String(currentDate.getDate()).padStart(2, '0');
+  var mm = String(currentDate.getMonth() + 1).padStart(2, '0');
+  var yyyy = currentDate.getFullYear();
+
+  currentDate = yyyy + '-' + mm + '-' + dd;
   useEffect(() => {
     axios
       .get(`${base_url}/events`)
@@ -45,9 +51,9 @@ const Moeventscreen = (props) => {
               show={show}
               onHide={handleClose}
             >
-              <Trial data={eventData} closeDialog={handleClose} />
+              <EventModelScreen data={eventData} closeDialog={handleClose} />
             </Modal>
-            {event.map((events) => (
+            {event.map((events) => (events.date > currentDate) ? (
               <Container style={{ maxWidth: '100%', margin: '0' }}>
                 <Card
                   id="contentcard"
@@ -97,7 +103,7 @@ const Moeventscreen = (props) => {
                   </Row>
                 </Card>
               </Container>
-            ))}
+            ): null )}
           </div>
         </div>
       </>
