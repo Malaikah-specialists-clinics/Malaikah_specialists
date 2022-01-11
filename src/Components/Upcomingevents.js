@@ -8,12 +8,14 @@ const Upcomingevents = () => {
   const [events, setEvents] = useState([]);
   var currentDate = new Date();
 
-
   var dd = String(currentDate.getDate()).padStart(2, '0');
   var mm = String(currentDate.getMonth() + 1).padStart(2, '0');
   var yyyy = currentDate.getFullYear();
-
   currentDate = yyyy + '-' + mm + '-' + dd;
+
+  //  var startTime = performance.now();
+  //  var endTime = performance.now();
+  //  var currentTime = startTime + '-' + endTime
 
   useEffect(() => {
     axios
