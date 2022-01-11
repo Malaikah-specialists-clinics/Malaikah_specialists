@@ -7,6 +7,7 @@ import { base_url } from '../Constants/index.js';
 const Upcomingevents = () => {
   const [events, setEvents] = useState([]);
   var currentDate = new Date();
+  
 
 
   var dd = String(currentDate.getDate()).padStart(2, '0');
@@ -14,6 +15,14 @@ const Upcomingevents = () => {
   var yyyy = currentDate.getFullYear();
 
   currentDate = yyyy + '-' + mm + '-' + dd;
+
+  // var startTime = performance.now();
+  // var endTime = performance.now();
+  // currentTime = String(endTime - startTime)
+
+
+
+  
 
   useEffect(() => {
     axios

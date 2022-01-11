@@ -21,6 +21,18 @@ const validateRegister = (regPerson) => {
     errors.email = 'Invalid email address';
   }
 
+  if (!regPerson.phoneNumber) {
+    errors.phoneNumber = 'Please Enter Phone Number';
+  } else if (regPerson.phoneNumber.length > 15) {
+    errors.phoneNumber = 'Phone Number cannot exceed 15 characters';
+  }
+
+  if (!regPerson.address) {
+    errors.address = 'Please Enter Address';
+  } else if (regPerson.address.length > 15) {
+    errors.address = 'Address cannot exceed 15 characters';
+  }
+
   return errors;
 };
 
@@ -59,14 +71,18 @@ const EventModelScreen = ({ data, closeDialog }) => {
           initialValues={{
             name: '',
             email: '',
+            phoneNumber: '',
+            address: '',
           }}
           // validationSchema={registereventSchema}
           validate={validateRegister}
-          onSubmit={(values, actions,) => {
+          onSubmit={(values, actions) => {
             setTimeout(() => {
               const registereventObject = {
                 name: values.name,
                 email: values.email,
+                phoneNumber: values.phoneNumber,
+                address: values.address,
                 eventId: data.id,
               };
 
@@ -80,7 +96,6 @@ const EventModelScreen = ({ data, closeDialog }) => {
             }, 1000);
           }}
         >
-      
           {(formik) => (
             <form onSubmit={formik.handleSubmit}>
               <label>Names</label>
@@ -94,7 +109,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
               {formik.touched.name && formik.errors.name ? (
                 <span style={{ color: 'red' }}>{formik.errors.name}</span>
               ) : null}
-              <br/>
+              <br />
 
               <label>Email</label>
               <Form.Control
@@ -107,6 +122,36 @@ const EventModelScreen = ({ data, closeDialog }) => {
               />
               {formik.touched.email && formik.errors.email ? (
                 <span style={{ color: 'red' }}>{formik.errors.email}</span>
+              ) : null}
+
+              <br />
+
+              <label>Phone Number</label>
+              <Form.Control
+                name="phoneNumber"
+                id="phoneNumber"
+                value={formik.values.phoneNumber}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
+                <span style={{ color: 'red' }}>
+                  {formik.errors.phoneNumber}
+                </span>
+              ) : null}
+
+              <br />
+
+              <label>Address</label>
+              <Form.Control
+                name="address"
+                id="address"
+                value={formik.values.address}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.address && formik.errors.address ? (
+                <span style={{ color: 'red' }}>{formik.errors.address}</span>
               ) : null}
 
               <Button id="Btn" style={{ width: '100%' }} type="submit">
