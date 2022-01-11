@@ -7,7 +7,7 @@ const StudentProfile = () => {
             <Container>
                 <Row>
                     <Col>
-                    <div style={{ padding: '3%', marginBottom: '3%', background: "#fcfcfc", }}>
+                    <div style={{ padding: '3%', marginBottom: '3%'}}>
                         <img src="/images/79285222.jpeg" id="photo" alt="" />
                     </div>
                     </Col>
