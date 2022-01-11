@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import SideNavbar from "../Components/SideNavbar";
 import { Col, Container, Row } from "react-bootstrap";
 import AuthService from "../Services/auth.service";
+import Profilepic from "../Components/profilepic"
 
 export default class Profile extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class Profile extends Component {
   componentDidMount() {
     const currentUser = AuthService.getCurrentUser();
 
-    if (!currentUser) this.setState({ redirect: "/" });
+    if (!currentUser) this.setState({ redirect: "/profile" });
     this.setState({ currentUser: currentUser, userReady: true })
   }
 
@@ -28,7 +29,7 @@ export default class Profile extends Component {
     }
 
     const { currentUser } = this.state;
-
+    
     return (
         <div style={{ background: "#f8f8f8" }} className="formcontent">
         <Container>
@@ -46,9 +47,7 @@ export default class Profile extends Component {
               sm={8}
             >
               <div style={{padding: '3%', marginBottom: '3%', background: "#fcfcfc", }}>
-                <img src="/images/79285222.jpeg" id="photo" alt="" /> <br />
-                <input type="file" id="file" />
-                <label style={{fontWeight:'bold', cursor: 'pointer', fontSize:'20px'}} for="file">Change Picture</label>
+              <Profilepic/> <br />
                 <div style={{ textAlign: "left" }}>
                   <h4>{currentUser.name}</h4>
                 </div>

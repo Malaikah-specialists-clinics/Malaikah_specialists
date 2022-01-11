@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, Row, Col, NavDropdown} from 'react-bootstrap';
+import { Nav, Navbar, Row, Col, NavDropdown, Container} from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
 import authService from "../Services/auth.service";
 
@@ -11,11 +11,23 @@ function Header() {
     <>
       <div className="fixed-top" style={{ position: 'fixed' }}>
         <Navbar bg="light" style={{padding: '0'}}>
-          <LinkContainer style={{ marginLeft: '82%' }} to="/login">
+          <Container>
+        <Nav className="me-auto">
+        <h6 >info@malaikahgroup.com</h6>
+          <h6 style={{marginLeft: '80%'}}>0772670952</h6>
+        
+          </Nav>
+          
+         
+          
+         <div className="ml-auto">
+          <LinkContainer style={{ marginLeft: '10%' }} to="/login">
             <Nav.Link onClick={authService.logout}>
               <h5 style={{ color: '#020e20' }}>LOGIN</h5>
             </Nav.Link>
           </LinkContainer>
+          </div>
+          </Container>
         </Navbar>
         <Navbar
           className="navbar"

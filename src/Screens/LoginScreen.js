@@ -40,7 +40,7 @@ class Login extends Component {
         console.log(err);
       });
       this.props.history.push("/profile");
-     
+      window.location.reload();
       
   }
  
