@@ -24,7 +24,7 @@ const StudentLogin = () => {
             <Col style={{textAlign: 'center'}}>
            <div className="pic">
              <img src="images/nurse.gif" alt=""
-             style={{width: '500px', height: '200px'}}
+             style={{width: '500px', height: '220px'}}
              />
            </div>
             </Col>
