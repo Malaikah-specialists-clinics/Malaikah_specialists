@@ -32,7 +32,6 @@ const Events = () => {
 
 
   return (
-    
     <Container style={{ maxWidth: '100%' }}>
       <h2
         style={{ textAlign: 'center', fontWeight: 'bolder', paddingTop: '5%' }}
@@ -41,27 +40,32 @@ const Events = () => {
       </h2>
 
       <Carousel>
-
-        {events.map((events_entity) => (events_entity.date < currentDate) ? (
-          <Carousel.Item>
-            <img
-              src={events_entity.image}
-              alt=" "
-              style={{ height: '400px', width: '100%' }}
-            />
-            <Carousel.Caption>
-              <h4>{events_entity.title}</h4>
-              <p style={{ color: '#0a1f3e' }}>{events_entity.description}</p>
-            </Carousel.Caption>
-          </Carousel.Item> 
-        ): null )}
+        {events.map((events_entity) =>
+          events_entity.date < currentDate ? (
+            <Carousel.Item>
+              <img
+                src={events_entity.image}
+                alt=" "
+                style={{ height: '400px', width: '100%' }}
+              />
+              <Carousel.Caption  className='eventscarousel'>
+              <div className='eventdiv'>
+                <h4 style={{ color: '#ffffff'}}>
+                  {events_entity.title}
+                </h4>
+                <p style={{ color: '#ffffff'}}>
+                  {events_entity.description}
+                </p>
+                </div>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ) : null
+        )}
       </Carousel>
 
       <Upcomingevents />
       <Tips />
     </Container>
-
-    
   );
 };
 
