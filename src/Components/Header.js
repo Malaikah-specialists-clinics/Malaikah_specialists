@@ -13,7 +13,11 @@ function Header() {
         <Navbar bg="light" style={{padding: '0'}}>
           <Container>
         <Nav className="me-auto">
+         
+          <img src="/images/email.png" alt="logo" width="50px" height="20px"/>
         <h6 >info@malaikahgroup.com</h6>
+        
+        <img src="/images/phone-call.png" alt="logo" width="50px" height="20px"/>
           <h6 style={{marginLeft: '80%'}}>0772670952</h6>
         
           </Nav>
@@ -23,6 +27,7 @@ function Header() {
          <div className="ml-auto">
           <LinkContainer style={{ marginLeft: '10%' }} to="/login">
             <Nav.Link onClick={authService.logout}>
+            <img src="/images/user.png" alt="logo" width="50px" height="20px"/>
               <h5 style={{ color: '#020e20' }}>LOGIN</h5>
             </Nav.Link>
           </LinkContainer>
