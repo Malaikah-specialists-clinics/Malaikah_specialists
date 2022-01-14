@@ -3,7 +3,7 @@ import { Col, Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class Specialities extends Component {
-  toggle = () => {
+   toggle = ()=> {
     var x = document.getElementById("toggle", "toggle1");
 
     if (x.style.display !== "none") {
