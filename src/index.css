@@ -118,7 +118,7 @@ h3 {
 .middlesect {
   text-align: center;
   color: #0a1f3e;
-  /* height: 100px; */
+
 }
 .sect1 {
   background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
@@ -156,11 +156,13 @@ h3 {
   border: 1px solid #ddd;
   box-shadow: 0px 0px 10px 0px #c5c5c5;
   margin-bottom: 30px;
-  /* float: right; */
   border-radius: 10px;
 }
+
+
+
 .card-box .card-thumbnail {
-  max-height: 450px;
+  max-height: 360px;
   overflow: hidden;
   border-radius: 10px;
   transition: 1s;
