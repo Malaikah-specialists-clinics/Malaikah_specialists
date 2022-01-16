@@ -1,9 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-*{
-  font-family: 'Poppins', sans-serif;
-
+* {
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -56,7 +54,6 @@ h4 {
   height: 35px;
   text-align: center;
 }
-
 
 #Btn {
   margin-top: 20px;
@@ -118,7 +115,6 @@ h3 {
 .middlesect {
   text-align: center;
   color: #0a1f3e;
-
 }
 .sect1 {
   background: url(https://108pkt40d39i1mdq4v41ganb-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/travel-nursing-interview-questions-travel-nursing.png);
@@ -127,7 +123,8 @@ h3 {
   background-position: center;
   height: 400px;
 }
-.hcare, .formcontent{
+.hcare,
+.formcontent {
   padding-top: 90px;
 }
 #hcare {
@@ -158,8 +155,6 @@ h3 {
   margin-bottom: 30px;
   border-radius: 10px;
 }
-
-
 
 .card-box .card-thumbnail {
   max-height: 360px;
@@ -331,11 +326,11 @@ h3 {
   .pic {
     display: none;
   }
- #tipcrd{
-   display: inline-block;
- }
-  
-  .formcontent{
+  #tipcrd {
+    display: inline-block;
+  }
+
+  .formcontent {
     margin-top: 0;
   }
   #himg,
@@ -534,21 +529,21 @@ h3 {
   top: 85%;
   right: 0;
 }
-.popup{
+.popup {
   width: 60px;
   height: 60px;
 }
-#PopModel{
-  background-color: #FFFFFF;
+#PopModel {
+  background-color: #ffffff;
 }
-#bookappointbtn{
+#bookappointbtn {
   background-color: #020e20;
   width: 100%;
   height: 50%;
   margin-bottom: 10px;
   border: none;
 }
-#talktodocbtn{
+#talktodocbtn {
   background-color: #020e20;
   width: 96%;
   height: 50%;
@@ -556,14 +551,15 @@ h3 {
   left: 20px;
   margin-left: 10px;
 }
-.bookappoint,  .talktodoc{
-  color: #FFFFFF;
+.bookappoint,
+.talktodoc {
+  color: #ffffff;
   font-weight: bold;
   text-align: center;
   padding-top: 10px;
 }
-#popuptitle{
-  color:#020e20;
+#popuptitle {
+  color: #020e20;
   margin-left: 30px;
   font-size: 25px;
 }
@@ -594,7 +590,6 @@ h3 {
   font-size: 18px;
   font-weight: lighter;
 }
-
 
 .sidebar-container {
   width: 220px;
@@ -674,8 +669,6 @@ h3 {
   background-color: transparent;
 }
 
-
-
 .heading h4 {
   margin-top: 5px;
 }
@@ -737,7 +730,7 @@ h3 {
 #photo {
   height: 65%;
   width: 35%;
-  
+
   border-radius: 50%;
 }
 
@@ -751,7 +744,7 @@ h3 {
   /* position: absolute; */
   /* bottom: 0; */
   /* left: 50%; */
-  transform: translateX(-190%); 
+  transform: translateX(-190%);
   /* text-align: center; */
   background: rgba(0, 0, 0, 0);
   color: rgb(4, 30, 48);
@@ -763,8 +756,6 @@ h3 {
   /* margin-left: 73%; */
   font-weight: bold;
 }
-
-
 
 #card {
   height: auto;
@@ -778,12 +769,12 @@ h3 {
   border-left: 3px solid rgb(94, 94, 94);
 }
 
-  .vertical {
-            border-left: 1px solid rgb(180, 180, 180);
-            height: 100px;
-            /* position:absolute; */
-            left: 50%;
-        }
+.vertical {
+  border-left: 1px solid rgb(180, 180, 180);
+  height: 100px;
+  /* position:absolute; */
+  left: 50%;
+}
 
 .inline {
   padding: 0 4px;
@@ -807,18 +798,18 @@ h3 {
 .nav.nav-pills .nav-link.active {
   background-color: #0a1f3e;
 }
-.whatsappicon{
+.whatsappicon {
   position: fixed;
   background: transparent;
   top: 85%;
   left: 0;
 }
-.whatsapp{
+.whatsapp {
   width: 60px;
   height: 60px;
 }
 /* styling the application forms */
-#applicationfield{
+#applicationfield {
   margin-top: 20px;
   font-size: 15px;
   border-radius: 0px;
@@ -835,7 +826,7 @@ h3 {
   border-radius: 0px;
 }
 
-.stdform{
+.stdform {
   padding: 5%;
   margin-bottom: 40px;
   margin: auto;
@@ -846,18 +837,36 @@ h3 {
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
     rgba(0, 0, 0, 0.117647) 0px 1px 4px;
 }
-.studenthome{
+.studenthome {
   height: 350px;
-  background: url('https://images.squarespace-cdn.com/content/v1/5269fbd3e4b0eb2b76ccc1db/1590313106663-6U0LEBI5MTB7AJ0MAKRO/morehouse-school-of-medicine.jpg');
+  background: url("https://images.squarespace-cdn.com/content/v1/5269fbd3e4b0eb2b76ccc1db/1590313106663-6U0LEBI5MTB7AJ0MAKRO/morehouse-school-of-medicine.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 /* styling the programs component */
-.programsinfo{
- background-color: #020e20; 
- color: #ffffff;
+.programsinfo {
+  background-color: #020e20;
+  color: #ffffff;
 }
 .eventscarousel {
   background-color: rgba(33, 33, 34, 0.76);
+}
+
+.span {
+  float: left;
+
+  margin-left: -40px;
+  margin-top: 5px;
+
+  cursor: pointer;
+}
+
+#eye {
+  max-width: 20px;
+}
+
+.password {
+  float: left;
+  width: 100%;
 }

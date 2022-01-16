@@ -1,68 +1,80 @@
-import React from 'react';
-import { Row, Col, Form, Button } from 'react-bootstrap';
-import axios from 'axios';
-import { base_url } from '../Constants/index.js';
-import { Formik } from 'formik';
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
+import { Row, Col, Form, Button } from "react-bootstrap";
+import axios from "axios";
+import { base_url } from "../Constants/index.js";
+import { Formik } from "formik";
+
 
 const validateUser = (regUser) => {
+
+
+
+
   const errors = {};
 
   if (!regUser.name) {
-    errors.name = 'Please Enter Full Names';
+    errors.name = "Please Enter Full Names";
   } else if (regUser.name.length > 25) {
-    errors.name = 'Name cannot exceed 25 characters';
+    errors.name = "Name cannot exceed 25 characters";
   }
   if (!regUser.email) {
-    errors.email = 'Please Enter Email';
-  } else if (
-    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(regUser.email)
-  ) {
-    errors.email = 'Invalid email address';
+    errors.email = "Please Enter Email";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(regUser.email)) {
+    errors.email = "Invalid email address";
   }
   if (!regUser.phoneNumber) {
-    errors.phoneNumber = 'Please Enter Phone Number'
+    errors.phoneNumber = "Please Enter Phone Number";
   } else if (regUser.phoneNumber.length > 15) {
-    errors.phoneNumber = 'Contact can not exceed 15 characters'
+    errors.phoneNumber = "Contact can not exceed 15 characters";
   }
 
   if (!regUser.dob) {
-    errors.dob = 'Required'
+    errors.dob = "Required";
   }
 
   if (!regUser.gender) {
-    errors.gender = 'Required'
+    errors.gender = "Required";
   }
   if (!regUser.location) {
-    errors.location = 'Required'
+    errors.location = "Required";
   }
 
   if (!regUser.password) {
-    errors.password = 'Password Required';
-  } 
+    errors.password = "Password Required";
+  }
   if (!regUser.marital) {
-    errors.marital = 'Marital Status Required';
-  } 
-
+    errors.marital = "Marital Status Required";
+  }
 
   return errors;
 };
 
-
 const Register = ({ closeDialog }) => {
+  const [type, setType]= useState('password')
+
+  const handleToggle=()=>{
+    if(type==='password'){
+  setType('text')
+    }else{
+      setType('password')
+    }
+  }
   return (
     <>
       <div
         className="formcontent"
         style={{
-          width: '80%',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          marginTop: '8%',
+          width: "80%",
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginTop: "8%",
         }}
       >
         <Row>
           <Col md>
-            <h2 style={{ marginTop: '40px', textAlign: 'center' }}>
+            <h2 style={{ marginTop: "40px", textAlign: "center" }}>
               Create An Account
             </h2>
             <div id="pic">
@@ -77,14 +89,14 @@ const Register = ({ closeDialog }) => {
           <Col md sm={6} className="form">
             <Formik
               initialValues={{
-                name: '',
-                email: '',
-                phoneNumber: '',
-                dob: '',
-                gender: '',
-                location: '',
-                password: '',
-                marital: ''
+                name: "",
+                email: "",
+                phoneNumber: "",
+                dob: "",
+                gender: "",
+                location: "",
+                password: "",
+                marital: "",
               }}
               validate={validateUser}
               onSubmit={(values, actions) => {
@@ -101,12 +113,12 @@ const Register = ({ closeDialog }) => {
                   };
 
                   axios.post(`${base_url}/auth/register`, userObject, {
-                    headers: { 'Access-Control-Allow-Origin': '*' },
-                  })
+                    headers: { "Access-Control-Allow-Origin": "*" },
+                  });
                   // .then((res)=>{
                   //   localStorage.setItem('access_token', res.data.access_token)
                   // });
-                  window.location.href = '/#/login';
+                  window.location.href = "/#/login";
                   if (closeDialog) {
                     closeDialog();
                   }
@@ -117,7 +129,7 @@ const Register = ({ closeDialog }) => {
               {(formik) => (
                 <Form
                   onSubmit={formik.handleSubmit}
-                  style={{ padding: '10px' }}
+                  style={{ padding: "10px" }}
                 >
                   <Row>
                     <Col md>
@@ -130,7 +142,7 @@ const Register = ({ closeDialog }) => {
                         onChange={formik.handleChange}
                       />
                       {formik.touched.name && formik.errors.name ? (
-                        <span style={{ color: 'red' }}>
+                        <span style={{ color: "red" }}>
                           {formik.errors.name}
                         </span>
                       ) : null}
@@ -144,7 +156,7 @@ const Register = ({ closeDialog }) => {
                         onChange={formik.handleChange}
                       />
                       {formik.touched.email && formik.errors.email ? (
-                        <span style={{ color: 'red' }}>
+                        <span style={{ color: "red" }}>
                           {formik.errors.email}
                         </span>
                       ) : null}
@@ -161,7 +173,7 @@ const Register = ({ closeDialog }) => {
                       />
                       {formik.touched.phoneNumber &&
                       formik.errors.phoneNumber ? (
-                        <span style={{ color: 'red' }}>
+                        <span style={{ color: "red" }}>
                           {formik.errors.phoneNumber}
                         </span>
                       ) : null}
@@ -175,7 +187,7 @@ const Register = ({ closeDialog }) => {
                         onChange={formik.handleChange}
                       />
                       {formik.touched.dob && formik.errors.dob ? (
-                        <span style={{ color: 'red' }}>
+                        <span style={{ color: "red" }}>
                           {formik.errors.dob}
                         </span>
                       ) : null}
@@ -196,7 +208,7 @@ const Register = ({ closeDialog }) => {
                         <option value="Other">Prefer not to say</option>
                       </Form.Select>
                       {formik.touched.gender && formik.errors.gender ? (
-                        <span style={{ color: 'red' }}>
+                        <span style={{ color: "red" }}>
                           {formik.errors.gender}
                         </span>
                       ) : null}
@@ -211,14 +223,14 @@ const Register = ({ closeDialog }) => {
                         onChange={formik.handleChange}
                       />
                       {formik.touched.location && formik.errors.location ? (
-                        <span style={{ color: 'red' }}>
+                        <span style={{ color: "red" }}>
                           {formik.errors.location}
                         </span>
                       ) : null}
                     </Col>
                   </Row>
                   <Row>
-                  <Col md>
+                    <Col md>
                       <Form.Label id="field">Marital Status</Form.Label>
                       <Form.Select
                         name="marital"
@@ -232,7 +244,7 @@ const Register = ({ closeDialog }) => {
                         <option value="seperated">Seperated</option>
                       </Form.Select>
                       {formik.touched.marital && formik.errors.marital ? (
-                        <span style={{ color: 'red' }}>
+                        <span style={{ color: "red" }}>
                           {formik.errors.marital}
                         </span>
                       ) : null}
@@ -240,27 +252,39 @@ const Register = ({ closeDialog }) => {
 
                     <Col md>
                       <Form.Label id="field">Password</Form.Label>
-                      <Form.Control
-                        name="password"
-                        type="password"
-                        id="form-control password"
-                        value={formik.values.password}
-                        onChange={formik.handleChange}
+                      <div className="password">
+                        <Form.Control
+                          name="password"
+                          type={type}
+                          id="form-control password"
+                          value={formik.values.password}
+                          onChange={formik.handleChange}
+                        />
+                        {formik.touched.password && formik.errors.password ? (
+                          <span style={{ color: "red" }}>
+                            {formik.errors.password}
+                          </span>
+                        ) : null}
+                      </div>
+                      <div className="span">
+                  <span >
+                      <img
+                        src="/images/eye.png"
+                        id="eye"
+                        onClick={handleToggle}
+                        alt="show password"
                       />
-                      {formik.touched.password && formik.errors.password ? (
-                        <span style={{ color: 'red' }}>
-                          {formik.errors.password}
-                        </span>
-                      ) : null}
+                    </span>
+                  </div>
                     </Col>
                   </Row>
                   <Row>
-                    <Col style={{ marginTop: '5%' }}>
+                    <Col style={{ marginTop: "5%" }}>
                       <Button type="submit" id="Btn">
                         REGISTER
                       </Button>
                     </Col>
-                    <Col style={{ marginTop: '9.5%' }}>
+                    <Col style={{ marginTop: "9.5%" }}>
                       <p>
                         Already have an account? <a href="#login">Sign in</a>
                       </p>
