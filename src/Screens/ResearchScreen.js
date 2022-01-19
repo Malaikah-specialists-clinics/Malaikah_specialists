@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-class Specialities extends Component {
+class Research extends Component {
   render() {
     return (
       <>
@@ -148,4 +148,4 @@ class Specialities extends Component {
   }
 }
 
-export default Specialities;
+export default Research;
