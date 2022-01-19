@@ -108,10 +108,10 @@ h3 {
   background-position: center;
   height: 400px;
 }
-.hcare,
+/* .hcare,
 .formcontent {
   padding-top: 10%;
-}
+} */
 #hcare {
   margin: 40px;
   height: auto;
@@ -249,9 +249,9 @@ h3 {
     display: inline-block;
   }
 
-  .formcontent {
+  /* .formcontent {
     margin-top: 0;
-  }
+  } */
   #himg,
   .video-container {
     max-height: 400px;

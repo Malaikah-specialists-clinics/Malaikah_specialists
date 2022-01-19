@@ -3,6 +3,7 @@
     width: 100%;
     text-align: center;
     margin: 0;
+    margin-top: 0;
   }
    /* @media (max-width: 1020px) {
     .alert{
@@ -13,15 +14,16 @@
     .alert{
         bottom: 105%;
     }
-}
+} */
 @media (max-width: 768px) {
  .alert{
-     bottom: 100%;
+     margin-top: 18%;
  }
 }
-/* --------media query forless than 600 screen size------ */
-/* @media (max-width: 600px) {
+
+ /* --------media query forless than 600 screen size------ */
+@media (max-width: 600px) {
     .alert{
-        bottom: 88%;
+        margin-top: 18%;
     }
-  } */ 
+  } 

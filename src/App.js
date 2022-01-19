@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
-import Header from './Components/Header/Header';
+import Headers from './Components/Header/Headers';
 import Footer from './Components/Footer/Footer';
 
 
@@ -37,7 +37,7 @@ function App() {
   return (
     
     <Router className="App">
-      <Header />
+      <Headers />
       <Route path="/" component={Home} exact />
       <Route path="/form" component={FormScreen} />
       <Route path="/register" component={Register} />

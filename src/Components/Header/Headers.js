@@ -8,12 +8,12 @@ import {FaPhoneAlt} from 'react-icons/fa';
 import {RiLoginCircleFill} from 'react-icons/ri'
 
 
-function Header() {
+function Headers() {
 
   
   return (
     <>
-      <div className="fixed-top" style={{ position: 'fixed' }}>
+      <header className="fixed-top">
         <Navbar bg="light" variant="light" expand="md" style={{ padding: '0' }}>
           <Container>
             <Navbar.Brand>
@@ -30,7 +30,7 @@ function Header() {
             </Navbar.Brand>
           </Container>
         </Navbar>
-
+      
         <Navbar
           className="navbar"
           variant="dark"
@@ -43,7 +43,7 @@ function Header() {
             <Nav className="me-auto">
               <Navbar.Brand>
                 <Row>
-                  <Col>
+                  <Col md>
                     <div>
                       <img
                         alt=""
@@ -54,15 +54,16 @@ function Header() {
                       />
                     </div>
                   </Col>
-                  <Col style={{ paddingTop: '20px' }}>
-                    Malaikah Specialists Clinics <br />{' '}
-                    <small style={{ marginLeft: '8%', fontSize: '13.5px' }}>
+                  <Col md style={{ paddingTop: '20px' }}>
+                    Malaikah Specialists Clinics <br />
+                    <small style={{ marginLeft: 'auto', fontSize: '13.5px' }}>
                       <i>Angels of Health</i>
                     </small>
                   </Col>
                 </Row>
               </Navbar.Brand>
             </Nav>
+            
             <Nav className="ml-auto nav-items">
               <LinkContainer to="/">
                 <Nav.Link>Home</Nav.Link>
@@ -86,9 +87,9 @@ function Header() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-      </div>
+      </header>
     </>
   );
 }
 
-export default Header;
+export default Headers;
