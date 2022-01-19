@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row, Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-
+import './specialties.css'
 
 function Specialities() {
   return (

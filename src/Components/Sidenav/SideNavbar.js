@@ -1,17 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import './sidenav.css'
 
 function SideNavbar() {
   return (
     
     <div style={{ marginTop: '1%', paddingTop: '2.5%' }}>
       <header className="container">
-        {/* <div>
-          <h5 style={{ float: 'right', color: 'black' }}>
-            Send Message
-          </h5>
-        </div> */}
+       
       </header>
       <div class="sidebar-container">
         <ul class="sidebar-navigation">

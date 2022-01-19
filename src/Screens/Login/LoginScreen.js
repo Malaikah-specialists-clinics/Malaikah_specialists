@@ -1,28 +1,30 @@
-import React, { Component} from 'react';
-import { Row, Col, Form, Button} from "react-bootstrap";
+import React, { Component } from 'react';
+import { Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { base_url } from '../../Constants/index.js';
-import "./Login.css"
-
-
-
-
 
 class Login extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       email: '',
       password: '',
+      showPassword: false,
     };
   }
+  // constructor(){
+  //   super()
+  //   this.state={
+  //     showPassword:false
+  //   }
+  // }
+
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
-   onSubmit(e) {
+  onSubmit(e) {
     e.preventDefault();
-  
+
     const loginObject = {
       email: this.state.email,
       password: this.state.password,
@@ -33,41 +35,41 @@ class Login extends Component {
       })
 
       .then((res) => {
-        if (res.data.accessToken) {
-          localStorage.setItem("user", JSON.stringify(res.data));
-        }
+        localStorage.setItem('access_token', res.data.access_token);
         console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-      this.props.history.push("/profile");
-      window.location.reload();
-      
+    this.props.history.push('/profile');
   }
- 
-  render(){
+
+  render() {
     return (
       <>
         <div
           className="formcontent"
-          style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto', marginTop: '8%' }}
+          style={{
+            width: '80%',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginTop: '8%',
+          }}
         >
-          <Row >
-            <Col md id="loginimg">
-
+          <Row>
+            <Col md>
+              <div id="pic">
                 <img
                   src="/images/doc.jpg"
                   alt="care"
                   width="500px"
                   height="340px"
                 />
-
+              </div>
             </Col>
-            <Col md  className="form">
+            <Col md sm={6} className="form">
               <Form
                 onSubmit={(e) => this.onSubmit(e)}
-                
                 style={{ padding: '10px' }}
               >
                 <Row>
@@ -85,21 +87,34 @@ class Login extends Component {
                 <Row>
                   <Col md>
                     <Form.Label id="field">Password</Form.Label>
-                    <Form.Control
-                      name="password"
-                      value={this.state.password}
-                      onChange={this.changeHandler}
-                      type="password"
-                      id="form-control password"
-                    />
+                    <div className="password">
+                      <Form.Control
+                        name="password"
+                        value={this.state.password}
+                        onChange={this.changeHandler}
+                        type={this.state.showPassword ? 'text' : 'password'}
+                        id="form-control password"
+                      />
+                    </div>
+                    <div className="span">
+                      <span>
+                        <img
+                          src="/images/eye.png"
+                          id="eye"
+                          onClick={() =>
+                            this.setState({
+                              showPassword: !this.state.showPassword,
+                            })
+                          }
+                          alt=""
+                        />
+                      </span>
+                    </div>
                   </Col>
                 </Row>
                 <Row>
                   <Col style={{ marginTop: '5%' }}>
-                    <Button type="submit"
-                     id="Btn" 
-                     onSubmit="user()"
-                     >
+                    <Button type="submit" id="Btn" onSubmit="user()">
                       LOGIN
                     </Button>
                   </Col>
@@ -118,7 +133,6 @@ class Login extends Component {
       </>
     );
   }
-  }
-  
+}
 
 export default Login;

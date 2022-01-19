@@ -1,0 +1,20 @@
+
+.inline {
+    padding: 0 4px;
+  
+    height: auto;
+  }
+  
+  .inline h3 {
+    font-size: 24px;
+    color: #0a1f3e;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .inline h5 {
+    font-size: 15px;
+    color: #494949a6;
+    text-align: left;
+    font-weight: lighter;
+  }

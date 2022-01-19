@@ -1,10 +1,10 @@
 import React from 'react';
 import { Carousel, Container} from 'react-bootstrap';
-import Tips from './Tips';
-import Upcomingevents from './Upcomingevents'
+import Tips from '../Tips/Tips';
+import Upcomingevents from '../Upcomingevents'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { base_url } from '../Constants/index.js';
+import { base_url } from '../../Constants/index.js';
 
 const Events = () => {
   const [events, setEvents] = useState([]);

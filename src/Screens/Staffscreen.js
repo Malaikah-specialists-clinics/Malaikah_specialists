@@ -1,6 +1,6 @@
 import React from 'react';
 import { CardGroup, Container,} from 'react-bootstrap';
-import  StaffComp from '../Components/StaffComp';
+import  StaffComp from '../Components/Staff/StaffComp';
 
 const Staffscreen = (props) => {
     return (

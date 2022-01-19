@@ -1,7 +1,6 @@
 import React from 'react'
 import { useEffect, useRef } from 'react'
-import { Col } from 'react-bootstrap'
-import Alerts from './alertComp'
+import './Landing.css'
 import { init } from 'ityped'
 
 function Landing() {
@@ -21,23 +20,15 @@ function Landing() {
   }, [])
   return (
     <>
-      <Col>
       <div className="video-container">
         <img src="/images/hospital.jpeg" alt="doctor" id="himg"/>
-        <Alerts />
+       
           <div id="caption">
             <h1 className="htext">
               <span ref={textRef}></span>
             </h1>
-            <p id="paragrah ">
-              {/* Easing access to affordable <br />
-              healthcare services. <br />
-              We link global doctors to you */}
-              {/* <span ref={paragrah}></span> */}
-            </p>
           </div>
           </div>
-      </Col>
     </>
   );
 }
