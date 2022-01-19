@@ -248,9 +248,15 @@ h3 {
   #tipcrd {
     display: inline-block;
   }
+<<<<<<< HEAD
 
   /* .formcontent {
     margin-top: 0;
+=======
+/* 
+  .formcontent {
+    margin-top: 20%;
+>>>>>>> 1ca1032ea5894a6d2f087c65ab7890ebd481ccf8
   } */
   #himg,
   .video-container {

@@ -1,36 +1,37 @@
-import React from "react";
-import { Nav, Navbar, Row, Col, NavDropdown, Container} from 'react-bootstrap';
-import { LinkContainer } from "react-router-bootstrap";
-import authService from "../../Services/auth.service";
+import React from 'react';
+import { Nav, Navbar, Row, Col, NavDropdown, Container } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import authService from '../../Services/auth.service';
 
 import { MdEmail } from 'react-icons/md';
-import {FaPhoneAlt} from 'react-icons/fa';
-import {RiLoginCircleFill} from 'react-icons/ri'
+import { FaPhoneAlt } from 'react-icons/fa';
+import { RiLoginCircleFill } from 'react-icons/ri';
 
-
-function Headers() {
-
-  
+function Header() {
   return (
     <>
-      <header className="fixed-top">
+      <div className="sticky-top">
         <Navbar bg="light" variant="light" expand="md" style={{ padding: '0' }}>
           <Container>
-            <Navbar.Brand>
+            <Navbar.Brand style={{ fontSize: 'medium', color: '#0a1f3e' }}>
               <MdEmail />
               info@malaikahgroup.com
             </Navbar.Brand>
-            <Navbar.Brand>
+            <Navbar.Brand style={{ fontSize: 'medium', color: '#0a1f3e' }}>
               <FaPhoneAlt />
               0772670952
             </Navbar.Brand>
-            <Navbar.Brand href="#login" onClick={authService.logout}>
+            <Navbar.Brand
+              href="#login"
+              onClick={authService.logout}
+              style={{ fontSize: 'medium', color: '#0a1f3e' }}
+            >
               <RiLoginCircleFill />
               LOGIN
             </Navbar.Brand>
           </Container>
         </Navbar>
-      
+
         <Navbar
           className="navbar"
           variant="dark"
@@ -43,7 +44,7 @@ function Headers() {
             <Nav className="me-auto">
               <Navbar.Brand>
                 <Row>
-                  <Col md>
+                  <Col lg>
                     <div>
                       <img
                         alt=""
@@ -54,16 +55,15 @@ function Headers() {
                       />
                     </div>
                   </Col>
-                  <Col md style={{ paddingTop: '20px' }}>
-                    Malaikah Specialists Clinics <br />
-                    <small style={{ marginLeft: 'auto', fontSize: '13.5px' }}>
+                  <Col lg style={{ paddingTop: '20px' }}>
+                    Malaikah Specialists Clinics <br />{' '}
+                    <small style={{ marginLeft: '8%', fontSize: '13.5px' }}>
                       <i>Angels of Health</i>
                     </small>
                   </Col>
                 </Row>
               </Navbar.Brand>
             </Nav>
-            
             <Nav className="ml-auto nav-items">
               <LinkContainer to="/">
                 <Nav.Link>Home</Nav.Link>
@@ -87,9 +87,9 @@ function Headers() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-      </header>
+      </div>
     </>
   );
 }
 
-export default Headers;
+export default Header;
