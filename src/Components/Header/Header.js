@@ -14,7 +14,7 @@ function Header() {
   return (
     <>
       <div className="sticky-top">
-        <Navbar bg="light" variant="light" expand="md" style={{ padding: '0' }}>
+        <Navbar  expand="md" style={{ padding: '0', backgroundColor: '#EEEEEE' }}>
           <Container>
             <Navbar.Brand style={{fontSize:'medium', color:'#0a1f3e'}}>
               <MdEmail />
