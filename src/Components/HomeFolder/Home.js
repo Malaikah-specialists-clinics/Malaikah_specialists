@@ -13,7 +13,9 @@ function Home(){
     return (
       <>
         <div className="formcontent">
-        <Alerts />
+          <div>
+          <Alerts />
+          </div>
           <Landing />
           <Specialities />
           <Events />
