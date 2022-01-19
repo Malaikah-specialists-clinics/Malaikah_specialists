@@ -1,7 +1,9 @@
 import React, { Component} from 'react';
 import { Row, Col, Form, Button} from "react-bootstrap";
 import axios from 'axios';
-import { base_url } from '../Constants/index.js';
+import { base_url } from '../../Constants/index.js';
+import "./Login.css"
+
 
 
 
@@ -51,18 +53,18 @@ class Login extends Component {
           className="formcontent"
           style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto', marginTop: '8%' }}
         >
-          <Row>
-            <Col md>
-              <div id="pic">
+          <Row >
+            <Col md id="loginimg">
+
                 <img
                   src="/images/doc.jpg"
                   alt="care"
                   width="500px"
                   height="340px"
                 />
-              </div>
+
             </Col>
-            <Col md sm={6} className="form">
+            <Col md  className="form">
               <Form
                 onSubmit={(e) => this.onSubmit(e)}
                 
