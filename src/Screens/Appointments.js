@@ -1,7 +1,7 @@
 import React from "react";
-import SideNavbar from "../Components/SideNavbar";
+import SideNavbar from "../Components/Sidenav/SideNavbar";
 import { Col, Container, Row, Tab, Tabs } from "react-bootstrap";
-import Pastappts from "../Components/Pastappts"
+import Pastappts from "../Components/Appointment/Pastappts"
 import Upcomingappts from "../Components/Upcomingappts"
 
 const Appointments = () => {

@@ -1,7 +1,9 @@
 import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+
+
 
 import HomecareScreen from './Screens/HomecareScreen'
 import Specialities from './Screens/SpecialitiesScreen';
@@ -12,7 +14,7 @@ import FormScreen from './Screens/FormScreen';
 import ResearchScreen from './Screens/ResearchScreen'
 import EmeservSreen from './Screens/EmeservSreen'
 import Moeventscreen from './Screens/Moeventscreen';
-import Home from './Components/Home';
+import Home from './Components/HomeFolder/Home';
 import SpecialitiesScreen from './Screens/SpecialitiesScreen'
  import LoginScreen from './Screens/LoginScreen'
 import Staffscreen from './Screens/Staffscreen'
@@ -31,7 +33,9 @@ import Profile from './Screens/Profile'
 require('dotenv').config();
 
 function App() {
+  
   return (
+    
     <Router className="App">
       <Header />
       <Route path="/" component={Home} exact />

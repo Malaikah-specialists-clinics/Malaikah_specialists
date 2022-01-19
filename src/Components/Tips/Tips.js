@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Container, Row, Col} from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { base_url } from '../Constants/index.js';
+import { base_url } from '../../Constants/index.js';
 
 const Tips = () => {
    const [tip, setTips] = useState([]);

@@ -1,6 +1,6 @@
 import React from "react";
 import {Card, Col, Row} from "react-bootstrap"
-
+import './Appointment.css'
 
 function Pastappts() {
   return (

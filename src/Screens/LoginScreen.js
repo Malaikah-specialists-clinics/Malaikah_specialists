@@ -31,22 +31,20 @@ class Login extends Component {
       password: this.state.password,
     };
     axios
-      .post(`${base_url}/auth/login`, loginObject, {
-        headers: { "Access-Control-Allow-Origin": "*" },
-      })
+    .post(`${base_url}/auth/login`, loginObject, {
+      headers: { 'Access-Control-Allow-Origin': '*' },
+    })
 
-      .then((res) => {
-        if (res.data.accessToken) {
-          localStorage.setItem("user", JSON.stringify(res.data));
-        }
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    this.props.history.push("/profile");
-    window.location.reload();
-  }
+    .then((res) => {
+      localStorage.setItem('access_token', res.data.access_token)
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+       this.props.history.push('/profile');
+    
+}
 
   render() {
     return (

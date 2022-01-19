@@ -1,0 +1,27 @@
+.alert {
+    background-color: #fff3cd;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+   /* @media (max-width: 1020px) {
+    .alert{
+        bottom: 95%;
+    }
+}
+@media (max-width: 991px) {
+    .alert{
+        bottom: 105%;
+    }
+}
+@media (max-width: 768px) {
+ .alert{
+     bottom: 100%;
+ }
+}
+/* --------media query forless than 600 screen size------ */
+/* @media (max-width: 600px) {
+    .alert{
+        bottom: 88%;
+    }
+  } */ 

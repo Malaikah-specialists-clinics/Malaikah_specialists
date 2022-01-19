@@ -6,7 +6,7 @@ const homecareservices = () => {
   return (
     <>
     <Container style={{maxWidth: '100%'}}>
-    <div className="hcare">
+    <div className="formcontent">
       <Row>
         <Col className="sect1">
           <h1 className="first-txt">Compasionate care <br/> for your loved ones</h1>

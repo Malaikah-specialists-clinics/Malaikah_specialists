@@ -2,8 +2,8 @@ import React from "react";
 import { Alert } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { base_url } from '../Constants/index.js';
-// import CloseButton from 'react-bootstrap/CloseButton'
+import { base_url } from '../../Constants/index.js';
+import "./alertComp.css"
 const Alerts = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [alert, setAlerts] = useState([]);
@@ -29,6 +29,7 @@ const Alerts = () => {
  
   return (
     <>
+    
       {alert.map((alerts) => (
         <Alert
         className="alert"

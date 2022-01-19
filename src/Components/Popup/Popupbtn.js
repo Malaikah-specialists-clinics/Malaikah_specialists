@@ -1,6 +1,7 @@
 import { useState}  from 'react';
 import {LinkContainer} from 'react-router-bootstrap'
 import { Button, Modal, Row, Container } from 'react-bootstrap';
+import './popup.css'
 
 
 
