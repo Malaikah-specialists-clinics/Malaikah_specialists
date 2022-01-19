@@ -108,10 +108,10 @@ h3 {
   background-position: center;
   height: 400px;
 }
-.hcare,
+/* .hcare,
 .formcontent {
   padding-top: 10%;
-}
+} */
 #hcare {
   margin: 40px;
   height: auto;
@@ -248,10 +248,10 @@ h3 {
   #tipcrd {
     display: inline-block;
   }
-
+/* 
   .formcontent {
-    margin-top: 0;
-  }
+    margin-top: 20%;
+  } */
   #himg,
   .video-container {
     max-height: 400px;

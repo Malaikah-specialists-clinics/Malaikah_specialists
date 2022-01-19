@@ -13,18 +13,18 @@ function Header() {
   
   return (
     <>
-      <div className="fixed-top" style={{ position: 'fixed' }}>
+      <div className="sticky-top">
         <Navbar bg="light" variant="light" expand="md" style={{ padding: '0' }}>
           <Container>
-            <Navbar.Brand>
+            <Navbar.Brand style={{fontSize:'medium', color:'#0a1f3e'}}>
               <MdEmail />
               info@malaikahgroup.com
             </Navbar.Brand>
-            <Navbar.Brand>
+            <Navbar.Brand style={{fontSize:'medium', color:'#0a1f3e'}}>
               <FaPhoneAlt />
               0772670952
-            </Navbar.Brand>
-            <Navbar.Brand href="#login" onClick={authService.logout}>
+            </Navbar.Brand >
+            <Navbar.Brand href="#login" onClick={authService.logout} style={{fontSize:'medium', color:'#0a1f3e'}}>
               <RiLoginCircleFill />
               LOGIN
             </Navbar.Brand>
@@ -43,7 +43,7 @@ function Header() {
             <Nav className="me-auto">
               <Navbar.Brand>
                 <Row>
-                  <Col>
+                  <Col lg>
                     <div>
                       <img
                         alt=""
@@ -54,7 +54,7 @@ function Header() {
                       />
                     </div>
                   </Col>
-                  <Col style={{ paddingTop: '20px' }}>
+                  <Col lg style={{ paddingTop: '20px' }}>
                     Malaikah Specialists Clinics <br />{' '}
                     <small style={{ marginLeft: '8%', fontSize: '13.5px' }}>
                       <i>Angels of Health</i>
