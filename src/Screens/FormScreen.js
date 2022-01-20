@@ -50,10 +50,19 @@ const FormPage = ({ closeDialog }) => {
     <>
       <div
         className="formcontent"
-        style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}
+        style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', marginTop:'1%' }}
       >
         <Row>
-          <Col md sm={6} className="form">
+        <Col md className="pic">
+          <img
+            src="/images/wnn-06.png"
+            alt="doctor"
+             style={{ width: '600px', height: 'auto' }}
+          />
+     
+      </Col>
+          <Col md className="form">
+          <h4>Patient Information </h4>
             <Formik
               initialValues={{
                 email: '',
@@ -88,8 +97,6 @@ const FormPage = ({ closeDialog }) => {
             >
               {(formik) => (
                 <Form onSubmit={formik.handleSubmit}>
-                  <h2>Book An Appointment</h2>
-                  <h4>Patient Information </h4>
                   <Row>
                     <Col md>
                       <Form.Label id="field">Email</Form.Label>
@@ -206,15 +213,6 @@ const FormPage = ({ closeDialog }) => {
                 </Form>
               )}
             </Formik>
-          </Col>
-          <Col md>
-            <div className="pic">
-              <img
-                src="/images/caremeds.jpg"
-                alt="doctor"
-                style={{ width: '600px', height: '600px', marginTop: '3%' }}
-              />
-            </div>
           </Col>
         </Row>
       </div>
