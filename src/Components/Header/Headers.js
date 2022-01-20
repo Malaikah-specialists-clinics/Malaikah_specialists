@@ -1,30 +1,31 @@
-import React from "react";
-import { Nav, Navbar, Row, Col, NavDropdown, Container} from 'react-bootstrap';
-import { LinkContainer } from "react-router-bootstrap";
-import authService from "../../Services/auth.service";
+import React from 'react';
+import { Nav, Navbar, Row, Col, NavDropdown, Container } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import authService from '../../Services/auth.service';
 
 import { MdEmail } from 'react-icons/md';
-import {FaPhoneAlt} from 'react-icons/fa';
-import {RiLoginCircleFill} from 'react-icons/ri'
-
+import { FaPhoneAlt } from 'react-icons/fa';
+import { RiLoginCircleFill } from 'react-icons/ri';
 
 function Header() {
-
-  
   return (
     <>
       <div className="sticky-top">
         <Navbar  expand="md" style={{ padding: '0', backgroundColor: '#EEEEEE' }}>
           <Container>
-            <Navbar.Brand style={{fontSize:'medium', color:'#0a1f3e'}}>
+            <Navbar.Brand style={{ fontSize: 'medium', color: '#0a1f3e' }}>
               <MdEmail />
               info@malaikahgroup.com
             </Navbar.Brand>
-            <Navbar.Brand style={{fontSize:'medium', color:'#0a1f3e'}}>
+            <Navbar.Brand style={{ fontSize: 'medium', color: '#0a1f3e' }}>
               <FaPhoneAlt />
               0772670952
-            </Navbar.Brand >
-            <Navbar.Brand href="#login" onClick={authService.logout} style={{fontSize:'medium', color:'#0a1f3e'}}>
+            </Navbar.Brand>
+            <Navbar.Brand
+              href="#login"
+              onClick={authService.logout}
+              style={{ fontSize: 'medium', color: '#0a1f3e' }}
+            >
               <RiLoginCircleFill />
               LOGIN
             </Navbar.Brand>
