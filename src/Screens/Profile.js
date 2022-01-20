@@ -38,7 +38,7 @@ const PatientProfile = () => {
 
   if (user){
   return ( 
-    <div style={{ background: "#f8f8f8" }} className="formcontent">
+    <div style={{ background: "#f8f8f8" }}>
       <Container>
       {user.map((users) => (
         <Row key={users.id}>

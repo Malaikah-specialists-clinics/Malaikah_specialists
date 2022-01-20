@@ -64,7 +64,6 @@ const Register = ({ closeDialog }) => {
   return (
     <>
       <div
-        className="formcontent"
         style={{
           width: "80%",
           marginLeft: "auto",

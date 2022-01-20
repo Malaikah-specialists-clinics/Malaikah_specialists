@@ -6,7 +6,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 const EmeservSreen = () => {
     return (
       <>
-       <Container className="formcontent" style={{maxWidth: '100%'}}>
+       <Container style={{maxWidth: '100%'}}>
         <Row id='main'>
           <Col md className='pic'>
           <img src="/images/emeservice.jpg" alt=""

@@ -49,7 +49,6 @@ const FormPage = ({ closeDialog }) => {
   return (
     <>
       <div
-        className="formcontent"
         style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', marginTop:'1%' }}
       >
         <Row>

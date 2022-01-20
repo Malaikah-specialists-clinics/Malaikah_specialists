@@ -6,7 +6,7 @@ const Staffscreen = (props) => {
     return (
       <>
       <Container style={{maxWidth: '100%'}}>
-        <div class="hcare">
+        <div>
         <h2 style={{ textAlign: 'center', marginTop: '10px'}}> Meet Our Doctors</h2>
             <CardGroup style={{justifyContent: 'space-evenly'}}>
               <StaffComp  Img="/images/doc.jpg" title="DR. COLLINES K.B" body="Experience: Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece  of classical Latin literature from 45 BC,  making "/>

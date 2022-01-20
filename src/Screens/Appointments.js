@@ -7,7 +7,7 @@ import Upcomingappts from "../Components/Upcomingappts"
 const Appointments = () => {
   return (
     <>
-    <div style={{ background: "#f8f8f8" }} className="formcontent">
+    <div style={{ background: "#f8f8f8" }}>
       <Container>
         <Row>
           <Col sm={4}>
