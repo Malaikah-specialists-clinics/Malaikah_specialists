@@ -117,19 +117,6 @@ h3 {
   height: auto;
 }
 
-/* #toggle1,
-#toggle,
-#toggle2,
-#toggle3,
-#toggle4,
-#toggle5 {
-  overflow: hidden;
-  display: none;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-} */
-
 #card5 {
   padding: 10px 50px;
 }
