@@ -64,29 +64,28 @@ const Register = ({ closeDialog }) => {
   return (
     <>
       <div
-        className="formcontent"
         style={{
           width: "80%",
           marginLeft: "auto",
           marginRight: "auto",
-          marginTop: "8%",
+          marginTop: "1%",
         }}
       >
         <Row>
-          <Col md>
+          <Col md id="pic">
             <h2 style={{ marginTop: "40px", textAlign: "center" }}>
               Create An Account
             </h2>
-            <div id="pic">
+          
               <img
                 src="/images/reg.jpg"
                 alt="care"
                 width="500px"
                 height="380px"
               />
-            </div>
+         
           </Col>
-          <Col md sm={6} className="form">
+          <Col md className="form">
             <Formik
               initialValues={{
                 name: "",

@@ -7,7 +7,7 @@ const Aboutscreen = () => {
   
   return (
     <Container style={{maxWidth: '100%'}}>
-    <div className="formcontent">
+    <div>
        <Row id="main"> 
          <Col md className="aboutus1">
           <h1> Who We Are</h1>

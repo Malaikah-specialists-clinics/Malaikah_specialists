@@ -41,7 +41,7 @@ const Moeventscreen = (props) => {
   if (event.length > 0) {
     return (
       <>
-        <div class="hcare">
+        <div>
           <div>
             <Modal
               {...props}
