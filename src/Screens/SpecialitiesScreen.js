@@ -3,7 +3,6 @@ import { Col, Row, Container, Accordion } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import { base_url } from '../Constants';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 
