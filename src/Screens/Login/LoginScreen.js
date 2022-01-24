@@ -51,72 +51,74 @@ class Login extends Component {
         <div
           className="formcontent"
           style={{
-            width: "80%",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: "8%",
+            width: '80%',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginTop: '8%',
           }}
         >
           <Row>
             <Col className="form">
               <Form
                 onSubmit={(e) => this.onSubmit(e)}
-                style={{ padding: "10px" }}
+                style={{ padding: '10px' }}
               >
                 <Row>
                   <Col md id="pic">
-                 
-                <img
-                  src="/images/doc.jpg"
-                  alt="care"
-                  width="500px"
-                  height="340px"
-                />
-             
-                  </Col>
-             <Col md>
-                <Form.Label id="field">Email Address</Form.Label>
-                <Form.Control
-                  name="email"
-                  value={this.state.email}
-                  onChange={this.changeHandler}
-                  id="form-control email"
-                />
-                <span id="EmailError"></span>
-                <Form.Label id="field">Password</Form.Label>
-                <div className="password">
-                  <Form.Control
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.changeHandler}
-                    type={this.state.showPassword ? "text" : "password"}
-                    id="form-control password"
-                  />
-                </div>
-                <div className="span">
-                  <span>
                     <img
-                      src="/images/eye.png"
-                      id="eye"
-                      onClick={() =>
-                        this.setState({
-                          showPassword: !this.state.showPassword,
-                        })
-                      }
-                      alt=""
+                      src="/images/doc.jpg"
+                      alt="care"
+                      width="500px"
+                      height="340px"
                     />
-                  </span>
-                </div>
+                  </Col>
+                  <Col md>
+                    <Form.Label id="field">
+                      Email Address<span class="required">*</span>
+                    </Form.Label>
+                    <Form.Control
+                      name="email"
+                      value={this.state.email}
+                      onChange={this.changeHandler}
+                      id="form-control email"
+                    />
+                    <span id="EmailError"></span>
+                    <Form.Label id="field">
+                      Password<span class="required">*</span>
+                    </Form.Label>
+                    <div className="password">
+                      <Form.Control
+                        name="password"
+                        value={this.state.password}
+                        onChange={this.changeHandler}
+                        type={this.state.showPassword ? 'text' : 'password'}
+                        id="form-control password"
+                      />
+                    </div>
+                    <div className="span">
+                      <span>
+                        <img
+                          src="/images/eye.png"
+                          id="eye"
+                          onClick={() =>
+                            this.setState({
+                              showPassword: !this.state.showPassword,
+                            })
+                          }
+                          alt=""
+                        />
+                      </span>
+                    </div>
 
-                <div style={{ marginTop: "5%" }}>
-                  <Button type="submit" id="Btn" onSubmit="user()">
-                    LOGIN
-                  </Button>
-                </div>
-                <p style={{ marginTop: "9.5%" }}>
-                  Have No account? <a href="#register">Sign Up</a>
-                </p>
-                </Col>
+                    <div style={{ marginTop: '5%' }}>
+                      <Button type="submit" id="Btn" onSubmit="user()">
+                        LOGIN
+                      </Button>
+                    </div>
+                    <p style={{ marginTop: '9.5%' }}>
+                      Have No account? <a href="#register">Sign Up</a>
+                    </p>
+                  </Col>
                 </Row>
               </Form>
             </Col>

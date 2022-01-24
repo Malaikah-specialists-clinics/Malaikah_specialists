@@ -620,3 +620,6 @@ h3 {
   color: #ffffff;
   
 }
+.required {
+  color: red;
+}

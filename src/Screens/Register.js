@@ -132,7 +132,7 @@ const Register = ({ closeDialog }) => {
                 >
                   <Row>
                     <Col md>
-                      <Form.Label id="field">Full Names</Form.Label>
+                      <Form.Label id="field">Full Names<span class="required">*</span></Form.Label>
                       <Form.Control
                         name="name"
                         type="text"
@@ -147,7 +147,7 @@ const Register = ({ closeDialog }) => {
                       ) : null}
                     </Col>
                     <Col md className="inputField">
-                      <Form.Label id="field">Email Address</Form.Label>
+                      <Form.Label id="field">Email Address<span class="required">*</span></Form.Label>
                       <Form.Control
                         name="email"
                         id="form-control email"
@@ -163,7 +163,7 @@ const Register = ({ closeDialog }) => {
                   </Row>
                   <Row>
                     <Col md>
-                      <Form.Label id="field">Phone number</Form.Label>
+                      <Form.Label id="field">Phone number<span class="required">*</span></Form.Label>
                       <Form.Control
                         name="phoneNumber"
                         id="form-control phoneNumber"
@@ -178,7 +178,7 @@ const Register = ({ closeDialog }) => {
                       ) : null}
                     </Col>
                     <Col md>
-                      <Form.Label id="field">Date of birth</Form.Label>
+                      <Form.Label id="field">Date of birth<span class="required">*</span></Form.Label>
                       <Form.Control
                         name="dob"
                         id="form-control dob"
@@ -194,7 +194,7 @@ const Register = ({ closeDialog }) => {
                   </Row>
                   <Row>
                     <Col md>
-                      <Form.Label id="field">Gender</Form.Label>
+                      <Form.Label id="field">Gender<span class="required">*</span></Form.Label>
                       <Form.Select
                         name="gender"
                         id="form-control gender"
@@ -213,7 +213,7 @@ const Register = ({ closeDialog }) => {
                       ) : null}
                     </Col>
                     <Col md>
-                      <Form.Label id="field">Location</Form.Label>
+                      <Form.Label id="field">Location<span class="required">*</span></Form.Label>
                       <Form.Control
                         name="location"
                         type="text"
@@ -230,7 +230,7 @@ const Register = ({ closeDialog }) => {
                   </Row>
                   <Row>
                     <Col md>
-                      <Form.Label id="field">Marital Status</Form.Label>
+                      <Form.Label id="field">Marital Status<span class="required">*</span></Form.Label>
                       <Form.Select
                         name="marital"
                         id="form-control marital"
@@ -250,7 +250,7 @@ const Register = ({ closeDialog }) => {
                     </Col>
 
                     <Col md>
-                      <Form.Label id="field">Password</Form.Label>
+                      <Form.Label id="field">Password<span class="required">*</span></Form.Label>
                       <div className="password">
                         <Form.Control
                           name="password"
