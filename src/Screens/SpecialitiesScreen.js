@@ -1,24 +1,13 @@
 import React from 'react';
-import { Col, Row, Container } from 'react-bootstrap';
+import { Col, Row, Container, Accordion } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { base_url } from '../Constants';
+import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 
 const Specialities =()=> {
    const [specialty, setSpecialties] = useState([]);
-  //  const [isLoading, setIsLoading] = useState(false);
-
-     const toggle = () => {
-       var x = document.getElementById('toggle', 'toggle1');
-
-       if (x.style.display !== 'none') {
-         x.style.display = 'none';
-       } else {
-         x.style.display = 'flex';
-       }
-     };
-
     useEffect(() => {
     axios
       .get(`${base_url}/specialties`)
@@ -32,20 +21,26 @@ const Specialities =()=> {
       });
   },[]);
 
-  // useEffect(() => {
-  //   fetch('/api/data')
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
+  function CustomToggle({ children, eventKey }) {
+    const decoratedOnClick = useAccordionButton(eventKey, () =>
+      console.log('totally custom!'),
+    );
   
-  // if (isLoading) {
-  //   return <div>Loading...</div>;
-  // }
+    return (
+      <button
+        type="button"
+        style={{ backgroundColor: 'pink' }}
+        onClick={decoratedOnClick}
+      >
+        {children}
+      </button>
+    );
+  }
+  
+  
+    
+  
+ 
 
   return (
     <>
@@ -91,28 +86,22 @@ const Specialities =()=> {
                 </p>
                 <Row>
                   <Col md>
-                    <div class="details">
-                      <button id="details" onClick={toggle}>
-                        View Details
-                      </button>
-                    </div>
+                  <Accordion defaultActiveKey="0">
+        
+        <CustomToggle eventKey="0">VIEW DETAILS</CustomToggle>
+    <Accordion.Collapse eventKey="0">
+       <p>Hello! I'm the body</p>
+    </Accordion.Collapse>
+ 
+  
+  </Accordion>
                   </Col>
-                  <Row id="toggle">
+                  <Row>
                     <Col >
-                      <ul>
-                        <li>Sore Throat</li>
-                        <li>Skin Infection</li>
-                        <li>Cough</li>
-                        <li>Ear Pain</li>
-                      </ul>
+                 
                     </Col>
                     <Col>
-                      <ul>
-                        <li>Bronchitis</li>
-                        <li>Pain</li>
-                        <li>Urinary Tarct Infection</li>
-                        <li>Other Conditions associated with children</li>
-                      </ul>
+                      
                     </Col>
                   </Row>
                   <Col md style={{ marginTop: '5px' }}>

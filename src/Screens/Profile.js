@@ -1,6 +1,6 @@
 import React from "react";
 import SideNavbar from "../Components/Sidenav/SideNavbar";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Alert } from "react-bootstrap";
 import axios from "axios";
 import { base_url } from "../Constants/index.js";
 import { useState, useEffect } from "react";
@@ -102,6 +102,13 @@ const PatientProfile = () => {
             </Col>
           </Row>
         </Container>
+      </div>
+    );
+  } 
+  else {
+    return (
+      <div>
+        <Alert variant="danger"> USER DOES NOT EXIST </Alert>
       </div>
     );
   }

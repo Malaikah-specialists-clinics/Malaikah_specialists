@@ -1,13 +1,17 @@
 import React from 'react';
 import { Nav, Navbar, Row, Col, NavDropdown, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import authService from '../../Services/auth.service';
+
 
 import { MdEmail } from 'react-icons/md';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { RiLoginCircleFill } from 'react-icons/ri';
 
 function Header() {
+  const handleLogout = () => {
+		localStorage.removeItem("accessToken");
+	//  window.location.reload();
+	};
   return (
     <>
       <div className="sticky-top">
@@ -23,7 +27,7 @@ function Header() {
             </Navbar.Brand>
             <Navbar.Brand
               href="#login"
-              onClick={authService.logout}
+              onClick={handleLogout}
               style={{ fontSize: 'medium', color: '#0a1f3e' }}
             >
               <RiLoginCircleFill />
