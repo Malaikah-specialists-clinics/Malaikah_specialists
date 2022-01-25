@@ -98,7 +98,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
         >
           {(formik) => (
             <form onSubmit={formik.handleSubmit}>
-              <label>Names</label>
+              <label>Names<span class="required">*</span></label>
               <Form.Control
                 name="name"
                 id="name"
@@ -111,7 +111,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
               ) : null}
               <br />
 
-              <label>Email</label>
+              <label>Email<span class="required">*</span></label>
               <Form.Control
                 name="email"
                 id="email"
@@ -126,7 +126,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
 
               <br />
 
-              <label>Phone Number</label>
+              <label>Phone Number<span class="required">*</span></label>
               <Form.Control
                 name="phoneNumber"
                 id="phoneNumber"
@@ -142,7 +142,7 @@ const EventModelScreen = ({ data, closeDialog }) => {
 
               <br />
 
-              <label>Address</label>
+              <label>Address<span class="required">*</span></label>
               <Form.Control
                 name="address"
                 id="address"

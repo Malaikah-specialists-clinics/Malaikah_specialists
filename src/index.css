@@ -552,6 +552,10 @@ h3 {
 .nav.nav-pills .nav-link.active {
   background-color: #0a1f3e;
 }
+.nav.nav-pills  .nav-link{
+  background-color: #d3d3d3;
+  color: #0a1f3e;
+}
 
 /* styling the application forms */
 #applicationfield {
@@ -619,4 +623,7 @@ h3 {
   background-color: #020e20;
   color: #ffffff;
   
+}
+.required {
+  color: red;
 }

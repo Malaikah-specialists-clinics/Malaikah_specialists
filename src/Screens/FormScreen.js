@@ -86,7 +86,7 @@ const FormPage = ({ closeDialog }) => {
                   axios.post(`${base_url}/bookappts`, patientObject, {
                     headers: { 'Access-Control-Allow-Origin': '*' },
                   });
-                  window.location.href = '/#/profile';
+                  window.location.href = '/#/appts';
                   if (closeDialog) {
                     closeDialog();
                   }
@@ -98,7 +98,7 @@ const FormPage = ({ closeDialog }) => {
                 <Form onSubmit={formik.handleSubmit}>
                   <Row>
                     <Col md>
-                      <Form.Label id="field">Email</Form.Label>
+                      <Form.Label id="field">Email<span class="required">*</span></Form.Label>
                       <Form.Control
                         placeholder="winniek@example.com"
                         id="form-control email"
@@ -116,7 +116,7 @@ const FormPage = ({ closeDialog }) => {
                   <Col md className="">
                     <Row>
                       <Col md className="inputField">
-                        <Form.Label id="field">Department</Form.Label>
+                        <Form.Label id="field">Department<span class="required">*</span></Form.Label>
                         <Form.Select
                           id="form-control dept"
                           name="sdept"
@@ -136,7 +136,7 @@ const FormPage = ({ closeDialog }) => {
                         ) : null}
                       </Col>
                       <Col md>
-                        <Form.Label id="field">Date Of Appointment</Form.Label>
+                        <Form.Label id="field">Date Of Appointment<span class="required">*</span></Form.Label>
                         <Form.Control
                           type="date"
                           name="doa"
@@ -153,7 +153,7 @@ const FormPage = ({ closeDialog }) => {
                     </Row>
                     <Row>
                       <Col md>
-                        <Form.Label id="field">Time Of Appointment</Form.Label>
+                        <Form.Label id="field">Time Of Appointment<span class="required">*</span></Form.Label>
                         <Form.Control
                           type="time"
                           name="toa"
@@ -169,7 +169,7 @@ const FormPage = ({ closeDialog }) => {
                       </Col>
 
                       <Col md>
-                        <Form.Label id="field">Mode of appointment</Form.Label>
+                        <Form.Label id="field">Mode of appointment<span class="required">*</span></Form.Label>
                         <Form.Select
                           name="moa"
                           value={formik.values.moa}
@@ -189,7 +189,7 @@ const FormPage = ({ closeDialog }) => {
                     </Row>
 
                     <Form.Label id="field">
-                      What is your primary medical issue?
+                      What is your primary medical issue?<span class="required">*</span>
                     </Form.Label>
                     <Form.Control
                       name="pmi"
@@ -203,7 +203,7 @@ const FormPage = ({ closeDialog }) => {
                     ) : null}
                     <Row>
                       <Col>
-                        <Button type="submit" id="Btn">
+                        <Button type="submit" id="Btn" >
                           BOOK APPOINTMENT
                         </Button>
                       </Col>

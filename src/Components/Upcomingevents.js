@@ -6,10 +6,8 @@ import { base_url } from '../Constants/index.js';
 
 const Upcomingevents = () => {
   const [events, setEvents] = useState([]);
+
   var currentDate = new Date();
-  
-
-
   var dd = String(currentDate.getDate()).padStart(2, '0');
   var mm = String(currentDate.getMonth() + 1).padStart(2, '0');
   var yyyy = currentDate.getFullYear();
@@ -20,9 +18,6 @@ const Upcomingevents = () => {
   // var endTime = performance.now();
   // currentTime = String(endTime - startTime)
 
-
-
-  
 
   useEffect(() => {
     axios
@@ -53,7 +48,7 @@ const Upcomingevents = () => {
               margin: 'auto',
             }}
           >
-            {events.map((events_entity) => (events_entity.date > currentDate) ? (
+            {events.map((events_entity) => (events_entity.date > currentDate ) ? (
               <Row style={{ height: 'auto' }}>
               
                 <Col
