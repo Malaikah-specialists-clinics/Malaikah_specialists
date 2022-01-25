@@ -1,44 +1,46 @@
 import React from "react";
 import SideNavbar from "../Components/Sidenav/SideNavbar";
-import { Col, Container, Row, Tab, Tabs } from "react-bootstrap";
+import { Col, Container, Row, Tab, Tabs,} from "react-bootstrap";
 import Pastappts from "../Components/Appointment/Pastappts"
 import Upcomingappts from "../Components/Upcomingappts"
+
+
 
 const Appointments = () => {
   return (
     <>
-    <div style={{ background: "#f8f8f8" }}>
-      <Container>
-        <Row>
-          <Col sm={4}>
-            <SideNavbar />
-          </Col>
-          <Col
-            style={{
-              marginTop: "5%",
-              paddingTop: "2%",
-              textAlign: "center",
-            }}
-            sm={8}
-          >
-             <Tabs
+      <div style={{ background: '#f8f8f8' }}>
+        <Container>
+          <Row>
+            <Col sm={4}>
+              <SideNavbar />
+            </Col>
+
+            <Col
+              style={{
+                marginTop: '5%',
+                paddingTop: '2%',
+                textAlign: 'center',
+              }}
+              sm={8}
+            >
+              <Tabs
                 defaultActiveKey="profile"
                 id="uncontrolled-tab-example"
                 className="mb-3"
                 variant="pills"
-                
               >
                 <Tab eventKey="home" title="Upcoming" id="tab-pills">
-                <Upcomingappts />
+                  <Upcomingappts />
                 </Tab>
                 <Tab eventKey="profile" title="Past" id="tab-pills">
-                 <Pastappts />
+                  <Pastappts />
                 </Tab>
               </Tabs>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </>
   );
 };

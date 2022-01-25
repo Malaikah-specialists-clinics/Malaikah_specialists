@@ -86,7 +86,7 @@ const FormPage = ({ closeDialog }) => {
                   axios.post(`${base_url}/bookappts`, patientObject, {
                     headers: { 'Access-Control-Allow-Origin': '*' },
                   });
-                  window.location.href = '/#/profile';
+                  window.location.href = '/#/appts';
                   if (closeDialog) {
                     closeDialog();
                   }
@@ -203,7 +203,7 @@ const FormPage = ({ closeDialog }) => {
                     ) : null}
                     <Row>
                       <Col>
-                        <Button type="submit" id="Btn">
+                        <Button type="submit" id="Btn" >
                           BOOK APPOINTMENT
                         </Button>
                       </Col>
