@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import SideNavbar from "../Components/Sidenav/SideNavbar";
 import { Col, Container, Row, Tab, Tabs,} from "react-bootstrap";
 import Pastappts from "../Components/Appointment/Pastappts"
@@ -6,7 +6,9 @@ import Upcomingappts from "../Components/Upcomingappts"
 
 
 
+
 const Appointments = () => {
+  
   return (
     <>
       <div style={{ background: '#f8f8f8' }}>
@@ -29,6 +31,7 @@ const Appointments = () => {
                 id="uncontrolled-tab-example"
                 className="mb-3"
                 variant="pills"
+                style={{justifyContent: 'space-around'}}
               >
                 <Tab eventKey="home" title="Upcoming" id="tab-pills">
                   <Upcomingappts />
