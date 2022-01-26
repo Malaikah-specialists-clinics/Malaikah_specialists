@@ -1,7 +1,6 @@
 
 .inline {
-    padding: 0 4px;
-  
+    padding: 1%;
     height: auto;
   }
   
@@ -16,5 +15,8 @@
     font-size: 15px;
     color: #494949a6;
     text-align: left;
-    font-weight: lighter;
+    font-weight: bolder;
+  }
+  .spanappts {
+    color: #0a1f3e;
   }
