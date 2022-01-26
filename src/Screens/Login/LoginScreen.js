@@ -12,13 +12,6 @@ class Login extends Component {
       showPassword: false,
     };
   }
-  // constructor(){
-  //   super()
-  //   this.state={
-  //     showPassword:false
-  //   }
-  // }
-
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -30,20 +23,22 @@ class Login extends Component {
       password: this.state.password,
     };
     axios
-      .post(`${base_url}/auth/login`, loginObject, {
-        headers: { "Access-Control-Allow-Origin": "*" },
-      })
+    .post(`${base_url}/auth/login`, loginObject, {
+      headers: { 'Access-Control-Allow-Origin': '*' },
+    })
 
-      .then((res) => {
-        localStorage.setItem("accessToken", res.data.accessToken);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    this.props.history.push("/profile");
+    .then((res) => {
+      if (res.data.accessToken) {
+        localStorage.setItem("user", JSON.stringify(res.data));
+      }
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+    this.props.history.push("/profile");  
     window.location.reload();
-  }
+}
 
   render() {
     return (
