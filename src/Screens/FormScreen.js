@@ -5,6 +5,11 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
 import { Formik } from 'formik';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 
 const validateBookappt = (bookapptDetails) => {
   const errors = {};
@@ -40,28 +45,38 @@ const validateBookappt = (bookapptDetails) => {
   return errors;
 };
 
-
+toast.configure();
 const FormPage = ({ closeDialog }) => {
   // alertText = () => {
   //   alert('You have an appointment!!, Please check your email');
   // };
+  const notify = () => {
+    toast.success('successfully registered', {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 4000,
+    });
+  };
 
   return (
     <>
       <div
-        style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', marginTop:'1%' }}
+        style={{
+          width: '90%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          marginTop: '1%',
+        }}
       >
         <Row>
-        <Col md className="pic">
-          <img
-            src="/images/wnn-06.png"
-            alt="doctor"
-             style={{ width: '600px', height: 'auto' }}
-          />
-     
-      </Col>
+          <Col md className="pic">
+            <img
+              src="/images/wnn-06.png"
+              alt="doctor"
+              style={{ width: '600px', height: 'auto' }}
+            />
+          </Col>
           <Col md className="form">
-          <h4>Patient Information </h4>
+            <h4>Patient Information </h4>
             <Formik
               initialValues={{
                 email: '',
@@ -98,7 +113,9 @@ const FormPage = ({ closeDialog }) => {
                 <Form onSubmit={formik.handleSubmit}>
                   <Row>
                     <Col md>
-                      <Form.Label id="field">Email<span class="required">*</span></Form.Label>
+                      <Form.Label id="field">
+                        Email<span class="required">*</span>
+                      </Form.Label>
                       <Form.Control
                         placeholder="winniek@example.com"
                         id="form-control email"
@@ -116,7 +133,9 @@ const FormPage = ({ closeDialog }) => {
                   <Col md className="">
                     <Row>
                       <Col md className="inputField">
-                        <Form.Label id="field">Department<span class="required">*</span></Form.Label>
+                        <Form.Label id="field">
+                          Department<span class="required">*</span>
+                        </Form.Label>
                         <Form.Select
                           id="form-control dept"
                           name="sdept"
@@ -136,7 +155,9 @@ const FormPage = ({ closeDialog }) => {
                         ) : null}
                       </Col>
                       <Col md>
-                        <Form.Label id="field">Date Of Appointment<span class="required">*</span></Form.Label>
+                        <Form.Label id="field">
+                          Date Of Appointment<span class="required">*</span>
+                        </Form.Label>
                         <Form.Control
                           type="date"
                           name="doa"
@@ -153,7 +174,9 @@ const FormPage = ({ closeDialog }) => {
                     </Row>
                     <Row>
                       <Col md>
-                        <Form.Label id="field">Time Of Appointment<span class="required">*</span></Form.Label>
+                        <Form.Label id="field">
+                          Time Of Appointment<span class="required">*</span>
+                        </Form.Label>
                         <Form.Control
                           type="time"
                           name="toa"
@@ -169,7 +192,9 @@ const FormPage = ({ closeDialog }) => {
                       </Col>
 
                       <Col md>
-                        <Form.Label id="field">Mode of appointment<span class="required">*</span></Form.Label>
+                        <Form.Label id="field">
+                          Mode of appointment<span class="required">*</span>
+                        </Form.Label>
                         <Form.Select
                           name="moa"
                           value={formik.values.moa}
@@ -189,7 +214,8 @@ const FormPage = ({ closeDialog }) => {
                     </Row>
 
                     <Form.Label id="field">
-                      What is your primary medical issue?<span class="required">*</span>
+                      What is your primary medical issue?
+                      <span class="required">*</span>
                     </Form.Label>
                     <Form.Control
                       name="pmi"
@@ -203,7 +229,7 @@ const FormPage = ({ closeDialog }) => {
                     ) : null}
                     <Row>
                       <Col>
-                        <Button type="submit" id="Btn" >
+                        <Button onClick={notify} type="submit" id="Btn">
                           BOOK APPOINTMENT
                         </Button>
                       </Col>
