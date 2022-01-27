@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const validateUser = (regUser) => {
- 
   const errors = {};
 
   if (!regUser.name) {
