@@ -1,10 +1,12 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
 import { Formik} from 'formik';
-import Snackbar from '../Components/notification/Snackbar.js';
+// import Snackbar from '../Components/notification/Snackbar.js';
 // import * as Yup from 'yup';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const validateRegister = (regPerson) => {
   const errors = {};
@@ -37,12 +39,12 @@ const validateRegister = (regPerson) => {
   return errors;
 };
 
-const SnackbarType = {
-  success: 'success',
-  fail: 'fail',
-};
+// const SnackbarType = {
+//   success: 'success',
+//   fail: 'fail',
+// };
 
-
+toast.configure();
 const EventModelScreen = ({ data, closeDialog }) => {
   // const registereventSchema = Yup.object().shape({
   //   name: Yup.string()
@@ -52,7 +54,13 @@ const EventModelScreen = ({ data, closeDialog }) => {
   //   email: Yup.string().email('Invalid email').required('Required'),
   // });
  
- const snackbarRef = useRef(null);
+//  const snackbarRef = useRef(null);
+const notify = () => {
+  toast.success('successfully registered', {
+    position: toast.POSITION.TOP_CENTER,
+    autoClose: 4000,
+  });
+};
   return (
     <>
       <Modal.Header closeButton>
@@ -172,17 +180,18 @@ const EventModelScreen = ({ data, closeDialog }) => {
                 style={{ width: '100%' }}
                 type="submit"
                 className="showSnackbarBttn"
-                onClick={() => {
-                  snackbarRef.current.show();
-                }}
+                // onClick={() => {
+                //   snackbarRef.current.show();
+                // }}
+                onClick={notify}
               >
                 SUBMIT
               </Button>
-              <Snackbar
+              {/* <Snackbar
                 ref={snackbarRef}
-                message=" Successfully Regsitered!..Check email for details"
+                message=" Successfully Regsitered!."
                 type={SnackbarType.success}
-              />
+              /> */}
             </form>
           )}
         </Formik>

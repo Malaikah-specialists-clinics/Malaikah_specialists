@@ -110,7 +110,7 @@ const Moeventscreen = (props) => {
     );
   } else {
     return (
-      <div className="event-alert" variant="success">
+      <div className="event-alert" variant="success" style={{marginTop:'50%'}}>
         <Alert variant="success">NO EVENTS YET</Alert>
       </div>
     );

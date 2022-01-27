@@ -9,7 +9,7 @@ const Snackbar = forwardRef((props, ref) => {
       setShowSnackbar(true);
       setTimeout(() => {
         setShowSnackbar(true);
-      }, 8000);
+      }, 15000);
     },
   }));
   return (
