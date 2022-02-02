@@ -1,7 +1,7 @@
 import React from "react";
 import SideNavbar from "../Components/Sidenav/SideNavbar";
 import { Col, Container, Row, Alert } from "react-bootstrap";
-import AuthService from "../services/auth.service";
+import AuthService from "../Services/auth.service";
 
 const Profile = () => {
   const currentUser = AuthService.getCurrentUser();
