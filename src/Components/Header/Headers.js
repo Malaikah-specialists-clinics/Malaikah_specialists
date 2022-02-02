@@ -9,7 +9,7 @@ import { RiLoginCircleFill } from 'react-icons/ri';
 
 function Header() {
   const handleLogout = () => {
-		localStorage.removeItem("accessToken");
+		localStorage.removeItem("user");
 	//  window.location.reload();
 	};
   return (

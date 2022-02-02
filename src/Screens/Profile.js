@@ -1,34 +1,24 @@
-import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import React from "react";
 import SideNavbar from "../Components/Sidenav/SideNavbar";
-import { Col, Container, Row } from "react-bootstrap";
-import AuthService from "../Services/auth.service";
+import { Col, Container, Row, Alert } from "react-bootstrap";
+import AuthService from "../services/auth.service";
 
-export default class Profile extends Component {
-  constructor(props) {
-    super(props);
+const Profile = () => {
+  const currentUser = AuthService.getCurrentUser();
 
-    this.state = {
-      redirect: null,
-      userReady: false,
-      currentUser: { name: "" }
-    };
+  if(!currentUser){
+    return(
+      <Alert
+      className="alert"
+        variant=""
+        style={{margin: '10% 0'}}>
+        <p>
+        USER UNAVAILABLE
+        </p>
+      
+      </Alert>
+    )
   }
-
-  componentDidMount() {
-    const currentUser = AuthService.getCurrentUser();
-
-    if (!currentUser) this.setState({ redirect: "/" });
-    this.setState({ currentUser: currentUser, userReady: true })
-  }
-
-  render() {
-    if (this.state.redirect) {
-      return <Redirect to={this.state.redirect} />
-    }
-
-    const { currentUser } = this.state;
-
     return (
         <div style={{ background: "#f8f8f8" }} className="formcontent">
         <Container>
@@ -95,4 +85,4 @@ export default class Profile extends Component {
       </div>
     );
   }
-}
+  export default Profile;

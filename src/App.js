@@ -16,7 +16,7 @@ import EmeservSreen from './Screens/EmeservSreen'
 import Moeventscreen from './Screens/Moeventscreen';
 import Home from './Components/HomeFolder/Home';
 import SpecialitiesScreen from './Screens/SpecialitiesScreen'
-import LoginScreen from './Screens/Login/LoginScreen';
+import LoginScreen from './Screens/LoginScreen';
 import Staffscreen from './Screens/Staffscreen'
 import Appointments from './Screens/Appointments'
 import Applicationforms from './EducationPortal/Applicationforms'

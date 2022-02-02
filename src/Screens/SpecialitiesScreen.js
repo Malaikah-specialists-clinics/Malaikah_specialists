@@ -76,7 +76,7 @@ const Specialities =()=> {
                 <p>{Specialties.description}</p>
                 <Row>
                   <Col xs={12} lg={6}>
-                    <Accordion defaultActiveKey="0">
+                    <Accordion>
                       <CustomToggle eventKey="0" >VIEW DETAILS</CustomToggle>
                       <Accordion.Collapse eventKey="0">
                         <p>{Specialties.specialtiesDetails}</p>

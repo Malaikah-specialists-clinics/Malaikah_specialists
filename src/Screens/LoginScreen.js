@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import axios from "axios";
-import { base_url } from "../../Constants/index.js";
+import { base_url } from "../Constants/index.js";
 
 class Login extends Component {
   constructor(props) {
@@ -30,13 +30,14 @@ class Login extends Component {
       if (res.data.accessToken) {
         localStorage.setItem("user", JSON.stringify(res.data));
       }
+      // return res.data;
       console.log(res.data);
     })
     .catch((err) => {
       console.log(err);
     });
-    this.props.history.push("/form");  
-    window.location.reload();
+     this.props.history.push("/profile");  
+     window.location.reload();
 }
 
   render() {
@@ -105,7 +106,9 @@ class Login extends Component {
                     </div>
 
                     <div style={{ marginTop: '5%' }}>
-                      <Button type="submit" id="Btn" onSubmit="user()">
+                      <Button type="submit" id="Btn"
+                      onSubmit="user()"
+                       >
                         LOGIN
                       </Button>
                     </div>

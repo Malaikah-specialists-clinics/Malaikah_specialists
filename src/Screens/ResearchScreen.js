@@ -61,11 +61,16 @@ const Research = () => {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Comments</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+        <div style={{border: 'none', background:'aliceblue'}}>
+        user : Comment <br/>
+     <input type='text' placeholder="reply"/>
+        </div>
+        </Modal.Body>
         <Modal.Footer>
-          <input />
+          <input type='text' name='comment'/>
         </Modal.Footer>
       </Modal>
                 </Col>
