@@ -2,6 +2,7 @@ import React from "react";
 import SideNavbar from "../Components/Sidenav/SideNavbar";
 import { Col, Container, Row, Alert } from "react-bootstrap";
 import AuthService from "../Services/auth.service";
+import PictureUploader from "../Components/Profile/profilepic";
 
 const Profile = () => {
   const currentUser = AuthService.getCurrentUser();
@@ -36,9 +37,10 @@ const Profile = () => {
               sm={8}
             >
               <div style={{padding: '3%', marginBottom: '3%', background: "#fcfcfc", }}>
-                <img src="/images/79285222.jpeg" id="photo" alt="" /> <br />
+                <PictureUploader />
+                {/* <img src="/images/79285222.jpeg" id="photo" alt="" /> <br />
                 <input type="file" id="file" />
-                <label style={{fontWeight:'bold', cursor: 'pointer', fontSize:'20px'}} for="file">Change Picture</label>
+                <label style={{fontWeight:'bold', cursor: 'pointer', fontSize:'20px'}} for="file">Change Picture</label> */}
                 <div style={{ textAlign: "left" }}>
                   <h4>{currentUser.name}</h4>
                 </div>
