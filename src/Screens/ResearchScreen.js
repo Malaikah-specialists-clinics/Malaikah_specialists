@@ -1,24 +1,39 @@
-import React, {useState}from "react";
-import { Col, Row, Container, Modal, Button } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Col, Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { base_url } from '../Constants';
 
 const Research = () => {
-  
-  
- const [show, setShow] = useState(false);
+  const [research, setResearch] = useState([]);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+   useEffect(() => {
+     axios
+       .get(`${base_url}/research`)
+       .then((res) => {
+         setResearch(res.data);
+         console.log('data', res);
+       })
+       .catch((err) => {
+         console.log({ message: err });
+       });
+   }, []);
+  
+  
+//  const [show, setShow] = useState(false);
+
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
     return (
       <>
         <div className="res-bimg">
           <div className="res-bcolor">
             <h1
               style={{
-                fontSize: "80px",
-                padding: "210px 10px 20px",
-                color: "whitesmoke",
-                fontWeight: "bolder",
+                fontSize: '80px',
+                padding: '210px 10px 20px',
+                color: 'whitesmoke',
+                fontWeight: 'bolder',
               }}
             >
               Our
@@ -28,70 +43,54 @@ const Research = () => {
           </div>
         </div>
         <Container>
-        <div
-          class="row"
-          style={{ height: "auto", marginTop: "30px" }}
-        >
-          <div class="col-sm-4">
-            <div class="card-box" id="card4">
-              <div class="card-thumbnail">
-                <img
-                  className="card-image"
-                  src="https://media.msf.org/AssetLink/407080s4p5src3vqpf1mra5oq7t4t8w5.jpg"
-                  alt=""
-                />
+          {research.map((research_entity) => (
+            <div class="row" style={{ height: 'auto', marginTop: '30px' }}>
+              <div class="col-sm-4">
+                <div class="card-box" id="card4">
+                  <div class="card-thumbnail">
+                    <img
+                      className="card-image"
+                      src={research_entity.image}
+                      alt=" "
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div id="card5">
+                  <h2>{research_entity.title}</h2>
+                  <Row>
+                  <Col style={{ marginTop: '5px' }}>{research_entity.date}</Col>
+                  </Row>
+
+                  <p>{research_entity.content}</p>
+                  <Row>
+                    {/* <Col md style={{ marginTop: "5px" }}>
+                  <Button style={{background:'#0a1f3e', border: 'none'}} >
+                    Comments
+                  </Button>
+                </Col> */}
+                    <Col md style={{ marginTop: '5px' }}>
+                      <Link
+                        class="btn btn-primary"
+                        to="/readmore"
+                        role="button"
+                        style={{
+                          background: '#FBBB35',
+                          color: 'black',
+                          border: 'none',
+                        }}
+                      >
+                        Read More
+                      </Link>
+                    </Col>
+                  </Row>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-8">
-            <div id="card5">
-              <h2>Recent Publication</h2>
-
-              <p>A research about COVID 19 vaccine in Africa ......</p>
-              <Row>
-                <Col style={{ marginTop: "5px" }}>
-                  
-                    25/04/2021
-                 
-                </Col>
-                <Col md style={{ marginTop: "5px" }}>
-                  <Button style={{background:'#0a1f3e', border: 'none'}} onClick={handleShow}>
-      Comments
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Comments</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <div style={{border: 'none', background:'aliceblue'}}>
-        user : Comment <br/>
-     <input type='text' placeholder="reply"/>
-        </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <input type='text' name='comment'/>
-        </Modal.Footer>
-      </Modal>
-                </Col>
-                <Col md style={{ marginTop: "5px" }}>
-                  <Link
-                    class="btn btn-primary"
-                    to=""
-                    role="button"
-                    style={{ background: "#FBBB35", color: "black", border: 'none' }}
-                  >
-                    Read More
-                  </Link>
-                </Col>
-              </Row>
-            </div>
-          </div>
-        </div>
-
-        
+          ))}
         </Container>
-        </>
+      </>
     );
  
 }
