@@ -48,7 +48,8 @@ const Upcomingevents = () => {
               margin: 'auto',
             }}
           >
-            {events.map((events_entity) => (events_entity.date > currentDate ) ? (
+            {events.map((events_entity) => (
+              events_entity.date > currentDate ) ? (
               <Row style={{ height: 'auto' }}>
               
                 <Col

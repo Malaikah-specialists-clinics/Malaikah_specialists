@@ -2,8 +2,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
-import axios from "axios";
-import { base_url } from "../Constants/index.js";
+import axios from 'axios';
+import { base_url } from '../Constants/index.js';
 import { Formik } from "formik";
 
 
@@ -116,7 +116,7 @@ const Register = ({ closeDialog }) => {
                   // .then((res)=>{
                   //   localStorage.setItem('access_token', res.data.access_token)
                   // });
-                  window.location.href = '/#/login';
+                  window.location.href = '/#/profile';
                   if (closeDialog) {
                     closeDialog();
                   }
@@ -294,7 +294,7 @@ const Register = ({ closeDialog }) => {
                   </Row>
                   <Row>
                     <Col style={{ marginTop: '5%' }}>
-                      <Button type="submit" href="#profile" id="Btn">
+                      <Button type="submit" id="Btn">
                         REGISTER
                       </Button>
                     </Col>

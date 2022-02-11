@@ -3,8 +3,8 @@ import { Col, Row, Container, Accordion } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import { base_url } from '../Constants';
+import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 
 const Specialities =()=> {
   function CustomToggle({ children, eventKey }) {
@@ -24,7 +24,6 @@ const Specialities =()=> {
   }
   
    const [specialty, setSpecialties] = useState([]);
-
     useEffect(() => {
     axios
       .get(`${base_url}/specialties`)
@@ -77,7 +76,7 @@ const Specialities =()=> {
                 <p>{Specialties.description}</p>
                 <Row>
                   <Col xs={12} lg={6}>
-                    <Accordion defaultActiveKey="0">
+                    <Accordion>
                       <CustomToggle eventKey="0" >VIEW DETAILS</CustomToggle>
                       <Accordion.Collapse eventKey="0">
                         <p>{Specialties.specialtiesDetails}</p>

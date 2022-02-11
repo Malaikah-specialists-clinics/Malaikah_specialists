@@ -1,36 +1,64 @@
-import React, { useState } from 'react'
-
+import React, { useState } from "react";
 const Profilepic = () => {
-    const [image, setImage] = useState("");
-    const [url, setUrl] = useState("")
-    const uploadImage = () => {
-        const data = new FormData()
-        data.append("file", image)
-        data.append("upload_preset", "Malaikah")
-        data.append("cloud_name", "malaikah-specialists")
-        fetch("https://api.cloudinary.com/v1_1/malaikah-specialists/image/upload", {
-            method: "post",
-            body:  data
-        })
-        .then(resp => resp.json())
-        .then(data =>{
-            setUrl(data.url)
-        })
-        .catch(err => console.log(err))
-    }
-    return (
-        <div>
+const [image, setImage] = useState("");
+  const [loading, setLoading] = useState(false);
+  
 
-            <div>
-                <img src={url} alt='profilepic'  id="photo" />
-            </div>
-            <div>
-                <input type="file" onChange={(e) => setImage(e.target.files[0])}></input>
-                <label style={{fontWeight:'bold', cursor: 'pointer', fontSize:'20px'}} onClick={uploadImage}>Change Picture</label>
-               
-            </div>
-        </div>
-    )
-}
+//   const uploadImage = () => {
+//     const formData = new FormData();
+//     formData.append("file", image);
+//     formData.append("upload_preset", "Malaikah");
 
-export default Profilepic
+//     axios
+//       .post(
+//         "https://api.cloudinary.com/v1_1/malaikah-specialists/image/upload",
+//         formData
+//       )
+//       .then((res) => console.log(res))
+//       .then((formData) => {
+//         setPublicId(formData.public_id);
+//       })
+//   };
+const uploadImage = async e=>{
+    const files = e.target.files
+    const data = new FormData();
+        data.append("file", files[0]);
+       data.append("upload_preset", "Malaikah");
+       setLoading(true)
+
+    //    const res = axios.post("https://api.cloudinary.com/v1_1/malaikah-specialists/image/upload",data)
+    //         .then((res) => console.log(res))
+            const res = await fetch("https://api.cloudinary.com/v1_1/malaikah-specialists/image/upload", {
+                method: 'POST',
+                body: data
+            })
+            const file = await res.json()
+            console.log(file)
+
+            setImage(file.secure_url)
+            setLoading(false)
+          }
+        
+
+  return (
+ <div>
+   <div id="photo">
+       {
+           loading? (
+               <h3 style={{color: 'black'}}>Loading...</h3>
+           ): (
+               <img src={image} alt= '' style={{width: '200px'}} />
+           )
+       }
+      </div>
+ 
+        <input
+          type="file"
+          name="file"
+          onChange={uploadImage}
+        ></input>   
+     </div>
+  );
+};
+
+export default Profilepic;

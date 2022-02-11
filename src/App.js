@@ -16,7 +16,7 @@ import EmeservSreen from './Screens/EmeservSreen'
 import Moeventscreen from './Screens/Moeventscreen';
 import Home from './Components/HomeFolder/Home';
 import SpecialitiesScreen from './Screens/SpecialitiesScreen'
-import LoginScreen from './Screens/Login/LoginScreen';
+import LoginScreen from './Screens/LoginScreen';
 import Staffscreen from './Screens/Staffscreen'
 import Appointments from './Screens/Appointments'
 import Applicationforms from './EducationPortal/Applicationforms'
@@ -28,6 +28,7 @@ import StudentDashboard from './EducationPortal/StudentDashboard';
 import Programs from './EducationPortal/Programs'
 import StudentProfile from './EducationPortal/StudentProfile';
 import Profile from './Screens/Profile'
+import Readmore from './Screens/Readmore'; 
 
 
 require('dotenv').config();
@@ -60,6 +61,7 @@ function App() {
       <Route path="/StudentDashboard" component={StudentDashboard}></Route>
       <Route path="/StudentProfile" component={StudentProfile}></Route>
       <Route path="/programs" component={Programs}></Route>
+      <Route path="/readmore" component={Readmore}></Route>
       <Footer />
     </Router>
   );
