@@ -1,34 +1,25 @@
-import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import React from "react";
 import SideNavbar from "../Components/Sidenav/SideNavbar";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Alert } from "react-bootstrap";
 import AuthService from "../Services/auth.service";
+import PictureUploader from "../Components/Profile/profilepic";
 
-export default class Profile extends Component {
-  constructor(props) {
-    super(props);
+const Profile = () => {
+  const currentUser = AuthService.getCurrentUser();
 
-    this.state = {
-      redirect: null,
-      userReady: false,
-      currentUser: { name: "" }
-    };
+  if(!currentUser){
+    return(
+      <Alert
+      className="alert"
+        variant=""
+        style={{margin: '10% 0'}}>
+        <p>
+        USER UNAVAILABLE
+        </p>
+      
+      </Alert>
+    )
   }
-
-  componentDidMount() {
-    const currentUser = AuthService.getCurrentUser();
-
-    if (!currentUser) this.setState({ redirect: "/" });
-    this.setState({ currentUser: currentUser, userReady: true })
-  }
-
-  render() {
-    if (this.state.redirect) {
-      return <Redirect to={this.state.redirect} />
-    }
-
-    const { currentUser } = this.state;
-
     return (
         <div style={{ background: "#f8f8f8" }} className="formcontent">
         <Container>
@@ -46,9 +37,10 @@ export default class Profile extends Component {
               sm={8}
             >
               <div style={{padding: '3%', marginBottom: '3%', background: "#fcfcfc", }}>
-                <img src="/images/79285222.jpeg" id="photo" alt="" /> <br />
+                <PictureUploader />
+                {/* <img src="/images/79285222.jpeg" id="photo" alt="" /> <br />
                 <input type="file" id="file" />
-                <label style={{fontWeight:'bold', cursor: 'pointer', fontSize:'20px'}} for="file">Change Picture</label>
+                <label style={{fontWeight:'bold', cursor: 'pointer', fontSize:'20px'}} for="file">Change Picture</label> */}
                 <div style={{ textAlign: "left" }}>
                   <h4>{currentUser.name}</h4>
                 </div>
@@ -95,4 +87,4 @@ export default class Profile extends Component {
       </div>
     );
   }
-}
+  export default Profile;

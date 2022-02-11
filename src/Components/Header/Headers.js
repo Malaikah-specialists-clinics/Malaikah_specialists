@@ -1,20 +1,48 @@
 import React from 'react';
 import { Nav, Navbar, Row, Col, NavDropdown, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-
+import AuthService from "../../Services/auth.service";
 
 import { MdEmail } from 'react-icons/md';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { RiLoginCircleFill } from 'react-icons/ri';
 
 function Header() {
+  const currentUser = AuthService.getCurrentUser();
   const handleLogout = () => {
-		localStorage.removeItem("accessToken");
-	//  window.location.reload();
+		localStorage.removeItem("user");
+	 window.location.href="/";
 	};
   return (
+    
     <>
       <div className="sticky-top">
+        {
+        currentUser? (
+          <Navbar  expand="md" style={{ padding: '0', backgroundColor: '#EEEEEE' }}>
+          <Container>
+            <Navbar.Brand style={{ fontSize: 'medium', color: '#0a1f3e' }}>
+              <MdEmail />
+              info@malaikahgroup.com
+            </Navbar.Brand>
+            <Navbar.Brand style={{ fontSize: 'medium', color: '#0a1f3e' }}>
+              <FaPhoneAlt />
+              0772670952
+            </Navbar.Brand>
+             <NavDropdown title={<span style={{color: '#0a1f3e'}}>{currentUser.name}</span>} id="basic-nav-dropdown" >
+          <NavDropdown.Item href="#profile">My Profile</NavDropdown.Item>
+          <NavDropdown.Item href="#appts">Appointments</NavDropdown.Item>
+          <NavDropdown.Item href="#">Medical history</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item onClick={handleLogout}>LOG OUT</NavDropdown.Item>
+        
+        </NavDropdown>
+          </Container>
+        </Navbar>
+
+        ):(
+
+       
         <Navbar  expand="md" style={{ padding: '0', backgroundColor: '#EEEEEE' }}>
           <Container>
             <Navbar.Brand style={{ fontSize: 'medium', color: '#0a1f3e' }}>
@@ -27,7 +55,7 @@ function Header() {
             </Navbar.Brand>
             <Navbar.Brand
               href="#login"
-              onClick={handleLogout}
+              // onClick={handleLogout}
               style={{ fontSize: 'medium', color: '#0a1f3e' }}
             >
               <RiLoginCircleFill />
@@ -35,7 +63,9 @@ function Header() {
             </Navbar.Brand>
           </Container>
         </Navbar>
-
+ )
+        
+}
         <Navbar
           className="navbar"
           variant="dark"
