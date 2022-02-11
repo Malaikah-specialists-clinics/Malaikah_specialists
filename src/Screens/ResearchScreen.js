@@ -77,7 +77,7 @@ const Research = () => {
                 <Col md style={{ marginTop: "5px" }}>
                   <Link
                     class="btn btn-primary"
-                    to=""
+                    to="/readmore"
                     role="button"
                     style={{ background: "#FBBB35", color: "black", border: 'none' }}
                   >
