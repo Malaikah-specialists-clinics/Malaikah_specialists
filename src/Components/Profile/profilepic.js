@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import axios from 'axios';
+import {base_url} from '../../Constants/index'
+
+
 const Profilepic = () => {
 const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -23,19 +27,10 @@ const uploadImage = async e=>{
     const files = e.target.files
     const data = new FormData();
         data.append("file", files[0]);
-       data.append("upload_preset", "Malaikah");
        setLoading(true)
 
-    //    const res = axios.post("https://api.cloudinary.com/v1_1/malaikah-specialists/image/upload",data)
-    //         .then((res) => console.log(res))
-            const res = await fetch("https://api.cloudinary.com/v1_1/malaikah-specialists/image/upload", {
-                method: 'POST',
-                body: data
-            })
-            const file = await res.json()
-            console.log(file)
-
-            setImage(file.secure_url)
+       const res = axios.post(`${base_url}/auth/upload`,data)
+            .then((res) => console.log(res))
             setLoading(false)
           }
         
@@ -55,8 +50,9 @@ const uploadImage = async e=>{
         <input
           type="file"
           name="file"
-          onChange={uploadImage}
-        ></input>   
+          // onChange={uploadImage}
+        ></input>  
+        <button onClick={uploadImage}>Upload</button> 
      </div>
   );
 };
