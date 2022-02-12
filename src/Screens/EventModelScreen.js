@@ -3,7 +3,10 @@ import { Modal, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
 import { Formik} from 'formik';
+// import Snackbar from '../Components/notification/Snackbar.js';
 // import * as Yup from 'yup';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const validateRegister = (regPerson) => {
   const errors = {};
@@ -36,8 +39,12 @@ const validateRegister = (regPerson) => {
   return errors;
 };
 
+// const SnackbarType = {
+//   success: 'success',
+//   fail: 'fail',
+// };
 
-
+toast.configure();
 const EventModelScreen = ({ data, closeDialog }) => {
   // const registereventSchema = Yup.object().shape({
   //   name: Yup.string()
@@ -47,7 +54,13 @@ const EventModelScreen = ({ data, closeDialog }) => {
   //   email: Yup.string().email('Invalid email').required('Required'),
   // });
  
-
+//  const snackbarRef = useRef(null);
+const notify = () => {
+  toast.success('successfully registered', {
+    position: toast.POSITION.TOP_CENTER,
+    autoClose: 4000,
+  });
+};
   return (
     <>
       <Modal.Header closeButton>
@@ -98,7 +111,9 @@ const EventModelScreen = ({ data, closeDialog }) => {
         >
           {(formik) => (
             <form onSubmit={formik.handleSubmit}>
-              <label>Names<span class="required">*</span></label>
+              <label>
+                Names<span class="required">*</span>
+              </label>
               <Form.Control
                 name="name"
                 id="name"
@@ -111,7 +126,9 @@ const EventModelScreen = ({ data, closeDialog }) => {
               ) : null}
               <br />
 
-              <label>Email<span class="required">*</span></label>
+              <label>
+                Email<span class="required">*</span>
+              </label>
               <Form.Control
                 name="email"
                 id="email"
@@ -126,7 +143,9 @@ const EventModelScreen = ({ data, closeDialog }) => {
 
               <br />
 
-              <label>Phone Number<span class="required">*</span></label>
+              <label>
+                Phone Number<span class="required">*</span>
+              </label>
               <Form.Control
                 name="phoneNumber"
                 id="phoneNumber"
@@ -142,7 +161,9 @@ const EventModelScreen = ({ data, closeDialog }) => {
 
               <br />
 
-              <label>Address<span class="required">*</span></label>
+              <label>
+                Address<span class="required">*</span>
+              </label>
               <Form.Control
                 name="address"
                 id="address"
@@ -154,9 +175,23 @@ const EventModelScreen = ({ data, closeDialog }) => {
                 <span style={{ color: 'red' }}>{formik.errors.address}</span>
               ) : null}
 
-              <Button id="Btn" style={{ width: '100%' }} type="submit">
+              <Button
+                id="Btn"
+                style={{ width: '100%' }}
+                type="submit"
+                className="showSnackbarBttn"
+                // onClick={() => {
+                //   snackbarRef.current.show();
+                // }}
+                onClick={notify}
+              >
                 SUBMIT
               </Button>
+              {/* <Snackbar
+                ref={snackbarRef}
+                message=" Successfully Regsitered!."
+                type={SnackbarType.success}
+              /> */}
             </form>
           )}
         </Formik>
