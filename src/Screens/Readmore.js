@@ -1,52 +1,54 @@
-import React, {useEffect, useState} from "react";
-import { Row, Col, Container} from "react-bootstrap";
-import axios from "axios";
-import { base_url } from "../Constants";
+import React from 'react';
+import { Modal, Row, Col, Container } from 'react-bootstrap';
 
+function Readmore({ data }) {
+  return (
+    <>
+      <Modal.Header closeButton>
+        {/* <Modal.Title>
+          <h2 style={{ textAlign: 'center' }}>{data.title}</h2>
+        </Modal.Title> */}
+      </Modal.Header>
+      <Modal.Body>
+        <Container style={{ maxWidth: '100%' }}>
+          <Row>
+            <Col md>
+              <img
+                src={data.image}
+                alt=""
+                style={{ width: '90%', height: 'auto' }}
+              />
+            </Col>
+            <Col
+              md
+              style={{
+                textAlign: 'center',
+                backgroundImage: `url("images/readmore.jpg")`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+              }}
+            >
+              <h2 style={{ marginTop: '10%' }}>{data.title}</h2>
+              <h4>
+                <span>Published By: </span>{data.author}
+              </h4>
+              <h4>{data.date}</h4>
+            </Col>
+          </Row>
+        </Container>
 
-
-
-function Readmore() {
-    const [research, setResearch] = useState([]);
-    useEffect(() => {
-        axios
-            .get(`${base_url}/research`)
-            .then((res) => {
-                setResearch(res.data);
-                console.log("This is readmore", res);
-            })
-            .catch((err) => {
-                console.log({ message: err });
-            });
-    }, []);
-
-    return (
-      <>
-        {research.map((research_entity) => (
-          <Container>
-            <h2 style={{ textAlign: 'center' }}>{research_entity.title}</h2>
-
-            <Row style={{ margin: 'auto' }}>
-              <Col>
-                <img
-                  src={research_entity.image}
-                  alt=""
-                  style={{ width: '50%', textAlign: 'center' }}
-                />
-              </Col>
-            </Row>
-            <Row>
-              <Col md>
-                <article style={{ marginTop: '1%' }}>
-                  {research_entity.article}
-                </article>
-              </Col>
-            </Row>
-            <hr style={{ borderTop: '2px solid gray' }} />
-          </Container>
-        ))}
-      </>
-    );
+        <Container
+          style={{ marginTop: '2%', wordSpacing: '8px', maxWidth: '100%' }}
+        >
+          <Row>
+            <Col md>
+              <article>{data.summary} {data.content}</article>
+            </Col>
+          </Row>
+        </Container>
+        {/* <hr style={{ borderTop: '2px solid gray' }} /> */}
+      </Modal.Body>
+    </>
+  );
 }
-
 export default Readmore;

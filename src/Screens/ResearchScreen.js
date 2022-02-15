@@ -1,11 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { Col, Row, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Col, Row, Container, Button, Modal } from "react-bootstrap";
 import axios from "axios";
 import { base_url } from '../Constants';
+import Readmore from './Readmore';
 
-const Research = () => {
+
+
+const Research = (props) => {
   const [research, setResearch] = useState([]);
+  const [researchData, setResearchData] = useState([]);
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
+
+   const handleClose = () => setShow(false);
+
+  const handleShow = (data) => {
+    console.log(data);
+    setResearchData(data);
+    setShow(true);
+    setFullscreen(true);
+  };
 
    useEffect(() => {
      axios
@@ -18,12 +33,7 @@ const Research = () => {
          console.log({ message: err });
        });
    }, []);
-  
-  
-//  const [show, setShow] = useState(false);
 
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
     return (
       <>
         <div className="res-bimg">
@@ -42,6 +52,14 @@ const Research = () => {
             </h1>
           </div>
         </div>
+        <Modal
+          {...props}
+          onHide={handleClose}
+          show={show}
+          fullscreen={fullscreen}
+        >
+          <Readmore data={researchData} />
+        </Modal>
         <Container>
           {research.map((research_entity) => (
             <div class="row" style={{ height: 'auto', marginTop: '30px' }}>
@@ -60,29 +78,30 @@ const Research = () => {
                 <div id="card5">
                   <h2>{research_entity.title}</h2>
                   <Row>
-                  <Col style={{ marginTop: '5px' }}>{research_entity.date}</Col>
+                    <Col style={{ marginTop: '5px' }}>
+                      {research_entity.date}
+                    </Col>
                   </Row>
 
-                  <p>{research_entity.content}</p>
+                  <p>{research_entity.summary}</p>
+
                   <Row>
-                    {/* <Col md style={{ marginTop: "5px" }}>
-                  <Button style={{background:'#0a1f3e', border: 'none'}} >
-                    Comments
-                  </Button>
-                </Col> */}
                     <Col md style={{ marginTop: '5px' }}>
-                      <Link
+                      <Button
                         class="btn btn-primary"
-                        to="/readmore"
+                        // to="/readmore"
                         role="button"
                         style={{
                           background: '#FBBB35',
                           color: 'black',
                           border: 'none',
                         }}
+                        onClick={() => {
+                          handleShow(research_entity);
+                        }}
                       >
                         Read More
-                      </Link>
+                      </Button>
                     </Col>
                   </Row>
                 </div>
