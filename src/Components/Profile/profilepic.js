@@ -4,7 +4,7 @@ import {base_url} from '../../Constants/index'
 
 
 const Profilepic = () => {
-const [image, setImage] = useState("");
+const [image] = useState("");
   const [loading, setLoading] = useState(false);
   
 
@@ -29,7 +29,7 @@ const uploadImage = async e=>{
         data.append("file", files[0]);
        setLoading(true)
 
-       const res = axios.post(`${base_url}/auth/upload`,data)
+       axios.post(`${base_url}/auth/upload`,data)
             .then((res) => console.log(res))
             setLoading(false)
           }
