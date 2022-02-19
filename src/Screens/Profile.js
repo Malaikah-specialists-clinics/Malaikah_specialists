@@ -1,8 +1,8 @@
 import React from "react";
-import SideNavbar from "../Components/Sidenav/SideNavbar";
+// import SideNavbar from "../Components/Sidenav/SideNavbar";
 import { Col, Container, Row, Alert } from "react-bootstrap";
 import AuthService from "../Services/auth.service";
-import PictureUploader from "../Components/Profile/profilepic";
+// import PictureUploader from "../Components/Profile/profilepic";
 
 const Profile = () => {
   const currentUser = AuthService.getCurrentUser();
@@ -13,9 +13,9 @@ const Profile = () => {
       <div style={{ background: "#f8f8f8" }} className="formcontent">
       <Container>
         <Row>
-          <Col sm={4}>
+          {/* <Col sm={4}>
             <SideNavbar />
-          </Col>
+          </Col> */}
           <Col
             style={{
               marginTop: "5%",
@@ -23,20 +23,28 @@ const Profile = () => {
               textAlign: "center",
               
             }}
-            sm={8}
+         
           >
-            <div style={{padding: '3%', marginBottom: '3%', background: "#fcfcfc", }}>
-              <PictureUploader />
-              {/* <img src="/images/79285222.jpeg" id="photo" alt="" /> <br />
-              <input type="file" id="file" />
-              <label style={{fontWeight:'bold', cursor: 'pointer', fontSize:'20px'}} for="file">Change Picture</label> */}
+            <div style={{padding: '3%', marginBottom: '3%', background: "#fcfcfc" , display: 'flex', justifyContent: 'space-between'}}>
               <div style={{ textAlign: "left" }}>
-                <h4>{currentUser.name}</h4>
+               <h4>PATIENT : <span>{currentUser.name}</span></h4>
+              </div>
+              <div style={{display: 'flex'}}>
+              <a
+            href="https://wa.me/256754238777"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/images/Whatsappbtn.png " alt="" 
+            style={{width: '40px', height: '40px'}}
+            />
+          </a>
+          
               </div>
             </div>
-           
+            <h3 style={{color: '#0a1f3e'}}>Personal Information</h3>
+         
             <div className="info ">
-            <h3>Personal Information</h3>
               <Row>
                 <Col md >
                   <div>

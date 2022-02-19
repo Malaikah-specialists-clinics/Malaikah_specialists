@@ -1,5 +1,4 @@
 import React from 'react';
-import SideNavbar from "../Components/Sidenav/SideNavbar";
 import { Col, Container, Row, Tab, Tabs,} from "react-bootstrap";
 import Pastappts from "../Components/Appointment/Pastappts"
 import Upcomingappts from "../Components/Upcomingappts"
@@ -12,19 +11,18 @@ const Appointments = () => {
   return (
     <>
       <div style={{ background: '#f8f8f8' }}>
-        <Container>
+        <Container >
           <Row>
-            <Col sm={4}>
-              <SideNavbar />
-            </Col>
-
+        
             <Col
               style={{
                 marginTop: '5%',
-                paddingTop: '2%',
+                paddingTop: '3%',
                 textAlign: 'center',
+                background: '#FCFCFC', 
+                borderRadius: '12px'
               }}
-              sm={8}
+             
             >
               <Tabs
                 defaultActiveKey="profile"
