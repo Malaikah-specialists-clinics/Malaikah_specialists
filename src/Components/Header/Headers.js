@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav, Navbar, Row, Col, NavDropdown, Container } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+// import { a } from 'react-router-bootstrap';
 import AuthService from "../../Services/auth.service";
 
 import { MdEmail } from 'react-icons/md';
@@ -30,9 +30,9 @@ function Header() {
               0772670952
             </Navbar.Brand>
              <NavDropdown title={<span style={{color: '#0a1f3e'}}>{currentUser.name}</span>} id="basic-nav-dropdown" >
-          <NavDropdown.Item href="#profile">My Profile</NavDropdown.Item>
-          <NavDropdown.Item href="#appts">Appointments</NavDropdown.Item>
-          <NavDropdown.Item href="#">Medical history</NavDropdown.Item>
+          <NavDropdown.Item href="/profile">My Profile</NavDropdown.Item>
+          <NavDropdown.Item href="/appts">Appointments</NavDropdown.Item>
+          <NavDropdown.Item href="/">Medical history</NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item onClick={handleLogout}>LOG OUT</NavDropdown.Item>
         
@@ -54,7 +54,7 @@ function Header() {
               0772670952
             </Navbar.Brand>
             <Navbar.Brand
-              href="#login"
+              href="/login"
               // onClick={handleLogout}
               style={{ fontSize: 'medium', color: '#0a1f3e' }}
             >
@@ -99,24 +99,16 @@ function Header() {
               </Navbar.Brand>
             </Nav>
             <Nav className="ml-auto nav-items">
-              <LinkContainer to="/">
-                <Nav.Link>Home</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/specscreen">
-                <Nav.Link>Specialties</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/rscreen">
-                <Nav.Link>Research</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/moeevents">
-                <Nav.Link>Events</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/studenthome">
-                <Nav.Link>Education</Nav.Link>
-              </LinkContainer>
+              
+                <Nav.Link href='/'>Home</Nav.Link>
+                <Nav.Link href='/specscreen'>Specialties</Nav.Link>
+                <Nav.Link href="/rscreen">Research</Nav.Link>
+                <Nav.Link href="/moeevents">Events</Nav.Link>
+                <Nav.Link href="/studenthome">Education</Nav.Link>
+            
               <NavDropdown title="About Us" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#about">Core Values</NavDropdown.Item>
-                <NavDropdown.Item href="#staff">Staff</NavDropdown.Item>
+                <NavDropdown.Item href="/about">Core Values</NavDropdown.Item>
+                <NavDropdown.Item href="/staff">Staff</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

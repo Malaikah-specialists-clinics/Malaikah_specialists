@@ -122,7 +122,7 @@ const Register = ({ closeDialog }) => {
                     // .then((res)=>{
                     //   localStorage.setItem('access_token', res.data.access_token)
                     // });
-                    window.location.href = '/#/profile';
+                    window.location.href = '/login';
                     if (closeDialog) {
                       closeDialog();
                     }
@@ -310,7 +310,7 @@ const Register = ({ closeDialog }) => {
                       </Col>
                       <Col style={{ marginTop: '9.5%' }}>
                         <p>
-                          Already have an account? <a href="#login">Sign in</a>
+                          Already have an account? <a href="/login">Sign in</a>
                         </p>
                       </Col>
                     </Row>

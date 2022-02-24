@@ -404,8 +404,19 @@ h3 {
   height: 40px;
 }
 
+a{
+  text-decoration: none;
+  color: #0a1f3e;
+}
+
 .nav-items {
   font-size: 16px;
+
+}
+#navbarLink{
+  color: white;
+font-size: small;
+font-weight: lighter;
 }
 /* styling the pop up page */
 
@@ -627,4 +638,3 @@ h3 {
 .required {
   color: red;
 }
-

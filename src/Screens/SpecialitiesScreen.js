@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row, Container, Accordion } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { base_url } from '../Constants';
@@ -84,9 +84,9 @@ const Specialities =()=> {
                     </Accordion>
                   </Col>
                   <Col xs={12} lg={6} style={{ marginTop: '5px' }}>
-                    <Link to="/form" role="button">
+                    <a href="/form" role="button">
                       <button className="Btn">Book An Appointment</button>
-                    </Link>
+                    </a>
                   </Col>
                 </Row>
               </div>

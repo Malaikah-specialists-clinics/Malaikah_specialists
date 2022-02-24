@@ -1,32 +1,22 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { base_url } from '../Constants/index.js';
 import { Formik } from 'formik';
-
-// const validateLogin = (loginUser) => {
-//   const errors = {};
-
-//   if (!loginUser.email) {
-//     errors.email = 'Please Enter Email';
-//   } else if (
-//     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(loginUser.email)
-//   ) {
-//     errors.email = 'Invalid email address';
-//   }
-//   if (!loginUser.password) {
-//     errors.password = 'Password Required';
-//   } 
-
-//   return errors;
-// };
+import {Navigate} from "react-router-dom";
+import Loader from "../Components/Loader"
 
 
-const Login = ({ closeDialog }) => {
+const Login = () => {
+  const [navigate, setNavigate] = useState(false);
+  const[loading, setLoading] = useState(false);
 
+  if (navigate) {
+    return <Navigate to="/profile"/>;
+}
   return (
-    
     <>
+      {loading && <Loader />}
       <div
         className="formcontent"
         style={{
@@ -70,13 +60,14 @@ const Login = ({ closeDialog }) => {
             "Content-type": "application/json"
             }, mode: 'cors'
               }, 
-             
+              setLoading(true)
               )
               .then((res) => {
             console.log(res)
             console.log(res.data)
               if (res.data.accessToken) {
                 localStorage.setItem("user", JSON.stringify(res.data));
+                setNavigate(true)
               }
               console.log(res.data);
             })
@@ -88,13 +79,16 @@ const Login = ({ closeDialog }) => {
                 }else if (err.message){
                     console.log("Message error")
             }
+            setNavigate(true)
               console.log(err.toJSON);
             });
-            window.location.href ='#profile'
+            
+           
               actions.setSubmitting(false);
             }, 1000);
           }}
         >
+          
           {(formik) => (
                 <Form
                   style={{ padding: '10px' }}
@@ -143,7 +137,7 @@ const Login = ({ closeDialog }) => {
                   <Row>
                     <Col style={{ marginTop: '9.5%' }}>
                       <p>
-                        Have No account? <a href="#register">Sign Up</a>
+                        Have No account? <a href="/register">Sign Up</a>
                       </p>
                     </Col>
                   </Row>

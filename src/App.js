@@ -1,6 +1,6 @@
 import React from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
-import Headers from './Components/Header/Headers';
+import { Route, Routes } from 'react-router-dom';
+import Header from './Components/Header/Headers';
 import Footer from './Components/Footer/Footer';
 
 
@@ -19,14 +19,14 @@ import SpecialitiesScreen from './Screens/SpecialitiesScreen'
 import LoginScreen from './Screens/LoginScreen';
 import Staffscreen from './Screens/Staffscreen'
 import Appointments from './Screens/Appointments'
-import Applicationforms from './EducationPortal/Applicationforms'
-import Applicationforms2 from './EducationPortal/Applicationforms2'
-import Applicationforms3 from './EducationPortal/Applicationforms3';
-import StudentLogin from './EducationPortal/StudentLogin';
-import HomePage from './EducationPortal/HomePage';
-import StudentDashboard from './EducationPortal/StudentDashboard';
-import Programs from './EducationPortal/Programs'
-import StudentProfile from './EducationPortal/StudentProfile';
+// import Applicationforms from './EducationPortal/Applicationforms'
+// import Applicationforms2 from './EducationPortal/Applicationforms2'
+// import Applicationforms3 from './EducationPortal/Applicationforms3';
+// import StudentLogin from './EducationPortal/StudentLogin';
+// import HomePage from './EducationPortal/HomePage';
+// import StudentDashboard from './EducationPortal/StudentDashboard';
+// import Programs from './EducationPortal/Programs'
+// import StudentProfile from './EducationPortal/StudentProfile';
 import Profile from './Screens/Profile'
 import Readmore from './Screens/Readmore'; 
 
@@ -36,34 +36,36 @@ require('dotenv').config();
 function App() {
   
   return (
-    
-    <Router className="App">
-      <Headers />
-      <Route path="/" component={Home} exact />
-      <Route path="/form" component={FormScreen} />
-      <Route path="/register" component={Register} />
-      <Route path="/hcare" component={HomecareScreen} />
-      <Route path="/rscreen" component={ResearchScreen} />
-      <Route path="/specscreen" component={Specialities} />
-      <Route path="/emergservice" component={EmeservSreen} />
-      <Route path="/moeevents" component={Moeventscreen} />
-      <Route path="/login" component={LoginScreen}></Route>
-      <Route path="/about" component={Aboutscreen}></Route>
-      <Route path="/staff" component={Staffscreen}></Route>
-      <Route path="/specialities" component={SpecialitiesScreen}></Route>
-      <Route path="/profile" component={Profile}></Route>
-      <Route path="/appts" component={Appointments}></Route>
-      <Route path="/applicationforms" component={Applicationforms}></Route>
-      <Route path="/applicationforms2" component={Applicationforms2}></Route>
-      <Route path="/applicationforms3" component={Applicationforms3}></Route>
-      <Route path="/studentlogin" component={StudentLogin}></Route>
-      <Route path="/studenthome" component={HomePage}></Route>
-      <Route path="/StudentDashboard" component={StudentDashboard}></Route>
-      <Route path="/StudentProfile" component={StudentProfile}></Route>
-      <Route path="/programs" component={Programs}></Route>
-      <Route path="/readmore" component={Readmore}></Route>
-      <Footer />
-    </Router>
+    <>
+    <Header />
+      <Routes>
+      <Route path="/" element={<Home/>} exact />
+      <Route path="/form" element={<FormScreen/>} />
+      <Route path="/register" element={<Register/>} />
+      <Route path="/hcare" element={<HomecareScreen/>} />
+      <Route path="/rscreen" element={<ResearchScreen/>} />
+      <Route path="/specscreen" element={<Specialities/>} />
+      <Route path="/emergservice" element={<EmeservSreen/>} />
+      <Route path="/moeevents" element={<Moeventscreen/>} />
+      <Route path="/login" element={<LoginScreen/>}></Route>
+      <Route path="/about" element={<Aboutscreen/>}></Route>
+      <Route path="/staff" element={<Staffscreen/>}></Route>
+      <Route path="/specialities" element={<SpecialitiesScreen/>}></Route>
+      <Route path="/profile" element={<Profile/>}></Route>
+      <Route path="/appts" element={<Appointments/>}></Route>
+      {/* <Route path="/applicationforms" element={Applicationforms}></Route>
+      <Route path="/applicationforms2" element={Applicationforms2}></Route>
+      <Route path="/applicationforms3" element={Applicationforms3}></Route>
+      <Route path="/studentlogin" element={StudentLogin}></Route>
+      <Route path="/studenthome" element={HomePage}></Route>
+      <Route path="/StudentDashboard" element={StudentDashboard}></Route>
+      <Route path="/StudentProfile" element={StudentProfile}></Route>
+      <Route path="/programs" element={Programs}></Route> */}
+      <Route path="/readmore" element={<Readmore/>}></Route>
+     
+      </Routes>
+     <Footer />
+     </>
   );
 
 }

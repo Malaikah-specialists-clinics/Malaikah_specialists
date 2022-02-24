@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-bootstrap";
 import './sidenav.css'
 
 function SideNavbar() {
@@ -13,10 +13,10 @@ function SideNavbar() {
         <ul class="sidebar-navigation">
           <li class="header">Dashboard</li>
           <li>
-            <Link to="/profile" id="current">
+            <a href="/profile" id="current">
               <img src="/images/profileicon.png " alt="" style={{ width: '20%', height: '20%' }}/>
               Profile
-            </Link>
+            </a>
           </li>
           <li>
             <NavLink to="/appts" id="current">

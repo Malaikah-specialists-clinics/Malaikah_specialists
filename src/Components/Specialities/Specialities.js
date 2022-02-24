@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row, Card } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+// import { LinkContainer } from "react-router-bootstrap";
 import './specialties.css'
 
 function Specialities() {
@@ -12,7 +12,7 @@ function Specialities() {
         <Col>
         <div className='slider'>
         <div className='slider-track' >
-          <LinkContainer to='/specialities'>
+          <a href='/specialities'>
           <Card id="crds">
                <Card.Img
                 variant="top"
@@ -24,9 +24,9 @@ function Specialities() {
                <h6>Gynecology services</h6>
               </Card.Body>
             </Card>
-          </LinkContainer>
+          </a>
            
-          <LinkContainer to='/specialities'>
+          <a href='/specialities'>
             <Card id="crds">
               <Card.Img
               className='crd-icon'
@@ -37,8 +37,8 @@ function Specialities() {
                 <h6>Paediatrics</h6>
               </Card.Body>
             </Card>
-            </LinkContainer>
-            <LinkContainer to='/specialities'>
+            </a>
+            <a href='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -49,8 +49,8 @@ function Specialities() {
                 <h6>Ambulance services</h6>
               </Card.Body>
             </Card>
-            </LinkContainer>
-            <LinkContainer to='/specialities'>
+            </a>
+            <a href='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -61,9 +61,9 @@ function Specialities() {
                 <h6>Hernia & Appendicitis surgery</h6>
               </Card.Body>
             </Card>
-            </LinkContainer>
+            </a>
 
-            <LinkContainer to='/specialities'>
+            <a href='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -74,8 +74,8 @@ function Specialities() {
                 <h6>Health Education</h6>
               </Card.Body>
             </Card>
-            </LinkContainer>
-          <LinkContainer to='/specialities'>
+            </a>
+          <a href='/specialities'>
           <Card id="crds">
               <Card.Img
                 variant="top"
@@ -86,9 +86,9 @@ function Specialities() {
                <h6>Gynecology services</h6>
               </Card.Body>
             </Card>
-          </LinkContainer>
+          </a>
            
-          <LinkContainer to='/specialities'>
+          <a href='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -99,8 +99,8 @@ function Specialities() {
                 <h6>Paediatrics</h6>
               </Card.Body>
             </Card>
-            </LinkContainer>
-            <LinkContainer to='/specialities'>
+            </a>
+            <a href='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -112,8 +112,8 @@ function Specialities() {
                 <h6>Ambulance services</h6>
               </Card.Body>
             </Card>
-            </LinkContainer>
-            <LinkContainer to='/specialities'>
+            </a>
+            <a href='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -124,9 +124,9 @@ function Specialities() {
                 <h6>Hernia & Appendicitis surgery</h6>
               </Card.Body>
             </Card>
-            </LinkContainer>
+            </a>
 
-            <LinkContainer to='/specialities'>
+            <a href='/specialities'>
             <Card id="crds">
               <Card.Img
                 variant="top"
@@ -137,7 +137,7 @@ function Specialities() {
                 <h6>Health Education</h6>
               </Card.Body>
             </Card>
-            </LinkContainer>
+            </a>
           {/* </CardGroup> */}
           </div>
           </div>
